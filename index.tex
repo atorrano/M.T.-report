@@ -23,7 +23,7 @@
 \usepackage{csquotes}
 
 \begin{document}
-\title{ABM applied to archeology and social models\\
+\title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
 \small{Master Thesis}}
 \author{Alexis Torrano Mart\'inez}
 \maketitle
@@ -31,7 +31,9 @@
 
 \pagenumbering{roman}
 \begin{abstract}
-Gujarat, ABM, hypothesis... blablabla
+The aim of this master thesis is the development of a multiagent model for a simulation  of two populations whose interactions are strongly influenced by a realistic landscape.
+This research will be in line with Consolider-Simulpast (www.simulpast.es), an interdisciplinary project aimed to create simulations designed to be used in archaeological studies of human-environment interaction, decision-making processes and coevolutionary/competition behaviours of past societies.
+The work plan will be focused on the development of first-stage models for two societies in the age of agriculture spreading surpasing the hunting and foraging way of living. The simulation will involve a climate engine for seasonality depending primarily on variable rainfall rate. Landscape information will be created from satellite image rasters. Constants, and variable relationship shall be modelled from measures and interviews with the experts. Data analysis tasks will be undertaken to validate the models and detect patterns in the archaeological record. Furthermore a comparison will be stablished between the classical simple models used in social simulation[1][2][8] and more advanced approaches.
 \end{abstract}
 \newpage 
 
@@ -59,10 +61,30 @@ Gujarat, ABM, hypothesis... blablabla
 \newpage 
 \chapter{Methodology}
 	\section{Intro}
+Dynamic systems tied to time. Non reducible to a formula, so the system must be replicated
+in a abstract calculus framework.  methodology with integration of system state, time component
+and repeatable experimentation for behaviour induction : simulation
+
+simulation : virtual experimentation in computers for a posteriori analisys of the dynamics.
+
+the system is reproduced in a model. The framework of the simulation reproduces the conditions
+for the experiments and iterates the changes of the system over time.
 
 	\section{Conceptual Framework}
+
+
 		\subsection{Evolution}
+
+Configurations c_1,...c_n. Strategies \sigma_1,...,\sigma_n. Along time we study adaptation
+of different strategies. 
+
 		\subsection{Coevolution}
+
+Retro feedback of the different actors inside the evolution phenomena.
+Everybody conditions the othe with its outcomes and success/fail in the evolution of
+its adaptation drive.
+
+
 			\subsubsection{Evolutionary \/ Genetic Programming?}
 	\section{ABMs}
 	  \subsection{Intro}
@@ -94,7 +116,11 @@ Gujarat, ABM, hypothesis... blablabla
 \newpage 
 \chapter{Gujarat Case Modelization}
 	\section{Introduction}
+Northern Gujarat is a marginal environment between the Thar Desert and the more fertile area of Saurashtra. This region is an ecotone, characterized by the seasonal influence of the monsoon where contrasting ecological niches are in tension and small climatic shifts can generate significant environmental changes, eventually affecting  resource availability. Archaeological evidence points to the presence and possible coexistence in the area of groups of people with different resource management strategies and mobility behaviors: hunter-gatherers (HG); agropastoralists (AP); urban Harappans (UH).
+The aim of this study is to model resource management and decision making among hunter-gatherer groups in this region to explore adaptive trajectories and performance in relation to a) environmental variability and b) the appearance of other specialized groups . 
+What factors play a role in HG persistence or disappearance in arid margins? Is the advent of agro-pastoral behaviour a big enough change to explain the disappearance of HG behaviour? What happens when there is an external influence, such as that by UH? Does climate change affect HG behaviour?
 	    \subsection{Hypotheses}
+In our starting hypothesis HG groups are adapted to marked seasonality (due to monsoon) in the arid margins of northern Gujarat. We intend to explore HG resilience considering: a) the appearance of AP, b) the appearance of an external attractor (UH) and c) climate change. We define resilience as the ability of the system to maintain its identity in the face of internal change and external perturbation (Carpenter 2001).
 	    \subsection{Aims and objectives}
 	    \subsection{Knowledge Elicitation \& Brainstorming}
 		\subsubsection{Interviews}
@@ -155,5 +181,32 @@ Gujarat, ABM, hypothesis... blablabla
       \section{Future Issues}
 \newpage 
 \chapter{Bibliography}
+\begin{thebibliography}{9}
+\bibitem{[1]} 
+J.M. Epstein. 
+\emph{Agent-based computational models and generative social science. Generative Social
+Science: Studies in Agent-Based Computational Modeling}, pages 4-46, 1999.
+\bibitem{[2]} 
+J.M. Epstein and R. Axtell.
+\emph{Growing artiﬁcial societies}. 1996.
+\bibitem{[3]} 
+R. Axelrod. 
+\emph{Simulation in Social Sciences. Handbook of research on nature-inspired computing for economics and management}, 1:90, 2007.
+\bibitem{[4]}
+Doran, J., 
+\emph{1999. Prospects for Agent-Based modelling in Archaeology}. Archeologia e Calcolatori, 10, 33-44.
+\bibitem{[5]}
+Gilbert, N.,
+\emph{2008. Agent-Based Models}. SAGE Publications, California.
+\bibitem{[6]}
+Gilbert, N., Troitzsch, K.G.,
+\emph{2008. Simulation for the Social Scientist}. Open University Press, USA.
+\bibitem{[7]}
+Lake, M W,
+\emph{2000. Computer Simulation of Mesolithic Foraging, in: Gumerman, G. J., Kohler, T.A. (Eds.), Dynamics in Human and Primate Societies: Agent-Based Modeling of Social and Spatial Processes}, Oxford University Press, New York, pp. 107-143.
+\bibitem{[8]}
+Sugarscape.
+\emph{http://ccl.northwestern.edu/netlogo/models/community/Sugarscape}
+\end{thebibliography}
 
 \end{document}
