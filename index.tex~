@@ -21,8 +21,6 @@
 \usepackage[utf8]{inputenc} %permite escribir {\'a},{\'e},{\'u},{\'o},{\'\i} & {\~n} directamente
 \usepackage[british]{babel}
 \usepackage{csquotes}
-\usepackage{amsmath, amsthm, amssymb}
-
 
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
@@ -72,32 +70,20 @@ simulation : virtual experimentation in computers for a posteriori analisys of t
 the system is reproduced in a model. The framework of the simulation reproduces the conditions
 for the experiments and iterates the changes of the system over time.
 
-
-
-The question stated and the domain where that question is answered, demands a methodology that should cope with time related dynamics, with systems the change across time. When you ask something to a system, sometimes, you can solve it with a formula, a one step or time dimension independent number of steps calculus. Some other times you cannot jump and skip the behaviour of the system between an initial time and a final time where you think your answer is solved. The last ones are called irreducible systems. In such systems, to ask something about the state of the system in time $t_n$ you have to calculate all the states between an initial $t_0$ and that end state at $t_n$. So, you have to reproduce the dynamic of the system along the time. And that is what simulation is about. 
-The Gujarat case, and in general social dynamics systems, fit well with the simulation approach. You have a system the changes along time. A system which is complex enough that does not allow to forget the middle states because for each new state you must induce it from the nearest past state.
-The simula
-
-
-
-The use of agent-based modelling and simulation techniques in the social sciences has flourished in the recent decades. 
-The main reason is that the object of study in these disciplines, human society present or past, is difficult to analyze through classical analytical 
-techniques. Population dynamics and structures are inhrently complex. Thus, other methodological techniques need to be found to more adequately study 
-this field. In this context, agent-based modelling is encouraging the introduction of computer simulations to examine behavioural patterns in complex systems.
-Simulation provides a tool to artificially examine socities, where a big number of actors with decision capacity coexist and interact.
-
 	\section{Conceptual Framework}
 
 
 		\subsection{Evolution}
 
-Configurations $c_1$,...,$c_n$. Strategies $\sigma_1$,...,$\sigma_n$. Along time we study adaptation of different strategies. 
+Configurations c_1,...c_n. Strategies \sigma_1,...,\sigma_n. Along time we study adaptation
+of different strategies. 
 
 		\subsection{Coevolution}
 
 Retro feedback of the different actors inside the evolution phenomena.
 Everybody conditions the othe with its outcomes and success/fail in the evolution of
 its adaptation drive.
+
 
 			\subsubsection{Evolutionary \/ Genetic Programming?}
 	\section{ABMs}
@@ -202,7 +188,7 @@ J.M. Epstein.
 Science: Studies in Agent-Based Computational Modeling}, pages 4-46, 1999.
 \bibitem{[2]} 
 J.M. Epstein and R. Axtell.
-\emph{Growing artiﬁcial societies}, 1996.
+\emph{Growing artiﬁcial societies}. 1996.
 \bibitem{[3]} 
 R. Axelrod. 
 \emph{Simulation in Social Sciences. Handbook of research on nature-inspired computing for economics and management}, 1:90, 2007.
