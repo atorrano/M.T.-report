@@ -176,50 +176,18 @@ The modelling process consists in identifying separable entities, processes, rel
 As Epstein \cite{Epstein2008} says \textit{“Anyone who ventures a projection, or imagines how a social dynamic—an epidemic, war, or migration—would unfold is running some model”}.\\
 Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort. \\
 For instance, I am modelling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so I could minimize hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the courtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if I would model the system to analyze the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
-
-%simplicity
-These practices should lead to a preference for simple models
-1.- Occam
-2.- simplicity : smaller models, less complexity, easier error detection, less items to justify(so less criticable)
-
-%ATMsimple vs complex
-
-complexity:
-	credibility(harder)
-		verification
-		validation
-	justification(harder)
-		Justify, Validate, Verify each one
-	analysis & conclusions get harder to extract	
-	criticability
-		objective/subjctive modelling decisions
-		experts' point of view
-		why them and not the others you left out?
-
-As Robinson \cite{Robinson2008} states simple models have many advantages, 
-  such as they are faster, 
-  require less data, 
-  are more flexible 
-  and, more importantly, if we better understand them we can better interpret their results.
-
-Davies \cite{Davies2003} states one should be carefull to simplify certain natural processes 
-since it presumes certain assumptions about how they work so one could miss some important facet to explain it.
-
-At this point how do we construct the model?
-	Top-down?
-	Bottom-up?
-	Consider a set of subsystems
-		explore them enable/disable pressence
-		add increasing complexity subsystems : eg. Agent Policy
-
-KISS Lemma
-
+This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclussions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen
+and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible and, more importantly, if we better understand them we can better interpret their results. The KISS Lemma sumarizes it ``Keep It Simple, Stupid''.\\
+% ATM:aqui o mes endevant? aprofondir molt?
+At this point how do we construct the model?\\
+	Top-down?\\
+	Bottom-up?\\
+	Consider a set of subsystems\\
+		explore them enable/disable pressence\\
+		add increasing complexity subsystems : eg. Agent Policy\\
 
 %George Box
 Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, quoting George Box, the model will be wrong, what matters is whether it will be useful for us or not.\\
-
-%el model com a eina de treball en grups multidisciplinars
-In social sciences and humanities, models are often expressed through natural language, which is ambigious. This is due to the nature of systems involved in their studies, which are often very complex in reasoning and suppositions. Moreover, each research discipline has its own vocabulary and approach. Therefore, scientists need to express the phenoma and ideas under study in the same rigorous manner \cite{Leeuw2004}. That is, they need to \textit{formalize} their models. Here when we talk about formal models we refer to the mechanism which permit us to understand, specify and analyse a system. Easily one can see the advantage on doing so when thinking in teams formed by experts from different areas of science. Models provide the way to make these multidisciplinary (pluridisciplinary? interdisciplinary?) teams work.\\
 
 % multidiscpl ATM
 As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our case we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, argue their discurse with different structures. 
@@ -229,29 +197,6 @@ Modelling will help to find a consensus for expressing the concepts and properti
 
 %%%ellicitation 
 %posar l'exercici de comprensio entre BSC - IMF, elicitation, ecotonos...
-
-%%%% borrar? 
-% com encaixa un model dins un estudi de simulació?
-In this way, it is not ventured to say that modelling is one of the keys to do research. A model has impact in all aspects of a simulation study. 
-In simulation field, the process of abstracting a model from a real or proposed system is called \textit{conceptual modelling} \cite{Robinson2008}. 
-The resulting structure of concepts and views under which the simulationists guided for the development of a simulation model is called 
-\textit{conceptual framework} \cite{Balci1988}. Serving as a guide, it facilitates the implementation and significantly reduces its complexity.
-However, the conceptual modelling process is independent from the later implementation of the simulation.
-In Figure ~\ref{fig:CM}, Heath \cite{Heath2009} shows how conceptual modelling is embebbed in a simplified simulation development process.
-As we can see, the previous step of formalizing a model is to formulate a problem and the objectives of the simulation study.\\
-
-%%% OK
-%com cal modelar
-To make the abstraction process effective an appropiate simplification of reality is needed \cite{Pidd2003}. That is, we need to set the 
-boundaries of the real world portion we want to model in an appropiate that can give answer to the question we want to make. 
-However, a model should be complex enough to answer the question raised \cite{Banks1998}. For example, a model that emulates a vehicle routing
-problem can answer question on how a company should distribute its products in a given network. However, this model can not answer questions
-on how this distribution will impact on the current traffic of the network. If we were interested on getting information on the traffic impact, we should enlarge our model to model the traffic flow to calculate how a given distribution of vehicles will affect it.  \\
-
-%%% OK
-%el balanç entre simple i complex
-Thus, we need to find a balance between real world and the conceptualized system. We could directly consider the most complex model to do an study but we will encounter several problems, being the most important its credibility. How could we be certain that the non necessary components in our model are not affecting the results? As Robinson \cite{Robinson2008} states simple models have many advantages, such as they are faster, require less data, are more flexible and, more importantly, if we better understand them we can better interpret their results.
-In fact, a good modelling design enhances the probability of simulation study success. However, not in all research areas simplicity is seen as a positive value. For instance, Leeuw \cite{Leeuw2004} says archaeologists can not presume a simple behaviour until there is some evidence of it. As Davies \cite{Davies2003} states one should be carefull to simplify certain natural processes since it presumes certain assumptions about how they work so one could miss some important facet to explain it. The tendency however is to build KISS (Keep it simple, stupid) models which is stems from Occam’s razor: the idea that things should be kept as simple as possible and made as little more complex as explanation purposes demand \cite{Axelrod1997a}. Applied to social simulation, KISS ideally seeks simple and abstract models that are general enough to be explanatory for multiple specific cases.\\
 
 
 %models que es contraduien-- camp de la física p.e.
@@ -302,8 +247,6 @@ certs apartats de l'ODD : adaptar les descripcions dels apartats de l'ODD
 %Comp emergent
 
 %Dificultats en la modelització en ciències socials: models matemàtics, models estadístics
-
-
 
 ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues --> cal IA.
 
