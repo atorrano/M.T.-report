@@ -23,7 +23,7 @@
 \usepackage[british]{babel}
 \usepackage{csquotes}
 \usepackage{amsmath, amsthm, amssymb}
-
+\usepackage{enumerate}
 
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
@@ -175,19 +175,12 @@ This kind of criteria should lead to a preference for simpler models. There are 
 
 % ATM:aqui o mes endevant? aprofondir molt?
 Another concern is that detail and granularity choice is attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
-The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships of subsumption and hierarchical connection. Following the distribution induced by such hierarchy the space of conceptualizations of the theory will have bounds in the higher and deeper concepts found in the top and bottom locations of the hierarchy. Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper. An ascending crystalization is called bottom-up and the inverse direction is known as top-down. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterized persons to some inner features related to their personality; now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.   
+The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships of subsumption and hierarchical connection. Following the distribution induced by such hierarchy the space of conceptualizations of the theory will have bounds in the higher and deeper concepts found in the top and bottom locations of the hierarchy. Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper. An ascending crystalization is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterized persons to some inner features related to their personality; now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.   
 
 %%% TODO posar dibuix : triangle, 2 fletxes: top->dw, bott->up
 %%% analisys of system
 %%% synthesis
 %%% sometimes you do a mix
-
-pots lligar el b-u/t-d amb la granularity pq pots anar en una direccio o en altra canviant
-la quantitat de detalls a base de posar tots els budells d'un object.
-
-%TODO
-tb esmenta : sociology tu un bottom definit fins on ella arriba... pero si el vols atravessar aniries
-cap a l'antropologia, i si traveses mes bottons arribes a la psico, i encara mes arribes a la neurologia, etc etc fins els atoms.
 
 
 %George Box
@@ -265,7 +258,10 @@ Gradually social modelling began to approach computational sciences keeping its 
 
 %non covered issues that motivate ABM, 
 %TOASK separo mÃ©s l'explicacio? part1: primers pseudo-agents part2:agents 100%, propietats aconseguides...
-This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the social hierarchy of concepts, people and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the  environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and complex psychology. As a last benefit to mention, modelling from a bottom-up point of view .... emergence... no t'oblidis de complx systm ...
+This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the  environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and complex psychology.\\ 
+Modelling from a bottom-up point of view with the inclusion of agents will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. Complex systems theory calls this \textbf{emergence}.
+
+
 
 % per on poses aixo? : ``Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems''. 
  
@@ -273,22 +269,41 @@ This last improvement and the use of MultiAgent Modelling in social modelling al
 %% ******* Modeling Lifecycle: SDLC; TOASK caldria una explicacio? nomes un grafic?
 %% no diguis Lifecycle, es Methodology
 
+
+we chosed simulation as technique to implement our calcules over the model...
+justified above
+
+Roadmap...
+
+
 The stages of simulation-based research
-........definition of the target\\
-............purpose/question\\
-............prediction/prognosis\\
-............diagnosis\\
-............theory validation / discovering\\
-............study future possible worlds\\
-........observations : get parameters and initial conditions\\
-........assumptions\\
-........design model\\
-........computer programming\\
-............verification\\
-........run simulation\\
-........gather results\\
-........validation\\
-........sensivity analisys\\
+
+which can be sumarized :
+\begin{description}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\item [Definition of the target] (the purpose/question)
+	\begin{description}
+	\item [prediction/prognosis]
+	\item [diagnosis]
+	\item [theory validation / discovering]
+	\item [study future possible worlds]
+	\end{description}
+\item [Observations] : get parameters and initial conditions]
+\item [Assumptions]
+\item [Design model]
+\item [Computer programming]
+	\begin{description}
+	\item [verification]
+	\end{description}
+\item [Run simulation]
+\item [gather results]
+\item [Validation]
+	\begin{description}
+	\item [sensivity analisys]
+	\end{description}
+\end{description}
+
 
 
 %% Emergence
