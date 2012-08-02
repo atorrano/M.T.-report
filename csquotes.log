@@ -1,0 +1,111 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.2.13)  21 FEB 2012 17:46
+entering extended mode
+ %&-line parsing enabled.
+**csquotes.sty
+(./csquotes.sty
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `csquotes'.
+
+! Use of \csq doesn't match its definition.
+<argument> \csq @rcsid 
+                       $Id: csquotes.sty,v 5.1d 2011/10/22 19:17:39 lehman s...
+l.22  context-sensitive quotations]
+                                   
+? 
+! Interruption.
+\@pr@videpackage ...name .\@currext \endcsname {#1
+                                                  }\ifx \@currext \@clsexten...
+l.22  context-sensitive quotations]
+                                   
+? quit
+OK, entering \batchmode...
+! Use of \csq doesn't match its definition.
+<write> Package: \@gtempa \space \csq @rcsid 
+                                             $Id: csquotes.sty,v 5.1d 2011/1...
+l.22  context-sensitive quotations]
+                                   
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Package: csquotes $Id: csquotes.sty,v 5.1d 2011/10/22 19:17:39 lehman stable $ 
+context-sensitive quotations
+ (./etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+ (/usr/share/texmf-texlive/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count79
+)
+\etb@tempcnta=\count80
+) (/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m 
+l.32 \@
+       ifpackagelater{etoolbox}{2008/06/28}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 \@
+       ifpackagelater{etoolbox}{2008/06/28}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \@
+       ifpackagelater{etoolbox}{2008/06/28}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 32.
+
+! Package csquotes Error: Outdated 'etoolbox' package.
+
+See the csquotes package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 ... This is a fatal error. I'm aborting now.}
+                                                  %
+Upgrade to etoolbox v1.7 (2008/06/28) or later.
+I found: '2011/01/03 v2.1 e-TeX tools for LaTeX'.
+This is a fatal error. I'm aborting now.
+
+)
+! Emergency stop.
+<*> csquotes.sty
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 391 strings out of 495062
+ 4553 string characters out of 1182644
+ 53611 words of memory out of 3000000
+ 3656 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 23i,2n,19p,792b,56s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

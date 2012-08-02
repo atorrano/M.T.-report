@@ -11,9 +11,9 @@
 \contentsline {paragraph}{Did Gujarat extreme enviromental conditions delayed the HG disappearence?}{1}
 \contentsline {chapter}{\numberline {2}Methodology}{2}
 \contentsline {section}{\numberline {2.1}Intro}{2}
-\contentsline {section}{\numberline {2.2}Conceptual Framework}{3}
-\contentsline {subsection}{\numberline {2.2.1}Evolution}{3}
-\contentsline {subsection}{\numberline {2.2.2}Coevolution}{3}
+\contentsline {section}{\numberline {2.2}Conceptual Framework}{2}
+\contentsline {subsection}{\numberline {2.2.1}Evolution}{2}
+\contentsline {subsection}{\numberline {2.2.2}Coevolution}{2}
 \contentsline {subsubsection}{Evolutionary \/ Genetic Programming?}{3}
 \contentsline {section}{\numberline {2.3}ABMs}{3}
 \contentsline {subsection}{\numberline {2.3.1}Intro}{3}

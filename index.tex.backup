@@ -76,7 +76,12 @@ for the experiments and iterates the changes of the system over time.
 
 The question stated and the domain where that question is answered, demands a methodology that should cope with time related dynamics, with systems the change across time. When you ask something to a system, sometimes, you can solve it with a formula, a one step or time dimension independent number of steps calculus. Some other times you cannot jump and skip the behaviour of the system between an initial time and a final time where you think your answer is solved. The last ones are called irreducible systems. In such systems, to ask something about the state of the system in time $t_n$ you have to calculate all the states between an initial $t_0$ and that end state at $t_n$. So, you have to reproduce the dynamic of the system along the time. And that is what simulation is about. 
 The Gujarat case, and in general social dynamics systems, fit well with the simulation approach. You have a system the changes along time. A system which is complex enough that does not allow to forget the middle states because for each new state you must induce it from the nearest past state.
-The simula
+
+
+
+
+
+
 
 
 

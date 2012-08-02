@@ -1,0 +1,94 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.2.13)  21 FEB 2012 17:47
+entering extended mode
+ %&-line parsing enabled.
+**csquotes.dtx
+(./etoolbox.sty
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `etoolbox'.
+
+! Use of \etb doesn't match its definition.
+<argument> \etb @rcsid 
+                       $Id: etoolbox.sty,v 2.1 2011/01/03 19:14:10 lehman st...
+l.22  e-TeX tools for LaTeX]
+                            
+? quit
+OK, entering \batchmode...
+! Use of \etb doesn't match its definition.
+<write> Package: \@gtempa \space \etb @rcsid 
+                                             $Id: etoolbox.sty,v 2.1 2011/01...
+l.22  e-TeX tools for LaTeX]
+                            
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Package: etoolbox $Id: etoolbox.sty,v 2.1 2011/01/03 19:14:10 lehman stable $ e
+-TeX tools for LaTeX
+! You can't use `\spacefactor' in vertical mode.
+\@->\spacefactor 
+                 \@m 
+l.25 \@
+       ifundefined{eTeXversion}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.25 \@
+       ifundefined{eTeXversion}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \@
+       ifundefined{eTeXversion}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 25.
+
+! Package etoolbox Error: Not running under e-TeX.
+
+See the etoolbox package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 ... This is a fatal error. I'm aborting now.}
+                                                  %
+This package requires e-TeX. Try compiling the document with
+'elatex' instead of 'latex'. When using pdfTeX, try 'pdfelatex'
+instead of 'pdflatex'. This is a fatal error. I'm aborting now.
+
+)
+! Emergency stop.
+<*> csquotes.dtx
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 12 strings out of 495062
+ 189 string characters out of 1182644
+ 45108 words of memory out of 3000000
+ 3286 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 18i,2n,12p,86b,56s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

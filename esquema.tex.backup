@@ -184,7 +184,7 @@ The theory describes the domain as an ontological corpus of interelated conceptu
 
 
 %George Box
-Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, citing the famous quote of George Box, essentially, all models are wrong, but some are useful.\\
+Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, citing the famous quote of George Box, the model will be wrong, what matters is whether it will be useful for us or not.\\
 
 % multidiscpl ATM
 As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures. 
@@ -297,15 +297,6 @@ of stages defined in simulation-based research.
 \end{description}
 
 
-\begin{figure}[tp]
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.5pt}
-\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationMethodlogy.jpg}}
-\caption{Stages defined in simulation-based research (after ... )}
-%by Gilbert \cite{GilbertTroitzsch}}
-\label{fig:SimTL}
-\end{figure}
-
 
 %% Emergence
 %Understanding a political or economic system requires more than an understanding of the individuals that comprise the system. It also requires understanding how the individuals interact with each other, and how the results can be more than the sum of the parts.
@@ -328,7 +319,7 @@ ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigu
 AI vs fake-AI : anar mes enlla de maquines d'estats, sistemes de regles, o mind mappings
 
 L'intere\'s d'aplicar AI es evitar hand-made minds. Hand-made mind pot portar un bias introduit pel dissenyador.
-Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semantica,.... posa mes exemples).
+Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semÃƒ ntica,.... posa mes exemples).
 Es busca una aproximacio mes SOFT i no tant hardwired com un sistema de regles (argumenta-ho MOLT,
 estaran els profes de la FIB, Â¿Miquel Sanchez? has de rebatre molts paradigmes : Neurons, SVMs, CBRs, Production Rules,...). 
 Menys bias, mes adaptatiu/flexible,... emergent i planificat.(llegeix llibres d'AI+SoftComp. Ã‚Â¿Ã‚Â¿Copiar justificacions de la SoftComputing + justificacions de ProblemSolving???)
@@ -336,6 +327,9 @@ Menys bias, mes adaptatiu/flexible,... emergent i planificat.(llegeix llibres d'
 Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
 resource adquisition -> math modelling -> maximization -> planning.
 
+models -> dialog between data and ideas?
+
+all models are wrong, but some of them are useful
 
 models are formal ( we use formal languages to specify them, is that the reason? )
 	atoms
@@ -404,7 +398,7 @@ conceptes\\
 ---------agents, una component que dispara la no linearitat i per tant la complexitat\\
 ---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
 
-\section{ABM}
+	\section{ABM}
 
 ABM's. ABM's should be seen more as a metaphor (es una tecnica, no una metafora) than a methodology.
 
