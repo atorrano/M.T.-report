@@ -164,7 +164,7 @@ The reason is that it is a procedure that will help to communicate the \textbf{d
 \section{Why model}
 
 % ATM, que es modelar? i com es modela?
-The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of study. Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation.
+The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of study. Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototipe.
 As Epstein \cite{Epstein2008} says \textit{â€œAnyone who ventures a projection, or imagines how a social dynamicâ€”an epidemic, war, or migrationâ€”would unfold is running some modelâ€}.\\
 
 Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort. \\
@@ -319,114 +319,34 @@ of stages defined in simulation-based research.
 
 %Comp emergent
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conceptual Framework}
 
-%%%%%%%%%%% ABMs %%%%%%%%%%%%%%%
-\section{almost ABM section}
+\subsection{Multi Agent Systems}
 
-al conceptual framework : parla dels conceptes, que venen de MultiAgent systems...
-a la section d'ABM continua contactant amb MultiAgent Systems
+%% aqui poses tota la part mes tecnica/teorica dels agents, a ABM ja no caldra explicar-ho
+%% ABM explicara issues de modelatge i aplicacio cientifica
 
-verifica aixo : ABM=method, MultiAgSys=architect
-
-
-
-ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues --> cal IA.
-
-AI vs fake-AI : anar mes enlla de maquines d'estats, sistemes de regles, o mind mappings
-
-L'intere\'s d'aplicar AI es evitar hand-made minds. Hand-made mind pot portar un bias introduit pel dissenyador.
-Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semantica,.... posa mes exemples).
-Es busca una aproximacio mes SOFT i no tant hardwired com un sistema de regles (argumenta-ho MOLT,
-estaran els profes de la FIB, Â¿Miquel Sanchez? has de rebatre molts paradigmes : Neurons, SVMs, CBRs, Production Rules,...). 
-Menys bias, mes adaptatiu/flexible,... emergent i planificat.(llegeix llibres d'AI+SoftComp. Ã‚Â¿Ã‚Â¿Copiar justificacions de la SoftComputing + justificacions de ProblemSolving???)
-
-Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
-resource adquisition -> math modelling -> maximization -> planning.
-
-
-models are formal ( we use formal languages to specify them, is that the reason? )
-	atoms
-	atom relationship
-	syntax \& semantics
-		trying to construct unambiguous 
-	detect flaws and intuition mistakes
-		posar l'exemple del graph (1r pdf modelthinking, 4 nodes vs 5 nodes, 3*1 > 4 * 0.71)
-	
-	common language with the community
-			share ideas
-			criticizing
-			advices, redesign loop
-
-	model is a logical/conceptual prototipe
-		build a plane, first build a DaVinci/wood plane, build a tiny plane with a dummy
-		to see ``what happens if I do things this way?"
-	
-Jean Lave \& James March, why model? : explain+predict phenomena, predict new phenomena, build+design systems.
-(introdueix els tecnicismes PROGNOSIS, DIAGNOSIS)
-
-R1Epstein.pdf(modelthinking)
-\{
-Sixteen Reasons Other Than Prediction to Build Models\\
-
-1. Explain (very distinct from predict)\\
-2. Guide data collection\\
-3. Illuminate core dynamics\\
-4. Suggest dynamical analogies\\
-5. Discover new questions\\
-6. Promote a scientific habit of mind\\
-7. Bound (bracket) outcomes to plausible ranges\\
-8. Illuminate core uncertainties.\\
-9. Offer crisis options in near-real time\\
-10. Demonstrate tradeoffs / suggest efficiencies\\
-11. Challenge the robustness of prevailing theory through perturbations\\
-12. Expose prevailing wisdom as incompatible with available data\\
-13. Train practitioners\\
-14. Discipline the policy dialogue\\
-15. Educate the general public\\
-16. Reveal the apparently simple (complex) to be complex (simple)\\
-\}
-
-Neurons, SVM, CBR : d\'on trec els exemples per a fer learning? no tinc etiquetes concretes, categories, classes expliÂ­cites ; Reinforcement Learning, aplicable? com introduir MDP? (potser mes endevant et pots extendre sobre el que es MDP)\\
-
-Uncertainty \& Imprecision : state of resources(other foragers, climate stochacity),uncomplete know,... 
-modelthinking{The complexity wrought by the increases in information, adaptability, and interconnectedness implies a lack of predictability about what's next}.
-
-modelthinking{modelling helps create a dialogue between ideas and data}.
-
-Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
-resource adquisition -> math modelling -> maximization -> planning.
-
-no oblidis dir que si enriquim un model, l'estem fent mes complexe. Afegir tots els detalls
-converteix el model en una cosa tant difiÂ­cil d'entendre com l'objecte a modelar.
-
-modelling aporta un rigor al treballar amb les ideas del sistema observat que fa mes facil detectar errors, ambiguetats de les descripcions o especificacions. 
-
-\section{Conceptual Framework}{Social Systems Modelization}
-
-conceptes\\
----sistemes\\
-------sistemes complexes\\
----------coevol \\
----------emergence\\
----------agents, una component que dispara la no linearitat i per tant la complexitat\\
----------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
-
-\section{ABM}
-
-ABM's. ABM's should be seen more as a metaphor (es una tecnica, no una metafora) than a methodology.
-
-An ABM is build from some atomic identified entities in a bottom up design procedure.\\
-Such entities are active decission making actors in the modelled system. The modelling lifecycle of an ABM will consider a stage where decission making processes must be identified from the system. Usually that decission making 
-actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will conform the ABM. The concept 
+A MAS is build from some atomic identified entities in a bottom up design procedure.\\
+Such entities are active decission making actors in the modelled system. The modelling lifecycle of an MAS will consider a stage where decission making processes must be identified from the system. Usually that decission making 
+actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will conform the MAS. The concept 
 '' agent '' condenses a set of features that will specify the modelling metaphor that an agent represents:
-some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, ABMs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
+some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, MASs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
 \\
 bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
 to join them from their relationship and then we try to get the big picture.
 \\
-		%explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
-		% busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
-\\
+
+al conceptual framework : parla dels conceptes, que venen de MultiAgent systems...
+a la section d'ABM continua contactant amb MultiAgent Systems
+
+\subsubsection{Agents}
+
+agent -> metaphor ( agrada a l'Ulisses)
+
+---------agents, una component que dispara la no linearitat i per tant la complexitat\\
+---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
+
 		Features:
 \\
 		  agents ( els features isolats )
@@ -450,6 +370,65 @@ to join them from their relationship and then we try to get the big picture.
 \\
 		  temporal correlation - histeresis
 \\
+%%%%%%%%%%%%%%%
+
+
+\subsection{Complex Systems}
+\subsection{Coevolution}
+\subsection{Emergence}
+
+Emergence is the outcome of the parts of the system that due to the dynamics of the intearactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics. 
+%Exemple de la columna i una altre que sigui de social sciences...
+The Column example.\\
+There is potential for emergent phenomena, i.e., when
+\begin{itemize} 
+\item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
+\item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
+\item Heterogeneous interactions between agents.
+\item When there is unstability to perturbations although the system could be defined linearly.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ABM}
+
+%% definition - description
+
+ABM is a modeling methodology that relies on a application engineering architecture called Multi Agent Systems from A.I.
+ 
+Following the paradigm of ABM, systems to model are decomposed into entities called agents, which have their behaviour defined,  how affect or are affected by environment, and how they interact with the other agents. The main activity for agents is decision making. Each agent individually assesses the current state of the environment, taking into account the other agents, and in accordance with its objectives takes an action that runs against the system, the environment plus the agents that may be involved. The system runs on a constant loop of evaluations, decisions and actions of the agents that inhabit it.
+This will lead to situations of iterated interactions between a set of agents in a framework of cooperation, coordination or competition. Although simple agents in such an interaction environment can  make emerge many complex patterns and be a good model of real world systems, the methodology considers also features like mind models, authomatic learning or evolution and natural selection in agents endowing the agents with enhanced adaptation.[Bonabeau 2002]  
+
+
+\subsection{Benefits of ABM}
+%TODO (ref. PNAS.org)
+There are  some striking features that make ABM stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable, natural to express things with that “language”. Also, it is more flexible in the modelization. And to finish enumeration, ABM captures emergent phenomena. ABM follows the arise of emergence from its definition, following the bottom-up generation of phenomena from the atomic constituents when the system is run.
+ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. For example, it is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. Because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties.  
+
+%TODO Pregunta al Xavi sobre això:
+%	classical : social system → conceptualizations → person, people → abstractions (groups, social dynamics,...) → model the abstractions.
+%	ABM : social system → conceptualizations → person, people → model the people.
+%Classical : you need an extra step of inferited knowledge a priori
+
+It is advisable, because it can be more natural and useful, to use ABM through the constituent units' activities under the next conditions.
+\begin{enumeration} 
+\item The behavior of individuals cannot be clearly defined through aggregate transition rates.
+\item Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behavior increases. Describing complex individual behavior with equations becomes intractable. For instance, the individual copes with hysteresis, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
+\item When the interactions between the agents are complex, nonlinear, discontinuous, or discrete (for example, when the behavior of an agent can be altered dramatically, even discontinuously, by other agents).
+\item When space is crucial and the agents' positions are not fixed. Example: fire escape, trade, foraging in a stochastic spatial distribution of resources, traffic.
+\item Activities are a more natural way of describing the system than processes.
+\item Validation and calibration of the model through expert judgment is crucial. ABM is often the most appropriate way of describing what is actually happening in the real world, and the experts can easily “connect” to the model and have a feeling of “ownership”. 
+\item Stochasticity applies to the agents' behavior. With ABM, sources of randomness are applied to the right places as opposed to a noise term added more or less arbitrarily to an aggregate equation. 
+\begin{end}
+
+Besides naturality in expressing models, ABM models are flexible. ABM can manage agents at different levels of aggregation. The decission units can be a person but also social entities like families, couples or tribes with their own rules for intearaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decission-making and aggregation is clearly separated. The range of complexity of the agent,  its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individualality, and groups. This allows the modeller to work with different levels of description or complexity in the same model. %TODO ( explicar-ho mes???)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		%explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
+		% busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
+\\
 		ABM vs other solutions
 \\      
 		    other solutions miss some points that ABMs can cover.
@@ -468,8 +447,7 @@ to join them from their relationship and then we try to get the big picture.
 		      analitza model de Fort, critica'l) -> processos amb cultura/expansio d'idees o espai de temps
 		      diferents no es poden modelitzar amb fiÂ­sica. 
 \\
-		    saber ilustrar quan usaries un ABM i quan no.
-\\
+		    
 \\
 		    %aquests punts servirien per a justificar tambÃƒÂ© perque triem ABMs i no un
 		    %altre paradigma per a resoldre la nostra simulaciÃƒÂ³
@@ -480,38 +458,55 @@ to join them from their relationship and then we try to get the big picture.
 		    computational costs
 
 
-		\subsection{Evolution}
+\subsection{Evolution}
 		Darwinisme : survival of the fittest.
 		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
 		Dins el mark evolutiu establirem la competencia entre les dues estrategies : qui pugui tenir una
 		millor supervivencia del seu offspring perpetuara  la seva estrategia (ADN)
 		
-		\subsection{Coevolution}
+\subsection{Coevolution}
 		Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
 
 			%\subsubsection{Evolutionary \/ Genetic Programming?}
 	
-	\subsection{ODD.Agents} % i la resta? ODD.world = {ODD.climate, ODD.terrain, ODD.resources,....}
+\subsection{ODD.Agents} % i la resta? ODD.world = {ODD.climate, ODD.terrain, ODD.resources,....}
 
 
-gradacio 
-|..................................|
-FISICA -> ABM / Teoria Jocs -> IA-MDP-Agents <<-- i aixo motiva el seguent apartat : IA Agents
+%% posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI for games : rules, bayes,...
 
-Teoria de jocs costa de lligar amb dades reals i denses.
+\subsection{Intelligent agents} % explico un agent desde la IA ( Norvig )
 
 
-posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI for games : rules, bayes,...
+ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues --> cal IA.
 
-	\section{Intelligent agents} % explico un agent desde la IA ( Norvig )
+AI vs fake-AI : anar mes enlla de maquines d'estats, sistemes de regles, o mind mappings
+
+L'intere\'s d'aplicar AI es evitar hand-made minds. Hand-made mind pot portar un bias introduit pel dissenyador.
+Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semantica,.... posa mes exemples).
+Es busca una aproximacio mes SOFT i no tant hardwired com un sistema de regles (argumenta-ho MOLT,
+estaran els profes de la FIB, Â¿Miquel Sanchez? has de rebatre molts paradigmes : Neurons, SVMs, CBRs, Production Rules,...). 
+Menys bias, mes adaptatiu/flexible,... emergent i planificat.(llegeix llibres d'AI+SoftComp. Ã‚Â¿Ã‚Â¿Copiar justificacions de la SoftComputing + justificacions de ProblemSolving???)
+
+Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
+resource adquisition -> math modelling -> maximization -> planning.
+
+Neurons, SVM, CBR : d\'on trec els exemples per a fer learning? no tinc etiquetes concretes, categories, classes expliÂ­cites ; Reinforcement Learning, aplicable? com introduir MDP? (potser mes endevant et pots extendre sobre el que es MDP)\\
+
+Uncertainty \& Imprecision : state of resources(other foragers, climate stochacity),uncomplete know,... 
+modelthinking{The complexity wrought by the increases in information, adaptability, and interconnectedness implies a lack of predictability about what's next}.
+
+Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
+resource adquisition -> math modelling -> maximization -> planning.
+
+
 
 	  .- reactive, proactive...
 	  .- adaptation
 	  .- reasoning
 	  .- planner
 
-	  \subsection{Planners, ...}
+\subsection{Planners, ...}
 
 	    UCT/MDP
 	    policies
@@ -521,8 +516,9 @@ posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI f
 	    approaches : greedy, plan next action, ?`adding lookahead?
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	   \chapter{Platforms / Software packages}
+\chapter{Platforms / Software packages}
 		\subsubsection{NetLogo...}
 
 		    rasters -> +- automata
@@ -561,7 +557,9 @@ posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI f
 \chapter{SugarScape vs Advanced Sugarscape} %% aqui veig mes clar que tota aquesta part funcionaria mes com un ODD
 
 \\
-
+fer matching dels features sugarscape amb les raons d'usar ABM que hi ha
+			a la section sobre ABMs
+\\
 
  .. as proof case study
 %SugarScape(Epstein) : environment for resource retrieval, social interactions, reproduction
@@ -779,8 +777,10 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Takahashi, Shingo; Sallach, David; Rouchier, Juliette
 	\emph{Advancing Social Simulation: The First World Congress, Springer, p. 354, ISBN 978-4-431-73150-4}.
 	2007.
-
-
+\bibitem{Bonabeau2002}
+	Eric Bonabeau
+	\emph{Agent-based modeling: Methods and techniques for simulating human systems, PNAS, vol 99} 
+	2002.
 
 \end{thebibliography}
 
