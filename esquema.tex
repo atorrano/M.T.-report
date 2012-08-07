@@ -203,6 +203,15 @@ Modelling will help to find a consensus for expressing the concepts and properti
 \section{Modeling in social sciences}
 \label{sec:modelsinSC}
 
+%%TODO afegeixo quelcom com aixo?
+%%		      com la fisica ha tingut la seva matematica molt avancada, les CienSocials
+%%		      reusen molt de les metafores i analogies que fa la fiÂ­sica de la matematica
+%%		      als seus sistemes -> buscar models fiÂ­sics que no son sound ( busca publicacions,
+%%		      analitza model de Fort, critica'l) -> processos amb cultura/expansio d'idees o espai de temps
+%%		      diferents no es poden modelitzar amb fi­sica. 
+
+
+
 %%%% content
 
 %society/social sc descrip, 
@@ -264,8 +273,6 @@ A further section will describe this effect.
 
 % per on poses aixo? : ``Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems''. 
  
-
-%% ******* Modeling Lifecycle: SDLC; TOASK caldria una explicacio? nomes un grafic?
 %% no diguis Lifecycle, es Methodology
 
 Modeling methodology will be materialized through the framework of simulation technique. It will follow a series
@@ -295,7 +302,7 @@ of stages defined in simulation-based research.
 	\item [sensivity analisys] Detect variables and parameters that produce great oscilations on the simulation results.
 	\end{description}
 \end{description}
-
+%%TODO GRAFIC del "cicle``
 
 \begin{figure}[tp]
 \setlength\fboxsep{0pt}
@@ -307,9 +314,6 @@ of stages defined in simulation-based research.
 \end{figure}
 
 
-%% Emergence
-%Understanding a political or economic system requires more than an understanding of the individuals that comprise the system. It also requires understanding how the individuals interact with each other, and how the results can be more than the sum of the parts.
-
 %bridge to ABM section
 
 %%%% end content
@@ -317,53 +321,104 @@ of stages defined in simulation-based research.
 
 % TOASK afegir certs apartats de l'ODD??? adaptar les descripcions dels apartats de l'ODD\\
 
-%Comp emergent
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conceptual Framework}
 
-\subsection{Multi Agent Systems}
+\subsection{Multi Agent Systems} %% M.A.S.
 
 %% aqui poses tota la part mes tecnica/teorica dels agents, a ABM ja no caldra explicar-ho
 %% ABM explicara issues de modelatge i aplicacio cientifica
 
-MAS = AI + distrib/parallel comput ?
+%%TODO MAS = AI + distrib/parallel comput ?
 
-A MAS is build from some atomic identified entities in a bottom up design procedure.\\
+%% Agent System : equal agents in a shared environment
+%% Multi Agent System : Heterogeneous agents.
+%% TODO refina definicio 
+
+%% definition
+Multi Agent System(MAS) is an architecture for software development based on designing a solution for a problem that 
+executes of a set of computational entities called agents that interact themselves in a defined environment.\\
 Such entities are active decission making actors in the modelled system. The modelling lifecycle of an MAS will consider a stage where decission making processes must be identified from the system. Usually that decission making 
 actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will conform the MAS. The concept 
 '' agent '' condenses a set of features that will specify the modelling metaphor that an agent represents:
 some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, MASs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
 \\
-bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
-to join them from their relationship and then we try to get the big picture.
+%%bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
+%%to join them from their relationship and then we try to get the big picture.
 \\
-
-al conceptual framework : parla dels conceptes, que venen de MultiAgent systems...
-a la section d'ABM continua contactant amb MultiAgent Systems
-
-
 
 \subsubsection{Agents}
 
-agent -> metaphor ( agrada a l'Ulisses)
+%%TODO TOASK definir el necessari per a la comprensio dels ABMs? anar mes enlla i tocar features q no
+%% ens son rellevants??
 
----------agents, una component que dispara la no linearitat i per tant la complexitat\\
----------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
+%%---------agents, una component que dispara la no linearitat i per tant la complexitat\\
+%%---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
 
-		Features:
-\\
-		  agents ( els features isolats )
-		    goal planning/seeking
-		    reasoning
-		    adaptation
-		    decission making
-\\
-		  social interaction
-\\
-		  emergence
-		    complex behaviour patterns arising from goals and social interactions.
-		    counterintuitive patterns : example of the colum in front of the exit door.
+%%refine
+An agent is a computer system that is capable of independent action on behalf of its user or owner
+(figuring out what needs to be done to satisfy design objectives, rather than constantly being told).
+
+
+\begin{description} Features
+	\item Autonomy: other entities does not set its objectives nor decissions
+	\item Reactivity : response to environment stimulus and changes
+	\item Proactivity : anticipation, taking initiative, detect oportunities
+	\item Social capabilities:cooperation, coordination, negotiation, competition, mind models
+	\item Learning : prediction for future situations,reuse solutions,avoid past errors
+\end{description}
+
+
+\begin{description} Agent Architectures %% we are interested in this division
+	\item Reactive Architectures
+	\begin{itemize}
+		%%refine \item With Internal state vs without internal state
+		\item Mind Maps
+		\item State Transition Machines %% TODO mira exemple
+		\item if_then rules
+	\end{itemize}
+	
+	\item Deliberative Architectures ( goal oriented )
+	\begin{itemize}
+		\item Logic
+		\item BDI
+		\item Planning
+	\end{itemize}
+	\item Hybrid Architectures (equilibrium React vs Delib)
+		
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Abstract Specification for Agent Architecture}
+Math specification : 
+Environment states : e_i 
+Agent Actions : a_i
+Agent Run = <e_i,a_j>^n
+Transition specification, transformer...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{description} Environment Features
+	\item[Accessible vs Inaccessible] 
+	\item[Deterministic vs non-Deterministic] 
+	\item[Episodic vs non-Episodic] 
+	\item[Static vs Dynamic]
+	\item[Discrete vs Continuous] 
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO quan parlis de les platforms, FIPA &Co, justifica que anem amb Pandora+ODD. Per paralelisme a MN?
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%Features:
+%\\
+%		  agents ( els features isolats )
+%		    goal planning/seeking
+%		    reasoning
+%		    adaptation
+%		    decission making
+%		  social interaction
+%		  emergence
 \\		    
 		  bottom-up modelization
 		    identify reasoning/deciding units : what will become agents
@@ -379,38 +434,24 @@ agent -> metaphor ( agrada a l'Ulisses)
 \subsection{Complex Systems}
 
 \subsection{Evolution}
-		Darwinisme : survival of the fittest.
+\underline{	Darwinisme : survival of the fittest.
 		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
 		Dins el mark evolutiu establirem la competencia entre les dues estrategies : qui pugui tenir una
 		millor supervivencia del seu offspring perpetuara  la seva estrategia (ADN)
-		
+		}
 \subsection{Coevolution}
-		Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
+\underline{	Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
-
+		}
 
 \subsection{Emergence}
-
-Emergence is the outcome of the parts of the system that due to the dynamics of the intearactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics. 
-Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics. Exemple de la columna I una altre que sigui de social sciences...
-there is potential for emergent phenomena, i.e., when: 
+Emergence is the outcome of the parts of the system that due to the dynamics of the interactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics.  
+There is potential for emergent phenomena, i.e., when: 
 \begin{itemize}
-
  \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
  \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
  \item Heterogeneous interactions between agents.
  \item When there is unstability to perturbations although the system could be defined linearly.
- 
-\end{itemize}
-
-%TODO Exemple de la columna i una altre que sigui de social sciences...
-The Column example.\\
-There is potential for emergent phenomena, i.e., when
-\begin{itemize} 
-\item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
-\item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
-\item Heterogeneous interactions between agents.
-\item When there is unstability to perturbations although the system could be defined linearly.
 \end{itemize}
 
 
@@ -428,6 +469,8 @@ This will lead to situations of iterated interactions between a set of agents in
 \subsection{Benefits of ABM}
 %TODO (ref. PNAS.org)
 There are  some striking features that make ABM stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable, natural to express things with that “language”. Also, it is more flexible in the modelization. And to finish enumeration, ABM captures emergent phenomena. ABM follows the arise of emergence from its definition, following the bottom-up generation of phenomena from the atomic constituents when the system is run.
+Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way.\\
+
 ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. For example, it is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. Because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties.  
 
 %TODO Pregunta al Xavi sobre això:
@@ -450,26 +493,7 @@ Besides naturality in expressing models, ABM models are flexible. ABM can manage
 
 A last characteristic feature of agent computing, although not often noted, is that once a model has been created it provides not merely one aspect of the solution — the equilibria, say, or the stability — but rather entire solution trajectories.[Axtell2000]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\\
-		ABM vs other solutions
-\\      
-		    other solutions miss some points that ABMs can cover.
-\\
-		      non linearity, discontinuity, discrete spaces
-		      non-homogeneous populations (different behaviours, HG,AP, mixed-HG-AP...)
-		      unstability, critical points, transition points...
-\\
-		      DiffEq, as an example, fluid dynamics is an abstraction of a particle system.
-		      You should justify that the abstraction from particle to fluid is sound and
-		      parallel to the person->fluid abstraction, persons are not particles ;P
-\\
-		      com la fisica ha tingut la seva matematica molt avancada, les CienSocials
-		      reusen molt de les metafores i analogies que fa la fiÂ­sica de la matematica
-		      als seus sistemes -> buscar models fiÂ­sics que no son sound ( busca publicacions,
-		      analitza model de Fort, critica'l) -> processos amb cultura/expansio d'idees o espai de temps
-		      diferents no es poden modelitzar amb fi­sica. 
-\\
-		    
+
 \\
 		    %aquests punts servirien per a justificar tambÃƒÂ© perque triem ABMs i no un
 		    %altre paradigma per a resoldre la nostra simulaciÃƒÂ³
@@ -809,7 +833,10 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Robert L. Axtell
 	\emph{WHY AGENTS? ON THE VARIED MOTIVATIONS FOR AGENT COMPUTING IN THE SOCIAL SCIENCES.The Brookings Institution}
 	2000.
-
+\bibitem{Helbing2000}
+	D. Helbing, I. Farkas, and T. Vicsek 
+	\emph{Simulating dynamical features of escape panic. Nature 407, 487-490.}
+	2000.
 \end{thebibliography}
 
 \end{document}
