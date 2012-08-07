@@ -376,13 +376,34 @@ agent -> metaphor ( agrada a l'Ulisses)
 \\
 %%%%%%%%%%%%%%%
 
-
 \subsection{Complex Systems}
+
+\subsection{Evolution}
+		Darwinisme : survival of the fittest.
+		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
+		Dins el mark evolutiu establirem la competencia entre les dues estrategies : qui pugui tenir una
+		millor supervivencia del seu offspring perpetuara  la seva estrategia (ADN)
+		
 \subsection{Coevolution}
+		Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
+		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
+
+
 \subsection{Emergence}
 
 Emergence is the outcome of the parts of the system that due to the dynamics of the intearactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics. 
-%Exemple de la columna i una altre que sigui de social sciences...
+Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics. Exemple de la columna I una altre que sigui de social sciences...
+there is potential for emergent phenomena, i.e., when: 
+\begin{itemize}
+
+ \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
+ \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
+ \item Heterogeneous interactions between agents.
+ \item When there is unstability to perturbations although the system could be defined linearly.
+ 
+\end{itemize}
+
+%TODO Exemple de la columna i una altre que sigui de social sciences...
 The Column example.\\
 There is potential for emergent phenomena, i.e., when
 \begin{itemize} 
@@ -429,9 +450,6 @@ Besides naturality in expressing models, ABM models are flexible. ABM can manage
 
 A last characteristic feature of agent computing, although not often noted, is that once a model has been created it provides not merely one aspect of the solution — the equilibria, say, or the stability — but rather entire solution trajectories.[Axtell2000]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-		%explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
-		% busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
 \\
 		ABM vs other solutions
 \\      
@@ -457,40 +475,33 @@ A last characteristic feature of agent computing, although not often noted, is t
 		    %altre paradigma per a resoldre la nostra simulaciÃƒÂ³
 \\
 \subsection{ABM issues}
-result analisys\\
-computational costs\\
-[Axtell2000]%%TODO desplagia
-However, the agent-based modeling methodology has one significant disadvantage vis-a-
-vis mathematical modeling. Despite the fact that each run of such a model yields is a sufficiency
-theorem, a single run does not provide any information on the robustness of such theorems. That
-is, given that agent model A yields result R, how much change in A is necessary in order for R to
-no longer obtain? In mathematical economics such questions are often formally resolvable via
-inspection, simple differentiation, the implicit function theorem, comparative statics, and so on.
-The only way to treat this problem in agent computing is through multiple runs, systematically
-varying initial conditions or parameters in order to assess the robustness of results. While the
-curse of dimensionality places a practical upper bound on the size of the parameter space that can
-be checked for robustness, it is also the case that vast performance increases of computer
-hardware are rapidly converting what was once perhaps a fatal difficulty into a manageable one.
+
+What is mentioned in a past section as a benefit must be mentioned here because there is an other side of the coin.
+While other methods return only the equilibria or optimality conditions, ABMs yield trajectories of the
+system, allowing to retrieve more data to induce patterns or any other dynamics that could emerge. This has its
+drawbacks. For a causality result to be stablished or a pattern to be detected many runs must be performed.
+If a result R appears as an outcome of the model, how strong are the bond of the result and that model? How
+much does have to change the model to loose R? For equational models there are analytical methods to answer
+the question. With ABMs many runs must be launched varying the initial conditions, testing parameter sensibility
+and other protocols from model validation. This leads to computational expensive experimental tests. 
+You have to come to terms with a post phase of analisys which could be computationally expensive, although improvements
+in current computer technology begins to lower the concern.
+\cite{Axtell2000}
+
+Other computational costs that encumber the model are the decission processes, even more if we talk about AI and Problem Solving techniques with intensive cpu consumption.%TODO un pel curt
 
 
-\subsection{Evolution}
-		Darwinisme : survival of the fittest.
-		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
-		Dins el mark evolutiu establirem la competencia entre les dues estrategies : qui pugui tenir una
-		millor supervivencia del seu offspring perpetuara  la seva estrategia (ADN)
-		
-\subsection{Coevolution}
-		Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
-		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-			%\subsubsection{Evolutionary \/ Genetic Programming?}
-	
 \subsection{ODD.Agents} % i la resta? ODD.world = {ODD.climate, ODD.terrain, ODD.resources,....}
 
 
 %% posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI for games : rules, bayes,...
 
 \subsection{Intelligent agents} % explico un agent desde la IA ( Norvig )
+
+		%explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
+		% busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
 
 
 ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues --> cal IA.
@@ -513,8 +524,6 @@ modelthinking{The complexity wrought by the increases in information, adaptabili
 
 Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
 resource adquisition -> math modelling -> maximization -> planning.
-
-
 
 	  .- reactive, proactive...
 	  .- adaptation
