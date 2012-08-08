@@ -345,26 +345,84 @@ some enclosed set of mechanisms to be aware of the state of the system, a set of
 %%bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
 %%to join them from their relationship and then we try to get the big picture.
 \\
+Objections to MAS\\
+\begin{description} 
+	\item [Isn’t it all just Distributed/Concurrent Systems?]
+	\item [Isn’t it all just]
+	\item [Isn’t it all just Economics/Game Theory?]
+	\item [Isn’t it all just Social Science?]
+\end{description}
 
 \subsubsection{Agents}
 
-%%TODO TOASK definir el necessari per a la comprensio dels ABMs? anar mes enlla i tocar features q no
+%%TODO TOASK definir nomes el necessari per a la comprensio dels ABMs? anar mes enlla i tocar features q no
 %% ens son rellevants??
 
 %%---------agents, una component que dispara la no linearitat i per tant la complexitat\\
 %%---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
 
 %%refine
-An agent is a computer system that is capable of independent action on behalf of its user or owner
-(figuring out what needs to be done to satisfy design objectives, rather than constantly being told).
+An agent is a computer system that is capable of independent action on behalf of its user or owner,
+figuring out what needs to be done to satisfy design objectives, rather than constantly being told.
+An agent solves problems applying iteratively the schema of sense, decide and act continously. Each
+of the steps can add new targets to fulfill which will keep the agent exploring the environment and interacting
+with it and other agents to develop its strategies to solve the tasks.
+%%TODO posa el grafic del cicle d'un agent de la presentacio dels Flintstones.
+
+An example of very simple agent would be a thermostat. It samples the environment with a probe/sensor, checks if the
+temperature corresponds to the target. According to the measure it launches one of the two actions, to set
+the heater to ON or to OFF.\\
+
+%%TODO TOASK cal ser tant pedagogics i esmentar quins designs hi ha?
+%% endow with task-solving -> reasoning -> Agent Design
+%% endow with interaction managing -> society design -> MultiAgent Systems Design
+
+\textbf{Agent Features}
+\begin{description}
+	\item [Autonomy] Other entities do not set the agent objectives nor decissions.
+	\item [Reactivity] Response to environment stimulus or changes. A reactive agent is 
+	one that maintains an ongoing interaction with its environment, and responds to changes 
+	that occur in it (in time for the response to be useful).
+	\item [Proactivity] It means anticipation, taking initiative, detect oportunities. This
+	could materialize in prediction of a future event an realize a set of a priori actions 
+	before it occurs. For instance, if you are modelling a population of farmers and ... 
+	It could mean that the agent produces a set of actions that trigger an environment event
+	that will allow the execution of an action the approaches the agent to its goals.
+	\item [Social capabilities] Cooperation, coordination, negotiation, competition, and mind models.
+	Some objectives are not achievable by the only means of the agent. The agent must interact
+	with other entities that can produce the chain of actions to produce the changes in the
+	environment needed.
+	%conflict
+	Agents inhabit and intearact with the environment applying actions and producing effects
+	in a same medium. Goals, effects and dynamics can clash. Is it possible the appearance of
+	conflict. Goals and planned trend can be contradictory for more than one agent. According
+	to the model of negotiation of the agent it can try to change its plan trying to not interfere
+	with the other agents, or produce a deliberate interference or ignore it and stick to its
+	objectives.
+	Social capabilities will cover the spectrum of comunication but also integrate the other agents
+	behaviour. Some sophisticated agents include mind models to add, predict the other agents' 
+	behaviour in its knowledge representation engines.
+	\begin{description}
+		\item [Cooperation] Cooperation is working together as a team to achieve a shared goal.
+		Often prompted either by the fact that no one agent can achieve the goal alone, or that 
+		cooperation will obtain a better result (e.g., get result faster). That is very easy
+		exemplified with hunt parties or some families of farmers that while one member takes care
+		of the plot the other takes the cattle for grazing.
+
+		\item [Coordination] Coordination is managing the interdependencies between activities.
+		For example, if there is a non-sharable resource that you want to use and I want to use, 
+		then we need to coordinate.
+
+		\item [Negotiation] Negotiation is the ability to reach agreements on matters of common 
+		interest. At the appearance of conflict a solution that benefits the parts is searched.
+		For example: You have one TV in your house; you want to watch a movie, your housemate wants to
+		watch football. A possible deal: watch football tonight, and a movie tomorrow.
+		Typically involves offer and counter-offer, with compromises made by participants.
+
+	\end{description}
 
 
-\begin{description} Features
-	\item Autonomy: other entities does not set its objectives nor decissions
-	\item Reactivity : response to environment stimulus and changes
-	\item Proactivity : anticipation, taking initiative, detect oportunities
-	\item Social capabilities:cooperation, coordination, negotiation, competition, mind models
-	\item Learning : prediction for future situations,reuse solutions,avoid past errors
+	\item [Learning] : prediction for future situations,reuse solutions,avoid past errors
 \end{description}
 
 
@@ -386,6 +444,13 @@ An agent is a computer system that is capable of independent action on behalf of
 	\item Hybrid Architectures (equilibrium React vs Delib)
 		
 \end{description}
+
+Differences between Agents & Expert Systems pg17
+and who this fits in out models
+
+will we use BDIs? responc aixo a la part d'agents dins l'ABM?
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Abstract Specification for Agent Architecture}
 Math specification : 
