@@ -365,19 +365,55 @@ Objections to MAS\\
 An agent is a computer system that is capable of independent action on behalf of its user or owner,
 figuring out what needs to be done to satisfy design objectives, rather than constantly being told.
 An agent solves problems applying iteratively the schema of sense, decide and act continously. Each
-of the steps can add new targets to fulfill which will keep the agent exploring the environment and interacting
-with it and other agents to develop its strategies to solve the tasks.
+of the steps can add new targets to fulfill which will keep the agent exploring the environment and 
+interacting with it and other agents to develop its strategies to solve the tasks.
 %%TODO posa el grafic del cicle d'un agent de la presentacio dels Flintstones.
 
-An example of very simple agent would be a thermostat. It samples the environment with a probe/sensor, checks if the
-temperature corresponds to the target. According to the measure it launches one of the two actions, to set
-the heater to ON or to OFF.\\
-
+An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, 
+checks if the temperature corresponds to the target. According to the measure it launches one of the two 
+actions, to set the heater to ON or to OFF.\\
+But could we have something as complex as an agent representing a car in a traffic simulation while drives 
+from one point to another in the city. The agent would have accesible a knowledge base of traffic rules 
+constraining its actions. The agent at each time step of the simulation would control the swarm of other 
+vehicles to avoid collisions and would follow paths and perform actions coherent to the rules of traffic. 
+The traffic rules would act as middle interface consensus of fair driving that coordinates all the cars 
+and allows some prediction of the adjacent cars. The agent can be designed a step further. When congestion 
+increases to a predefined threshold, which could be tuned through authomatic learning, the agent recalculates 
+the route to adapt and avoid the traffic jam.
 %%TODO TOASK cal ser tant pedagogics i esmentar quins designs hi ha?
 %% endow with task-solving -> reasoning -> Agent Design
 %% endow with interaction managing -> society design -> MultiAgent Systems Design
 
-\textbf{Agent Features}
+%%\subsubsection{Agent Architecture Specification}
+
+\paragraph{Agent formal description}
+	
+Let E be an environment with a finite set of states 
+\begin{equation}
+	\Omega = \{\omega_0,\omega_1,\ldots \}
+\end{equation}
+Each agent has available a set of actions 
+\begin{equation}
+	A = \{ \alpha_0, \alpha_1, \ldots \} 
+\end{equation}
+An action is a function that changes the state of the environment 
+\begin{equation}
+	\alpha_i : \Omega \longrightarrow \Omega 
+\end{equation}
+An agent $X_i$ retrieves information from environment states to choose actions to launch
+\begin{equation}
+	X_i : \Omega \longrightarrow A 
+\end{equation}
+An agent's trace or run is a sequence of states of the environment where 
+the transitions were triggered by actions launched by the agents
+\begin{equation}
+	r = ( \omega_0 , \alpha_0 , \omega_1 , \alpha_1 ,\ldots, \omega_u-1 , \alpha_u-1 , \omega_u )
+\end{equation}
+\begin{equation}
+	\forall j \in [0..u-1] : X_i(\omega_j) = \alpha_j
+\end{equation}
+\\
+\textbf{Agent Main Features}
 \begin{description}
 	\item [Autonomy] Other entities do not set the agent objectives nor decissions.
 	\item [Reactivity] Response to environment stimulus or changes. A reactive agent is 
@@ -425,6 +461,7 @@ the heater to ON or to OFF.\\
 	\item [Learning] : prediction for future situations,reuse solutions,avoid past errors
 \end{description}
 
+%% extra properies:Mobility,Veracity,Benevolence,Rationality,Learning/adaption.
 
 \begin{description} Agent Architectures %% we are interested in this division
 	\item Reactive Architectures
@@ -432,7 +469,7 @@ the heater to ON or to OFF.\\
 		%%refine \item With Internal state vs without internal state
 		\item Mind Maps
 		\item State Transition Machines %% TODO mira exemple
-		\item if_then rules
+		\item if-then rules
 	\end{itemize}
 	
 	\item Deliberative Architectures ( goal oriented )
@@ -445,10 +482,12 @@ the heater to ON or to OFF.\\
 		
 \end{description}
 
-Differences between Agents & Expert Systems pg17
-and who this fits in out models
+%%TODO TOASK Differences between Agents & Expert Systems pg17
+%% why did we choose agents? why not embed and ExpSyst in our agents?
 
-will we use BDIs? responc aixo a la part d'agents dins l'ABM?
+%%TODO TOASK BDIs? not decided yet. Responc aixo a la part d'agents dins l'ABM?
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -460,12 +499,31 @@ Agent Run = <e_i,a_j>^n
 Transition specification, transformer...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{description} Environment Features
-	\item[Accessible vs Inaccessible] 
-	\item[Deterministic vs non-Deterministic] 
-	\item[Episodic vs non-Episodic] 
-	\item[Static vs Dynamic]
-	\item[Discrete vs Continuous] 
+\begin{description} 
+	\item [Environment Features]
+	\item [Accessible vs Inaccessible] An accessible environment is one in which the agent
+		can obtain complete, accurate, up-to-date information about the environment’s state.
+		Most moderately complex environments (including, for example, the everyday physical 
+		world and the Internet) are inaccessible.
+		The more accessible an environment is, the simpler it is to build agents to operate in it.
+	\item [Deterministic vs non-Deterministic] As we have already mentioned, a deterministic
+		environment is one in which any action has a single guaranteed effect — there is no 
+		uncertainty about the state that will result from performing an action.
+		The physical world can to all intents and purposes be regarded as non-deterministic.
+		Non-deterministic environments present greater problems for the agent designer.
+	\item [Episodic vs non-Episodic] In an episodic environment, the performance of an
+		agent is dependent on a number of discrete episodes, with no link between the performance
+		of an agent in different scenarios. Episodic environments are simpler from the agent
+		developer’s perspective because the agent can decide what action to perform based only 
+		on the current episode — it need not reason about the interactions between this and future 
+		episodes.
+	\item [Static vs Dynamic] A static environment is one that can be assumed to remain unchanged 
+		except by the performance of actions by the agent. A dynamic environment is one that has 
+		other processes operating on it, and which hence changes in ways beyond the agent’s control.
+		The physical world is a highly dynamic environment.
+	\item [Discrete vs Continuous] An environment is discrete if there are a fixed, finite
+		number of actions and percepts in it. Russell and Norvig give a chess game as 
+		an example of a discrete environment, and taxi driving as an example of a continuous one.
 \end{description}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO quan parlis de les platforms, FIPA &Co, justifica que anem amb Pandora+ODD. Per paralelisme a MN?
