@@ -24,7 +24,7 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumerate}
-
+\usepackage{algorithm2e}
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
 \small{Master Thesis}}
@@ -345,13 +345,6 @@ some enclosed set of mechanisms to be aware of the state of the system, a set of
 %%bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
 %%to join them from their relationship and then we try to get the big picture.
 \\
-Objections to MAS\\
-\begin{description} 
-	\item [Isn’t it all just Distributed/Concurrent Systems?]
-	\item [Isn’t it all just]
-	\item [Isn’t it all just Economics/Game Theory?]
-	\item [Isn’t it all just Social Science?]
-\end{description}
 
 \subsubsection{Agents}
 
@@ -368,6 +361,18 @@ An agent solves problems applying iteratively the schema of sense, decide and ac
 of the steps can add new targets to fulfill which will keep the agent exploring the environment and 
 interacting with it and other agents to develop its strategies to solve the tasks.
 %%TODO posa el grafic del cicle d'un agent de la presentacio dels Flintstones.
+
+\begin{algorithm}[H]
+\SetAlgoLined
+	initialization\;
+	\While{not end}
+	{
+		s = read environment current state\;
+		a = getAction(s)\;
+		launch(a);
+	}
+\caption{agent loop}
+\end{algorithm}
 
 An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, 
 checks if the temperature corresponds to the target. According to the measure it launches one of the two 
@@ -400,25 +405,58 @@ An action is a function that changes the state of the environment
 \begin{equation}
 	\alpha_i : \Omega \longrightarrow \Omega 
 \end{equation}
-An agent $X_i$ retrieves information from environment states to choose actions to launch
+An agent's run is a sequence of states of the environment where the transitions were triggered 
+by actions launched by the agent. Let $R$ be the set of all possible runs over $\Omega$ and $A$, and
+$r^{u}$ one sequence of length $u$.
 \begin{equation}
-	X_i : \Omega \longrightarrow A 
+	r^{u} = ( \omega_0 , \alpha_0 , \omega_1 , \alpha_1 ,\ldots, \omega_{u-1} , \alpha_{u-1} , \omega_u )
 \end{equation}
-An agent's trace or run is a sequence of states of the environment where 
-the transitions were triggered by actions launched by the agents
+Let $R^{A}$ the sequences that end with an action 
 \begin{equation}
-	r = ( \omega_0 , \alpha_0 , \omega_1 , \alpha_1 ,\ldots, \omega_u-1 , \alpha_u-1 , \omega_u )
+	r^{u-1}_{A} = ( \omega_0 , \alpha_0 , \omega_1 , \alpha_1 ,\ldots, \omega_{u-1} , \alpha_{u-1} )
 \end{equation}
+Let $R^{\Omega}$ the sequences that end with an environment state 
 \begin{equation}
-	\forall j \in [0..u-1] : X_i(\omega_j) = \alpha_j
+	r^{u}_{\Omega} = ( \omega_0 , \alpha_0 , \omega_1 , \alpha_1 ,\ldots, \omega_{u-1} , \alpha_{u-1} , \omega_u )
 \end{equation}
+Actions in the run are the response of an agent $X_i$ to the states of the environment
+\begin{equation}
+	\forall j \in [0..u-1] : X_i(r^{j}_{\Omega}) = \alpha_j
+\end{equation}
+An stochastic and historic dependent environment behaviour, $\Tau$, can be described as
+\begin{equation}
+	\tau : R^{A} \longrightarrow \wp(\Omega)
+\end{equation}
+A Markovian environment behaviour would be defined as
+\begin{equation}
+	\tau : \Omega,A \longrightarrow \wp(\Omega)
+\end{equation}
+and the next would hold for the runs
+\begin{equation} 
+	\forall i \in [0..u-1] : \tau(\omega_i, \alpha_i) = \omega_{i+1}
+\end{equation}
+Let's say that no end condition is described for the runs here because althought it could happen
+$\tau(\omega_i, \alpha_i) = \varnothing$, many other conditions could mark the end of a run.
+For instance, a run can finish because the population of agents reaches 0 due to some dying process.
+A run can also stop after a finite number of transitions, or some predefined event appears.\\
 \\
-\textbf{Agent Main Features}
+An agent $X_i$ retrieves information from the history of environment states to choose an action to launch
+\begin{equation}
+	X_i : R^{\Omega} \longrightarrow A 
+\end{equation}
+
+%%
+\\
+\paragraph{Agent Main Features}
 \begin{description}
 	\item [Autonomy] Other entities do not set the agent objectives nor decissions.
 	\item [Reactivity] Response to environment stimulus or changes. A reactive agent is 
 	one that maintains an ongoing interaction with its environment, and responds to changes 
-	that occur in it (in time for the response to be useful).
+	that occur in it (in time for the response to be useful). A pure reactive agent, the 
+	thermostat can be formally descrived as
+	\begin{equation}
+		X_i : \Omega \longrightarrow A 
+	\end{equation}
 	\item [Proactivity] It means anticipation, taking initiative, detect oportunities. This
 	could materialize in prediction of a future event an realize a set of a priori actions 
 	before it occurs. For instance, if you are modelling a population of farmers and ... 
@@ -457,18 +495,33 @@ the transitions were triggered by actions launched by the agents
 
 	\end{description}
 
-
-	\item [Learning] : prediction for future situations,reuse solutions,avoid past errors
+	\item [Learning] Prediction for future situations,reuse solutions,avoid past errors. The agents stores
+	patterns from the history of environment changes, or other agents' actions. The patterns conform a model
+	of the world or of the task to perform used by the agent for future actions. As a detail, although the 
+	learning could be produced in first stages of the run to produce benefits along the life of the agent,
+	it is desirable that the learning should occur along all the run to produce a real adaptation of the 
+	agent. The keyword is \textbf{incremental learning}.
 \end{description}
 
 %% extra properies:Mobility,Veracity,Benevolence,Rationality,Learning/adaption.
 
-\begin{description} Agent Architectures %% we are interested in this division
+\paragraph{Inteligent Agents Architecture}
+\begin{description} %% we are interested in this division
 	\item Reactive Architectures
 	\begin{itemize}
 		%%refine \item With Internal state vs without internal state
 		\item Mind Maps
 		\item State Transition Machines %% TODO mira exemple
+
+		\begin{figure}[tp]
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/agentArchitect1.png}}
+		\caption{State Machine Reactive Agent Architecture}
+		%by Wooldridge2002 \cite{Wooldridge2002}}
+		\label{fig:SimTL}
+		\end{figure}
+
 		\item if-then rules
 	\end{itemize}
 	
@@ -482,21 +535,12 @@ the transitions were triggered by actions launched by the agents
 		
 \end{description}
 
+
 %%TODO TOASK Differences between Agents & Expert Systems pg17
 %% why did we choose agents? why not embed and ExpSyst in our agents?
 
 %%TODO TOASK BDIs? not decided yet. Responc aixo a la part d'agents dins l'ABM?
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Abstract Specification for Agent Architecture}
-Math specification : 
-Environment states : e_i 
-Agent Actions : a_i
-Agent Run = <e_i,a_j>^n
-Transition specification, transformer...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{description} 
@@ -504,8 +548,10 @@ Transition specification, transformer...
 	\item [Accessible vs Inaccessible] An accessible environment is one in which the agent
 		can obtain complete, accurate, up-to-date information about the environment’s state.
 		Most moderately complex environments (including, for example, the everyday physical 
-		world and the Internet) are inaccessible.
+		world) are inaccessible.\\
 		The more accessible an environment is, the simpler it is to build agents to operate in it.
+		Accuracy and completeness about information retrieved is key to decission making.
+		All the missing stretch must be supplied with uncertainty managing techniques.
 	\item [Deterministic vs non-Deterministic] As we have already mentioned, a deterministic
 		environment is one in which any action has a single guaranteed effect — there is no 
 		uncertainty about the state that will result from performing an action.
@@ -540,16 +586,16 @@ Transition specification, transformer...
 %		    decission making
 %		  social interaction
 %		  emergence
-\\		    
-		  bottom-up modelization
-		    identify reasoning/deciding units : what will become agents
-		    identify agents' relationships. 
-\\
-		  natural correspondence/matching of identified entities in social systems vs 
-		  agents in the ABMs theoretical framework
-\\
-		  temporal correlation - histeresis
-\\
+%\\		    
+%		  bottom-up modelization
+%		    identify reasoning/deciding units : what will become agents
+%		    identify agents' relationships. 
+%\\
+%		  natural correspondence/matching of identified entities in social systems vs 
+%		  agents in the ABMs theoretical framework
+%\\
+%		  temporal correlation - histeresis
+%\\
 %%%%%%%%%%%%%%%
 
 \subsection{Complex Systems}
