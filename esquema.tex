@@ -489,9 +489,10 @@ An agent $X_i$ retrieves information from the history of environment states to c
 
 		\item [Negotiation] Negotiation is the ability to reach agreements on matters of common 
 		interest. At the appearance of conflict a solution that benefits the parts is searched.
-		For example: You have one TV in your house; you want to watch a movie, your housemate wants to
-		watch football. A possible deal: watch football tonight, and a movie tomorrow.
-		Typically involves offer and counter-offer, with compromises made by participants.
+		For example: Two farmers arrive at a piece of land good for crop growing. A possible deal: split
+		the land in two.Another solution : both work on the land, but each has assigned different
+		tasks. By the end of the year they divide the harvest. Typically involves offer and 
+		counter-offer, with compromises made by participants.
 
 	\end{description}
 
@@ -506,6 +507,11 @@ An agent $X_i$ retrieves information from the history of environment states to c
 %% extra properies:Mobility,Veracity,Benevolence,Rationality,Learning/adaption.
 
 \paragraph{Inteligent Agents Architecture}
+
+This paragraph will show different decompositions of how an agent is structured 
+and provide an answer to the question of how the sensor data and the current internal 
+state of the agent determine the actions and future internal state of the agent.
+
 \begin{description} %% we are interested in this division
 	\item Reactive Architectures
 	\begin{itemize}
@@ -526,11 +532,78 @@ An agent $X_i$ retrieves information from the history of environment states to c
 	\end{itemize}
 	
 	\item Deliberative Architectures ( goal oriented )
-	\begin{itemize}
-		\item Logic
-		\item BDI
-		\item Planning
-	\end{itemize}
+	A deliberative agent uses symbolic reasoning to deduce the action to launch. The deliberative agent
+	contains explicitly the goal that steers its behaviour. Deliberation is done through an internal formal 
+	representation of the state of the world, the state of the agent and other information retrieved by
+	it. A logic engine will produce deductions from the facts stored in the agent memory, the knowledge
+	base. The perceptions from the environment become facts to add to the internal representation of
+	the environment. From this internal world model the agent can deduce trends for prediction besides
+	the next action to launch. 
+	\begin{description} 
+		\item [Logic] Deliberative agents will use assert clauses and structures to represent facts in 
+		a logic of some level, CP0, CP1. Each new change in the knowledge base will allow to deduce
+		new facts from the status of the system to check againts the goals and other issues the agent
+		is considering to produce an action coherent with the planning and the mechanics of the environment
+		to fulfill a new step to get nearer to the goals.
+		%%TODO dibuix de la taula i els objectes mes la representacio interna : on(), above(),under()
+		The agent will use its knowledge base as a theory of the world and things plus the dynamic facts
+		that represent the volatile states.\\
+		Let $\rho$ be a theory of the world. Depending on the architecture this can be a set of rules,
+		or a learned structure along the run.\\ 
+		If $\Gamma$ is a description for the current state of the world. $A$ the set of possible actions 
+		\{$\alpha_1$, $\alpha_2$, $\alpha_3$, \ldots\}. And $\Gamma \vdash_{\rho} \Phi$ stands for a succesful 
+		prove that $\Phi$ is deduced from the knowledge base $\Gamma$ using theory $\rho$. The Deliberative 
+		agent will choose actions according to a schema like that:
+
+		\begin{algorithm}[H]
+		\ForAll{$\alpha \in A$}{	
+			\If{$\Gamma \vdash_{\rho} doAction(\alpha)$}{
+				\Return $\alpha$;
+			}
+		}
+
+		\ForAll{$\alpha \in A$}{	
+			\If{$\Gamma \nvdash_{\rho} \neg doAction(\alpha)$}{
+				\Return $\alpha$;
+			}
+		}
+		\Return null;
+		\end{algorithm}
+
+		Asserts from Logic will be used to state the facts that are true from environment
+		and the other agents.Knowledge representation. Solvers : Resolution, Forward/Backward chaining
+		
+		\item [BDI] Yoav Shoham introduced “agent-oriented programming” in 1990(\cite{Shoham1990}):“new 
+		programming paradigm, based on a societal view of computation”. The key idea is about directly 
+		programming agents in terms of intentional notions like belief, commitment, and intention.
+		BDI belongs to a overloaded kind of logics cal modal logic which add meta language operators to
+		the facts to alter with some nuance the meaning or the semantic interpretation of the fact.
+		For instance, let $\phi$ be a fact that could represent ``deer is in the wood''. Indeed it is true
+		for the example. Our agent has not seen it and only has some clue that the deer is in the 
+		wood; so the agent states $\Box_B \phi$, with an operator $\Box_B$ to indicate ``I believe the 
+		deer is in the wood''. The memory of the agent will contain also the facts below
+		\begin{description}
+		\item[$\theta$] = ``I am hungry''.
+		\item [$\Box_D \eta$] = ``I have Desire for going hunting''.
+		\item [$\Box_I \eta$] = ``I have Intention for going hunting''.
+		\end{description}
+		Some of these entail from other. They are governed by the next rules
+		\begin{itemize}
+		\item hungry -> D-hunt
+		\item D-hunt && x in y -> I-hunt
+		\item I-hunt && x in y -> launch action go(y)
+		\end{itemize}
+		
+
+		
+		Programming agents this way allows a deeper description of the dynamics around the goals an agent 
+		self-imposes and also an easier way for the agent to reason about the other agents. This last point
+		crucial for a better integration of the social dynamics in the planning of goal achieving.
+		
+
+		\item [Planning]
+	\end{description}
+
 	\item Hybrid Architectures (equilibrium React vs Delib)
 		
 \end{description}
