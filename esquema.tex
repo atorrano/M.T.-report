@@ -24,7 +24,7 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumerate}
-\usepackage{algorithm2e}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
 \small{Master Thesis}}
@@ -575,8 +575,8 @@ state of the agent determine the actions and future internal state of the agent.
 		
 		\item [BDI] Yoav Shoham introduced “agent-oriented programming” in 1990(\cite{Shoham1990}):“new 
 		programming paradigm, based on a societal view of computation”. The key idea is about directly 
-		programming agents in terms of intentional notions like belief, commitment, and intention.
-		BDI belongs to a overloaded kind of logics cal modal logic which add meta language operators to
+		programming agents in terms of \textbf{intentional} notions like belief, commitment, and intention.
+		BDI belongs to a overloaded kind of logics called modal logics which add meta language operators to
 		the facts to alter with some nuance the meaning or the semantic interpretation of the fact.
 		For instance, let $\phi$ be a fact that could represent ``deer is in the wood''. Indeed it is true
 		for the example. Our agent has not seen it and only has some clue that the deer is in the 
@@ -584,24 +584,61 @@ state of the agent determine the actions and future internal state of the agent.
 		deer is in the wood''. The memory of the agent will contain also the facts below
 		\begin{description}
 		\item[$\theta$] = ``I am hungry''.
+		\item[$\eta$] = ``I go hunting''.
 		\item [$\Box_D \eta$] = ``I have Desire for going hunting''.
 		\item [$\Box_I \eta$] = ``I have Intention for going hunting''.
 		\end{description}
-		Some of these entail from other. They are governed by the next rules
+		Some of these entail from other. They are governed by the next rules from the knowledge base
 		\begin{itemize}
-		\item hungry -> D-hunt
-		\item D-hunt && x in y -> I-hunt
-		\item I-hunt && x in y -> launch action go(y)
+		\item myState(HUNGRY) 
+			$\rightarrow$ $\Box_D$ doAction(HUNT)
+		\item $\Box_D$ doAction(HUNT) $\wedge$ $\Box_B$ entityAtPlace($x$,$y$) $\wedge$ edible($x$) 
+			$\rightarrow$ $\Box_I$ doAction(HUNT)
+		\item $\Box_I$ doAction(HUNT) $\wedge$ $\Box_B$ entityAtPlace($x$,$y$) $\wedge$ edible($x$) 
+			$\rightarrow$ doAction(go, $y$)
+		\item entityAtPlace(MYSELF,$p$) $\wedge$ $\Box_I$ doAction(HUNT) $\wedge$ entityAtPlace($x$,$y$) $\wedge$ edible($x$) $\wedge$ distance($p$,$y$) $\leq$ HUNTDISTANCE	
+			$\rightarrow$ doAction(HUNT,$x$)
+		\item doAction($a$,$x$) $\rightarrow$ launchAction($a$($x$))
 		\end{itemize}
-		
 
-		
+		This rules would carry the agent to satisfy the goal of feeding going through the goal of going where the
+		prey is, and see that it is indeed there where the agent believed.
+
 		Programming agents this way allows a deeper description of the dynamics around the goals an agent 
 		self-imposes and also an easier way for the agent to reason about the other agents. This last point
-		crucial for a better integration of the social dynamics in the planning of goal achieving.
-		
+		crucial for a better integration of the social dynamics in the planning of goal achieving. The agent
+		can construct through facts of Believing, Desire and Intention a mind model of the other models taking
+		into account their BDI intentions and adapting to them to cooperate or compete. 
+
+		Continuing the example, the agent would be inmersed in social deliberations after retrieving from the
+		world facts like $\Box_{I}^i \eta$ that stand for ``Agent $i$ has the Intention of hunting''. The 
+		interaction of all these facts, entityAtPlace(MYSELF,P), entityAtPlace($i$, P) will make deduce to the
+		MYSELF agent somekind of communication protocol with agent $i$ to solve the conflict. Because they could 
+		end to hunting the same deer, before they would launch their HUNT action, they must reach a consensus about
+		what to do each other. 
+
+		\begin{algorithm}
+		%\SetAlgoLined
+
+		\SetKwData{B}{B}\SetKwData{D}{D}\SetKwData{I}{I}
+		\SetKwFunction{getNextPercept}{getNextPercept}\SetKwFunction{brf}{brf}\SetKwFunction{options}{options}\SetKwFunction{filter}{filter}\SetKwFunction{plan}{plan}\SetKwFunction{execute}{execute}
+		\BlankLine
+		$B \gets B_0$\;
+		$I \gets I_0$\;
+		\While {true}{
+			$\delta$ $\gets$ getNextPercept()\;
+			$B$ $\gets$ brf($B$, $\delta$)\;
+			$D$ $\gets$ options($B$, $I$)\;
+			$I$ $\gets$ filter($B$, $D$, $I$)\;
+			$\pi$ $\gets$ plan($B$, $I$)\;
+			execute($\pi$)\;
+		}
+		\end{algorithm}
 
 		\item [Planning]
+
+
+
 	\end{description}
 
 	\item Hybrid Architectures (equilibrium React vs Delib)
