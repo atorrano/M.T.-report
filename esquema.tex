@@ -24,7 +24,8 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumerate}
-\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{algorithm2e}
+%\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
 \small{Master Thesis}}
@@ -617,9 +618,11 @@ state of the agent determine the actions and future internal state of the agent.
 		end to hunting the same deer, before they would launch their HUNT action, they must reach a consensus about
 		what to do each other. 
 
-		\begin{algorithm}
-		%\SetAlgoLined
+		Schema for BDI	
 
+
+		\begin{algorithm}[H]
+		\SetAlgoLined
 		\SetKwData{B}{B}\SetKwData{D}{D}\SetKwData{I}{I}
 		\SetKwFunction{getNextPercept}{getNextPercept}\SetKwFunction{brf}{brf}\SetKwFunction{options}{options}\SetKwFunction{filter}{filter}\SetKwFunction{plan}{plan}\SetKwFunction{execute}{execute}
 		\BlankLine
@@ -633,10 +636,15 @@ state of the agent determine the actions and future internal state of the agent.
 			$\pi$ $\gets$ plan($B$, $I$)\;
 			execute($\pi$)\;
 		}
+		\caption{BDI main loop}
 		\end{algorithm}
 
-		\item [Planning]
 
+		other issues about BDI : planning of actions to fulfill intentions, and commitment management
+
+		second algorithm
+
+		\item [Planning]
 
 
 	\end{description}
@@ -685,6 +693,19 @@ state of the agent determine the actions and future internal state of the agent.
 %TODO quan parlis de les platforms, FIPA &Co, justifica que anem amb Pandora+ODD. Per paralelisme a MN?
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\textbf{Utility}
+
+• Assume $\Omega$ = {$\omega_1$, $\omega_2$, . . .} is the set of “outcomes” that
+agents have preferences over.
+• We capture preferences by utility functions:
+ui : $\Omega$ $\rightarrow$ R
+uj : $\Omega$ $\rightarrow$  R
+
+• Utility functions lead to preference orderings over
+outcomes:
+
+$\omega$ $\succeq_i$ $\omega$' means ui(ω) $\geq$ ui(ω')
+$\omega$ $\succ_i$ $\omega$' means ui(ω) > ui(ω')
 
 
 %Features:
