@@ -360,32 +360,86 @@ An agent is a computer system that is capable of independent action on behalf of
 figuring out what needs to be done to satisfy design objectives, rather than constantly being told.
 An agent solves problems applying iteratively the schema of sense, decide and act continously. Each
 of the steps can add new targets to fulfill which will keep the agent exploring the environment and 
-interacting with it and other agents to develop its strategies to solve the tasks.
-%%TODO posa el grafic del cicle d'un agent de la presentacio dels Flintstones.
+interacting with it and other agents to develop its strategies to solve the tasks and achieve goals.
 
-\begin{algorithm}[H]
-\SetAlgoLined
+	\begin{figure}[h]
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.5pt}
+	\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/agentArchitect0.jpg}}
+	\caption{Agents interact with environments through sensors and actuators.}
+	%by Wooldridge2002 \cite{Wooldridge2002}}
+	\label{fig:SimTL}
+	\end{figure}
+
+
+ 	\begin{algorithm}[H]
+	\SetAlgoSkip{} 
+	\SetAlgoLined
 	initialization\;
 	\While{not end}
 	{
 		s = read environment current state\;
 		a = getAction(s)\;
-		launch(a);
+		launch(a)\;
 	}
-\caption{agent loop}
-\end{algorithm}
+	\caption{Agents basic main loop.}
+	\end{algorithm}
+
+
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l|}
+		\hline
+			Agent's main loop & Agent Basic Structure \\
+		\hline
+		 	\begin{algorithm}[H]
+			\SetAlgoSkip{} 
+			\SetAlgoLined
+			initialization\;
+			\While{not end}
+			{
+				s = read environment current state\;
+				a = getAction(s)\;
+				launch(a)\;
+			}
+			\end{algorithm}
+			&
+			\includegraphics[width=60mm,keepaspectratio=true]{figures/agentArchitect0.jpg}\\
+		\hline
+	\end{tabular}
+	\caption{Agent's basic characterization.}
+	\label{tab:BasicAgent}
+	\end{table}
 
 An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, 
 checks if the temperature corresponds to the target. According to the measure it launches one of the two 
 actions, to set the heater to ON or to OFF.\\
-But could we have something as complex as an agent representing a car in a traffic simulation while drives 
+But we could have something as complex as an agent representing a car in a traffic simulation while drives 
 from one point to another in the city. The agent would have accesible a knowledge base of traffic rules 
 constraining its actions. The agent at each time step of the simulation would control the swarm of other 
 vehicles to avoid collisions and would follow paths and perform actions coherent to the rules of traffic. 
 The traffic rules would act as middle interface consensus of fair driving that coordinates all the cars 
 and allows some prediction of the adjacent cars. The agent can be designed a step further. When congestion 
 increases to a predefined threshold, which could be tuned through authomatic learning, the agent recalculates 
-the route to adapt and avoid the traffic jam.
+the route to adapt and avoid the traffic jam.\\
+Intelligent agent design considers the setting of Perceptions, Actions, Goals and Environment. These
+aspects conform a general structure where an agent design can grow. Mentioning an example considering a 
+system that simulates hunting practices from ancient cultures will show how features from the agent are 
+attached to these modules in the structure(table \ref{tab:hunterAgentSetting}).\\
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{|l||l|}
+		\hline
+		\textbf{Perceptions} & Hunger, TerrainSlope, ReadTracks, LookForPrey.\\
+		\textbf{Actions} & Eat, LightFire, Cook, ThrowArrow, Walk, Run, Stalk, Hide.\\
+		\textbf{Goals} & Survive, AvoidHarm.\\
+		\textbf{Environment} & Weather, Plants, Mountain, Valley, Caves, Deers, Rabbits.\\ 
+		\hline
+	\end{tabular}
+	\caption{Setting table for a hunter agent.}
+	\label{tab:hunterAgentSetting}
+	\end{table}
+
 %%TODO TOASK cal ser tant pedagogics i esmentar quins designs hi ha?
 %% endow with task-solving -> reasoning -> Agent Design
 %% endow with interaction managing -> society design -> MultiAgent Systems Design
@@ -448,9 +502,13 @@ An agent $X_i$ retrieves information from the history of environment states to c
 
 %%
 \\
-\paragraph{Agent Main Features}
+\paragraph{Agent Main Behaviours}
 \begin{description}
-	\item [Autonomy] Other entities do not set the agent objectives nor decissions.
+	\item [Autonomy] Other entities do not set the agent objectives nor decissions. With agents, 
+	we give a high-level description of the delegated goal, and let the control mechanism figure
+	out what to do, knowing that it will act in accordance with some built-in theory of rational 
+	agency to satisfy it.
+
 	\item [Reactivity] Response to environment stimulus or changes. A reactive agent is 
 	one that maintains an ongoing interaction with its environment, and responds to changes 
 	that occur in it (in time for the response to be useful). A pure reactive agent, the 
@@ -507,7 +565,7 @@ An agent $X_i$ retrieves information from the history of environment states to c
 
 %% extra properies:Mobility,Veracity,Benevolence,Rationality,Learning/adaption.
 
-\paragraph{Inteligent Agents Architecture}
+\paragraph{Intelligent Agents Architecture}
 
 This paragraph will show different decompositions of how an agent is structured 
 and provide an answer to the question of how the sensor data and the current internal 
@@ -517,7 +575,17 @@ state of the agent determine the actions and future internal state of the agent.
 	\item Reactive Architectures
 	\begin{itemize}
 		%%refine \item With Internal state vs without internal state
-		\item Mind Maps
+
+bounded an tractable number of states of the environment :
+table[state_i] = action_j then no agent is needed;
+
+untractable number of states, combinatoric space -> feature and structure extraction to
+infer the action to perform;
+a change in the environmen provokes a response from the agent.
+when changes and deliberations in agent are only motivated by an event in the environment, the
+agent is pure reactive.\\
+
+		\item Cognitive Maps
 		\item State Transition Machines %% TODO mira exemple
 
 		\begin{figure}[tp]
@@ -619,7 +687,6 @@ state of the agent determine the actions and future internal state of the agent.
 		what to do each other. 
 
 		Schema for BDI	
-
 
 		\begin{algorithm}[H]
 		\SetAlgoLined
