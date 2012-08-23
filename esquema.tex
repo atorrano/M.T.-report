@@ -570,20 +570,53 @@ An agent $X_i$ retrieves information from the history of environment states to c
 This paragraph will show different decompositions of how an agent is structured 
 and provide an answer to the question of how the sensor data and the current internal 
 state of the agent determine the actions and future internal state of the agent.
+The thermostat example contains an environment with a bounded and tractable number of states.
+Such situations can be solved with a direct implementation setting the bijective function 
+state - action with a table or with a limited number of rules.
+As complexity of modelled systems grows, the number of states and possibilities become
+untractable. Theres no time nor space to specify each correspondence. The agents apply different 
+techniques for retrieving features  and structure from the environment to proceed with the
+decission process from an abstraction to the action to perform (\cite{RussellNorvig}).  
 
 \begin{description} %% we are interested in this division
 	\item Reactive Architectures
+
+Reactive Architectures are also known as Simple Reflex Agents. The decission process selects actions only
+based on the last perception retrieved from the environment. It does not considers any subset of
+past perceptions.
+
+		\begin{figure}[h]
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/SimpleReflexArchitect0.jpg}}
+		\caption{Simple Reflex Agent Architecture}
+		%by RussellNorvig \cite{RussellNorvig}}
+		\label{fig:SimpleReflexArchitect0_label}
+		\end{figure}
+
+A change in the environmen provokes a response from the agent.
+When changes and deliberations in agent are only motivated by an event in the environment, the
+agent is pure reactive.\\
+	
+		\begin{algorithm}[H]
+		\SetAlgoLined
+		\SetKwData{rules}{rules}\SetKwData{rule}{rule}\SetKwData{I}{I}
+		\SetKwFunction{getNextPercept}{getNextPercept}\SetKwFunction{brf}{brf}\SetKwFunction{options}{options}\SetKwFunction{filter}{filter}\SetKwFunction{plan}{plan}\SetKwFunction{execute}{execute}
+		\BlankLine
+		\While {true}{
+			$\sigma$ $\gets$ getNextPercept()\;
+			$rule$ $\gets$ ruleMatch($rules$, $\sigma$)\;
+			$\alpha$ $\gets$ ruleAction($rule$)\;
+			execute($\alpha$)\;
+		}
+		\caption{Simple Reflex Agent main loop}
+		\end{algorithm}
+
+
+
 	\begin{itemize}
 		%%refine \item With Internal state vs without internal state
 
-bounded an tractable number of states of the environment :
-table[state_i] = action_j then no agent is needed;
-
-untractable number of states, combinatoric space -> feature and structure extraction to
-infer the action to perform;
-a change in the environmen provokes a response from the agent.
-when changes and deliberations in agent are only motivated by an event in the environment, the
-agent is pure reactive.\\
 
 		\item Cognitive Maps
 		\item State Transition Machines %% TODO mira exemple
@@ -756,6 +789,30 @@ agent is pure reactive.\\
 		number of actions and percepts in it. Russell and Norvig give a chess game as 
 		an example of a discrete environment, and taxi driving as an example of a continuous one.
 \end{description}
+
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{||l|l|l|l|l|l|l|l||}
+		\hline
+		\hline
+		\textbf{Task} \textbf{Environment} & \textbf{Observable} & \textbf{Deterministic} & \textbf{Episodic} & \textbf{Static} & \textbf{Discrete} & \textbf{Agents}\\
+		\hline
+		Crossword puzzle 	& Fully & Deterministic & Sequential & Static & Discrete & Single	\\ \hline
+		Chess with a clock	& Fully & Strategic     & Sequential & Semi   & Discrete & Multi	\\ \hline
+		Poker			& Partially & Stochastic & Sequential & Static & Discrete & Multi	\\ \hline
+		Backgammon		& Fully & Stochastic    & Sequential & Static & Discrete & Multi	\\ \hline
+		Taxi driving		& Partially & Stochastic & Sequential & Dynamic & Continuons & Multi	\\ \hline
+		Medical diagnosis	& Partially & Stochastic & Sequential & Dynamic & Continuous & Single	\\ \hline
+		Image-analysis		& Fully	& Deterministic & Episodic & Semi & Continuous & Single 	\\ \hline
+		Part-picking robot	& Partially & Stochastic & Episodic & Dynamic & Continuous & Single	\\ \hline
+		Refinery controller	& Partially & Stochastic & Sequential & Dynamic & Continuous & Single	\\ \hline
+		Interactive English tutor & Partially & Stochastic & Sequential & Dynamic & Discrete & Multi	\\ \hline
+		\hline
+	\end{tabular}
+	\caption{Examples of task environments and their characteristics.}
+	\label{tab:EvironmentCharactExamples}
+	\end{table}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO quan parlis de les platforms, FIPA &Co, justifica que anem amb Pandora+ODD. Per paralelisme a MN?
 %%%%%%%%%%%%%%%%%%%%%%%%%%
