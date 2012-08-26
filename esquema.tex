@@ -634,6 +634,7 @@ agent is pure reactive.\\
 	\end{itemize}
 	
 	\item Deliberative Architectures ( goal oriented )
+
 	A deliberative agent uses symbolic reasoning to deduce the action to launch. The deliberative agent
 	contains explicitly the goal that steers its behaviour. Deliberation is done through an internal formal 
 	representation of the state of the world, the state of the agent and other information retrieved by
@@ -641,6 +642,14 @@ agent is pure reactive.\\
 	base. The perceptions from the environment become facts to add to the internal representation of
 	the environment. From this internal world model the agent can deduce trends for prediction besides
 	the next action to launch. 
+%%%
+Some systems and agent behaviour must be described this way. -example-
+A state of the environment or of the agent is specified. The agent must find the way to fulfill this within his reach of perceptions and actions.
+Desirable situations are seeked → goals, seeked states of environment or agent.
+Actions → satisfy goals non achievable from a single action execution: search + planning techniques
+Goals could be a design feature of the agent (survive & reproduce), or could be set in runtime by conditions in the environment or through user commandment.
+%%%%
+
 	\begin{description} 
 		\item [Logic] Deliberative agents will use assert clauses and structures to represent facts in 
 		a logic of some level, CP0, CP1. Each new change in the knowledge base will allow to deduce
@@ -749,7 +758,36 @@ agent is pure reactive.\\
 
 	\end{description}
 
-	\item Hybrid Architectures (equilibrium React vs Delib)
+
+	\item Utility based
+
+Goal-based models are a dycothomic approach that rely on bivalued logics. A goal is considered achievable or not achievable, an agent is commited to a goal or is not commited to that goal. But many fields have shown things usually work in a fuzzy manner or probabilistically or with multivalued assignations. Mentioning some example, robot soccers, eventually, you could pass the ball to a partner or try to score. If you launch the action “pass” things will happen
+different from launching action “score” but a priori you cannot predict which will be of more help. And if you stop
+to think about it the opponent will steal the ball from you. Another example, a fire simulation. There are many escape routes; when a route is saturated due to congestion, people have a variable internal timeout wait time to leave the route and try another one. There is also fuzzy phenomena in auctions; auction agents have to decide wheter raise the ``bet'' or leave.
+
+%TODO arrange
+An agent under these circumstances will find a set of available goals where each one produce a different benefit for the agent itself. The goals, the states of agent and environment must be weighted in function of probability of success, or benefit for the agent. Also, there is some related optimization trend or related likelihood of achieving positive results. 
+
+%%Uncertainty(chap13 Russell... maybe ch16)
+A pure logical agent can find a cul-de-sac on its deductions if the possible contingencies overcome the reasoning to deduce the actions to fulfill the goal.  
+These issues are what is called \textbf{uncertainty}. Uncertainty is the term used when there are many solutions that lead to the goal or if the goal is something not sure to be achieved and the agent faces a choice with no success ensured. 
+
+For instance, considering a hunter agent in a social simulation of ancient societies, a hunt action can be affected by many issues. First you must make a guess about where the preys are. Once you begin the hunting session many things could happen: a weather incident that changes prey grace behaviour, other hunters appear to hunt the preys, or dangerous roaming predators. The pure bivalued logic agent cannot predict the setbacks so cannot deduce the sucess of the action, and the hunt action will not be launched leading to starvation. If all the logical paths towards the achievement of the goal are troubled by contingencies the agent could fall in a loop of inactivity.\\ 
+When perfect solution is perhaps non achievable, the agent should be allowed to satisfy the goals through a non perfect solution. The decission engine should be changed to accept failable solutions for its goal seeking. Another hunt area should be eligible in the decission process. But maybe, although the other area is free of contingencies, it cannot offer a good outcome because is almost dessertic. Someway the agent should express a \textbf{preference} and deduce the action planning according to it. Preference over the outcomes of and action in the goal seeking activities of the agent encompass the modeling of success probability and benefit quantification. A particular outcome should be the fact that the hunter returned home without getting injured and a certain amount of Kg. of meat. \textbf{Utility theory} is used to represent and reason with preferences. Utility theory says that every state has a degree of usefulness, or utility, to an agent and that the agent will prefer states with higher utility \cite{RussellNorvig}.
+  
+Preference and similar issues are modeled through \textbf{utility functions}. Utility functions map goals and desired states to a quantitative dimension, a scoring. Utility ponderation allows to break ties in goal selection. Utility functions will give extra heuristic information about the likelihood achieving a goal. If the hunter agent has acces to two areas of hunting, valley and wood and is more likely to find dangerous predators in the wood although the same preys can be found on both areas, the utility function would assign greater utility to the valley.\\
+Preferences, as expressed with utility functions, are combined with probabilities in the general theory of rational decisions called decision theory: \cite{RussellNorvig}
+	\begin{equation}
+	Decision\ theory = probability\ theory\ +\ utility\ theory .
+	\end{equation}
+
+Utility-based agents are rational and follow the principle of \textbf{Maximum Expected Utility (MEU)} : 
+\textit{An agent is rational if and only if it chooses the action that yields the highest expected utility, averaged over all the possible outcomes of the action.}
+
+	\item Hybrid Architectures 
+	say you can mix everything
+
+
 		
 \end{description}
 
