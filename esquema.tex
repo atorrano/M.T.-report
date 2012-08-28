@@ -518,9 +518,15 @@ An agent $X_i$ retrieves information from the history of environment states to c
 	\end{equation}
 	\item [Proactivity] It means anticipation, taking initiative, detect oportunities. This
 	could materialize in prediction of a future event an realize a set of a priori actions 
-	before it occurs. For instance, if you are modelling a population of farmers and ... 
+	before it occurs. For instance, if you are modelling a population of farmers and agent A1 
+	sees the state of low resources of its neighbour agent A2 at the end of the season. As 
+	a social action, A1 makes a pressent of food to A2 before it begins to starve or asks for
+	help. We also know that this kind of action will produce stronger bonds and could have their
+	pay-off in the future. But the most extended example is when you enter in a bookshop, 
+	as you delay a bit in your search, a salesman appears offering its help before you ask for it.
 	It could mean that the agent produces a set of actions that trigger an environment event
 	that will allow the execution of an action the approaches the agent to its goals.
+
 	\item [Social capabilities] Cooperation, coordination, negotiation, competition, and mind models.
 	Some objectives are not achievable by the only means of the agent. The agent must interact
 	with other entities that can produce the chain of actions to produce the changes in the
@@ -680,9 +686,13 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 		Asserts from Logic will be used to state the facts that are true from environment
 		and the other agents.Knowledge representation. Solvers : Resolution, Forward/Backward chaining
 		
-		\item [BDI] Yoav Shoham introduced “agent-oriented programming” in 1990(\cite{Shoham1990}):“new 
-		programming paradigm, based on a societal view of computation”. The key idea is about directly 
-		programming agents in terms of \textbf{intentional} notions like belief, commitment, and intention.
+		\item [BDI] BDI stands for Belief-Desire-Intention. Yoav Shoham introduced “agent-oriented 
+		programming” in 1990(\cite{Shoham1990}):“new programming paradigm, based on a societal view of
+		computation”. The key idea is about directly programming agents in terms of \textbf{intentional}
+		notions like belief, commitment, and intention.	Beliefs are used to model the state of the world.
+		Desire allows the selection of possible states of the world and preferences. Intentions are 
+		compromises to achieve a given state, is the commitment of the agent.
+
 		BDI belongs to a overloaded kind of logics called modal logics which add meta language operators to
 		the facts to alter with some nuance the meaning or the semantic interpretation of the fact.
 		For instance, let $\phi$ be a fact that could represent ``deer is in the wood''. Indeed it is true
@@ -745,6 +755,7 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 		\end{algorithm}
 
 
+
 		other issues about BDI : planning of actions to fulfill intentions, and commitment management
 
 		second algorithm
@@ -782,7 +793,7 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 		behaviour, other hunters appear to hunt the preys, or dangerous roaming predators. The pure bivalued
 		logic agent cannot predict the setbacks so cannot deduce the sucess of the action, and the hunt 
 		action will not be launched leading to starvation. If all the logical paths towards the achievement 
-		of the goal are troubled by contingencies the agent could fall in a loop of inactivity.\\ 
+		of the goal are troubled by contingencies, the agent could fall in a loop of inactivity.\\ 
 		When perfect solution is perhaps non achievable, the agent should be allowed to satisfy the goals
 		through a non perfect solution. The decission engine should be changed to accept failable solutions 
 		for its goal seeking. Another hunt area should be eligible in the decission process. But maybe,
@@ -804,7 +815,8 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 		allows to break ties in sub-goal selection. Utility functions will give extra heuristic information
 		about the likelihood achieving a goal. If the hunter agent has acces to two areas of hunting, $valley$
 		and $wood$ and is more likely to find dangerous predators in the $wood$ although the same preys can 
-		be found on both areas, the utility function would assign greater utility to the $valley$.\\
+		be found on both areas, the utility function would assign greater utility to the $valley$. Utility
+		provides a way in which the likelihood of success can be weighed against the importance of the goals.\\
 		Preferences, as expressed with utility functions, are combined with probabilities in the general 
 		theory of rational decisions called \textbf{decision theory}: \cite{RussellNorvig}
 			\begin{equation}
@@ -812,8 +824,8 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 			\end{equation}
 
 		Utility-based agents are rational and follow the principle of \textbf{Maximum Expected Utility (MEU)}: 
-		\textit{An agent is rational if and only if it chooses the action that yields the highest expected
-		utility, averaged over all the possible outcomes of the action.}
+		\textit{An agent is \textbf{rational} if and only if it chooses the action that yields the highest
+		expected utility, averaged over all the possible outcomes of the action.}\cite{RussellNorvig}.
 
 		\paragraph{Utility and Planning}
 
@@ -892,20 +904,6 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO quan parlis de les platforms, FIPA &Co, justifica que anem amb Pandora+ODD. Per paralelisme a MN?
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\textbf{Utility}
-
-• Assume $\Omega$ = {$\omega_1$, $\omega_2$, . . .} is the set of “outcomes” that
-agents have preferences over.
-• We capture preferences by utility functions:
-ui : $\Omega$ $\rightarrow$ R
-uj : $\Omega$ $\rightarrow$  R
-
-• Utility functions lead to preference orderings over
-outcomes:
-
-$\omega$ $\succeq_i$ $\omega$' means ui(ω) $\geq$ ui(ω')
-$\omega$ $\succ_i$ $\omega$' means ui(ω) > ui(ω')
 
 
 %Features:
@@ -1101,6 +1099,21 @@ resource adquisition -> math modelling -> maximization -> planning.
 
 \newpage 
 \chapter{SugarScape vs Advanced Sugarscape} %% aqui veig mes clar que tota aquesta part funcionaria mes com un ODD
+
+
+%% four our utility-based agents, justification : copied from Russel&Norvig_3rdEd, desplagia-ho
+"Is it that simple? We just build agents that maximize expected utility, and we're done?" 
+It's true that such agents would be intelligent, but it's not simple. A utility-based agent 
+has to model and keep track of its environment, tasks that have involved a great deal of research 
+on perception, representation, reasoning, and learning. The results of this research fill many 
+of the chapters of this book. Choosing the utility-maximizing course of action is also a difficult 
+task, requiring ingenious algorithms that fill several more chapters, Even with these algorithms, 
+perfect rationality is usually unachievable in practice because of computational complexity, 
+as we noted in Chapter 1.
+
+
+
+
 
 \\
 fer matching dels features sugarscape amb les raons d'usar ABM que hi ha
