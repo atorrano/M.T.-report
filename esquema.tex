@@ -356,11 +356,30 @@ some enclosed set of mechanisms to be aware of the state of the system, a set of
 %%---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
 
 %%refine
+
 An agent is a computer system that is capable of independent action on behalf of its user or owner,
-figuring out what needs to be done to satisfy design objectives, rather than constantly being told.
-An agent solves problems applying iteratively the schema of sense, decide and act continously. Each
-of the steps can add new targets to fulfill which will keep the agent exploring the environment and 
-interacting with it and other agents to develop its strategies to solve the tasks and achieve goals.
+figuring out what needs to be done to satisfy design objectives, rather than constantly being told.\cite{Wooldridge2002} An agent solves problems applying iteratively the schema of sense, decide and 
+act continously. Each of the steps can add new targets to fulfill which will keep the agent exploring 
+the environment and interacting with it and other agents to develop its strategies to solve the tasks 
+and achieve goals.\\
+
+Agents are \cite{WooldridgeJennings1995}:
+\begin{enumerate}[i-]
+ \item clearly identifiable problem solving entities with well-defined boundaries and
+interfaces;
+\item situated (embedded) in a particular environment—they receive inputs related to the
+state of their environment through sensors and they act on the environment through
+effectors;
+\item designed to fulfill a specific purpose—they have particular objectives (goals) to
+achieve;
+\item autonomous—they have control both over their internal state and over their own
+behaviour;
+\item capable of exhibiting flexible problem solving behaviour in pursuit of their design
+objectives—they need to be both reactive (able to respond in a timely fashion to
+changes that occur in their environment) and reactive (able to act in anticipation of
+future goals).
+\end{enumerate}
+
 
 	\begin{figure}[h]
 	\setlength\fboxsep{0pt}
@@ -827,9 +846,10 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 		\textit{An agent is \textbf{rational} if and only if it chooses the action that yields the highest
 		expected utility, averaged over all the possible outcomes of the action.}\cite{RussellNorvig}.
 
-		\paragraph{Utility and Planning}
+		\item[Utility and Planning]
 
-		utility functions applied to runs
+		utility functions applied to runs... 
+		%%TODO (Explicar-ho? o es fa al capitol del MDP)
 
 	\end{description}
 
@@ -929,6 +949,29 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 
 \subsection{Complex Systems}
 
+Definitions & Tipical Phenomena.
+
+\subsection{Emergence}
+
+Emergence is a phenomenon where aggregation of individual and local behaviours are the direct cause
+of a higher level pattern,phenomenon or global behaviour.
+Emergence is one of the key concepts from Complexity that is studied in Social Simulation. 
+%TODO elabora. Emergence es un key concept
+It is a sign that something is happening in a low level. There is a global sensivity to changes and
+dynamics in the bottom layer.
+
+Emergence is the outcome of the parts of the system that due to the dynamics of the interactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics.  
+Examples : ant colony, swarms, self-organization of structures (extend it)
+
+
+There is potential for emergent phenomena, i.e., when: 
+\begin{itemize}
+ \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
+ \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
+ \item Heterogeneous interactions between agents.
+ \item When there is unstability to perturbations although the system could be defined linearly.
+\end{itemize}
+
 \subsection{Evolution}
 \underline{	Darwinisme : survival of the fittest.
 		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
@@ -939,17 +982,6 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 \underline{	Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
 		}
-
-\subsection{Emergence}
-Emergence is the outcome of the parts of the system that due to the dynamics of the interactions of these parts. Emergence cannot be predicted from only the constituents and their addition, the feedback must be taken into consideration. Emergence is a global effect produced by local dynamics.  
-There is potential for emergent phenomena, i.e., when: 
-\begin{itemize}
- \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
- \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
- \item Heterogeneous interactions between agents.
- \item When there is unstability to perturbations although the system could be defined linearly.
-\end{itemize}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ABM}
@@ -975,7 +1007,7 @@ ABM is most indicated for describing and simulating a system composed of “beha
 %Classical : you need an extra step of inferited knowledge a priori
 
 It is advisable, because it can be more natural and useful, to use ABM through the constituent units' activities under the next conditions.
-\begin{enumeration} 
+\begin{enumerate}[i-] 
 \item The behavior of individuals cannot be clearly defined through aggregate transition rates.
 \item Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behavior increases. Describing complex individual behavior with equations becomes intractable. For instance, the individual copes with hysteresis, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
 \item When the interactions between the agents are complex, nonlinear, discontinuous, or discrete (for example, when the behavior of an agent can be altered dramatically, even discontinuously, by other agents).
@@ -983,7 +1015,8 @@ It is advisable, because it can be more natural and useful, to use ABM through t
 \item Activities are a more natural way of describing the system than processes.
 \item Validation and calibration of the model through expert judgment is crucial. ABM is often the most appropriate way of describing what is actually happening in the real world, and the experts can easily “connect” to the model and have a feeling of “ownership”. 
 \item Stochasticity applies to the agents' behavior. With ABM, sources of randomness are applied to the right places as opposed to a noise term added more or less arbitrarily to an aggregate equation. 
-\begin{end}
+\end{enumerate}
+
 
 Besides naturality in expressing models, ABM models are flexible. ABM can manage agents at different levels of aggregation. The decission units can be a person but also social entities like families, couples or tribes with their own rules for intearaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decission-making and aggregation is clearly separated. The range of complexity of the agent,  its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individualality, and groups. This allows the modeller to work with different levels of description or complexity in the same model. %TODO ( explicar-ho mes???)
 
