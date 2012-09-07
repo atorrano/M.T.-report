@@ -402,32 +402,6 @@ future goals).
 	\caption{Agents basic main loop.}
 	\end{algorithm}
 
-
-	\begin{table}[h]
-	\centering
-	\begin{tabular}{|l||l|}
-		\hline
-			Agent's main loop & Agent Basic Structure \\
-		\hline
-		 	\begin{algorithm}[H]
-			\SetAlgoSkip{} 
-			\SetAlgoLined
-			initialization\;
-			\While{not end}
-			{
-				s = read environment current state\;
-				a = getAction(s)\;
-				launch(a)\;
-			}
-			\end{algorithm}
-			&
-			\includegraphics[width=60mm,keepaspectratio=true]{figures/agentArchitect0.jpg}\\
-		\hline
-	\end{tabular}
-	\caption{Agent's basic characterization.}
-	\label{tab:BasicAgent}
-	\end{table}
-
 An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, 
 checks if the temperature corresponds to the target. According to the measure it launches one of the two 
 actions, to set the heater to ON or to OFF.\\
@@ -947,7 +921,57 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 
 \subsection{Complex Systems}
 
-Definitions & Tipical Phenomena.
+Complex Systems is a discipline that studies systems that cannot be studied through the analisys of its
+parts and the simple composition of those analisys. Usually, reductionism has coped with complicated systems
+where the supression of constituents does not change the main trend of its behaviour, and that is used to
+work with simplified questions. Let's think for instance in a car which more or less keeps running although 
+you remove its seats, the doors, and the lights, to mention some. That is what could be called a complicated 
+system \cite{MillerPage2007}.\\
+There are systems where the interrelationship is so rich that supression of one part dismembers all the coherence
+of the system. Taking again the car exemple, if we think about the engine, the suppression of a most tiny
+gear will change the things, everything will stop. Historically, those systems have been an issue that was 
+of concern to many disciplines, Economics, Physics and Biological sciences, that gave arise through an
+interdisciplinary effort to complexity science \cite{MelanieMitchell2009} ( here we are not talking the computational
+concept of algorithm complexity ). 
+Complex science tries to find out how the interactions of a set of participants conform a system that exhibits 
+adaptive traits, descentralized organization, and macroscale behaviour patterns. 
+The strong relationships that give arise to the complex phenomena and acts as the glue that holds the system ...
+it gives reason to the system existence, as any change encompass the dynamics of the system it also makes it
+vulnerable...  adaptability + robustness + irreducibility
+
+\begin{figure}[tp]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/BZ_Spiral_waves.jpg}}
+\caption{ Development of spiral waves after hydrodynamic breaking of a concentric wave (Zhabotinsky and Zaikin, 1971).}
+\label{fig:ZhaboZaikin_1}
+\end{figure}
+
+Indeed we observe that theres a system there is the pressence of the macro phenomena. It is the evidence that
+something is there
+
+
+
+%TODO
+%Just as an anecdotic remark, the word ``complex'' comes from the latin word ``plectere'' which means ``to weave'', ``to enwine''.
+
+%TODO exemples : swarm, ecosystems, Belousov-Zhabotinsky reaction
+%TODO game of life, we give the pressence of entitty to patterns arising from cell behaviour.
+%TODO we see a shape move, form give life to a macro entity, and we observe a lifecycle of operations :
+%TODO space translation, shape transformation, appearance, disappearance
+
+
+%TODO Complex : emergence, self organizing, adaptive, descentralized 
+
+Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, a complex system is a system in
+which large networks of components with no central control and simple rules of operation give rise to complex collective 
+behavior, sophisticated information processing, and adaptation via learning or evolution. Sumarizing, a system that 
+exhibits nontrivial emergent and self-organizing behaviors.
+
+%TODO ara lligues Complex amb Emergence i pots passar al següent punt
+Complex behaviour is tied to a non central global decission process. But, on the other hand, the emerged pattern is
+something that does not belongs to a identifiable constituent. It is build from the descentralized dynamic of all 
+the constituents. That feature is called \textbf{emergence}.
 
 \subsection{Emergence}
 
@@ -964,18 +988,26 @@ be enumerated to circle the concept of emergence.
 A phenomenon will be considered emergent when it is repeatable and surprising, non deducible from lower 
 level rules and the relationships of basic constituents of the system.
 Emergence cannot be predicted, given our current means, from only the constituents and their addition, 
-following the reverse way of reductionism. Even a small an simple set of rules can make a dynamic system 
-generate emergent phenomena. 
+following the reverse way of reductionism. Reductionism is one of paradigms of science. A system is observed
+to detect differentiated parts. Then each part is analized to extract its behaviour. Reductionism states
+that the behaviour of the system can be understood from the constituents specifications plus a simple or 
+direct aggregation step. This idea can be applied recursively on the same constituents till some atomic element
+considered the bottom of the process. The think is that due to nonlinear relationships...
+
+Even a small an simple set of rules can make a dynamic system generate emergent phenomena. 
 If these rules induce non linear relationships the proportion of a perturbation in the system will not 
 be paired with the response of it. To use a uninventive example, nonlinear emergence occurs when someone 
 \textbf{calmly} says “fire” in a crowded room and produces \textbf{explosive} panic. Unpredictable results 
 arise from constituents interactions. It is here where Emergence can be appear. When a pattern is 
 recognizable and repeats usually along experiments, is plausible to be considered emergent \cite{Holland.Emergence.1997}.  
 
+Reductionism -> divide the system to constituents. From constituents studied behaviour plus additive composition
+we get the picture of the system.
+ 
+
+
 %TODO : la sorpresa que es demana sempre es sorpresa, no cansa : on surt?
 
-Along the run
-of the system there will appear 
 
 Exemple : Volterra, dinamica equilibrada, Column fire run away
 
@@ -991,7 +1023,6 @@ There is potential for emergent phenomena, i.e., when:
 
 
 
-
 \subsection{Evolution}
 \underline{	Darwinisme : survival of the fittest.
 		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
@@ -1001,6 +1032,7 @@ There is potential for emergent phenomena, i.e., when:
 \subsection{Coevolution}
 \underline{	Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
+		Close interrelationship, strong feedback. It is an environment prone to emergent patterns.
 		}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1314,6 +1346,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
       \section{Future Issues}
 \newpage 
 
+%TODO ordena la bibliografia per any
 \chapter{Bibliography}
 \begin{thebibliography}{13}
 \bibitem{Epstein1999} 
@@ -1401,6 +1434,21 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	D. Helbing, I. Farkas, and T. Vicsek 
 	\emph{Simulating dynamical features of escape panic. Nature 407, 487-490.}
 	2000.
+\bibitem{MelanieMitchell2009}
+	Melanie Mitchell
+	\emph{Complexity, a Guided Tour.}
+	2009.
+\bibitem{JHolland1997}
+	John Holland
+	\emph{Philosophica 59 (1997, 1) pp. 11-40. Emergence.}
+	1997.
+\bibitem{MillerPage2007}
+	John H. Miller, Scott E. Page
+	\emph{Complex Adaptive Systems: An Introduction to Computational Models of Social Life (Princeton Studies in Complexity)}
+	2007.
+
+
+
 \end{thebibliography}
 
 \end{document}
