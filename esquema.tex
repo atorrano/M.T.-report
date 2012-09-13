@@ -220,7 +220,8 @@ exchange and the mutual adaptative changes induced between the actors, co-evolut
 
 %modelling targets/items, 
 
-Modelling societies implies being aware of constituents identified by the social theories. Interacting entities conform a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. 
+Modelling societies implies being aware of constituents identified by the social theories. Interacting entities 
+form a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. 
 An individual leaves a trace of participations and interactions in the society. Such activities occur with other
 individuals, with some activity units or through them. Populations of individuals flow through the social structures, selectively participating and differentially performing. 
 Ordinary living involves a participation of people in the social activities of family, leisure and holidays, shopping, work and travel. Activity within a unit is structured by relationships and choices, rules, rituals and randomness. Ordinary living also involves the participation of cultural ideas and artefacts in social activities.\\
@@ -337,7 +338,7 @@ of stages defined in simulation-based research.
 Multi Agent System(MAS) is an architecture for software development based on designing a solution for a problem that 
 executes of a set of computational entities called agents that interact themselves in a defined environment.\\
 Such entities are active decission making actors in the modelled system. The modelling lifecycle of an MAS will consider a stage where decission making processes must be identified from the system. Usually that decission making 
-actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will conform the MAS. The concept 
+actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will form the MAS. The concept 
 '' agent '' condenses a set of features that will specify the modelling metaphor that an agent represents:
 some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, MASs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
 \\
@@ -414,7 +415,7 @@ and allows some prediction of the adjacent cars. The agent can be designed a ste
 increases to a predefined threshold, which could be tuned through authomatic learning, the agent recalculates 
 the route to adapt and avoid the traffic jam.\\
 Intelligent agent design considers the setting of Perceptions, Actions, Goals and Environment. These
-aspects conform a general structure where an agent design can grow. Mentioning an example considering a 
+aspects form a general structure where an agent design can grow. Mentioning an example considering a 
 system that simulates hunting practices from ancient cultures will show how features from the agent are 
 attached to these modules in the structure(table \ref{tab:hunterAgentSetting}).\\
 	\begin{table}[h]
@@ -553,7 +554,7 @@ An agent $X_i$ retrieves information from the history of environment states to c
 	\end{description}
 
 	\item [Learning] Prediction for future situations,reuse solutions,avoid past errors. The agents stores
-	patterns from the history of environment changes, or other agents' actions. The patterns conform a model
+	patterns from the history of environment changes, or other agents' actions. The patterns induce a model
 	of the world or of the task to perform used by the agent for future actions. As a detail, although the 
 	learning could be produced in first stages of the run to produce benefits along the life of the agent,
 	it is desirable that the learning should occur along all the run to produce a real adaptation of the 
@@ -922,24 +923,59 @@ Goals could be a design feature of the agent (survive & reproduce), or could be 
 \subsection{Complex Systems}
 
 Complex Systems is a discipline that studies systems that cannot be studied through the analisys of its
-parts and the simple composition of those analisys. Usually, reductionism has coped with complicated systems
-where the supression of constituents does not change the main trend of its behaviour, and that is used to
+parts and the simple composition of those analisys. Usually, \textbf{reductionism} has coped with complicated systems
+where the supression of constituents does not change the main trend of its behaviour, and it is used to
 work with simplified questions. Let's think for instance in a car which more or less keeps running although 
 you remove its seats, the doors, and the lights, to mention some. That is what could be called a complicated 
-system \cite{MillerPage2007}.\\
+system \cite{MillerPage2007}.
 There are systems where the interrelationship is so rich that supression of one part dismembers all the coherence
 of the system. Taking again the car exemple, if we think about the engine, the suppression of a most tiny
 gear will change the things, everything will stop. Historically, those systems have been an issue that was 
 of concern to many disciplines, Economics, Physics and Biological sciences, that gave arise through an
 interdisciplinary effort to complexity science \cite{MelanieMitchell2009} ( here we are not talking the computational
 concept of algorithm complexity ). 
-Complex science tries to find out how the interactions of a set of constituents conform a system that exhibits 
-adaptive traits, descentralized organization, and macroscale behaviour patterns. 
-The strong relationships that give arise to the complex phenomena and acts as the glue that holds the system ...
-it gives reason to the system existence, as any change encompass the dynamics of the system it also makes it
-vulnerable...  adaptability + robustness + irreducibility
+Complex science tries to find out how the interactions of a set of constituents build a system that exhibits 
+adaptive traits, descentralized organization, and macroscale behaviour patterns.\\
 
-\begin{figure}[tp]
+One of the most known systems studied by its complexity are ant colonies. The colony is formed by a limited range
+of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odor of the nest. Unloaded workers follow explorer's pheromons. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defense and many
+other adaptation to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an especific task. The colony is ductile, malleable. The ant 
+colony acts has a whole with very rich global behaviours. That is a complex system.\\
+
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/ant_1.jpg}}
+\caption{ Ant explorers building a bridge to overcome obstacles.}
+\label{fig:ants_1}
+\end{figure}
+
+
+%TODO exemples : swarm, ecosystems, weather,Belousov-Zhabotinsky reaction, real economic systems, markets
+%TODO game of life, we give the pressence of entitty to patterns arising from cell behaviour.
+
+Researchers observed that woods under a fire dissappear at different rates not completely dependent to the intensity
+of the focus, nor the climatic conditions. It was observed that under some tree topologies and certain wood
+density a small change of number of trees would mean sometimes the complete combustion of all the wood, and
+other times the wood would only burn in a small controlled area. This topology dependant condition is called
+\textbf{percolation}. It arises from the spatial relationship between the trees. Considering an ideal situation
+where topology protects the wood from percolation appearance, slight changes in some trees distribution will make
+them sensible to fire, but the rest of the wood will not burn. That conditions are an example of robustness
+in complex systems. But enough changes will collapse it.\\
+The strong relationships that give arise to the complex phenomena act as the glue that holds the system, it gives
+reason to the system existence.\\ 
+Percolation was not discovered studying one tree. It was detected taking into account the whole of the wood and the feedback versus the individual trees.\\
+
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/percolation_1.jpg}}
+\caption{ Percolation phenomena in fire spreading.}
+\label{fig:percolation_1}
+\end{figure}
+
+
+\begin{figure}[h]
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/dictyo1.jpg}}
@@ -947,13 +983,13 @@ vulnerable...  adaptability + robustness + irreducibility
 \label{fig:ZhaboZaikin_1}
 \end{figure}
 
-Indeed we observe that theres a system there is the pressence of the macro phenomena. It is the evidence that
-something is there
+Indeed we observe that there is a system due to the pressence of the macro phenomena. It is the evidence that
+something is happening there that relates the constituents.\\
 
 %TODO
 %Just as an anecdotic remark, the word ``complex'' comes from the latin word ``plectere'' which means ``to weave'', ``to enwine''.
 
-%TODO exemples : swarm, ecosystems, Belousov-Zhabotinsky reaction
+%TODO exemples : swarm, ecosystems, weather,Belousov-Zhabotinsky reaction, real economic systems, markets
 %TODO game of life, we give the pressence of entitty to patterns arising from cell behaviour.
 %TODO we see a shape move, form give life to a macro entity, and we observe a lifecycle of operations :
 %TODO space translation, shape transformation, appearance, disappearance
@@ -963,16 +999,14 @@ something is there
 Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, a complex system is a system in
 which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Sumarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors.
 
-
-\begin{figure}[tp]
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.5pt}
-\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}}
-\caption{ A swarm of birds flying avoiding clashes and generating patterns in the air that sometimes defend them from predators.}
-\label{fig:swarm_1}
-\end{figure}
-
-
+%exemple -> analitzar-lo i posar de manifest la complexitat ???
+% and then state what comes next:
+The laws that describe its behaviour are qualitatively different from those that govern its individual units.
+The advances of computational techniques for scientific discovering is changing the way we confront the models 
+and the manipulation of these issues. Computers have allowed new ways of learning. Computational techniques allow the modelling of many constituents and its relationships, how they assemble to a whole system. It allows us to understand
+and play with the experimental manipulation of the behaviour in a easier way. Computers not only help us in studying
+the surface of the behavioral phenomena but also the internals of complex systems giving insight to our explanations and deductions. Besides, computational experimentation has the advantage of controlling the trace and generating 
+rich databases of events for posterior analyses \cite{Vicsek2002}.
 
 %TODO ara lligues Complex amb Emergence i pots passar al següent punt
 Complex behaviour is tied to a non central global decission process. But, on the other hand, the emerged pattern is
@@ -981,10 +1015,13 @@ the constituents. That feature is called \textbf{emergence}.
 
 \subsection{Emergence}
 
+
+%Emergence is „the arising of novel and coherent structures, patterns and properties during the process of self-organization in complex systems." (Corning, 2002; Goldstein, 1999)
+
 Emergence is a phenomenon where aggregation of individual and local behaviours are the direct cause
-of a higher level pattern,phenomenon or global behaviour.
-Emergence is one of the key concepts from Complexity that is studied in Social Simulation. Indeed,
-emergence is one of the main features exhibited by complex systems.
+of a higher level pattern or global behaviour. Emergence is one of the key concepts from Complexity 
+that is studied in Social Simulation. Indeed, emergence is one of the main features exhibited by 
+complex systems.
 %TODO elabora. Emergence es un key concept
 
 Although we can give features and descriptions, emergence cannot be fully specified due to the vague 
@@ -998,26 +1035,61 @@ following the reverse way of reductionism. Reductionism is one of paradigms of s
 to detect differentiated parts. Then each part is analized to extract its behaviour. Reductionism states
 that the behaviour of the system can be understood from the constituents specifications plus a simple or 
 direct aggregation step. This idea can be applied recursively on the same constituents till some atomic element
-considered the bottom of the process. The think is that due to nonlinear relationships...
+considered the bottom of the process. The thing is that due to nonlinear relationships follow the inverse
+path to reconstruct a sense for the whole system is practically impossible.
 
 Even a small an simple set of rules can make a dynamic system generate emergent phenomena. 
 If these rules induce non linear relationships the proportion of a perturbation in the system will not 
 be paired with the response of it. To use a uninventive example, nonlinear emergence occurs when someone 
 \textbf{calmly} says “fire” in a crowded room and produces \textbf{explosive} panic. Unpredictable results 
-arise from constituents interactions. It is here where Emergence can be appear. When a pattern is 
-recognizable and repeats usually along experiments, is plausible to be considered emergent \cite{Holland.Emergence.1997}.  
+arise from constituents interactions. It is here where Emergence can be appear. When a pattern is recognizable 
+and repeats usually along experiments, is plausible to be considered emergent \cite{Holland.Emergence.1997}.  
 
-Reductionism -> divide the system to constituents. From constituents studied behaviour plus additive composition
-we get the picture of the system.
- 
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}}
+\caption{ A swarm of birds flying avoiding clashes and generating patterns in the air that sometimes defend them from predators.}
+\label{fig:swarm_1}
+\end{figure}
+
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.png}}
+\caption{ Swarms of fishes generating patterns in water sometimes defend them from predators.}
+\label{fig:emergence_1}
+\end{figure}
+
+
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|}
+		\hline
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}}
+\label{fig:swarm_1}
+\end{figure}
+&
+\begin{figure}[h]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.jpg}}
+\label{fig:emergence_1}
+\end{figure}
+		\hline
+	\end{tabular}
+	\caption{Emergence of patterns from the interaction of many moving actors.}
+	\label{tab:tableSwarm}
+	\end{table}
 
 
 %TODO : la sorpresa que es demana sempre es sorpresa, no cansa : on surt?
 
-
-Exemple : Volterra, dinamica equilibrada, Column fire run away
-
-Examples : ant colony, swarms, self-organization of structures (extend it)
 
 There is potential for emergent phenomena, i.e., when: 
 \begin{itemize}
@@ -1026,7 +1098,6 @@ There is potential for emergent phenomena, i.e., when:
  \item Heterogeneous interactions between agents.
  \item When there is unstability to perturbations although the system could be defined linearly.
 \end{itemize}
-
 
 
 \subsection{Evolution}
@@ -1438,7 +1509,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	2000.
 \bibitem{Helbing2000}
 	D. Helbing, I. Farkas, and T. Vicsek 
-	\emph{Simulating dynamical features of escape panic. Nature 407, 487-490.}
+	\emph{Simulating dynamical features of escape panic. Nature 407, pg 487-490.}
 	2000.
 \bibitem{MelanieMitchell2009}
 	Melanie Mitchell
@@ -1452,8 +1523,10 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	John H. Miller, Scott E. Page
 	\emph{Complex Adaptive Systems: An Introduction to Computational Models of Social Life (Princeton Studies in Complexity)}
 	2007.
-
-
+\bibitem{Vicsek2002}
+	Tamas Vicsek
+	\emph{Complexity. The bigger picture. Nature 418, pg 131.}
+	2002	
 
 \end{thebibliography}
 
