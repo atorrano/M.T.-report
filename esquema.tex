@@ -1,7 +1,12 @@
 %\documentclass[man]{apa}
 %\documentclass[doc]{article}{styles/apacls/apa}
-\documentclass{report}
+%\documentclass{report}
+%\documentclass[man]{styles/apacls/apa}
 
+%\documentclass[11pt,twoside,a4paper]{article}
+%\documentclass[11pt,twoside,a4paper]{book}
+%\documentclass[11pt,twoside,a4paper,openright]{report}
+\documentclass[11pt,oneside,a4paper,openright]{report}
 
 \usepackage{mathptmx}       % selects Times Roman as basic font
 \usepackage{helvet}         % selects Helvetica as sans-serif font
@@ -32,6 +37,9 @@
 \author{Alexis Torrano Mart\'inez}
 \maketitle
 \newpage
+
+%\textwidth 6in \oddsidemargin 0.2in \evensidemargin -0.2in
+%\textheight 9in \topmargin -0.75in \headheight 0mm \headsep 25mm
 
 %\Large
 %\addtolength{\hoffset}{-2cm}
@@ -301,12 +309,12 @@ of stages defined in simulation-based research.
 \end{description}
 %%TODO GRAFIC del "cicle``
 
-\begin{figure}[tp]
+\begin{figure}[h]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationMethodlogy.jpg}}
-\caption{Stages defined in simulation-based research \cite{Norvig}}
+\caption{Stages defined in simulation-based research \cite{RussellNorvig}}
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimTL}
 \end{figure}
@@ -335,8 +343,7 @@ of stages defined in simulation-based research.
 %% definition
 Multi Agent System(MAS) is an architecture for software development based on designing a solution for a problem that 
 executes of a set of computational entities called agents that interact themselves in a defined environment.\\
-Such entities are active decission making actors in the modelled system. The modelling lifecycle of an MAS will consider a stage where decission making processes must be identified from the system. Usually that decission making 
-actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will form the MAS. The concept ''agent`` condenses a set of features that will specify the modelling metaphor that an agent represents:
+Such entities are active decission making actors in the modelled system. The modelling lifecycle of an MAS will consider a stage where decission making processes must be identified from the system. Usually those decission making actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will form the MAS. The concept ''agent`` condenses a set of features that will specify the modelling metaphor that an agent represents:
 some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, MASs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
 
 %%bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
@@ -571,16 +578,17 @@ state - action with a table or with a limited number of rules.
 As complexity of modelled systems grows, the number of states and possibilities become
 untractable. Theres no time nor space to specify each correspondence. The agents apply different 
 techniques for retrieving features and structure from the environment to proceed with the
-decission process from an abstraction to the action to perform (\cite{RussellNorvig}).  
+decission process from an abstraction to the action to perform \cite{RussellNorvig}.  
 
 \begin{description} %% we are interested in this division
-	\item ?`Pure? Reactive Architectures
+	\item Reactive Architectures
 
 The decission process in Reactive Architectures selects actions only based on the last perception retrieved
 from the environment. It does not considers any subset of past perceptions. Reactive Architectures encompass  
 the Simple Reflex Agents.
 
 		\begin{figure}[h]
+		\centering
 		\setlength\fboxsep{0pt}
 		\setlength\fboxrule{0.5pt}
 		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/SimpleReflexArchitect0.jpg}}
@@ -592,7 +600,7 @@ the Simple Reflex Agents.
 A change in the environment provokes a response from the agent. When changes and deliberations in agent are
 only motivated by an event in the environment, the agent is pure reactive.\\
 	
-		\begin{algorithm}[H]
+		\begin{algorithm}[h]
 		\SetAlgoLined
 		\SetKwData{rules}{rules}\SetKwData{rule}{rule}\SetKwData{I}{I}
 		\SetKwFunction{getNextPercept}{getNextPercept}\SetKwFunction{brf}{brf}\SetKwFunction{options}{options}\SetKwFunction{filter}{filter}\SetKwFunction{plan}{plan}\SetKwFunction{execute}{execute}
@@ -612,11 +620,11 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		\item Cognitive Maps
 		\item State Transition Machines %% TODO mira exemple
 
-		\begin{figure}[tp]
+		\begin{figure}[h]
 		\centering
 		\setlength\fboxsep{0pt}
 		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/agentArchitect1.png}}
+		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/agentArchitect1.png}}
 		\caption{State Machine Reactive Agent Architecture}
 		%by Wooldridge2002 \cite{Wooldridge2002}}
 		\label{fig:SimTL}
@@ -633,14 +641,16 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 	it. A logic engine will produce deductions from the facts stored in the agent memory, the knowledge
 	base. The perceptions from the environment become facts to add to the internal representation of
 	the environment. From this internal world model the agent can deduce trends for prediction besides
-	the next action to launch. 
-%%%
-Some systems and agent behaviour must be described this way. -example-
-A state of the environment or of the agent is specified. The agent must find the way to fulfill this within his reach of perceptions and actions.
-Desirable situations are seeked → goals, seeked states of environment or agent.
-Actions → satisfy goals non achievable from a single action execution: search + planning techniques
-Goals could be a design feature of the agent (survive \& reproduce), or could be set in runtime by conditions in the environment or through user commandment.
-%%%%
+	the next action to launch. A state of the environment or of the agent is specified. The agent must find 
+	the way to fulfill this within his reach of perceptions and actions. Desirable situations are seeked, 
+	called goals, that is environment states or agent states. 
+
+	Given some systems or situations, goals are non achievable from a single action execution. The agent 
+	must apply search and planning techniques to conform a plan that will satisfy, after a limited number of 
+	steps, the desired goal.
+
+	Goals could be a design feature of the agent, for instance \textbf{survive} \& \textbf{reproduce}, or could 
+	be set dynamically in runtime by conditions in the environment or through user commandment.
 
 	\begin{description} 
 		\item [Logic] Deliberative agents will use assert clauses and structures to represent facts in 
@@ -674,14 +684,15 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 		\end{algorithm}
 
 		Asserts from Logic will be used to state the facts that are true from environment
-		and the other agents.Knowledge representation. Solvers : Resolution, Forward/Backward chaining
+		and the other agents.
+		% Knowledge representation. Solvers : Resolution, Forward/Backward chaining
 		
 		\item [BDI] BDI stands for Belief-Desire-Intention. Yoav Shoham introduced “agent-oriented 
-		programming” in 1990(\cite{Shoham1990}):“new programming paradigm, based on a societal view of
+		programming” in 1990 \cite{Shoham1990}:“new programming paradigm, based on a societal view of
 		computation”. The key idea is about directly programming agents in terms of \textbf{intentional}
 		notions like belief, commitment, and intention.	Beliefs are used to model the state of the world.
 		Desire allows the selection of possible states of the world and preferences. Intentions are 
-		compromises to achieve a given state, is the commitment of the agent.
+		compromises to achieve a given state, they are the commitment of the agent.
 
 		BDI belongs to a overloaded kind of logics called modal logics which add meta language operators to
 		the facts to alter with some nuance the meaning or the semantic interpretation of the fact.
@@ -689,12 +700,12 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 		for the example. Our agent has not seen it and only has some clue that the deer is in the 
 		wood; so the agent states $\Box_B \phi$, with an operator $\Box_B$ to indicate ``I believe the 
 		deer is in the wood''. The memory of the agent will contain also the facts below
-		\begin{description}
-		\item[$\theta$] = ``I am hungry''.
-		\item[$\eta$] = ``I go hunting''.
-		\item [$\Box_D \eta$] = ``I have Desire for going hunting''.
-		\item [$\Box_I \eta$] = ``I have Intention for going hunting''.
-		\end{description}
+		  \begin{description}
+		    \item[$\theta$] = ``I am hungry''.
+		    \item[$\eta$] = ``I go hunting''.
+		    \item [$\Box_D \eta$] = ``I have Desire for going hunting''.
+		    \item [$\Box_I \eta$] = ``I have Intention for going hunting''.
+		  \end{description}
 		Some of these entail from other. They are governed by the next rules from the knowledge base
 		\begin{itemize}
 		\item myState(HUNGRY) 
@@ -713,7 +724,7 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 
 		Programming agents this way allows a deeper description of the dynamics around the goals an agent 
 		self-imposes and also an easier way for the agent to reason about the other agents. This last point
-		crucial for a better integration of the social dynamics in the planning of goal achieving. The agent
+		is crucial for a better integration of the social dynamics in the planning of goal achieving. The agent
 		can construct through facts of Believing, Desire and Intention a mind model of the other models taking
 		into account their BDI intentions and adapting to them to cooperate or compete. 
 
@@ -744,12 +755,9 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 		\caption{BDI main loop}
 		\end{algorithm}
 
+		%other issues about BDI : planning of actions to fulfill intentions, and commitment management
 
-
-		other issues about BDI : planning of actions to fulfill intentions, and commitment management
-
-		second algorithm
-
+		%TODO add the second algorithm?
 
 		\item[Utility based]
 
@@ -806,7 +814,7 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 		about the likelihood achieving a goal. If the hunter agent has acces to two areas of hunting, $valley$
 		and $wood$ and is more likely to find dangerous predators in the $wood$ although the same preys can 
 		be found on both areas, the utility function would assign greater utility to the $valley$. Utility
-		provides a way in which the likelihood of success can be weighed against the importance of the goals.\\
+ 		provides a way in which the likelihood of success can be weighted against the importance of the goals.\\
 		Preferences, as expressed with utility functions, are combined with probabilities in the general 
 		theory of rational decisions called \textbf{decision theory}: \cite{RussellNorvig}
 			\begin{equation}
@@ -817,18 +825,16 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 		\textit{An agent is \textbf{rational} if and only if it chooses the action that yields the highest
 		expected utility, averaged over all the possible outcomes of the action.}\cite{RussellNorvig}.
 
-		\item[Utility and Planning]
+		%\item[Utility and Planning]
 
-		utility functions applied to runs... 
+		%utility functions applied to runs... 
 		%%TODO (Explicar-ho? o es fa al capitol del MDP)
 
 	\end{description}
 
 
-	\item Hybrid Architectures 
-	say you can mix everything
-
-
+	%\item Hybrid Architectures 
+	%say you can mix everything
 		
 \end{description}
 
@@ -920,7 +926,7 @@ Goals could be a design feature of the agent (survive \& reproduce), or could be
 
 \subsection{Complex Systems}
 
-Complex Systems is a discipline that studies systems that cannot be studied through the analisys of its
+Complexity is a discipline that studies systems that cannot be studied through the analisys of its
 parts and the simple composition of those analisys. Usually, \textbf{reductionism} has coped with complicated systems
 where the supression of constituents does not change the main trend of its behaviour, and it is used to
 work with simplified questions. Let's think for instance in a car which more or less keeps running although 
@@ -937,7 +943,7 @@ adaptive traits, descentralized organization, and macroscale behaviour patterns.
 
 One of the most known systems studied by its complexity are ant colonies. The colony is formed by a limited range
 of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odor of the nest. Unloaded workers follow explorer's pheromons. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defense and many
-other adaptation to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an especific task. The colony is ductile, malleable. The ant 
+other adaptations to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an especific task. The colony is ductile, malleable. The ant 
 colony acts has a whole with very rich global behaviours. That is a complex system.\\
 
 \begin{figure}[h]
@@ -981,7 +987,7 @@ something is happening there that relates the constituents.\\
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
-\fbox{\includegraphics[width=40mm,keepaspectratio=true]{figures/dictyo1.jpg}}
+\fbox{\includegraphics[width=40mm,keepaspectratio=true]{figures/dictyo_2.jpg}}
 \caption{ Development of spiral waves after hydrodynamic breaking of a concentric wave (Zhabotinsky and Zaikin, 1971).}
 \label{fig:ZhaboZaikin_1}
 \end{figure}
@@ -1004,10 +1010,12 @@ which large networks of components with no central control and simple rules of o
 % and then state what comes next:
 The laws that describe its behaviour are qualitatively different from those that govern its individual units.
 The advances of computational techniques for scientific discovering is changing the way we confront the models 
-and the manipulation of these issues. Computers have allowed new ways of learning. Computational techniques allow the modelling of many constituents and its relationships, how they assemble to a whole system. It allows us to understand
-and play with the experimental manipulation of the behaviour in a easier way. Computers not only help us in studying
-the surface of the behavioral phenomena but also the internals of complex systems giving insight to our explanations and deductions. Besides, computational experimentation has the advantage of controlling the trace and generating 
-rich databases of events for posterior analyses \cite{Vicsek2002}.
+and the manipulation of these issues. Computers have allowed new ways of learning about them. Computational techniques 
+allow the modelling of many constituents and its relationships, how they assemble to a whole system. It allows us 
+to understand and play with the experimental manipulation of the behaviour in a easier way. Computers not only help 
+us in studying the surface of the behavioral phenomena but also the internals of complex systems giving insight 
+to our explanations and deductions. Besides, computational experimentation has the advantage of controlling the trace 
+and generating rich databases of events for posterior analyses \cite{Vicsek2002}.
 
 %TODO ara lligues Complex amb Emergence i pots passar al següent punt
 Complex behaviour is tied to a non central global decission process. But, on the other hand, the emerged pattern is
@@ -1026,7 +1034,7 @@ complex systems.
 %TODO elabora. Emergence es un key concept
 
 Although we can give features and descriptions, emergence cannot be fully specified due to the vague 
-concepts of ``surprising'' and non deducibility \cite{Holland.Emergence.1997} . But some signals can 
+concepts of ``surprising'' and non deducibility \cite{Holland1997} . But some signals can 
 be enumerated to circle the concept of emergence. 
 
 A phenomenon will be considered emergent when it is repeatable and surprising, non deducible from lower 
@@ -1036,17 +1044,18 @@ following the reverse way of reductionism. Reductionism is one of paradigms of s
 to detect differentiated parts. Then each part is analized to extract its behaviour. Reductionism states
 that the behaviour of the system can be understood from the constituents specifications plus a simple or 
 direct aggregation step. This idea can be applied recursively on the same constituents till some atomic element
-considered the bottom of the process. The thing is that due to nonlinear relationships follow the inverse
+considered the bottom of the process. The thing is that due to nonlinear relationships, following the inverse
 path to reconstruct a sense for the whole system is practically impossible.\\
 
-Even a small an simple set of rules can make a dynamic system generate emergent phenomena. 
+Even a small and simple set of rules can make a dynamic system generate emergent phenomena. 
 If these rules induce non linear relationships the proportion of a perturbation in the system will not 
-be paired with the response of it. To use a uninventive example, nonlinear emergence occurs when someone 
+be paired with the response of it. To use an uninventive example, nonlinear emergence occurs when someone 
 \textbf{calmly} says “fire” in a crowded room and produces \textbf{explosive} panic. Unpredictable results 
-arise from constituents interactions. It is here where Emergence can be appear. When a pattern is recognizable 
-and repeats usually along experiments, is plausible to be considered emergent \cite{Holland.Emergence.1997}.\\  
+arise from constituents interactions. It is here where emergence can appear. When a pattern is recognizable 
+and repeats usually along experiments, is plausible to be considered emergent \cite{Holland1997}.\\  
 
 %\begin{figure}[h]
+%\centering
 %\setlength\fboxsep{0pt}
 %\setlength\fboxrule{0.5pt}
 %\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}}
@@ -1055,6 +1064,7 @@ and repeats usually along experiments, is plausible to be considered emergent \c
 %\end{figure}
 
 %\begin{figure}[h]
+%\centering
 %\setlength\fboxsep{0pt}
 %\setlength\fboxrule{0.5pt}
 %\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.png}}
@@ -1066,7 +1076,7 @@ and repeats usually along experiments, is plausible to be considered emergent \c
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}
+		\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm2.jpg}
 		&
 		\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.png}\\
 		\hline
@@ -1148,8 +1158,8 @@ To summarize the major ideas of Darwin’s theory:
 Darwin theory had some points to be clarified. How parents passed their traits to the offspring?
 The process of refining these theories comprised the addition of Mendel's theories lasting till 
 the past century where everything was unified with the descovering of DNA and genomics. DNA is the 
-way in which is encoded the traits that the organic being will probably exhibit in his life, and 
-also if the transmission medium of the traits in the reproduction process. We will take \textbf{Richard Dawkins} 
+way in which are encoded the traits that the organic being will probably exhibit in his life, and 
+also DNA is the transmission medium of the traits in the reproduction process. We will take \textbf{Richard Dawkins} 
 position as our final work metaphor for evolution and natural selection\cite{Dawkins1990}.\\ 
 As it is mentioned, part of the working framework of our simulation is based on the ideas of evolution and ``natural selection''. We understand the ``natural selection'' as a process that "rewards" adaptive solutions and penalizes those less adapted. Darwinian Evolution is the result of the continued application of this screening and the persistence of adaptive patterns and what comes off of them. Persistence is produced through the reproductive process of agents. Regularly an agent generates a copy of itself with some disturbance in their features and takes charge of it for a period of time. The extraction capacity of system resources, adaptability,  marks their survival and that of their offspring. If the offspring survives, the configuration is maintained over time and gets another chance to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of configurations to respond more adaptively than others, working with the hypothesis that selected ones would correspond to reality. We simulate systems plus the evolutionary process. Our utility functions, birth \& mortality are filters to keep or remove agents of the system depending on its performance against its lifecycle.\\ 
 We are applying a parallelism between DNA information and configuration or features in the agent. The features stablish
@@ -1161,23 +1171,29 @@ the policy of the agent. For instance, the Gujarat project would differentiate b
 %		Close interrelationship, strong feedback. It is an environment prone to emergent patterns.
 %		}
 
-Coevolution; when two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes also in the other species \cite{Gross2008}.
+Coevolution; \textit{when two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes also in the other species} \cite{Gross2008}.
 
 Long ago, bacteria and plancton dominated the seas. There was only microscopic life. Then appeared photonsynthesis
 based microbes. With Sun light and CO$_2$ chemistry they spread at a greater rate than their neighbours. Photosynthesis
 microbes filling the seas plus millennia produced the oxygen filled atmosphere of the planet. Changes in the atmosphere
 changed weather and many other chemical properties in the planet. The atmosphere contained ozone which barred the 
 UV rays of the Sun which forbidded life in the surface. Then some individuals appeared with capabilities to
-breath the air of the surface. It is an example of feedback between the environment and the evolving life beings. But this feedback can also happen between these beings, and then it is called coevolution\cite{Dawkins1990}.
+breath the air of the surface. It is an example of mutual feedback between the environment and the evolving life beings. 
+But this feedback can also happen between these beings, and then it is called coevolution\cite{Dawkins1990}.
 When the adaptive process of an species produces a change that motivates selection of new adapting traits in other
 species which in turn affects the same way the first species we have coevolution. For instance, the relationship 
 between a prey and a predator will induce coevolution. The hunting activities produce death in the prey species, hence
-motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.
+motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
+with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent 
+predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding 
+changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.
 
 Although we will not wire explicitly coevolution in our social models we expect to see this phenomena. Sugarscape will
 be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project
 we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land.
-In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies. 
+In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated 
+agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium 
+of the two adaptive strategies. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ABM}
@@ -1194,6 +1210,20 @@ This will lead to situations of iterated interactions between a set of agents in
 %TODO (ref. PNAS.org)
 There are  some striking features that make ABM stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable, natural to express things with that “language”. Also, it is more flexible in the modelization. And to finish enumeration, ABM captures emergent phenomena. ABM follows the arise of emergence from its definition, following the bottom-up generation of phenomena from the atomic constituents when the system is run.
 Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way.\\
+
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\includegraphics[width=60mm,keepaspectratio=true]{figures/column1.png}
+		&
+		\includegraphics[width=60mm,keepaspectratio=true]{figures/column2.png}\\
+		\hline
+	\end{tabular}
+	\caption{Unexpected emergence of scape patterns under different situations.}
+	\label{tab:columnExit}
+	\end{table}
+
 
 ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. For example, it is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. Because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties.  
 
@@ -1512,7 +1542,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	\emph{Prospects for Agent-Based modelling in Archaeology}. Archeologia e Calcolatori, 10, 33-44.
 	1999
 
-\bibitem{Norvig}
+\bibitem{RussellNorvig}
 	Stuart Russell and Peter Norvig.
 	\emph{Artificial Intelligence: A Modern Approach}
 	2009
@@ -1537,6 +1567,11 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	\emph{Intelligent Agents: Theory and Practice}  Knowledge Engineering Review Volume 10 No 2. (c) Cambridge
 	University Press 
 	1995
+
+\bibitem{Shoham1990}
+	Yoav Shoham.
+	\emph{Agent-Oriented Programming. Stanford University: Computer Science Department.(Technical Report STAN-CS-90-1335).}
+	1990 
 
 \bibitem{Lake}
 	Lake, M W,
@@ -1608,7 +1643,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Melanie Mitchell
 	\emph{Complexity, a Guided Tour.}
 	2009.
-\bibitem{JHolland1997}
+\bibitem{Holland1997}
 	John Holland
 	\emph{Philosophica 59 (1997, 1) pp. 11-40. Emergence.}
 	1997.
