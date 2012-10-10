@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.2)  2 AUG 2012 19:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.4.2)  5 OCT 2012 09:36
 entering extended mode
  %&-line parsing enabled.
 **esquema.tex
@@ -8,8 +8,8 @@ Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -647,6 +647,56 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/share/texmf-texlive/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks32
+) (./algorithm2e.sty
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+\c@AlgoLine=\count119
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/tools/xspace.sty
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/relsize.sty
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip51
+\skiplinenumber=\skip52
+\skiprule=\skip53
+\skiphlne=\skip54
+\skiptext=\skip55
+\skiplength=\skip56
+\algomargin=\skip57
+\skipalgocfslide=\skip58
+\algowidth=\dimen124
+\inoutsize=\dimen125
+\inoutline=\dimen126
+\interspacetitleruled=\dimen127
+\interspacealgoruled=\dimen128
+\interspacetitleboxruled=\dimen129
+\algocf@inoutbox=\box54
+\algocf@inputbox=\box55
+\AlCapSkip=\skip59
+\AlCapHSkip=\skip60
+\algocf@nlbox=\box56
+\algocf@hangingbox=\box57
+\algocf@capbox=\box58
+\algoheightruledefault=\skip61
+\algoheightrule=\skip62
+\algotitleheightruledefault=\skip63
+\algotitleheightrule=\skip64
+\c@algocfline=\count120
+\c@algocfproc=\count121
+\c@algocf=\count122
+\algocf@algoframe=\box59
+\algocf@algobox=\box60
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -662,84 +712,99 @@ LaTeX Warning: Label `fig:SimTL' multiply defined.
 
 LaTeX Warning: Label `fig:SimTL' multiply defined.
 
+
+LaTeX Warning: Label `fig:SimTL' multiply defined.
+
+
+LaTeX Warning: Label `fig:SimTL' multiply defined.
+
+
+LaTeX Warning: Label `TakahashiSallachRouchier2007' multiply defined.
+
 )
 \openout1 = `esquema.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
  (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 34.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen124
-\scratchbox=\box54
-\nofMPsegments=\count120
-\nofMParguments=\count121
+\scratchcounter=\count123
+\scratchdimen=\dimen130
+\scratchbox=\box61
+\nofMPsegments=\count124
+\nofMParguments=\count125
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen125
-\MPnumerator=\count123
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen131
+\MPnumerator=\count127
 \everyMPtoPDFconversion=\toks34
 )
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 32
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 38
 .
  (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 32
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 38
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 32
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 38
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 32
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 38
 .
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
- [1]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+
+Overfull \hbox (18.37228pt too wide) in paragraph at lines 49--52
+\OT1/ptm/m/n/10.95 land-scape. This re-search will be in line with Consolider-S
+imulpast (www.simulpast.es),
+ []
+
+[1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
  (./esquema.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
@@ -752,330 +817,410 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [3]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
-[1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
 
-] [2]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 122.
-
- (/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
  []
 
-[3]
 
-! LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--94
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 135--140
+
+ []
+
+
+Overfull \hbox (14.9728pt too wide) in paragraph at lines 147--150
+[]\OT1/ptm/b/n/10.95 Did Gu-jarat ex-treme en-vi-ro-men-tal con-di-tions de-lay
+ed the HG dis-ap-pearence? 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--150
 
  []
 
 [4]
 Chapter 2.
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 \\
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.168 ...ould unfold is running some modelâ€}
-                                                  .\\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 176--195
 
  []
 
 [5
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
-
- []
-
-[7] <figures/Gilbert_pg21.jpg, id=42, 691.08188pt x 587.94656pt>
+] [6] [7] <figures/Gilbert_pg21.jpg, id=42, 691.08188pt x 587.94656pt>
 File: figures/Gilbert_pg21.jpg Graphic file (type jpg)
 
 <use figures/Gilbert_pg21.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
-
- []
-
-<figures/statisticalModelling1.jpg, id=43, 995.72pt x 565.11125pt>
-File: figures/statisticalModelling1.jpg Graphic file (type jpg)
-
-<use figures/statisticalModelling1.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
 [8 <./figures/Gilbert_pg21.jpg>]
+<figures/statisticalModelling1.jpg, id=47, 995.72pt x 565.11125pt>
+File: figures/statisticalModelling1.jpg Graphic file (type jpg)
+
+<use figures/statisticalModelling1.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
 <figures/simulationModelling1.jpg, id=48, 985.6825pt x 554.07pt>
 File: figures/simulationModelling1.jpg Graphic file (type jpg)
 
-<use figures/simulationModelling1.jpg> [9 <./figures/statisticalModelling1.jpg>
-] [10 <./figures/simulationModelling1.jpg>]
-<figures/simulationMethodlogy.jpg, id=55, 798.985pt x 580.1675pt>
+<use figures/simulationModelling1.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./figures/statisticalModelling1.jpg>] [10 <./figures/simulationModelling1.j
+pg>] <figures/simulationMethodlogy.jpg, id=55, 798.985pt x 580.1675pt>
 File: figures/simulationMethodlogy.jpg Graphic file (type jpg)
 
-<use figures/simulationMethodlogy.jpg> [11 <./figures/simulationMethodlogy.jpg>
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 364.
+<use figures/simulationMethodlogy.jpg>
 
- (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+LaTeX Warning: Citation `RussellNorvig' on page 11 undefined on input line 317.
+
+
+[11 <./figures/simulationMethodlogy.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 362--367
+
+ []
+
+[12] <figures/agentArchitect0.jpg, id=62, 446.66875pt x 376.40625pt>
+File: figures/agentArchitect0.jpg Graphic file (type jpg)
+
+<use figures/agentArchitect0.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13 <./figures/agentArchitect0.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 488--495
+
+ []
+
+[14]
+Overfull \hbox (0.25093pt too wide) in paragraph at lines 526--540
+[]\OT1/ptm/m/n/10.95 Cooperation, co-or-di-na-tion, ne-go-ti-a-tion, com-pe-ti-
+tion, and mind
+ []
+
+[15]
+
+LaTeX Warning: Citation `RussellNorvig' on page 16 undefined on input line 581.
+
+
+[16] <figures/SimpleReflexArchitect0.jpg, id=82, 518.93875pt x 400.49625pt>
+File: figures/SimpleReflexArchitect0.jpg Graphic file (type jpg)
+
+<use figures/SimpleReflexArchitect0.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 600--602
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 620.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<figures/agentArchitect1.png, id=83, 556.0775pt x 376.40625pt>
+File: figures/agentArchitect1.png Graphic file (type png)
+
+<use figures/agentArchitect1.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./figures/SimpleReflexArchitect0.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 667.
+
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 364.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 667.
+ [18 <./figures/agentArchitect1.png (PNG copy)>]
+Overfull \hbox (51.46509pt too wide) in paragraph at lines 671--684
+$[]$ 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--366
+
+LaTeX Warning: Citation `Shoham1990' on page 19 undefined on input line 691.
+
+
+Overfull \hbox (9.13106pt too wide) in paragraph at lines 690--696
+[]\OT1/ptm/m/n/10.95 BDI stands for Belief-Desire-Intention. Yoav Shoham in-tro
+-duced \agent-
+ []
+
+
+Overfull \hbox (4.21605pt too wide) in paragraph at lines 690--696
+\OT1/ptm/m/n/10.95 oriented pro-gram-ming" in 1990 [[]]:\new pro-gram-ming para
+digm, based
+ []
+
+[19]
+Overfull \hbox (25.12897pt too wide) in paragraph at lines 717--719
+[]\OT1/ptm/m/n/10.95 entityAtPlace(MYSELF,$\OML/ztmcm/m/it/10.95 p$\OT1/ptm/m/n
+/10.95 ) $\OMS/ztmcm/m/n/10.95 ^$ $\U/msa/m/n/10.95 ^^C[]$ \OT1/ptm/m/n/10.95 d
+oAc-tion(HUNT) $\OMS/ztmcm/m/n/10.95 ^$ \OT1/ptm/m/n/10.95 entityAtPlace($\OML/
+ztmcm/m/it/10.95 x$\OT1/ptm/m/n/10.95 ,$\OML/ztmcm/m/it/10.95 y$\OT1/ptm/m/n/10
+.95 )
+ []
+
+
+Overfull \hbox (25.3706pt too wide) in paragraph at lines 717--719
+\OMS/ztmcm/m/n/10.95 ^$ \OT1/ptm/m/n/10.95 edible($\OML/ztmcm/m/it/10.95 x$\OT1
+/ptm/m/n/10.95 ) $\OMS/ztmcm/m/n/10.95 ^$ \OT1/ptm/m/n/10.95 distance($\OML/ztm
+cm/m/it/10.95 p$\OT1/ptm/m/n/10.95 ,$\OML/ztmcm/m/it/10.95 y$\OT1/ptm/m/n/10.95
+ ) $\OMS/ztmcm/m/n/10.95 ^^T$ \OT1/ptm/m/n/10.95 HUNT-DIS-TANCE $\OMS/ztmcm/m/n
+/10.95 !$ \OT1/ptm/m/n/10.95 doAction(HUNT,$\OML/ztmcm/m/it/10.95 x$\OT1/ptm/m/
+n/10.95 ) 
+ []
+
+
+Overfull \hbox (51.46509pt too wide) in paragraph at lines 740--756
+$[]$ 
+ []
+
+[20]
+
+LaTeX Warning: Citation `RussellNorvig' on page 21 undefined on input line 807.
+
+
+[21]
+
+LaTeX Warning: Citation `RussellNorvig' on page 22 undefined on input line 819.
+
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 826.
+
+LaTeX Warning: Citation `RussellNorvig' on page 22 undefined on input line 826.
+
+
+
+Overfull \hbox (4.57623pt too wide) in paragraph at lines 863--869
+[]\OT1/ptm/m/n/10.95 In an episodic en-vi-ron-ment, the per-for-mance of an age
+nt
+ []
+
+[22]
+Overfull \hbox (117.67656pt too wide) in paragraph at lines 880--897
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--943
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 944--948
+
+ []
+
+<figures/ant_1.jpg, id=108, 256.96pt x 191.917pt>
+File: figures/ant_1.jpg Graphic file (type jpg)
+ <use figures/ant_1.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 962--973
+
+ []
+
+[24 <./figures/ant_1.jpg>]
+<figures/percolation_1.jpg, id=112, 333.20947pt x 330.65125pt>
+File: figures/percolation_1.jpg Graphic file (type jpg)
+
+<use figures/percolation_1.jpg>
+Underfull \hbox (badness 10000) in paragraph at lines 983--985
+
+ []
+
+<figures/dictyo_2.jpg, id=113, 1466.47874pt x 1467.4825pt>
+File: figures/dictyo_2.jpg Graphic file (type jpg)
+
+<use figures/dictyo_2.jpg> [25 <./figures/percolation_1.jpg> <./figures/dictyo_
+2.jpg>]
+
+LaTeX Warning: Citation `Holland1997' on page 26 undefined on input line 1037.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1049
 
  []
 
 
-! Package inputenc Error: Unicode char \u8:­ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.385 ... concretes, categories, classes expliÂ­
-                                                  cites ; Reinforcement Lear...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Citation `Holland1997' on page 26 undefined on input line 1055.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1056
 
  []
 
-[12]
+<figures/swarm2.jpg, id=117, 350.30875pt x 451.6875pt>
+File: figures/swarm2.jpg Graphic file (type jpg)
 
-! Package inputenc Error: Unicode char \u8:­ not set up for use with LaTeX.
+<use figures/swarm2.jpg>
+<figures/emergence_1.png, id=118, 395.4775pt x 296.10625pt>
+File: figures/emergence_1.png Graphic file (type png)
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.396 ...erteix el model en una cosa tant difiÂ­
-                                                  cil d'entendre com l'objec...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--409
-
+<use figures/emergence_1.png>
+Overfull \hbox (5.43304pt too wide) in paragraph at lines 1077--1084
+ [][] 
  []
 
 
-! Package inputenc Error: Unicode char \u8:­ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.462 ...es metafores i analogies que fa la fiÂ­
-                                                  sica de la matematica
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-! Package inputenc Error: Unicode char \u8:­ not set up for use with LaTeX.
+Overfull \hbox (2.56265pt too wide) in paragraph at lines 1095--1096
+[]\OT1/ptm/m/n/10.95 Under mem-ory phe-nom-ena, path-dependence, and hys-tere-s
+is, non-markovian
+ []
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.463 ...als seus sistemes -> buscar models fiÂ­
-                                                  sics que no son sound ( bu...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:­ not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.465 ...ferents no es poden modelitzar amb fiÂ­
-                                                  sica.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--474
+[26] [27 <./figures/swarm2.jpg> <./figures/emergence_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1139
 
  []
 
-
-Overfull \hbox (1.33664pt too wide) in paragraph at lines 414--474
-\OT1/ptm/m/n/10 emergence com-plex be-haviour pat-terns aris-ing from goals and
- so-cial in-ter-ac-tions. coun-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--474
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1213
 
  []
 
+[30] <figures/column1.png, id=137, 416.55624pt x 249.93375pt>
+File: figures/column1.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--474
+<use figures/column1.png>
+<figures/column2.png, id=138, 414.54875pt x 249.93375pt>
+File: figures/column2.png Graphic file (type png)
+
+<use figures/column2.png>
+Overfull \hbox (5.43304pt too wide) in paragraph at lines 1216--1223
+ [][] 
+ []
+
+[31 <./figures/column1.png> <./figures/column2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1251
 
  []
 
-[13] [14] [15]
+[32]
+Overfull \hbox (20.74881pt too wide) in paragraph at lines 1288--1293
+\OT1/ptm/m/n/10.95 tatiu/flexible,... emer-gent i plan-i-fi-cat.(llegeix lli-br
+es d'AI+SoftComp. []A[][]A?`[]A[][]A?`Copiar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1297--1298
+
+ []
+
+[33]
 Chapter 3.
-[16
+[34
 
 ]
 Chapter 4.
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.560 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--566
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--595
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--595
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--612
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1425
 
  []
 
-[17
+[35
 
-]
-Overfull \hbox (2.26724pt too wide) in paragraph at lines 613--619
-[]\OT1/ptm/m/n/10 La seg[]A\TS1/ptm/m/n/10 �[]\OT1/ptm/m/n/10 A\TS1/ptm/m/n/10 
-�\OT1/ptm/m/n/10 ent com-pro-vaci[]A\TS1/ptm/m/n/10 �[]\OT1/ptm/m/n/10 A\TS1/pt
-m/m/n/10 � \OT1/ptm/m/n/10 fes-la en el mod-e-latge o un al-tre capi-tol m[]A\T
-S1/ptm/m/n/10 �[]\OT1/ptm/m/n/10 A\TS1/ptm/m/n/10 �\OT1/ptm/m/n/10 s
- []
-
-[18]
+] [36]
 Chapter 5.
-[19
+[37
 
-] [20] [21]
+] [38] [39]
 Chapter 6.
-[22
+[40
 
 ]
 Chapter 7.
-[23
+[41
 
-] [24
+]
+Overfull \hbox (11.93425pt too wide) in paragraph at lines 1580--1582
+[]\OT1/ptm/m/n/10.95 Sugarscape. \OT1/ptm/m/it/10.95 http://ccl.northwestern.ed
+u/netlogo/models/community/Sugarscape 
+ []
 
-] [25] (./esquema.aux)
+[42
+
+] [43] (./esquema.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4328 strings out of 495061
- 56036 string characters out of 1182622
- 121565 words of memory out of 3000000
- 7404 multiletter control sequences out of 15000+50000
- 43025 words of font info for 91 fonts, out of 3000000 for 9000
+ 5570 strings out of 495061
+ 72840 string characters out of 1182622
+ 160316 words of memory out of 3000000
+ 8616 multiletter control sequences out of 15000+50000
+ 46154 words of font info for 99 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 30i,7n,24p,1496b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,13n,24p,1500b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on esquema.pdf (30 pages, 318544 bytes).
+ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share
+/texmf-texlive/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-texlive/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb
+i8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on esquema.pdf (48 pages, 1965185 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
