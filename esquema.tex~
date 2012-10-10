@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %\documentclass[man]{apa}
 %\documentclass[doc]{article}{styles/apacls/apa}
 %\documentclass{report}
@@ -7,6 +8,14 @@
 %\documentclass[11pt,twoside,a4paper]{book}
 %\documentclass[11pt,twoside,a4paper,openright]{report}
 \documentclass[11pt,oneside,a4paper,openright]{report}
+=======
+
+
+%\documentclass[man]{apa}
+%\documentclass[doc]{article}{styles/apacls/apa}
+\documentclass{report}
+
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 \usepackage{mathptmx}       % selects Times Roman as basic font
 \usepackage{helvet}         % selects Helvetica as sans-serif font
@@ -27,9 +36,12 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumerate}
+<<<<<<< HEAD
 \usepackage{algorithm2e}
 %\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
 
+=======
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 \begin{document}
 \title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
@@ -38,6 +50,7 @@
 \maketitle
 \newpage
 
+<<<<<<< HEAD
 %\textwidth 6in \oddsidemargin 0.2in \evensidemargin -0.2in
 %\textheight 9in \topmargin -0.75in \headheight 0mm \headsep 25mm
 
@@ -47,6 +60,11 @@
 \pagenumbering{roman}
 \begin{abstract}
 The aim of this master thesis is the development of a multiagent model for a simulation of two populations whose interactions are strongly influenced by a realistic landscape.
+=======
+\pagenumbering{roman}
+\begin{abstract}
+The aim of this master thesis is the development of a multiagent model for a simulation  of two populations whose interactions are strongly influenced by a realistic landscape.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 This research will be in line with Consolider-Simulpast (www.simulpast.es), an interdisciplinary project aimed to create simulations designed to be used in archaeological studies of human-environment interaction, decision-making processes and coevolutionary/competition behaviours of past societies.
 The work plan will be focused on the development of first-stage models for two societies in the age of agriculture spreading surpasing the hunting and foraging way of living. The simulation will involve a climate engine for seasonality depending primarily on variable rainfall rate. Landscape information will be created from satellite image rasters. Constants, and variable relationship shall be modelled from measures and interviews with the experts. Data analysis tasks will be undertaken to validate the models and detect patterns in the archaeological record. Furthermore a comparison will be stablished between the classical simple models used in social simulation[1][2][8] and more advanced approaches.
 \end{abstract}
@@ -68,21 +86,34 @@ The work plan will be focused on the development of first-stage models for two s
 Simulation has been following an evolution in the models and paradigms applied to represent its target
 systems. Dynamical systems, differential equations have been used and an overall simplification of the parts of the systems in the history of simulation to operate with the abstraction and simplification of the problems.
 Mainly, reusing ideas from physical simulations, social sciences has modelled complex systems with dynamical
+<<<<<<< HEAD
 atomic entities that apply a simple set of centralized rules to move around the environment modelled. It was seen that due to the deeper details in human behaviour the question that could be solved and asked to that kind of models could not go very further as expected.\\ 
+=======
+atomic entities that apply a simple set of centralized rules to move around the environment modelled. It was seen that due to the deeper details in human behaviour the question that could be solved and asked to that kind of models could not go very further as expected. 
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 To solve non-linearity phenomena, heterogeneity, hysteressis and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more insight of the modelled systems achieving good results. But under 
 some conditions of very complex relationships between agents, highly specialized decission taking procedures
 and issues in the environment led agents to need a sophysticated reasoning and problem solving capabilities
+<<<<<<< HEAD
 that are not specified and not yet introduced in ABMs coming from Social Sciences.\\ 
 
 We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decissions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearier match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.\\
 
 In order to study such posibilities Sugarscape[SugarScape] is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al[Epstein]. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.\\
+=======
+that are not specified and not yet introduced in ABMs coming from Social Sciences. 
+
+We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decissions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearier match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.
+
+In order to study such posibilities Sugarscape[SugarScape] is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al[Epstein]. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 \section{Simulation}
 
 %brief description
 %hi ha altres aplicacions de simulacio on no hi ha component temporal i no ho estic esmentant! MonteCarlo,etc...
+<<<<<<< HEAD
 Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modelled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhace or guide strategy development, decission taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the inmersion in virtual worlds responding to our input.\\
 % purpose, a priori, outcome, { deduction, induction, abduction(Alexis) } Axelrod's
 % crec que els agradara, marketing, saborcillo de IA impregnant els racons
@@ -92,6 +123,16 @@ Simulation, like deduction, starts with a set of those explicit assumptions. But
 Just like in a tipical Sherlock Holmes case you pick the evidences, scenario for the experiment, and the common knowledge (the initial expert assumptions about the model). You enter in a refinement cycle where you test hypothesis and readjust them to discover the theory, the ``plot'', the explanation of what is happening. Following the abductive reasoning schema one looks for the hypothesis that would best explain the relevant evidence \cite{Axelrod2003}.\\
 %% no anava errat amb l'abduccio! :D
 
+=======
+Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modelled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhace or guide strategy development, decission taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the inmersion in virtual worlds responding to our input.
+
+% purpose, a priori, outcome,  { deduction, induction, abduction(Alexis) } Axelrod's
+% crec que els agradara, marketing, saborcillo de IA impregnant els racons
+A simulation obeys some direction of experimentation, so a question must be set to drive the selection of features to model from the real system and give a direction to the modelling and the experiments design.These assumptions choice will prune the details not related to the questions to solve. It is not just for the sake of simplicity but for the practical reason that a model too near of the real system will be as hard as the original system to analyse.\\
+Simulation, like deduction, starts with a set of those explicit assumptions. But unlike deduction, it does not prove theorems. Instead, a simulation generates data that can be analysed inductively. Unlike typical induction, however, the simulated data comes from a rigorously specified artificial experiment rather than direct measurement of the real world. While induction can be used to find patterns in data, and deduction can be used to find consequences of assumptions, simulation modeling can be used as an aid intuition and hypothesis validation tool ( also as space search mechanism for parameter tunning or optimization ).
+%abduction
+Just like in a tipical Sherlock Holmes adventure you pick the evidences, scenario for the experiment, and the common knowledge (initial expert assumptions about the model). You enter in a refinement cycle where you test hypothesis and readjust them to discover the theory, the ``plot``, the explanation of what is happening. Following the abductive reasoning schema ... matching with SSSS needs...
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %--: simulation, results, validation and statement of your inital hypothesis and question...
 %--: simulation connected to abduction
 % connect abduction with the simulation lifecycle 
@@ -132,6 +173,7 @@ There are some models, however, in which emergent properties can be formally ded
 % trobo a faltar m\'es xixa te\`orica, aix\`o s'hauria de semblar m\'es a un cap\'itol del Norvig.
 In classical simulation approaches, specifically in the branch of Social Simulation, active entities which model human actors are designed with very simple behaviour engines. The classical hypothesis is that a complex mind for entities in the simulation are not that needed and maybe even could lead to difficult analysis of final results of the simulations (too daring statement?). 
 
+<<<<<<< HEAD
 Our statement is that, on the contrary, the mind engine of a simulation entity should not be bounded to that limit but special attention must be paid to give any necessary sofistication to give the entity a correct behaviour, real enough, sensible to the changes in the environment and competent to solve the issues that will have to solve along its lifetime in the system. Even more, we think that this entities' capability to respond with complex behaviours is the core that roots the modelling granularity needed to catch the essential of the social systems that we want to model.
 %TODO ( a l'apartat de ABMs ho tornem a dir perÃƒÂ² afegint que cal adaptabilitat, resposta no lineal, aprenentatge depenent del temps, histeresis,...).\\
 %( i aixo motivaria els ABMs) 
@@ -140,6 +182,14 @@ capabilities to the entities with the aim to get more accurate simulations and r
 
 %% ABM -> Decentralization of Decision-Making
 
+=======
+Our statement is that, on the contrary, the mind engine of a simulation entity should not be bounded to that limit but special attention must be paid to give any necessary sofistication to give the entity a correct behaviour, real enough, sensible to the changes in the environment and competent to solve the issues that will have to solve along its lifetime in the system. Even more, we think that this entities' capability to respond with complex behaviours is the core that roots the modelling granularity needed to catch the essential of the social systems that we want to model.( a l'apartat de ABMs ho tornem a dir perÃƒÂ² afegint que cal adaptabilitat, resposta no lineal, aprenentatge depenent del temps, histeresis,...).\\
+( i aixo motivaria els ABMs) Applying such premises we will explore the possibility to give or enhance decission
+making, problem solving capabilities to the entities with the aim to get more accurate simulations and realistic models with higher matching against our job hypothesis and premises. We will take the framework of ABMs to integrate the AI techniques in a decission making schema of action-response dynamics sensible to a modelled world(por los pelos...).\\
+
+%% ABM -> Decentralization of Decision-Making
+\\
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %%exposicio mes detallada dels punts febles que creus que trobarÃƒ s als simple agents (i a les conclusions 
 %% d'AI-Sugarscape se't confirma 
 %% i d'altres outcomes)
@@ -163,12 +213,23 @@ capabilities to the entities with the aim to get more accurate simulations and r
 %% metode = modelling\\
 %% tecnica en ciencies socials = ABMs \\
 %% afegir capitol llibre Rub+Cris\\
+<<<<<<< HEAD
 
 %que es modelling en ciencies socials 
+=======
+\\
+%que es modelling en ciencies socials 
+\\
+
+%%% XR
+%%Computer modelling and complex systems simulation have dominated the scientific debate over the last decade, %%providing important outcomes in biology, geology and life sciences, and resulting in the birth of entirely new %%disciplines (e.g. bioinformatics, geoinformatics, health informatics, etc.). In the social sciences, the number of groups currently developing research programs in this direction is increasing. The results are extremely promising since simulation technologies have the potential to become an essential tool in the field \cite{Gilbert2008}.\\
+%%However, some social scientists are sceptical about the idea of reproducing â€œinsideâ€ a computer population dynamics, because of the perceived complexity of social structures. This scepticism is understandable given the low number of projects that used this approach and the lack of experience of social scientists with these tools. Nevertheless, the research done in complexity science during recent years shows the way computer simulation can be applied to this field. Artificial intelligence portrays how the appropriate interconnection of very simple computational mechanisms is able to show extraordinary complex patterns, and access to distributed computing has become affordable. For this reason, agent-based simulation allows the implementation of experiments and studies that would not be viable otherwise \cite{Pavon2008}. \\
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 % ATM mini intro
 Modelling is a widely extended methodology. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
 Modelling will be our framework for communication between archeologists' and sociologists' knowledge and their conceptualizations with our formal representations from computer science practices( simulation, algorithms, AI ).
+<<<<<<< HEAD
 The reason is that it is a procedure that will help to communicate the \textbf{discursive} nature of Social Sciences with the formal structures from Computer Science. The enginering of model development will allow us to reach a connection from experts' knowledge to a model that comprises the set of detail clearing out the ambiguity that language could filtrate. Also, modeling will help set a picture of the system without inconsistencies, with each fact sound, coherent and consistent from the logical point of view with the whole.\\ 
 
 \section{Why model}
@@ -181,16 +242,48 @@ This kind of criteria should lead to a preference for simpler models. There are 
 % ATM:aqui o mes endevant? aprofondir molt?
 Another concern is that detail and granularity choice is attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
 The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships of subsumption and hierarchical connection. Following the distribution induced by such hierarchy the space of conceptualizations of the theory will have bounds in the higher and deeper concepts found in the top and bottom locations of the hierarchy. Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper. An ascending crystalization is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons to some inner features related to their personality; now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.\\
+=======
+The reason is that it is a procedure that will help to communicate the \textbf{discursive} nature of Social Sciences with the formal structures from Computer Science. The enginering of model development will allow us to reach a connection from experts' knowledge to a model that comprises the set of detail clearing out the ambiguity that language could filtrate. Also, the model development cycle will help set a picture of the system without inconsistencies, with each fact sound,  coherent and consistent from the logical point of view with the whole. 
+
+\section{Why model}
+
+% ATM, que es modelar? i com es modela?
+The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of study. Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation.
+As Epstein \cite{Epstein2008} says \textit{â€œAnyone who ventures a projection, or imagines how a social dynamicâ€”an epidemic, war, or migrationâ€”would unfold is running some modelâ€}.\\
+
+Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort. \\
+
+For instance, I am modelling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so I could minimize hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the courtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if I would model the system to analyze the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
+
+This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclussions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible and, more importantly, if we better understand them we can better interpret their results. The KISS Lemma sumarizes it ``Keep It Simple, Stupid''.\\
+
+% ATM:aqui o mes endevant? aprofondir molt?
+Another concern is that detail and granularity choice is attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
+The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships of subsumption and hierarchical connection. Following the distribution induced by such hierarchy the space of conceptualizations of the theory will have bounds in the higher and deeper concepts found in the top and bottom locations of the hierarchy. Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper. An ascending crystalization is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterized persons to some inner features related to their personality; now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.   
+
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %%% TODO posar dibuix : triangle, 2 fletxes: top->dw, bott->up
 %%% analisys of system
 %%% synthesis
 %%% sometimes you do a mix
+<<<<<<< HEAD
 %George Box
 Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, citing the famous quote of George Box, essentially, all models are wrong, but some are useful.\\
 % multidiscpl ATM
 As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures.\\ 
 Besides having to cope with implicit ambiguity in each discursive knowledge, all these branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities, other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modelling process will ellicite this structures and will match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole, the \textbf{conceptual framework}.\\
 Modelling will help to find a consensus for expressing the concepts and properties, will help to ellicite knowledge, arrange ambiguities, detect common points. It will allow as to embed the needed rigor to work under the same framework to make every part work together. Modelling shall be an exercise of shared development that can approach positions and circle a communication problem to solve the issues that will arise.\\
+=======
+
+
+%George Box
+Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, citing the famous quote of George Box, essentially, all models are wrong, but some are useful.\\
+
+% multidiscpl ATM
+As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures. 
+Besides having to cope with implicit ambiguity in each discursive knowledge, all these branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities, other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modelling process will ellicite this structures and will match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole, the \textbf{conceptual framework}.  
+Modelling will help to find a consensus for expressing the concepts and properties, will help to ellicite knowledge, arrange ambiguities, detect common points. It will allow as to embed the needed rigor to work under the same framework to make every part work together ( aixo sona fatxa i centralista :P ). Modelling shall be an exercise of shared development that can approach positions and circle a communication problem to solve the issues that will arise.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 % posar les 2 figures de multidiscp modelling
 
 %%%ellicitation 
@@ -204,6 +297,7 @@ Modelling will help to find a consensus for expressing the concepts and properti
 \section{Modeling in social sciences}
 \label{sec:modelsinSC}
 
+<<<<<<< HEAD
 %%TODO afegeixo quelcom com aixo?
 %% com la fisica ha tingut la seva matematica molt avancada, les CienSocials
 %% reusen molt de les metafores i analogies que fa la fiÂ­sica de la matematica
@@ -213,10 +307,13 @@ Modelling will help to find a consensus for expressing the concepts and properti
 
 
 
+=======
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %%%% content
 
 %society/social sc descrip, 
 Social Sciences study the outcome of the interaction of individuals, the behaviour of society or distinguishable
+<<<<<<< HEAD
 groups identified in it. The study of society or social groups considers its target as a adaptative ecosystem of people with interaction, other living entities, environmental conditions or environmental dynamics, information
 exchange and the mutual adaptative changes induced between the actors, co-evolution \cite{PerezAndBatten2006}.
 
@@ -238,6 +335,27 @@ The main issues observed, individuals, units, processes or actions, flow and dyn
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/Gilbert_pg21.jpg}}
 \caption{The development of contemporary approaches to simulation in the social sciences (after Troitzsch )\cite{GilbertTroitzsch}}
+=======
+groups inditified in it. The study of society or social groups considers its target as a adaptative ecosystem of people with interaction, other living entities, environmental conditions or environmental dynamics, information
+exchange and the mutual adaptative changes induced between the actors, co-evolution.
+
+%modelling targets/items, 
+
+Modelling societies implies being aware of constituents identified by the social theories. Interacting entities conform a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. 
+An individual leaves a trace of participations and interactions in the society. Such activities occur with other
+individuals, with some activity units or through them. Populations of individuals flow through the social structures, selectively participating and differentially performing. 
+Ordinary living involves a participation of people in the social activities of family, leisure and holidays, shopping, work and travel. Activity within a unit is structured by relationships and choices, rules, rituals and randomness. Ordinary living also involves the participation of cultural ideas and artefacts in social activities.\\
+The social sciences seek to understand not only how individuals behave under the social influence, but also how the interaction of many individuals leads to large-scale outcomes and global phenomena. 
+%%
+The main issues observed, individuals, units, processes or actions, flow and dynamics within units, are the frontline of the modelization aspects and motivation for the different paradigms appeared or adapted to solve the modeling objectives. New knowledge to infer from this identified phenomena will be the \textbf{descriptive} statement of observed behaviour, quantitative empirical \textbf{generalisations}, construction or assesment of \textbf{theories} and \textbf{prediction} models.
+
+% reproducciÃ³ parcial, ilegal?
+\begin{figure}[tp]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/Gilbert_pg21.jpg}}
+\caption{The development of contemporary approaches to simulation in the social sciences (after Troitzsch 1997)}
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimTL}
 \end{figure}
@@ -246,18 +364,27 @@ The main issues observed, individuals, units, processes or actions, flow and dyn
 
 The first paradigms to model social processes were borrowed from the fields of physics, operations research, and economics materialized as game theory. The first social concepts considered were those related to social units or subgroups and large processes. Also, due to the main use of dynamical systems and differential equations, social phenomena was modelled as a flow between different containers that represent groups or state of individuals.\\
 
+<<<<<<< HEAD
 \begin{figure}[h]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/statisticalModelling1.jpg}}
 \caption{The logic of statistical modelling (after Gilbert 1993)\cite{GilbertTroitzsch}}
+=======
+\begin{figure}[tp]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/statisticalModelling1.jpg}}
+\caption{The logic of statistical modelling (after Gilbert 1993)}
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimTL}
 \end{figure}
 
 Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems making them hard to represent or analitically unsolvable, hence, the following years saw the spreading of \textbf{simulation techniques}, first AI aproximations, cellular automatas and Petri's networks that allowed a finer granularity going from the top abstract groupings infered in social theories to the individual entities.\\
 
+<<<<<<< HEAD
 Gradually social modelling began to approach computational sciences keeping its connections to mathematics and statistics. Programming languages are more expressive, less abstract than most mathematical techniques. Programs deal more easily with parallel processes and processes without a well-defined order of actions compared to math equations. There is a quite long experience on studying programs and their properties from Algorithmics, Soft Engineering, and Operating Systems. The enginering of big models benefits from these branches endowing them with the desirable properties of modularity, extendibility, the experience of combining programs to grow huge program systems, error detection and maintenance, to mention some \cite{TaberAndTimpone1996}.
 
 \begin{figure}[h]
@@ -266,18 +393,36 @@ Gradually social modelling began to approach computational sciences keeping its 
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationModelling1.jpg}}
 \caption{The logic of simulation as a method (after Gilbert 1993)\cite{GilbertTroitzsch}}
+=======
+Gradually social modelling began to approach computational sciences keeping its connections to mathematics and statistics. Programming languages are more expressive, less abstract than most mathematical techniques. Programs deal more easily with parallel processes and processes without a well-defined order of actions compared to math equations. There is a quite long experience on studying programs and their properties from Algorithmics, Soft Engineering, and Operating Systems. The enginering of big models benefits from these branches endowing them with the desirable properties of modularity, extendibility, the experience of combining programs to grow huge program systems, error detection and maintenance, to mention some.
+
+\begin{figure}[tp]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationModelling1.jpg}}
+\caption{The logic of simulation as a method (after Gilbert 1993)}
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimTL}
 \end{figure}
 
 %non covered issues that motivate ABM, 
 %TOASK separo mÃ©s l'explicacio? part1: primers pseudo-agents part2:agents 100%, propietats aconseguides...
+<<<<<<< HEAD
 This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and complex psychology.\\ 
+=======
+This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the  environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and complex psychology.\\ 
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 Modelling from a bottom-up point of view with the inclusion of agents will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. Complex systems theory calls this \textbf{emergence}.
 A further section will describe this effect.
 
 % per on poses aixo? : ``Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems''. 
  
+<<<<<<< HEAD
+=======
+
+%% ******* Modeling Lifecycle: SDLC; TOASK caldria una explicacio? nomes un grafic?
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %% no diguis Lifecycle, es Methodology
 
 Modeling methodology will be materialized through the framework of simulation technique. It will follow a series
@@ -286,7 +431,11 @@ of stages defined in simulation-based research.
 \begin{description}
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\cdot$}
+<<<<<<< HEAD
 \item [Definition of the target] A purpose for the model or a question over the target system is stated.
+=======
+\item [Definition of the target] A purpose for the model o a question over the target system is stated.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 	\begin{description}
 	\item [prediction/prognosis]
 	\item [diagnosis]
@@ -307,6 +456,7 @@ of stages defined in simulation-based research.
 	\item [sensivity analisys] Detect variables and parameters that produce great oscilations on the simulation results.
 	\end{description}
 \end{description}
+<<<<<<< HEAD
 %%TODO GRAFIC del "cicle``
 
 \begin{figure}[h]
@@ -315,11 +465,26 @@ of stages defined in simulation-based research.
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationMethodlogy.jpg}}
 \caption{Stages defined in simulation-based research \cite{RussellNorvig}}
+=======
+
+
+\begin{figure}[tp]
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationMethodlogy.jpg}}
+\caption{Stages defined in simulation-based research (after ... )}
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimTL}
 \end{figure}
 
 
+<<<<<<< HEAD
+=======
+%% Emergence
+%Understanding a political or economic system requires more than an understanding of the individuals that comprise the system. It also requires understanding how the individuals interact with each other, and how the results can be more than the sum of the parts.
+
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 %bridge to ABM section
 
 %%%% end content
@@ -327,6 +492,7 @@ of stages defined in simulation-based research.
 
 % TOASK afegir certs apartats de l'ODD??? adaptar les descripcions dels apartats de l'ODD\\
 
+<<<<<<< HEAD
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conceptual Framework}
@@ -1273,6 +1439,207 @@ Other computational costs that encumber the model are the decission processes, e
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Platforms / Software packages}
+=======
+%Comp emergent
+
+
+%%%%%%%%%%% ABMs %%%%%%%%%%%%%%%
+\section{almost ABM section}
+
+ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues --> cal IA.
+
+AI vs fake-AI : anar mes enlla de maquines d'estats, sistemes de regles, o mind mappings
+
+L'intere\'s d'aplicar AI es evitar hand-made minds. Hand-made mind pot portar un bias introduit pel dissenyador.
+Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semantica,.... posa mes exemples).
+Es busca una aproximacio mes SOFT i no tant hardwired com un sistema de regles (argumenta-ho MOLT,
+estaran els profes de la FIB, Â¿Miquel Sanchez? has de rebatre molts paradigmes : Neurons, SVMs, CBRs, Production Rules,...). 
+Menys bias, mes adaptatiu/flexible,... emergent i planificat.(llegeix llibres d'AI+SoftComp. Ã‚Â¿Ã‚Â¿Copiar justificacions de la SoftComputing + justificacions de ProblemSolving???)
+
+Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
+resource adquisition -> math modelling -> maximization -> planning.
+
+
+models are formal ( we use formal languages to specify them, is that the reason? )
+	atoms
+	atom relationship
+	syntax \& semantics
+		trying to construct unambiguous 
+	detect flaws and intuition mistakes
+		posar l'exemple del graph (1r pdf modelthinking, 4 nodes vs 5 nodes, 3*1 > 4 * 0.71)
+	
+	common language with the community
+			share ideas
+			criticizing
+			advices, redesign loop
+
+	model is a logical/conceptual prototipe
+		build a plane, first build a DaVinci/wood plane, build a tiny plane with a dummy
+		to see ``what happens if I do things this way?"
+	
+Jean Lave \& James March, why model? : explain+predict phenomena, predict new phenomena, build+design systems.
+(introdueix els tecnicismes PROGNOSIS, DIAGNOSIS)
+
+R1Epstein.pdf(modelthinking)
+\{
+Sixteen Reasons Other Than Prediction to Build Models\\
+
+1. Explain (very distinct from predict)\\
+2. Guide data collection\\
+3. Illuminate core dynamics\\
+4. Suggest dynamical analogies\\
+5. Discover new questions\\
+6. Promote a scientific habit of mind\\
+7. Bound (bracket) outcomes to plausible ranges\\
+8. Illuminate core uncertainties.\\
+9. Offer crisis options in near-real time\\
+10. Demonstrate tradeoffs / suggest efficiencies\\
+11. Challenge the robustness of prevailing theory through perturbations\\
+12. Expose prevailing wisdom as incompatible with available data\\
+13. Train practitioners\\
+14. Discipline the policy dialogue\\
+15. Educate the general public\\
+16. Reveal the apparently simple (complex) to be complex (simple)\\
+\}
+
+Neurons, SVM, CBR : d\'on trec els exemples per a fer learning? no tinc etiquetes concretes, categories, classes expliÂ­cites ; Reinforcement Learning, aplicable? com introduir MDP? (potser mes endevant et pots extendre sobre el que es MDP)\\
+
+Uncertainty \& Imprecision : state of resources(other foragers, climate stochacity),uncomplete know,... 
+modelthinking{The complexity wrought by the increases in information, adaptability, and interconnectedness implies a lack of predictability about what's next}.
+
+modelthinking{modelling helps create a dialogue between ideas and data}.
+
+Logic Programming, Semantic Networks : hard to represent the foraging expertise of H.G. -> reduce the problem to 
+resource adquisition -> math modelling -> maximization -> planning.
+
+no oblidis dir que si enriquim un model, l'estem fent mes complexe. Afegir tots els detalls
+converteix el model en una cosa tant difiÂ­cil d'entendre com l'objecte a modelar.
+
+modelling aporta un rigor al treballar amb les ideas del sistema observat que fa mes facil detectar errors, ambiguetats de les descripcions o especificacions. 
+
+\section{Conceptual Framework}{Social Systems Modelization}
+
+conceptes\\
+---sistemes\\
+------sistemes complexes\\
+---------coevol \\
+---------emergence\\
+---------agents, una component que dispara la no linearitat i per tant la complexitat\\
+---------heterogeneitat : dos \`atoms de Carboni es comporten igual en mateixes condicions, les persones no.\\
+
+\section{ABM}
+
+ABM's. ABM's should be seen more as a metaphor (es una tecnica, no una metafora) than a methodology.
+
+An ABM is build from some atomic identified entities in a bottom up design procedure.\\
+Such entities are active decission making actors in the modelled system. The modelling lifecycle of an ABM will consider a stage where decission making processes must be identified from the system. Usually that decission making 
+actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will conform the ABM. The concept 
+'' agent '' condenses a set of features that will specify the modelling metaphor that an agent represents:
+some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, ABMs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
+\\
+bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
+to join them from their relationship and then we try to get the big picture.
+\\
+		%explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
+		% busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
+\\
+		Features:
+\\
+		  agents ( els features isolats )
+		    goal planning/seeking
+		    reasoning
+		    adaptation
+		    decission making
+\\
+		  social interaction
+\\
+		  emergence
+		    complex behaviour patterns arising from goals and social interactions.
+		    counterintuitive patterns : example of the colum in front of the exit door.
+\\		    
+		  bottom-up modelization
+		    identify reasoning/deciding units : what will become agents
+		    identify agents' relationships. 
+\\
+		  natural correspondence/matching of identified entities in social systems vs 
+		  agents in the ABMs theoretical framework
+\\
+		  temporal correlation - histeresis
+\\
+		ABM vs other solutions
+\\      
+		    other solutions miss some points that ABMs can cover.
+\\
+		      non linearity, discontinuity, discrete spaces
+		      non-homogeneous populations (different behaviours, HG,AP, mixed-HG-AP...)
+		      unstability, critical points, transition points...
+\\
+		      DiffEq, as an example, fluid dynamics is an abstraction of a particle system.
+		      You should justify that the abstraction from particle to fluid is sound and
+		      parallel to the person->fluid abstraction, persons are not particles ;P
+\\
+		      com la fisica ha tingut la seva matematica molt avancada, les CienSocials
+		      reusen molt de les metafores i analogies que fa la fiÂ­sica de la matematica
+		      als seus sistemes -> buscar models fiÂ­sics que no son sound ( busca publicacions,
+		      analitza model de Fort, critica'l) -> processos amb cultura/expansio d'idees o espai de temps
+		      diferents no es poden modelitzar amb fiÂ­sica. 
+\\
+		    saber ilustrar quan usaries un ABM i quan no.
+\\
+\\
+		    %aquests punts servirien per a justificar tambÃƒÂ© perque triem ABMs i no un
+		    %altre paradigma per a resoldre la nostra simulaciÃƒÂ³
+\\
+		ABM issues
+  
+		    result analisys
+		    computational costs
+
+
+		\subsection{Evolution}
+		Darwinisme : survival of the fittest.
+		Ingredient afegit per a testejar l'adaptabilitat i el fitness de les dues estrategies : HG vs AP
+		Dins el mark evolutiu establirem la competencia entre les dues estrategies : qui pugui tenir una
+		millor supervivencia del seu offspring perpetuara  la seva estrategia (ADN)
+		
+		\subsection{Coevolution}
+		Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
+		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
+
+			%\subsubsection{Evolutionary \/ Genetic Programming?}
+	
+	\subsection{ODD.Agents} % i la resta? ODD.world = {ODD.climate, ODD.terrain, ODD.resources,....}
+
+
+gradacio 
+|..................................|
+FISICA -> ABM / Teoria Jocs -> IA-MDP-Agents <<-- i aixo motiva el seguent apartat : IA Agents
+
+Teoria de jocs costa de lligar amb dades reals i denses.
+
+
+posar el tipus de t\`ecniques per donar IA als agents : mira els llibres de AI for games : rules, bayes,...
+
+	\section{Intelligent agents} % explico un agent desde la IA ( Norvig )
+
+	  .- reactive, proactive...
+	  .- adaptation
+	  .- reasoning
+	  .- planner
+
+	  \subsection{Planners, ...}
+
+	    UCT/MDP
+	    policies
+	    actions
+	    sectors
+
+	    approaches : greedy, plan next action, ?`adding lookahead?
+
+
+
+	   \chapter{Platforms / Software packages}
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 		\subsubsection{NetLogo...}
 
 		    rasters -> +- automata
@@ -1310,6 +1677,7 @@ Other computational costs that encumber the model are the decission processes, e
 \newpage 
 \chapter{SugarScape vs Advanced Sugarscape} %% aqui veig mes clar que tota aquesta part funcionaria mes com un ODD
 
+<<<<<<< HEAD
 
 %% four our utility-based agents, justification : copied from Russel&Norvig_3rdEd, desplagia-ho
 "Is it that simple? We just build agents that maximize expected utility, and we're done?" 
@@ -1332,6 +1700,18 @@ as we noted in Chapter 1.\\
 
 %		Perque comportaments + rics? l'approach classic es queda curt quan compliques les coses
 %TODO		(add all the good features) (justifica-ho!, en que i com es queda mes curt?)
+=======
+\\
+
+
+ .. as proof case study
+%SugarScape(Epstein) : environment for resource retrieval, social interactions, reproduction
+%Match results, AI-agents are more proficient than their nonAI-counterparts
+\\
+
+%		Perque comportaments + rics? l'approach classic es queda curt quan compliques les coses
+		(add all the good features) (justifica-ho!, en que i com es queda mes curt?)
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
       
 %		A question:
 		  
@@ -1348,7 +1728,11 @@ as we noted in Chapter 1.\\
 
 %		We want to apply the trend begun with the announced motivation to the case study of Gujarat in
 %Simulpast project. 	
+<<<<<<< HEAD
 		  Why HG survived more than expected? ( l'aplicacio de la pregunta 1)
+=======
+		  Why HG survived more than expected? ( l'aplicaciÃƒÆ’Ã‚Â³ de la pregunta 1)
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 			\textbf{interaction society vs envirm}
 				2 main forces that drive change.
 				Environment as a drive for adaptation.
@@ -1359,6 +1743,7 @@ as we noted in Chapter 1.\\
 \\
 \\
 
+<<<<<<< HEAD
 %explica els agents com son a un ABM ( hauria de ser diferent d'un agent IA-Norvig que veiem mes endevant )
 % busca models on puguis veure com son els seus agents, Journals, Hidden Order (llibre, el te la Cris)  
 
@@ -1393,6 +1778,8 @@ resource adquisition -> math modelling -> maximization -> planning.
 	    sectors
 
 	    approaches : greedy, plan next action, ?`adding lookahead?
+=======
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 
 
@@ -1410,7 +1797,11 @@ Made assumptions about behavior of real systems\\
   2nd step, test whether model implements assumptions\\
     -Verification, or correctness\\
 
+<<<<<<< HEAD
 La seguent comprovacio fes-la en el modelatge o un altre capitol mes adient:\\
+=======
+La segÃƒÂ¼ent comprovaciÃƒÂ³ fes-la en el modelatge o un altre capitol mÃƒÂ©s adient:\\
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 Seed independence Ã¢â‚¬â€œ random number generator starting value should not affect final conclusion (maybe individual output, but not overall conclusion)
 Three key aspects to validate:
   -Assumptions
@@ -1500,6 +1891,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
       \section{Future Issues}
 \newpage 
 
+<<<<<<< HEAD
 %TODO ordena la bibliografia per any
 \chapter{Bibliography}
 \begin{thebibliography}{13}
@@ -1566,17 +1958,44 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	\emph{Agent-Oriented Programming. Stanford University: Computer Science Department.(Technical Report STAN-CS-90-1335).}
 	1990 
 
+=======
+\chapter{Bibliography}
+\begin{thebibliography}{13}
+\bibitem{Epstein1999} 
+	J.M. Epstein. 
+	\emph{Agent-based computational models and generative social science. Generative Social
+	Science: Studies in Agent-Based Computational Modeling}, pages 4-46, 1999.
+\bibitem{EpsteinAxtell}
+	J.M. Epstein and R. Axtell.
+	\emph{Growing Artificial Societies}, 1996.
+\bibitem{Axelrod2007}
+	R. Axelrod. 
+	\emph{Simulation in Social Sciences. Handbook of research on nature-inspired computing for economics and management}, 1:90, 2007.
+\bibitem{JDoran}
+	Doran, J., 
+	\emph{1999. Prospects for Agent-Based modelling in Archaeology}. Archeologia e Calcolatori, 10, 33-44.
+\bibitem{GilbertABM}
+	Gilbert, N.,
+	\emph{2008. Agent-Based Models}. SAGE Publications, California.
+\bibitem{GilbertTroitzsch}
+	Gilbert, N., Troitzsch, K.G.,
+	\emph{2008. Simulation for the Social Scientist}. Open University Press, USA.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 \bibitem{Lake}
 	Lake, M W,
 	\emph{2000. Computer Simulation of Mesolithic Foraging, in: Gumerman, G. J., Kohler, T.A. (Eds.), Dynamics in Human and Primate Societies: Agent-Based Modeling of Social and Spatial Processes}, Oxford University Press, New York, pp. 107-143.
 \bibitem{Sugarscape}
 	Sugarscape.
 	\emph{http://ccl.northwestern.edu/netlogo/models/community/Sugarscape}
+<<<<<<< HEAD
 
+=======
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 \bibitem{Epstein2008}
 	Joshua Epstein
 	\emph{Why Model?}.
 	2008.
+<<<<<<< HEAD
 
 \bibitem{Pavon2008}
 	Juan Pavón, Millán Arroyo, Samer Hassan, Candelaria Sansores.
@@ -1611,6 +2030,28 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	\emph{Conflict, Complexity and Mathematical Social Science}
 	2010.
 
+=======
+\bibitem{Pidd2012}
+	Pidd
+	\emph{Pidd book}.
+	2012.
+\bibitem{Pidd2010}
+	Pidd
+	\emph{Pidd book}.
+	2010.
+\bibitem{Pidd2003}
+	Pidd
+	\emph{Pidd book}.
+	2003.
+\bibitem{Leeuw2004}
+	Leeuw
+	\emph{Leeuw book}.
+	2004.
+\bibitem{Robinson2008}
+	Robinson
+	\emph{Robinson book}.
+	2008.
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 \bibitem{Balci1988}
 	Balci
 	\emph{Balci book}.
@@ -1635,6 +2076,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Takahashi, Shingo; Sallach, David; Rouchier, Juliette
 	\emph{Advancing Social Simulation: The First World Congress, Springer, p. 354, ISBN 978-4-431-73150-4}.
 	2007.
+<<<<<<< HEAD
 \bibitem{Bonabeau2002}
 	Eric Bonabeau
 	\emph{Agent-based modeling: Methods and techniques for simulating human systems, PNAS, vol 99} 
@@ -1677,6 +2119,10 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Richard Dawkins
 	\emph{The Selfish Gene.Oxford University Press, 2nd edition}	
 	1990
+=======
+
+
+>>>>>>> af6bbac8082497c109640e4b9258fb17df89aee8
 
 \end{thebibliography}
 
