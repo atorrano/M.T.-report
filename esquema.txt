@@ -1,0 +1,2552 @@
+Coevolutionary strategies in MultiAgent systems.
+An approach using socionatural realistic
+environments.
+Master Thesis
+
+Alexis Torrano Mart´nez
+ı
+17th September 2012
+
+Abstract
+The aim of this master thesis is the development of a multiagent model for a simulation
+of two populations whose interactions are strongly inﬂuenced by a realistic landscape.
+This research will be in line with Consolider-Simulpast (www.simulpast.es), an interdisciplinary project aimed to create simulations designed to be used in archaeological studies of human-environment interaction, decision-making processes and coevolutionary/competition behaviours of past societies. The work plan will be focused on
+the development of ﬁrst-stage models for two societies in the age of agriculture spreading surpasing the hunting and foraging way of living. The simulation will involve a
+climate engine for seasonality depending primarily on variable rainfall rate. Landscape information will be created from satellite image rasters. Constants, and variable
+relationship shall be modelled from measures and interviews with the experts. Data
+analysis tasks will be undertaken to validate the models and detect patterns in the archaeological record. Furthermore a comparison will be stablished between the classical
+simple models used in social simulation[1][2][8] and more advanced approaches.
+
+Contents
+1
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+1
+1
+1
+2
+4
+
+Methodology
+2.1 Intro . . . . . . . . . . . . . . . . . . . . . .
+2.2 Why model . . . . . . . . . . . . . . . . . .
+2.3 Modeling in social sciences . . . . . . . . . .
+2.4 Conceptual Framework . . . . . . . . . . . .
+2.4.1 Multi Agent Systems . . . . . . . . .
+Agents . . . . . . . . . . . . . . . .
+Agent formal description . . .
+Agent Main Behaviours . . .
+Intelligent Agents Architecture
+2.4.2 Complex Systems . . . . . . . . . . .
+2.4.3 Emergence . . . . . . . . . . . . . .
+2.4.4 Evolution . . . . . . . . . . . . . . .
+2.4.5 Coevolution . . . . . . . . . . . . . .
+2.5 ABM . . . . . . . . . . . . . . . . . . . . .
+2.5.1 Beneﬁts of ABM . . . . . . . . . . .
+2.5.2 ABM issues . . . . . . . . . . . . . .
+2.5.3 ODD.Agents . . . . . . . . . . . . .
+2.5.4 Intelligent agents . . . . . . . . . . .
+2.5.5 Planners, ... . . . . . . . . . . . . . .
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+5
+5
+5
+7
+11
+11
+12
+13
+15
+16
+23
+25
+27
+28
+28
+29
+30
+31
+31
+31
+
+3
+
+Platforms / Software packages
+NetLogo... . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Pandora/Cassandra . . . . . . . . . . . . . . . . . . . . . . .
+
+33
+33
+33
+
+4
+
+SugarScape vs Advanced Sugarscape
+4.1 What is SugarScape? . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 Added advanced features . . . . . . . . . . . . . . . . . . . . . . . .
+
+34
+34
+34
+
+2
+
+Introduction
+1.1 Description
+1.2 Motivation .
+1.3 Simulation .
+1.4 Question . .
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+i
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+4.3
+4.4
+
+5
+
+Same deduced trends and emerging dynamics . . . . .
+Realistic Adaptability to Parameter Perturbations . . .
+Solving critics against classic SugarScape . . . . . . . . . . . . . . .
+Experiments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4.4.1 Initial Conditions . . . . . . . . . . . . . . . . . . . . . . . .
+Montecarlo? . . . . . . . . . . . . . . . . . . . . . . . . . .
+Emergence of stationary state; initial state := stationary
+state . . . . . . . . . . . . . . . . . . . .
+4.4.2 Experiment features . . . . . . . . . . . . . . . . . . . . . .
+Description . . . . . . . . . . . . . . . . . . . . . . .
+Hypothesis . . . . . . . . . . . . . . . . . . . . . . .
+Assumptions . . . . . . . . . . . . . . . . . . . . . .
+Conﬁg . . . . . . . . . . . . . . . . . . . . . . . . . .
+Results . . . . . . . . . . . . . . . . . . . . . . . . .
+Validation . . . . . . . . . . . . . . . . . . . . . . . .
+
+Gujarat Case Modelization
+5.1 Introduction . . . . . . . . . . . . . . . . . . . . . . .
+5.1.1 Hypotheses . . . . . . . . . . . . . . . . . . .
+5.1.2 Aims and objectives . . . . . . . . . . . . . .
+5.1.3 Knowledge Elicitation & Brainstorming . . . .
+Interviews . . . . . . . . . . . . . . . . . . . .
+ECOTONO (journal club) . . . . . . . . . . .
+ODD . . . . . . . . . . . . . . . . . . . . . .
+5.2 Physical World / Environment . . . . . . . . . . . . .
+5.2.1 Statistical Modelling . . . . . . . . . . . . . .
+Data Sources . . . . . . . . . . . . . . . . . .
+Resource Pipeline . . . . . . . . . . . . . . . .
+5.3 Antrophological Model . . . . . . . . . . . . . . . . .
+5.3.1 The Model . . . . . . . . . . . . . . . . . . .
+Knowledge Represent . . . . . . . . . . . . .
+Decission Process . . . . . . . . . . . . . . . .
+Hypothesis:richer agents . . . . . . . .
+UPF hand to hand work:UCT algorithm
+Methods . . . . . . . . . . . . . . . .
+˜ ˆ
+A A¿state of the art? . . . . . . . . . .
+’
+Social Network . . . . . . . . . . . . . . . . .
+˜ ˆ
+A A¿state of the art? . . . . . . . . . .
+’
+Design . . . . . . . . . . . . . . . . . . . . .
+Organisational level design . . . . . . .
+Social structure . . . . . . . . . . . . .
+Interaction structure . . . . . . . . . .
+Communicative structure . . . . . . . .
+Normative structure . . . . . . . . . . .
+Coordination level design . . . . . . . . . . .
+Action model . . . . . . . . . . . . . .
+ii
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+34
+34
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+35
+36
+36
+36
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+37
+38
+38
+38
+38
+
+5.4
+
+6
+
+7
+
+Task model . . . . . . . . . . . . . . . . . . . . . . .
+Agent model . . . . . . . . . . . . . . . . . . . . . .
+Plan model . . . . . . . . . . . . . . . . . . . . . . .
+Experiments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.4.1 Initial Conditions . . . . . . . . . . . . . . . . . . . . . . . .
+Montecarlo? . . . . . . . . . . . . . . . . . . . . . . . . . .
+Emergence of stationary state; initial state := stationary
+state . . . . . . . . . . . . . . . . . . . .
+5.4.2 Experiment features . . . . . . . . . . . . . . . . . . . . . .
+Description . . . . . . . . . . . . . . . . . . . . . . .
+Hypothesis . . . . . . . . . . . . . . . . . . . . . . .
+Assumptions . . . . . . . . . . . . . . . . . . . . . .
+Conﬁg . . . . . . . . . . . . . . . . . . . . . . . . . .
+Results . . . . . . . . . . . . . . . . . . . . . . . . .
+Validation . . . . . . . . . . . . . . . . . . . . . . . .
+
+Conclusion
+6.1 Achieved Objectives . .
+6.2 Achieved Objectives . .
+6.3 Comparison AI - Simple
+6.4 Difﬁculties & Issues . . .
+6.5 Publications/CAA . . . .
+6.6 Future Issues . . . . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+Bibliography
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+38
+38
+38
+38
+38
+38
+38
+38
+38
+38
+38
+38
+38
+38
+39
+39
+39
+39
+39
+39
+39
+40
+
+iii
+
+Chapter 1
+
+Introduction
+1.1
+
+Description
+
+1.2
+
+Motivation
+
+Simulation has been following an evolution in the models and paradigms applied to
+represent its target systems. Dynamical systems, differential equations have been used
+and an overall simpliﬁcation of the parts of the systems in the history of simulation to
+operate with the abstraction and simpliﬁcation of the problems. Mainly, reusing ideas
+from physical simulations, social sciences has modelled complex systems with dynamical atomic entities that apply a simple set of centralized rules to move around the
+environment modelled. It was seen that due to the deeper details in human behaviour
+the question that could be solved and asked to that kind of models could not go very
+further as expected.
+To solve non-linearity phenomena, heterogeneity, hysteressis and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more
+insight of the modelled systems achieving good results. But under some conditions of
+very complex relationships between agents, highly specialized decission taking procedures and issues in the environment led agents to need a sophysticated reasoning and
+problem solving capabilities that are not speciﬁed and not yet introduced in ABMs
+coming from Social Sciences.
+We have found an example of that situation in our case study located in Gujarat
+from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with
+other groups in a co-evolution dynamic. Because we want to ﬁnd out why the Gujarat
+HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival
+strategies used by these groups. A simply reactive agent cannot cope with short term
+plus long term decissions in that competitive environment. So the question stated as
+
+1
+
+topic for this Master Thesis project is “do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission
+making engines of the entities in the system?”. As we understand “better results“,
+the outcome from the use of AI should be a more sound validation of the model, a
+nearier match of modelled behaviours with the real ones, and clearer, richer and robust
+scientiﬁc conclusions.
+In order to study such posibilities Sugarscape[SugarScape] is a good framework to
+extend. Sugarscape is an artiﬁcial society developed by Joshua Epstein et al[Epstein].
+where a number of inhabitants move to collect resources they need to live. Sugarscape
+models perception, lattice scanning in search of resources, sexual reproduction of the
+agents in the simulation, market relationships, immunology and spreading of diseases,
+and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The
+results and conclusions will feed our AI experiments in order to make the comparisons
+of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of
+the Master Project.
+
+1.3
+
+Simulation
+
+Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics
+of that system is codiﬁed in an algorithm that computes a calculus imitating the changes
+of state in the model, hence having a representation of that change along the time of the
+system modelled. Simulate is to play to ”what happens if...?”, and it is aimed to discover and explain the dynamics of a system to enhace or guide strategy development,
+decission taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive beneﬁts from it
+like theory checking or training through the inmersion in virtual worlds responding to
+our input.
+A simulation obeys some direction of experimentation, so a question must be set to
+drive the selection of features to model from the real system and give a direction to the
+modelling and the experiments design.These assumptions choice will prune the details
+not related to the questions to solve. It is not just for the sake of simplicity but for the
+practical reason that a model too near of the real system will be as hard as the original
+system to analyse.
+Simulation, like deduction, starts with a set of those explicit assumptions. But unlike
+deduction, it does not prove theorems. Instead, a simulation generates data that can
+be analysed inductively. Unlike typical induction, however, the simulated data comes
+from a rigorously speciﬁed artiﬁcial experiment rather than direct measurement of the
+real world. While induction can be used to ﬁnd patterns in data, and deduction can be
+used to ﬁnd consequences of assumptions, simulation modeling can be used as an aid
+intuition and hypothesis validation tool. Also as space search mechanism for parameter
+tunning or optimization. This links with abductive processes.
+2
+
+Just like in a tipical Sherlock Holmes case you pick the evidences, scenario for the experiment, and the common knowledge (the initial expert assumptions about the model).
+You enter in a reﬁnement cycle where you test hypothesis and readjust them to discover
+the theory, the “plot”, the explanation of what is happening. Following the abductive
+reasoning schema one looks for the hypothesis that would best explain the relevant evidence [3].
+Social simulation is a research ﬁeld that applies computational methods to study
+issues in the social sciences. The issues explored include problems in psychology, sociology, political science, economics, anthropology, geography, archaeology and linguistics [29].
+Social simulation aims to cross the gap between the descriptive approach used in the
+social sciences and the formal approach used in the hard sciences, by moving the focus
+on the processes/mechanisms/behaviors that build the social reality.
+In social simulation, computers supports human reasoning activities by executing these
+mechanisms. This ﬁeld explores the simulation of societies as complex non-linear systems, which are difﬁcult to study with classical mathematical equation-based models.
+Most of the times, studying complex systems implies to cope with non reducibility.
+One of the examples is Gravitational Dynamics. If our assumption is the use of Newton’s mechanics, we can predict the state at any time or not, depending on the scenario.
+For a one dimension world you can predict the state at time tn from the initial state t0
+without computing all the preceding ones. For two and more dimensions you can only
+compute directly state tn if less the three bodies are implied. So in a real environment
+of many bodies in a 3D world you need to compute all the states from the initial to
+the one you consider as the last one. The system is non analytically reducible and you
+are forced to apply simulation to visit all the states and develop the behaviour of the
+model. It happens in most of the complex systems models, they have a nonlinear speciﬁcation. Nonlinear models do not have a simple or computational reasonable analytical
+solution.
+Other of the main issues in complex systems simulation is emergence. While the
+initial assumptions may be simple, the consequences may not be at all obvious. The
+large-scale effects of locally interacting entities are called ”emergent properties” of the
+system. Emergent properties are often surprising because it can be hard to anticipate
+the full consequences of even simple forms of interaction.
+There are some models, however, in which emergent properties can be formally
+deduced. Good examples include the neo-classical economic models in which rational agents operating under powerful assumptions about the availability of information
+and the capability to optimize can achieve an efﬁcient reallocation of resources among
+themselves through costless trading. But when the agents use adaptive rather than optimizing strategies, deducing the consequences is often impossible; simulation becomes
+necessary.
+
+3
+
+1.4
+
+Question
+
+In classical simulation approaches, speciﬁcally in the branch of Social Simulation, active entities which model human actors are designed with very simple behaviour engines. The classical hypothesis is that a complex mind for entities in the simulation are
+not that needed and maybe even could lead to difﬁcult analysis of ﬁnal results of the
+simulations (too daring statement?).
+Our statement is that, on the contrary, the mind engine of a simulation entity should
+not be bounded to that limit but special attention must be paid to give any necessary
+soﬁstication to give the entity a correct behaviour, real enough, sensible to the changes
+in the environment and competent to solve the issues that will have to solve along its
+lifetime in the system. Even more, we think that this entities’ capability to respond with
+complex behaviours is the core that roots the modelling granularity needed to catch the
+essential of the social systems that we want to model.( a l’apartat de ABMs ho tornem
+˜ ˆ
+a dir perAƒA² afegint que cal adaptabilitat, resposta no lineal, aprenentatge depenent
+del temps, histeresis,...).
+( i aixo motivaria els ABMs) Applying such premises we will explore the possibility to
+give or enhance decission making, problem solving capabilities to the entities with the
+aim to get more accurate simulations and realistic models with higher matching against
+our job hypothesis and premises. We will take the framework of ABMs to integrate the
+AI techniques in a decission making schema of action-response dynamics sensible to a
+modelled world(por los pelos...).
+Do AI techniques contribute to better simulation results?
+Classic Simple Agent approach vs Rich Agents
+Did Gujarat extreme enviromental conditions delayed the HG disappearence?
+
+4
+
+Chapter 2
+
+Methodology
+2.1
+
+Intro
+
+Modelling is a widely extended methodology. It comes from the natural observation of
+the world and the curiosity or need to reproduce it.
+Modelling will be our framework for communication between archeologists’ and sociologists’ knowledge and their conceptualizations with our formal representations from
+computer science practices( simulation, algorithms, AI ). The reason is that it is a procedure that will help to communicate the discursive nature of Social Sciences with the
+formal structures from Computer Science. The enginering of model development will
+allow us to reach a connection from experts’ knowledge to a model that comprises the
+set of detail clearing out the ambiguity that language could ﬁltrate. Also, the model
+development cycle will help set a picture of the system without inconsistencies, with
+each fact sound, coherent and consistent from the logical point of view with the whole.
+
+2.2
+
+Why model
+
+The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of
+study. Indeed just thinking about something implies an unconscious projection of our
+mental frame hence producing a set of concepts and relationships that give birth to a
+model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototipe.
+As Epstein [10] says ”Anyone who ventures a projection, or imagines how a social
+dynamic, epidemic, war, or migration would unfold is running some model“.
+Modelling is an introspection exercise where you take into account the domain to elaborate a formal representation of the conceptualizations you develop around the problem.
+Mainly, it will have to do with mathematical expressions from calculus or algebra and
+logics. That is called conceptual modelling. This phase comprises the development
+of a relevant simpliﬁcation, which must be complete according to the phenomena that
+5
+
+inspires the question. Anything left out will change the outcome of the simulation,
+and non-relevant added items will produce noise that will difﬁcult posterior analisys.
+All the involved facts must be correctly well grounded taking into account that any
+unneeded compound in the model will also be added to the scientiﬁc and mathematic
+justiﬁcation, adding good-for-nothing effort.
+For instance, I am modelling the dynamics of a restaurant to ﬁnd an optimum allocation of waiters between interior and terrace tables and their serving policy, so I could
+minimize hired waiters while lowering the waiting time of clients. Variables like client
+arrival rate, kitchen serving time, number of interior tables, number of terrace tables
+are reasonable parts of the system to add to the simpliﬁcation. The colour of the courtains, the outﬁt of the waiters most probably will not account for the stated optimization
+objective. Someone could argue about the topology of the tables whether it should be
+added or not to the model. But if I would model the system to analyze the survival rate
+when there is a ﬁre and people must exit from the building as soon as possible, table
+and furniture topology is an unquestionable variable.
+This kind of criteria should lead to a preference for simpler models. There are many
+reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, veriﬁcation for the correct implementation
+of the conceptual model, and from the formal point of view, validation of the model
+and the scientiﬁc conclussions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective
+choice of features and modelling decisions. Why the present features were chosen and
+the missing ones were left out? why one expert point of view, and not other one? Also,
+as Robinson [15] states, simple models have many advantages, such as they are faster,
+require less data, are more ﬂexible and, more importantly, if we better understand them
+we can better interpret their results. The KISS Lemma sumarizes it “Keep It Simple,
+Stupid”.
+Another concern is that detail and granularity choice is attached to the overall direction
+that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.
+The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships
+of subsumption and hierarchical connection. Following the distribution induced by
+such hierarchy the space of conceptualizations of the theory will have bounds in the
+higher and deeper concepts found in the top and bottom locations of the hierarchy.
+Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or
+the deeper. An ascending crystalization is called bottom-up and the inverse direction
+is known as top-down. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires
+go further the bound. For instance, consider we are modelling a society to see the
+emergence of some differentiated groups. We could model towns, neighbourhoods, go
+down to families and then arrive to the person. Maybe we would like to characterized
+persons to some inner features related to their personality; now we are entering in a
+layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the
+6
+
+ﬁeld of neurology. We could continue to mollecules, biochemistry, and so on and so
+forth.
+Although good modelling of the parts could be accomplished lefting out the nonrelevant phenomena, citing the famous quote of George Box, essentially, all models
+are wrong, but some are useful.
+As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our Gujarat project we are experiencing interaction between different
+disciplines of social sciences : anthropology, archeology, and sociology. Each one of
+these branches has its own terminology, target problems and argue their discurse with
+different structures.
+Besides having to cope with implicit ambiguity in each discursive knowledge, all these
+branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities,
+other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modelling process will ellicite this structures and will
+match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole,
+the conceptual framework.
+Modelling will help to ﬁnd a consensus for expressing the concepts and properties, will
+help to ellicite knowledge, arrange ambiguities, detect common points. It will allow as
+to embed the needed rigor to work under the same framework to make every part work
+together ( aixo sona fatxa i centralista :P ). Modelling shall be an exercise of shared
+development that can approach positions and circle a communication problem to solve
+the issues that will arise.
+
+2.3
+
+Modeling in social sciences
+
+Social Sciences study the outcome of the interaction of individuals, the behaviour of
+society or distinguishable groups inditiﬁed in it. The study of society or social groups
+considers its target as a adaptative ecosystem of people with interaction, other living
+entities, environmental conditions or environmental dynamics, information exchange
+and the mutual adaptative changes induced between the actors, co-evolution.
+Modelling societies implies being aware of constituents identiﬁed by the social
+theories. Interacting entities form a society. Such entities are observed and abstracted
+from identiﬁable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. An individual
+leaves a trace of participations and interactions in the society. Such activities occur
+with other individuals, with some activity units or through them. Populations of individuals ﬂow through the social structures, selectively participating and differentially
+performing. Ordinary living involves a participation of people in the social activities
+of family, leisure and holidays, shopping, work and travel. Activity within a unit is
+structured by relationships and choices, rules, rituals and randomness. Ordinary living
+also involves the participation of cultural ideas and artefacts in social activities.
+7
+
+The social sciences seek to understand not only how individuals behave under the social inﬂuence, but also how the interaction of many individuals leads to large-scale
+outcomes and global phenomena. The main issues observed, individuals, units, processes or actions, ﬂow and dynamics within units, are the frontline of the modelization
+aspects and motivation for the different paradigms appeared or adapted to solve the
+modeling objectives. New knowledge to infer from this identiﬁed phenomena will be
+the descriptive statement of observed behaviour, quantitative empirical generalisations, construction or assesment of theories and prediction models.
+
+Figure 2.1: The development of contemporary approaches to simulation in the social
+sciences (after Troitzsch 1997)
+The ﬁrst paradigms to model social processes were borrowed from the ﬁelds of
+physics, operations research, and economics materialized as game theory. The ﬁrst
+social concepts considered were those related to social units or subgroups and large
+processes. Also, due to the main use of dynamical systems and differential equations,
+social phenomena was modelled as a ﬂow between different containers that represent
+groups or state of individuals.
+Richer representations to cope with reality led to nonlinear speciﬁcations and the
+introduction of heterogeneity present in social systems making them hard to represent
+8
+
+Figure 2.2: The logic of statistical modelling (after Gilbert 1993)
+or analitically unsolvable, hence, the following years saw the spreading of simulation techniques, ﬁrst AI aproximations, cellular automatas and Petri’s networks that
+allowed a ﬁner granularity going from the top abstract groupings infered in social theories to the individual entities.
+Gradually social modelling began to approach computational sciences keeping its
+connections to mathematics and statistics. Programming languages are more expressive, less abstract than most mathematical techniques. Programs deal more easily with
+parallel processes and processes without a well-deﬁned order of actions compared to
+math equations. There is a quite long experience on studying programs and their properties from Algorithmics, Soft Engineering, and Operating Systems. The enginering of
+big models beneﬁts from these branches endowing them with the desirable properties
+of modularity, extendibility, the experience of combining programs to grow huge program systems, error detection and maintenance, to mention some.
+This last improvement and the use of MultiAgent Modelling in social modelling
+allowed to introduce the bottom layer of the hierarchy of concepts of social science,
+people and all the package of phenomena and issues associated to it. Once you are
+modelling a person you can work directly with personal or social relationships and
+their properties, arity, creation and destruction mechanisms, transitivity and interaction
+rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved,
+for instance. Also the direct interaction and feedback effects between the entities and
+the environment can be represented in the model. Before this step, other paradigms
+could not cope with the intrinsic phenomena of people interacting in a social scenario.
+Different issues had to be modelled, agent decission process modelling and embedding
+9
+
+Figure 2.3: The logic of simulation as a method (after Gilbert 1993)
+of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and
+complex psychology.
+Modelling from a bottom-up point of view with the inclusion of agents will allow to
+be near the real causes of macroscopic large scale phenomena non predicted from the
+microscopic local issues. Complex systems theory calls this emergence. A further
+section will describe this effect.
+Modeling methodology will be materialized through the framework of simulation
+technique. It will follow a series of stages deﬁned in simulation-based research.
+Deﬁnition of the target A purpose for the model o a question over the target system
+is stated.
+prediction/prognosis
+diagnosis
+theory validation / discovering
+study future possible worlds
+Observations Data gathering, parameters and initial conditions retrieval from the target system using bibliography, interviews and experts’ supervision.
+Assumptions Relevant simpliﬁcations are considered.
+Design model Translation of the experts’ conceptualizations to a formal modeling language or structure.
+Computer programming Implementation of the model.
+
+10
+
+Figure 2.4: Stages deﬁned in simulation-based research [?]
+veriﬁcation Test that the program matches the speciﬁcations and features of the
+formal model.
+Run simulation Perform the experiments.
+Gather results Extract conclussions from the simulation data.
+Validation Check that the conclussions are scientiﬁcally sound and match the plausible target system behaviour. The model should behave similar to the target
+system under the selected features and details.
+sensivity analisys Detect variables and parameters that produce great oscilations on the simulation results.
+
+2.4
+2.4.1
+
+Conceptual Framework
+Multi Agent Systems
+
+Multi Agent System(MAS) is an architecture for software development based on designing a solution for a problem that executes of a set of computational entities called
+agents that interact themselves in a deﬁned environment.
+Such entities are active decission making actors in the modelled system. The modelling
+11
+
+lifecycle of an MAS will consider a stage where decission making processes must be
+identiﬁed from the system. Usually that decission making actions are carried along
+by more or less clear individual entities from the system. The modelling process will
+take the task to set the matching between these entities and the agent that will form the
+MAS. The concept ” agent ” condenses a set of features that will specify the modelling
+metaphor that an agent represents: some enclosed set of mechanisms to be aware of
+the state of the system, a set of goals to accomplish and the engine to decide from
+a bounded perception of the world, the actions to apply on it to achieve these goals.
+Besides the reasoning component of the agents, MASs have a strong component of
+inter-agent relationship. How one agent interacts with other agents could as important
+or more as how it reacts to world changes.
+
+Agents
+An agent is a computer system that is capable of independent action on behalf of its user
+or owner, ﬁguring out what needs to be done to satisfy design objectives, rather than
+constantly being told.[?] An agent solves problems applying iteratively the schema of
+sense, decide and act continously. Each of the steps can add new targets to fulﬁll which
+will keep the agent exploring the environment and interacting with it and other agents
+to develop its strategies to solve the tasks and achieve goals.
+Agents are [?]:
+i- clearly identiﬁable problem solving entities with well-deﬁned boundaries and interfaces;
+ii- situated (embedded) in a particular environment—they receive inputs related to
+the state of their environment through sensors and they act on the environment
+through effectors;
+iii- designed to fulﬁll a speciﬁc purpose—they have particular objectives (goals) to
+achieve;
+iv- autonomous—they have control both over their internal state and over their own
+behaviour;
+v- capable of exhibiting ﬂexible problem solving behaviour in pursuit of their design
+objectives—they need to be both reactive (able to respond in a timely fashion to
+changes that occur in their environment) and reactive (able to act in anticipation
+of future goals).
+
+12
+
+Figure 2.5: Agents interact with environments through sensors and actuators.
+initialization;
+while not end do
+s = read environment current state;
+a = getAction(s);
+launch(a);
+end
+Algorithm 1: Agents basic main loop.
+An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, checks if the temperature corresponds to the target. According to the measure it launches one of the two actions, to set the heater to ON or to OFF.
+But we could have something as complex as an agent representing a car in a trafﬁc
+simulation while drives from one point to another in the city. The agent would have
+accesible a knowledge base of trafﬁc rules constraining its actions. The agent at each
+time step of the simulation would control the swarm of other vehicles to avoid collisions and would follow paths and perform actions coherent to the rules of trafﬁc. The
+trafﬁc rules would act as middle interface consensus of fair driving that coordinates all
+the cars and allows some prediction of the adjacent cars. The agent can be designed
+a step further. When congestion increases to a predeﬁned threshold, which could be
+tuned through authomatic learning, the agent recalculates the route to adapt and avoid
+the trafﬁc jam.
+Intelligent agent design considers the setting of Perceptions, Actions, Goals and Environment. These aspects form a general structure where an agent design can grow.
+Mentioning an example considering a system that simulates hunting practices from ancient cultures will show how features from the agent are attached to these modules in
+the structure(table 2.1).
+
+Agent formal description Let E be an environment with a ﬁnite set of states
+Ω = {ω0 , ω1 , . . .}
+13
+
+(2.1)
+
+Perceptions
+Actions
+Goals
+Environment
+
+Hunger, TerrainSlope, ReadTracks, LookForPrey.
+Eat, LightFire, Cook, ThrowArrow, Walk, Run, Stalk, Hide.
+Survive, AvoidHarm.
+Weather, Plants, Mountain, Valley, Caves, Deers, Rabbits.
+Table 2.1: Setting table for a hunter agent.
+
+Each agent has available a set of actions
+A = {α0 , α1 , . . .}
+
+(2.2)
+
+An action is a function that changes the state of the environment
+αi : Ω −→ Ω
+
+(2.3)
+
+An agent’s run is a sequence of states of the environment where the transitions were
+triggered by actions launched by the agent. Let R be the set of all possible runs over Ω
+and A, and ru one sequence of length u.
+ru = (ω0 , α0 , ω1 , α1 , . . . , ωu−1 , αu−1 , ωu )
+Let
+
+RA
+
+(2.4)
+
+the sequences that end with an action
+u−1
+rA = (ω0 , α0 , ω1 , α1 , . . . , ωu−1 , αu−1 )
+
+Let
+
+RΩ
+
+(2.5)
+
+the sequences that end with an environment state
+u
+rΩ = (ω0 , α0 , ω1 , α1 , . . . , ωu−1 , αu−1 , ωu )
+
+(2.6)
+
+Actions in the run are the response of an agent Xi to the states of the environment
+j
+∀ j ∈ [0..u − 1] : Xi (rΩ ) = α j
+
+(2.7)
+
+An stochastic and historic dependent environment behaviour, τ, can be described as
+τ : RA −→ ℘(Ω)
+
+(2.8)
+
+A Markovian environment behaviour would be deﬁned as
+τ : Ω, A −→ ℘(Ω)
+
+(2.9)
+
+and the next would hold for the runs
+∀i ∈ [0..u − 1] : τ(ωi , αi ) = ωi+1
+
+(2.10)
+
+Let’s say that no end condition is described for the runs here because althought it could
+happen τ(ωi , αi ) = ∅, many other conditions could mark the end of a run. For instance,
+a run can ﬁnish because the population of agents reaches 0 due to some dying process.
+A run can also stop after a ﬁnite number of transitions, or some predeﬁned event appears.
+An agent Xi retrieves information from the history of environment states to choose
+an action to launch
+Xi : RΩ −→ A
+(2.11)
+14
+
+Agent Main Behaviours
+Autonomy Other entities do not set the agent objectives nor decissions. With agents,
+we give a high-level description of the delegated goal, and let the control mechanism ﬁgure out what to do, knowing that it will act in accordance with some
+built-in theory of rational agency to satisfy it.
+Reactivity Response to environment stimulus or changes. A reactive agent is one that
+maintains an ongoing interaction with its environment, and responds to changes
+that occur in it (in time for the response to be useful). A pure reactive agent, the
+thermostat can be formally descrived as
+Xi : Ω −→ A
+
+(2.12)
+
+Proactivity It means anticipation, taking initiative, detect oportunities. This could
+materialize in prediction of a future event an realize a set of a priori actions
+before it occurs. For instance, if you are modelling a population of farmers and
+agent A1 sees the state of low resources of its neighbour agent A2 at the end
+of the season. As a social action, A1 makes a pressent of food to A2 before
+it begins to starve or asks for help. We also know that this kind of action will
+produce stronger bonds and could have their pay-off in the future. But the most
+extended example is when you enter in a bookshop, as you delay a bit in your
+search, a salesman appears offering its help before you ask for it. It could mean
+that the agent produces a set of actions that trigger an environment event that will
+allow the execution of an action the approaches the agent to its goals.
+Social capabilities Cooperation, coordination, negotiation, competition, and mind models. Some objectives are not achievable by the only means of the agent. The agent
+must interact with other entities that can produce the chain of actions to produce
+the changes in the environment needed. Agents inhabit and intearact with the
+environment applying actions and producing effects in a same medium. Goals,
+effects and dynamics can clash. Is it possible the appearance of conﬂict. Goals
+and planned trend can be contradictory for more than one agent. According to
+the model of negotiation of the agent it can try to change its plan trying to not
+interfere with the other agents, or produce a deliberate interference or ignore it
+and stick to its objectives. Social capabilities will cover the spectrum of comunication but also integrate the other agents behaviour. Some sophisticated agents
+include mind models to add, predict the other agents’ behaviour in its knowledge
+representation engines.
+Cooperation Cooperation is working together as a team to achieve a shared
+goal. Often prompted either by the fact that no one agent can achieve the
+goal alone, or that cooperation will obtain a better result (e.g., get result
+faster). That is very easy exempliﬁed with hunt parties or some families
+of farmers that while one member takes care of the plot the other takes the
+cattle for grazing.
+
+15
+
+Coordination Coordination is managing the interdependencies between activities. For example, if there is a non-sharable resource that you want to use
+and I want to use, then we need to coordinate.
+Negotiation Negotiation is the ability to reach agreements on matters of common interest. At the appearance of conﬂict a solution that beneﬁts the parts
+is searched. For example: Two farmers arrive at a piece of land good for
+crop growing. A possible deal: split the land in two.Another solution :
+both work on the land, but each has assigned different tasks. By the end of
+the year they divide the harvest. Typically involves offer and counter-offer,
+with compromises made by participants.
+Learning Prediction for future situations,reuse solutions,avoid past errors. The agents
+stores patterns from the history of environment changes, or other agents’ actions.
+The patterns induce a model of the world or of the task to perform used by the
+agent for future actions. As a detail, although the learning could be produced in
+ﬁrst stages of the run to produce beneﬁts along the life of the agent, it is desirable
+that the learning should occur along all the run to produce a real adaptation of
+the agent. The keyword is incremental learning.
+Intelligent Agents Architecture This paragraph will show different decompositions
+of how an agent is structured and provide an answer to the question of how the sensor
+data and the current internal state of the agent determine the actions and future internal
+state of the agent. The thermostat example contains an environment with a bounded
+and tractable number of states. Such situations can be solved with a direct implementation setting the bijective function state - action with a table or with a limited number
+of rules. As complexity of modelled systems grows, the number of states and possibilities become untractable. Theres no time nor space to specify each correspondence.
+The agents apply different techniques for retrieving features and structure from the environment to proceed with the decission process from an abstraction to the action to
+perform ([?]).
+¿Pure? Reactive Architectures
+The decission process in Reactive Architectures selects actions only based on
+the last perception retrieved from the environment. It does not considers any
+subset of past perceptions. Reactive Architectures encompass the Simple Reﬂex
+Agents.
+A change in the environment provokes a response from the agent. When changes
+and deliberations in agent are only motivated by an event in the environment, the
+agent is pure reactive.
+
+16
+
+Figure 2.6: Simple Reﬂex Agent Architecture
+
+while true do
+σ ← getNextPercept();
+rule ← ruleMatch(rules, σ );
+α ← ruleAction(rule);
+execute(α);
+end
+Algorithm 2: Simple Reﬂex Agent main loop
+• Cognitive Maps
+• State Transition Machines
+• if-then rules
+Deliberative Architectures
+A deliberative agent uses symbolic reasoning to deduce the action to launch. The
+deliberative agent contains explicitly the goal that steers its behaviour. Deliberation is done through an internal formal representation of the state of the world,
+the state of the agent and other information retrieved by it. A logic engine will
+produce deductions from the facts stored in the agent memory, the knowledge
+base. The perceptions from the environment become facts to add to the internal
+representation of the environment. From this internal world model the agent can
+deduce trends for prediction besides the next action to launch. Some systems
+and agent behaviour must be described this way. -example- A state of the environment or of the agent is speciﬁed. The agent must ﬁnd the way to fulﬁll
+this within his reach of perceptions and actions. Desirable situations are seeked
+goals, seeked states of environment or agent. Actions
+satisfy goals non
+achievable from a single action execution: search + planning techniques Goals
+
+
+
+
+
+17
+
+Figure 2.7: State Machine Reactive Agent Architecture
+could be a design feature of the agent (survive & reproduce), or could be set in
+runtime by conditions in the environment or through user commandment.
+Logic Deliberative agents will use assert clauses and structures to represent facts
+in a logic of some level, CP0, CP1. Each new change in the knowledge base
+will allow to deduce new facts from the status of the system to check againts
+the goals and other issues the agent is considering to produce an action
+coherent with the planning and the mechanics of the environment to fulﬁll
+a new step to get nearer to the goals. The agent will use its knowledge base
+as a theory of the world and things plus the dynamic facts that represent the
+volatile states.
+Let ρ be a theory of the world. Depending on the architecture this can be a
+set of rules, or a learned structure along the run.
+If Γ is a description for the current state of the world. A the set of possible
+actions {α1 , α2 , α3 , . . . }. And Γ ρ Φ stands for a succesful prove that Φ
+is deduced from the knowledge base Γ using theory ρ. The Deliberative
+agent will choose actions according to a schema like that:
+
+18
+
+forall the α ∈ A do
+if Γ ρ doAction(α) then
+return α;
+end
+end
+forall the α ∈ A do
+if Γ ρ ¬doAction(α) then
+return α;
+end
+end
+return null;
+Asserts from Logic will be used to state the facts that are true from environment and the other agents.Knowledge representation. Solvers : Resolution,
+Forward/Backward chaining
+BDI BDI stands for Belief-Desire-Intention. Yoav Shoham introduced “agentoriented programming” in 1990([?]):“new programming paradigm, based
+on a societal view of computation”. The key idea is about directly programming agents in terms of intentional notions like belief, commitment, and
+intention. Beliefs are used to model the state of the world. Desire allows
+the selection of possible states of the world and preferences. Intentions are
+compromises to achieve a given state, is the commitment of the agent.
+BDI belongs to a overloaded kind of logics called modal logics which add
+meta language operators to the facts to alter with some nuance the meaning
+or the semantic interpretation of the fact. For instance, let φ be a fact that
+could represent “deer is in the wood”. Indeed it is true for the example. Our
+agent has not seen it and only has some clue that the deer is in the wood;
+so the agent states B φ , with an operator B to indicate “I believe the deer
+is in the wood”. The memory of the agent will contain also the facts below
+θ = “I am hungry”.
+η = “I go hunting”.
+D η = “I have Desire for going hunting”.
+I η = “I have Intention for going hunting”.
+Some of these entail from other. They are governed by the next rules from
+the knowledge base
+• myState(HUNGRY) → D doAction(HUNT)
+• D doAction(HUNT) ∧ B entityAtPlace(x,y) ∧ edible(x)
+→ I doAction(HUNT)
+• I doAction(HUNT) ∧ B entityAtPlace(x,y) ∧ edible(x)
+→ doAction(go, y)
+• entityAtPlace(MYSELF,p) ∧ I doAction(HUNT) ∧ entityAtPlace(x,y)
+∧ edible(x) ∧ distance(p,y) ≤ HUNTDISTANCE → doAction(HUNT,x)
+• doAction(a,x) → launchAction(a(x))
+
+19
+
+This rules would carry the agent to satisfy the goal of feeding going through
+the goal of going where the prey is, and see that it is indeed there where the
+agent believed.
+Programming agents this way allows a deeper description of the dynamics
+around the goals an agent self-imposes and also an easier way for the agent
+to reason about the other agents. This last point crucial for a better integration of the social dynamics in the planning of goal achieving. The agent can
+construct through facts of Believing, Desire and Intention a mind model of
+the other models taking into account their BDI intentions and adapting to
+them to cooperate or compete.
+Continuing the example, the agent would be inmersed in social deliberations after retrieving from the world facts like i η that stand for “Agent i
+I
+has the Intention of hunting”. The interaction of all these facts, entityAtPlace(MYSELF,P), entityAtPlace(i, P) will make deduce to the MYSELF
+agent somekind of communication protocol with agent i to solve the conﬂict. Because they could end to hunting the same deer, before they would
+launch their HUNT action, they must reach a consensus about what to do
+each other.
+Schema for BDI
+B ← B0 ;
+I ← I0 ;
+while true do
+δ ← getNextPercept();
+B ← brf(B, δ );
+D ← options(B, I);
+I ← ﬁlter(B, D, I);
+π ← plan(B, I);
+execute(π);
+end
+Algorithm 3: BDI main loop
+other issues about BDI : planning of actions to fulﬁll intentions, and commitment management
+second algorithm
+Utility based Goal-based models are a dycothomic approach that rely on bivalued logics. A goal is considered achievable or not achievable, an agent is
+commited to a goal or is not commited to that goal. But many ﬁelds have
+shown things usually work in a fuzzy manner or probabilistically or with
+multivalued assignations. Mentioning some example, robot soccers. In a
+match, eventually, you could pass the ball to a partner or try to score. If you
+launch the action “pass” things will happen different from launching action
+“score” but a priori you cannot predict which will be of more help. And if
+you stop to think about it the opponent will steal the ball from you. Another
+example, a ﬁre simulation. There are many escape routes; when a route is
+saturated due to congestion, people have a variable internal timeout wait
+20
+
+time to leave the route and try another one. There is also fuzzy phenomena
+in auctions; auction agents have to decide wheter raise the “bet” or leave.
+An agent under these circumstances will ﬁnd a set of available goals where
+each one produce a different beneﬁt for the agent itself. The goals, the
+states of agent and environment must be weighted in function of probability
+of success, or beneﬁt for the agent. Also, there is some related optimization
+trend or related likelihood of achieving positive results.
+A pure logical agent can ﬁnd a cul-de-sac on its deductions if the possible
+contingencies overcome the reasoning to deduce the actions to fulﬁll the
+goal. These issues are what is called uncertainty. Uncertainty is the term
+used when there are many solutions that lead to the goal or if the goal is
+something not sure to be achieved and the agent faces a choice with no
+success ensured.
+For instance, considering a hunter agent in a social simulation of ancient societies, a hunt action can be affected by many issues. First you must make a
+guess about where the preys are. Once you begin the hunting session many
+things could happen: a weather incident that changes prey grace behaviour,
+other hunters appear to hunt the preys, or dangerous roaming predators.
+The pure bivalued logic agent cannot predict the setbacks so cannot deduce
+the sucess of the action, and the hunt action will not be launched leading to
+starvation. If all the logical paths towards the achievement of the goal are
+troubled by contingencies, the agent could fall in a loop of inactivity.
+When perfect solution is perhaps non achievable, the agent should be allowed to satisfy the goals through a non perfect solution. The decission
+engine should be changed to accept failable solutions for its goal seeking.
+Another hunt area should be eligible in the decission process. But maybe,
+although the other area is free of contingencies, it cannot offer a good outcome because is almost dessertic. Someway the agent should express a
+preference and deduce the action planning according to it. Preference over
+the outcomes of and action in the goal seeking activities of the agent encompass the modeling of success probability and beneﬁt quantiﬁcation. A
+particular outcome should be the fact that the hunter returned home without
+getting injured and a certain amount of Kg. of meat.
+Utility theory is used to represent and reason with preferences. Utility
+theory says that every state has a degree of usefulness, or utility, to an
+agent and that the agent will prefer states with higher utility [?]. Preference
+and similar issues are modeled through utility functions.
+u : E→ R
+
+(2.13)
+
+Utility functions map desired states to a quantitative dimension, a scoring.
+Utility ponderation allows to break ties in sub-goal selection. Utility functions will give extra heuristic information about the likelihood achieving
+a goal. If the hunter agent has acces to two areas of hunting, valley and
+wood and is more likely to ﬁnd dangerous predators in the wood although
+the same preys can be found on both areas, the utility function would assign
+21
+
+greater utility to the valley. Utility provides a way in which the likelihood
+of success can be weighed against the importance of the goals.
+Preferences, as expressed with utility functions, are combined with probabilities in the general theory of rational decisions called decision theory:
+[?]
+Decision theory = probability theory + utility theory.
+
+(2.14)
+
+Utility-based agents are rational and follow the principle of Maximum Expected Utility (MEU): An agent is rational if and only if it chooses the action that yields the highest expected utility, averaged over all the possible
+outcomes of the action.[?].
+Utility and Planning utility functions applied to runs...
+Hybrid Architectures say you can mix everything
+Environment Features
+Accessible vs Inaccessible An accessible environment is one in which the agent can
+obtain complete, accurate, up-to-date information about the environment’s state.
+Most moderately complex environments (including, for example, the everyday
+physical world) are inaccessible.
+The more accessible an environment is, the simpler it is to build agents to operate
+in it. Accuracy and completeness about information retrieved is key to decission
+making. All the missing stretch must be supplied with uncertainty managing
+techniques.
+Deterministic vs non-Deterministic As we have already mentioned, a deterministic
+environment is one in which any action has a single guaranteed effect — there
+is no uncertainty about the state that will result from performing an action. The
+physical world can to all intents and purposes be regarded as non-deterministic.
+Non-deterministic environments present greater problems for the agent designer.
+Episodic vs non-Episodic In an episodic environment, the performance of an agent
+is dependent on a number of discrete episodes, with no link between the performance of an agent in different scenarios. Episodic environments are simpler
+from the agent developer’s perspective because the agent can decide what action
+to perform based only on the current episode — it need not reason about the
+interactions between this and future episodes.
+Static vs Dynamic A static environment is one that can be assumed to remain unchanged except by the performance of actions by the agent. A dynamic environment is one that has other processes operating on it, and which hence changes
+in ways beyond the agent’s control. The physical world is a highly dynamic
+environment.
+Discrete vs Continuous An environment is discrete if there are a ﬁxed, ﬁnite number
+of actions and percepts in it. Russell and Norvig give a chess game as an example
+of a discrete environment, and taxi driving as an example of a continuous one.
+
+22
+
+Task Environment
+Crossword puzzle
+Chess with a clock
+Poker
+Backgammon
+Taxi driving
+Medical diagnosis
+Image-analysis
+Part-picking robot
+Reﬁnery controller
+Interactive English tutor
+
+Observable
+Fully
+Fully
+Partially
+Fully
+Partially
+Partially
+Fully
+Partially
+Partially
+Partially
+
+Deterministic
+Deterministic
+Strategic
+Stochastic
+Stochastic
+Stochastic
+Stochastic
+Deterministic
+Stochastic
+Stochastic
+Stochastic
+
+Episodic
+Sequential
+Sequential
+Sequential
+Sequential
+Sequential
+Sequential
+Episodic
+Episodic
+Sequential
+Sequential
+
+Static
+Static
+Semi
+Static
+Static
+Dynamic
+Dynamic
+Semi
+Dynamic
+Dynamic
+Dynamic
+
+Table 2.2: Examples of task environments and their characteristics.
+
+2.4.2
+
+Complex Systems
+
+Complex Systems is a discipline that studies systems that cannot be studied through the
+analisys of its parts and the simple composition of those analisys. Usually, reductionism has coped with complicated systems where the supression of constituents does not
+change the main trend of its behaviour, and it is used to work with simpliﬁed questions.
+Let’s think for instance in a car which more or less keeps running although you remove
+its seats, the doors, and the lights, to mention some. That is what could be called a
+complicated system [27]. There are systems where the interrelationship is so rich that
+supression of one part dismembers all the coherence of the system. Taking again the
+car exemple, if we think about the engine, the suppression of a most tiny gear will
+change the things, everything will stop. Historically, those systems have been an issue
+that was of concern to many disciplines, Economics, Physics and Biological sciences,
+that gave arise through an interdisciplinary effort to complexity science [25] ( here we
+are not talking the computational concept of algorithm complexity ). Complex science
+tries to ﬁnd out how the interactions of a set of constituents build a system that exhibits
+adaptive traits, descentralized organization, and macroscale behaviour patterns.
+One of the most known systems studied by its complexity are ant colonies. The
+colony is formed by a limited range of roles, a queen, soldiers and workers/explorers.
+Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the
+odor of the nest. Unloaded workers follow explorer’s pheromons. When food is found
+a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a
+huge amount of ants produces an ant colony that manages food resources, reproduction
+and care, defense and many other adaptation to the wild life in the forest. It can loose
+part of its population, can balance workload, a same speciﬁc individual group of ants is
+not needed for an especiﬁc task. The colony is ductile, malleable. The ant colony acts
+has a whole with very rich global behaviours. That is a complex system.
+
+23
+
+Discrete
+Discrete
+Discrete
+Discrete
+Discrete
+Continuons
+Continuous
+Continuous
+Continuous
+Continuous
+Discrete
+
+Agents
+Single
+Multi
+Multi
+Multi
+Multi
+Single
+Single
+Single
+Single
+Multi
+
+Figure 2.8: Ant explorers building a bridge to overcome obstacles.
+Researchers observed that woods under a ﬁre dissappear at different rates not completely dependent to the intensity of the focus, nor the climatic conditions. It was
+observed that under some tree topologies and certain wood density a small change in
+the number of trees would mean sometimes the complete combustion of all the wood,
+and other times the wood would only burn in a small controlled area. This topology
+dependant condition is called percolation. It arises from the spatial relationship between the trees. Considering an ideal situation where topology protects the wood from
+percolation appearance, slight changes in some trees distribution will make them sensible to ﬁre, but the rest of the wood will not burn. These conditions are an example of
+robustness in complex systems. But enough changes will collapse it.
+The strong relationships that give arise to the complex phenomena act as the glue that
+holds the system, it gives reason to the system existence.
+Percolation was not discovered studying one tree. It was detected taking into account
+the whole of the wood and the feedback versus the individual trees.
+
+Figure 2.9: Percolation phenomena in ﬁre spreading.
+Indeed we observe that there is a system due to the pressence of the macro phenomena. It is the evidence that something is happening there that relates the constituents.
+Just to give a compact deﬁnition from Melanie Mitchel [25], a complex system is
+a system in which large networks of components with no central control and simple
+24
+
+Figure 2.10: Development of spiral waves after hydrodynamic breaking of a concentric
+wave (Zhabotinsky and Zaikin, 1971).
+rules of operation give rise to complex collective behaviour, sophisticated information
+processing, and adaptation via learning or evolution. Sumarizing, a complex system
+exhibits nontrivial emergent and self-organizing behaviors.
+The laws that describe its behaviour are qualitatively different from those that govern its individual units. The advances of computational techniques for scientiﬁc discovering is changing the way we confront the models and the manipulation of these
+issues. Computers have allowed new ways of learning. Computational techniques allow the modelling of many constituents and its relationships, how they assemble to a
+whole system. It allows us to understand and play with the experimental manipulation
+of the behaviour in a easier way. Computers not only help us in studying the surface
+of the behavioral phenomena but also the internals of complex systems giving insight
+to our explanations and deductions. Besides, computational experimentation has the
+advantage of controlling the trace and generating rich databases of events for posterior
+analyses [28].
+Complex behaviour is tied to a non central global decission process. But, on the
+other hand, the emerged pattern is something that does not belongs to a identiﬁable
+constituent. It is build from the descentralized dynamic of all the constituents. That
+feature is called emergence.
+
+2.4.3
+
+Emergence
+
+Emergence is a phenomenon where aggregation of individual and local behaviours are
+the direct cause of a higher level pattern or global behaviour. Emergence is one of the
+key concepts from Complexity that is studied in Social Simulation. Indeed, emergence
+is one of the main features exhibited by complex systems.
+Although we can give features and descriptions, emergence cannot be fully speciﬁed due to the vague concepts of “surprising” and non deducibility [?] . But some
+signals can be enumerated to circle the concept of emergence.
+A phenomenon will be considered emergent when it is repeatable and surprising,
+non deducible from lower level rules and the relationships of basic constituents of the
+system. Emergence cannot be predicted, given our current means, from only the constituents and their addition, following the reverse way of reductionism. Reductionism is
+one of paradigms of science. A system is observed to detect differentiated parts. Then
+
+25
+
+each part is analized to extract its behaviour. Reductionism states that the behaviour
+of the system can be understood from the constituents speciﬁcations plus a simple or
+direct aggregation step. This idea can be applied recursively on the same constituents
+till some atomic element considered the bottom of the process. The thing is that due
+to nonlinear relationships follow the inverse path to reconstruct a sense for the whole
+system is practically impossible.
+Even a small an simple set of rules can make a dynamic system generate emergent
+phenomena. If these rules induce non linear relationships the proportion of a perturbation in the system will not be paired with the response of it. To use a uninventive
+example, nonlinear emergence occurs when someone calmly says “ﬁre” in a crowded
+room and produces explosive panic. Unpredictable results arise from constituents interactions. It is here where Emergence can be appear. When a pattern is recognizable
+and repeats usually along experiments, is plausible to be considered emergent [?].
+
+Table 2.3: Emergence of swarm patterns from the interaction of many moving actors.
+There is potential for emergent phenomena, i.e., when:
+• Agent behaviour is non linear ( weight sum of variables), or is expressed with
+discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
+• Under memory phenomena, path-dependence, and hysteresis, non-markovian
+behavior, or temporal correlations, including learning and adaptation.
+
+26
+
+• Heterogeneous interactions between agents.
+• When there is unstability to perturbations although the system could be deﬁned
+linearly.
+
+2.4.4
+
+Evolution
+
+Evolution theory is the result of observations made by Charles Darwin in his trips to
+Galapagos Islands and study of native species of ﬁnche birds. Darwin proposed that
+the varieties and specializations of observed species was imposed by the topology of
+the island and the local conditions of each one. The theory arised from the following
+points in conjunction of the observations. He based his deductions on the next hypothesis:
+• Gradual change over long periods can produce very large effects.
+• Population growth combined with limited resources creates a struggle for existence.
+• Collections of individuals acting in self-interested ways produce global beneﬁt.
+• Life seems to allow almost inﬁnite variation, and a species’ particular traits seem
+designed for the very environment in which the species lives.
+• Species branch out from common ancestors.
+Darwin called Evolution by Natural Selection to the improvement by mutation
+and competition process where individual beings produce offspring at a rate greater
+of the survival rate ( otherwise they would extinct). The offspring is almost equal to
+the parents except from slight variations. At some point the population will saturate
+the niche and they will compete for the resources. The more adapted individuals are
+considered those who will satisfy their resource needs and have higher reproduction
+success. This will imply that a great number of offspring that inherited features from
+their successful parents will populate the environment. These traits will persist through
+the time from generation to generation. This would explain why individuals are as they
+are and not other way. Adaptation comes from the small perturbations or changes between parents and offspring. This is an open door to the appearance of an improved trait
+that would increase the adaptation of the new generation. Hence, change after change
+the Evolution sculpts step by step the organic beings making them more adapted to the
+environment. Traits that does not allow to survive nor reproduce will not appear in the
+next generation, except due to some rare mutation but that will be purged again in the
+competition game againts the environment.
+To summarize the major ideas of Darwin’s theory:
+• Evolution has occurred; that is, all species descend from a common ancestor.
+The history of life is a branching tree of species.
+
+27
+
+• Natural selection occurs when the number of births is greater than existing resources can support so that individuals undergo competition for resources.
+• Traits of organisms are inherited with variation. The variation is in some sense
+random—that is, there is no force or bias leading to variations that increase ﬁtness. Variations that turn out to be adaptive in the current environment are likely
+to be selected, meaning that organisms with those variations are more likely to
+survive and thus pass on the new traits to their offspring, causing the number of
+organisms with those traits to increase over subsequent generations.
+• Evolutionary change is constant and gradual via the accumulation of small, favorable variations.
+Part of the working framework of our simulation is based on the ideas of evolution and “natural selection”. We understand the “natural selection” as a process that
+”rewards” adaptive solutions and penalizes those less adapted. Darwinian Evolution is
+the result of the continued application of this screening and the persistence of adaptive
+patterns and what comes off of them. Persistence is produced through the reproductive
+process of agents. Regularly an agent generates a copy of itself with some disturbance
+in their features and takes charge of it for a period of time. The extraction capacity of
+system resources, adaptability, marks their survival and that of their offspring. If the
+offspring survives, the conﬁguration is maintained over time and gets another chance
+to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of conﬁgurations to respond more adaptively than others,
+working with the hypothesis that selected ones would correspond to reality. We Simulate systems plus the evolutionary process. Our utility functions, birth & mortality are
+ﬁlters to keep or remove agents of the system depending on its performance against its
+lifecycle. Applying Natural Selection as a metaphor for certain features derived from
+DNA we take as item of information in time to extend the cultural conﬁguration of the
+agent: Lifestyle HG / AP, and below, we will add the pack of proﬁciency in the skills
+that we deﬁne for the agents.
+
+2.4.5
+
+Coevolution
+
+Coevolution; when two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes
+also in the other species [30].
+
+2.5
+
+ABM
+
+ABM is a modeling methodology that relies on a application engineering architecture
+called Multi Agent Systems from A.I.
+Following the paradigm of ABM, systems to model are decomposed into entities
+called agents, which have their behaviour deﬁned, how affect or are affected by environment, and how they interact with the other agents. The main activity for agents is
+decision making. Each agent individually assesses the current state of the environment,
+
+28
+
+taking into account the other agents, and in accordance with its objectives takes an action that runs against the system, the environment plus the agents that may be involved.
+The system runs on a constant loop of evaluations, decisions and actions of the agents
+that inhabit it. This will lead to situations of iterated interactions between a set of agents
+in a framework of cooperation, coordination or competition. Although simple agents
+in such an interaction environment can make emerge many complex patterns and be a
+good model of real world systems, the methodology considers also features like mind
+models, authomatic learning or evolution and natural selection in agents endowing the
+agents with enhanced adaptation.[Bonabeau 2002]
+
+2.5.1
+
+Beneﬁts of ABM
+
+There are some striking features that make ABM stand out from other paradigms or
+approaches. ABM copes with the simple and bottom constituents of social science
+implicated in the modelization of a system, hence it can sometimes allow to describe
+a system naturally. It is not easy to develop an agent, but you are working with a
+metaphor with a structure and concepts that we have at hand everyday. So it is more
+manageable, natural to express things with that “language”. Also, it is more ﬂexible
+in the modelization. And to ﬁnish enumeration, ABM captures emergent phenomena. ABM follows the arise of emergence from its deﬁnition, following the bottom-up
+generation of phenomena from the atomic constituents when the system is run. Lets
+mention an example from Helbing,[24]; consider a ﬁre escape situation in a conﬁned
+space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outﬂow of people? Narrowing down the problem, one
+could ask: what is the effect of putting a column (a pillar) just before exit, slightly
+asymmetrically (for example, to the left of the exit), about 1 m away from the exit?
+Intuitively, one might think the column will slow down the outﬂow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the
+ﬂow, leading to fewer injured people and a signiﬁcant increase in the ﬂow, especially
+if one assumes that injured people cannot move and impede the ﬂow. This result is an
+example of a counterintuitive consequence of an emergent phenomena: who would
+think of putting a column in front of an emergency exit? ABM captures that emergent
+phenomenon in a natural way.
+ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a trafﬁc jam, the stock market,
+voters, or how an organization works, ABM makes the model seem closer to reality.
+For example, it is more natural to describe how a party of hunters move in a terrain and
+circle their preys than to come up with the equations that govern the dynamics of the
+density of hunters. Because the density equations result from the behavior of hunters,
+the ABM approach will also enable the user to study aggregate properties.
+It is advisable, because it can be more natural and useful, to use ABM through the
+constituent units’ activities under the next conditions.
+i- The behavior of individuals cannot be clearly deﬁned through aggregate transition
+rates.
+
+29
+
+ii- Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the
+complexity of behavior increases. Describing complex individual behavior with
+equations becomes intractable. For instance, the individual copes with hysteresis,
+or there is heterogeneity in the set of behaviours or there are learning procedures
+and adaptability.
+iii- When the interactions between the agents are complex, nonlinear, discontinuous,
+or discrete (for example, when the behavior of an agent can be altered dramatically,
+even discontinuously, by other agents).
+iv- When space is crucial and the agents’ positions are not ﬁxed. Example: ﬁre escape, trade, foraging in a stochastic spatial distribution of resources, trafﬁc.
+v- Activities are a more natural way of describing the system than processes.
+vi- Validation and calibration of the model through expert judgment is crucial. ABM
+is often the most appropriate way of describing what is actually happening in the
+real world, and the experts can easily “connect” to the model and have a feeling of
+“ownership”.
+vii- Stochasticity applies to the agents’ behavior. With ABM, sources of randomness
+are applied to the right places as opposed to a noise term added more or less
+arbitrarily to an aggregate equation.
+Besides naturality in expressing models, ABM models are ﬂexible. ABM can manage agents at different levels of aggregation. The decission units can be a person but
+also social entities like families, couples or tribes with their own rules for intearaction
+and behaviour. You can tune your model easily moving between different layers of
+abstraction from social sciences. ABM works with models where decission-making
+and aggregation is clearly separated. The range of complexity of the agent, its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be
+tuned more independently of the range of complexity of the aggregation, individualality, and groups. This allows the modeller to work with different levels of description or
+complexity in the same model.
+A last characteristic feature of agent computing, although not often noted, is that
+once a model has been created it provides not merely one aspect of the solution — the
+equilibria, say, or the stability — but rather entire solution trajectories [23].
+
+2.5.2
+
+ABM issues
+
+What is mentioned in a past section as a beneﬁt must be mentioned here because there is
+an other side of the coin. While other methods return only the equilibria or optimality
+conditions, ABMs yield trajectories of the system, allowing to retrieve more data to
+induce patterns or any other dynamics that could emerge. This has its drawbacks.
+For a causality result to be stablished or a pattern to be detected many runs must be
+performed. If a result R appears as an outcome of the model, how strong are the bond
+30
+
+of the result and that model? How much does have to change the model to loose R?
+For equational models there are analytical methods to answer the question. With ABMs
+many runs must be launched varying the initial conditions, testing parameter sensibility
+and other protocols from model validation. This leads to computational expensive
+experimental tests. You have to come to terms with a post phase of analisys which could
+be computationally expensive, although improvements in current computer technology
+begins to lower the concern. [23]
+Other computational costs that encumber the model are the decission processes,
+even more if we talk about AI and Problem Solving techniques with intensive cpu
+consumption.
+
+2.5.3
+
+ODD.Agents
+
+2.5.4
+
+Intelligent agents
+
+ABM van be per a fer toy model, quan vols anar mes enlla i ser mes real, fa aigues –¿
+cal IA.
+AI vs fake-AI : anar mes enlla de maquines d’estats, sistemes de regles, o mind
+mappings
+L’intere´ d’aplicar AI es evitar hand-made minds. Hand-made mind pot portar un
+s
+bias introduit pel dissenyador. Les opcions estan limitades als casos contemplats (disseny amb regles, xarxa semantica,.... posa mes exemples). Es busca una aproximacio
+mes SOFT i no tant hardwired com un sistema de regles (argumenta-ho MOLT, estaran
+ˆ
+els profes de la FIB, A¿Miquel Sanchez? has de rebatre molts paradigmes : Neurons,
+SVMs, CBRs, Production Rules,...). Menys bias, mes adaptatiu/ﬂexible,... emergent i
+˜ ˆ ˜ ˆ
+planiﬁcat.(llegeix llibres d’AI+SoftComp. A A¿A A¿Copiar justiﬁcacions de la Soft’
+’
+Computing + justiﬁcacions de ProblemSolving???)
+Logic Programming, Semantic Networks : hard to represent the foraging expertise
+of H.G. -¿ reduce the problem to resource adquisition -¿ math modelling -¿ maximization -¿ planning.
+Neurons, SVM, CBR : d´ n trec els exemples per a fer learning? no tinc etiquetes
+o
+concretes, categories, classes explicites ; Reinforcement Learning, aplicable? com introduir MDP? (potser mes endevant et pots extendre sobre el que es MDP)
+Uncertainty & Imprecision : state of resources(other foragers, climate stochacity),uncomplete know,... modelthinkingThe complexity wrought by the increases in
+information, adaptability, and interconnectedness implies a lack of predictability about
+what’s next.
+Logic Programming, Semantic Networks : hard to represent the foraging expertise
+of H.G. -¿ reduce the problem to resource adquisition -¿ math modelling -¿ maximization -¿ planning.
+.- reactive, proactive... .- adaptation .- reasoning .- planner
+
+2.5.5
+
+Planners, ...
+
+UCT/MDP policies actions sectors
+
+31
+
+approaches : greedy, plan next action, ¿adding lookahead?
+
+32
+
+Chapter 3
+
+Platforms / Software packages
+NetLogo...
+rasters -¿ +- automata paralelism = 0 math libraries = 0? ML, AI,... ??? – efﬁciency
+why do you not use netlogo
+Pandora/Cassandra
+Pandora : C++, STL, Python API Parallelism
+The software we will use to implement the model is the Pandora Library, created by the social simulation research group of the Barcelona Supercomputing Centre.
+This tool is designed to implement agent-based models and to execute them in highperformance computing environments (Rubio and Cela, 2010). It has been explicitly
+programmed to allow the execution of large-scale agent-based simulations, and it is capable of dealing with thousands of agents developing complex actions. The tool used
+has full GIS support to cope with simulations in which spatial coordinates are relevant,
+as in the case here, where we want to detect and compare spatial patterns. This library
+also allows the researcher to execute several simulations by modifying initial parameters, as well as to distribute particular executions with high computer costs by using
+a computer cluster. A cluster is formed by different linked computers (called nodes);
+the distribution divides the computing cost of the execution between different nodes,
+each of which executes a part of the entire simulation. As a result we will be able to
+run the simulation in a fraction of the time that would be needed if we were using a
+single computer. The results of each simulation are stored in hierarchical data format
+(HDF5), a popular format that can be loaded by most GIS. This feature is particularly
+useful, as we will also use GIS to analyse simulation results.
+Finally, Pandora is complemented by Cassandra, a program developed to analyse
+the results generated by a simulation created with the library.
+why do you use Pandora
+
+33
+
+Chapter 4
+
+SugarScape vs Advanced
+Sugarscape
+”Is it that simple? We just build agents that maximize expected utility, and we’re
+done?” It’s true that such agents would be intelligent, but it’s not simple. A utilitybased agent has to model and keep track of its environment, tasks that have involved
+a great deal of research on perception, representation, reasoning, and learning. The
+results of this research ﬁll many of the chapters of this book. Choosing the utilitymaximizing course of action is also a difﬁcult task, requiring ingenious algorithms that
+ﬁll several more chapters, Even with these algorithms, perfect rationality is usually unachievable in practice because of computational complexity, as we noted in Chapter 1.
+Why HG survived more than expected? ( l’aplicacio de la pregunta 1) interaction
+society vs envirm 2 main forces that drive change. Environment as a drive for adaptation. Society : safety network, cooperation and competition
+niche construction theory AP occupy space and cause HG displacement.
+
+4.1
+
+What is SugarScape?
+
+4.2
+
+Added advanced features
+
+Same deduced trends and emerging dynamics
+Realistic Adaptability to Parameter Perturbations
+
+34
+
+4.3
+
+Solving critics against classic SugarScape
+
+4.4
+
+Experiments
+
+Made assumptions about behavior of real systems
+1st step, test if assumptions are reasonable
+-Validation, or representativeness of assumptions
+2nd step, test whether model implements assumptions
+-Veriﬁcation, or correctness
+˜ ˆ
+˜ ˆ
+˜ ˆ
+La segAƒA¼ent comprovaciAƒA³ fes-la en el modelatge o un altre capitol mAƒA©s
+adient:
+˜ a a
+Seed independence A¢ˆ ¬ˆ Cœ random number generator starting value should not af’
+fect ﬁnal conclusion (maybe individual output, but not overall conclusion) Three key
+aspects to validate: -Assumptions -Input parameter values and distributions -Output
+values and conclusions
+
+4.4.1
+
+Initial Conditions
+
+Montecarlo?
+Emergence of stationary state; initial state := stationary state
+
+4.4.2
+
+Experiment features
+
+Description
+Hypothesis
+Assumptions
+Conﬁg
+Results
+Validation
+
+35
+
+Chapter 5
+
+Gujarat Case Modelization
+5.1
+
+Introduction
+
+Northern Gujarat is a marginal environment between the Thar Desert and the more
+fertile area of Saurashtra. This region is an ecotone, characterized by the seasonal inﬂuence of the monsoon where contrasting ecological niches are in tension and small
+climatic shifts can generate signiﬁcant environmental changes, eventually affecting resource availability. Archaeological evidence points to the presence and possible coexistence in the area of groups of people with different resource management strategies
+and mobility behaviors: hunter-gatherers (HG); agropastoralists (AP); urban Harappans (UH). The aim of this study is to model resource management and decision making among hunter-gatherer groups in this region to explore adaptive trajectories and
+performance in relation to a) environmental variability and b) the appearance of other
+specialized groups . What factors play a role in HG persistence or disappearance in arid
+margins? Is the advent of agro-pastoral behaviour a big enough change to explain the
+disappearance of HG behaviour? What happens when there is an external inﬂuence,
+such as that by UH? Does climate change affect HG behaviour?
+
+5.1.1
+
+Hypotheses
+
+In our starting hypothesis HG groups are adapted to marked seasonality (due to monsoon) in the arid margins of northern Gujarat. We intend to explore HG resilience
+considering: a) the appearance of AP, b) the appearance of an external attractor (UH)
+and c) climate change. We deﬁne resilience as the ability of the system to maintain its
+identity in the face of internal change and external perturbation (Carpenter 2001).
+
+36
+
+5.1.2
+
+Aims and objectives
+
+5.1.3
+
+Knowledge Elicitation & Brainstorming
+
+Interviews
+ECOTONO (journal club)
+ODD
+
+5.2
+5.2.1
+
+Physical World / Environment
+Statistical Modelling
+
+Data Sources
+Resource Pipeline
+
+5.3
+5.3.1
+
+Antrophological Model
+The Model
+
+Knowledge Represent
+Arithmetics, logics, probab models,... which & why
+Decission Process
+Hypothesis:richer agents
+UPF hand to hand work:UCT algorithm
+Methods
+˜ ˆ
+A A¿state of the art?
+’
+Social Network
+˜ ˆ
+A A¿state of the art?
+’
+Design
+Organisational level design
+Social structure
+Interaction structure
+
+37
+
+Communicative structure
+Normative structure
+Coordination level design
+Action model
+Task model
+Agent model
+Plan model
+
+5.4
+5.4.1
+
+Experiments
+Initial Conditions
+
+Montecarlo?
+Emergence of stationary state; initial state := stationary state
+
+5.4.2
+
+Experiment features
+
+Description
+Hypothesis
+Assumptions
+Conﬁg
+Results
+Validation
+
+38
+
+Chapter 6
+
+Conclusion
+6.1
+
+Achieved Objectives
+
+6.2
+
+Achieved Objectives
+
+6.3
+
+Comparison AI - Simple
+
+6.4
+
+Difﬁculties & Issues
+
+6.5
+
+Publications/CAA
+
+6.6
+
+Future Issues
+
+39
+
+Chapter 7
+
+Bibliography
+
+40
+
+Bibliography
+[1] J.M. Epstein. Agent-based computational models and generative social science.
+Generative Social Science: Studies in Agent-Based Computational Modeling,
+pages 4-46 1999
+[2] J.M. Epstein and R. Axtell. Growing Artiﬁcial Societies, 1996. 1996
+[3] R. Axelrod. Advancing the Art of Simulation in the Social Sciences. Japanese
+Journal for Management Information System, Special Issue on Agent-Based Modeling, Vol. 12, No. 3 Dec. 2003.
+[4] R. Axelrod. Simulation in Social Sciences. Handbook of research on natureinspired computing for economics and management, 1:90, 2007.
+[5] Doran, J., 1999. Prospects for Agent-Based modelling in Archaeology. Archeologia e Calcolatori, 10, 33-44.
+[6] Gilbert, N., 2008. Agent-Based Models. SAGE Publications, California.
+[7] Gilbert, N., Troitzsch, K.G., 2008. Simulation for the Social Scientist. Open University Press, USA.
+[8] Lake, M W, 2000. Computer Simulation of Mesolithic Foraging, in: Gumerman,
+G. J., Kohler, T.A. (Eds.), Dynamics in Human and Primate Societies: AgentBased Modeling of Social and Spatial Processes, Oxford University Press, New
+York, pp. 107-143.
+[9] Sugarscape. http://ccl.northwestern.edu/netlogo/models/community/Sugarscape
+[10] Joshua Epstein Why Model?. 2008.
+[11] Pidd Pidd book. 2012.
+[12] Pidd Pidd book. 2010.
+[13] Pidd Pidd book. 2003.
+[14] Leeuw Leeuw book. 2004.
+[15] Robinson Robinson book. 2008.
+
+41
+
+[16] Balci Balci book. 1988.
+[17] Heath Heath book. 2009.
+[18] Banks Banks book. 1998.
+[19] Davies Davies book. 2003.
+[20] Axelrod Axelrod book. 1997.
+[21] Takahashi, Shingo; Sallach, David; Rouchier, Juliette Advancing Social Simulation: The First World Congress, Springer, p. 354, ISBN 978-4-431-73150-4.
+2007.
+[22] Eric Bonabeau Agent-based modeling: Methods and techniques for simulating
+human systems, PNAS, vol 99 2002.
+[23] Robert L. Axtell WHY AGENTS? ON THE VARIED MOTIVATIONS FOR AGENT
+COMPUTING IN THE SOCIAL SCIENCES.The Brookings Institution 2000.
+[24] D. Helbing, I. Farkas, and T. Vicsek Simulating dynamical features of escape
+panic. Nature 407, pg 487-490. 2000.
+[25] Melanie Mitchell Complexity, a Guided Tour. 2009.
+[26] John Holland Philosophica 59 (1997, 1) pp. 11-40. Emergence. 1997.
+[27] John H. Miller, Scott E. Page Complex Adaptive Systems: An Introduction to
+Computational Models of Social Life (Princeton Studies in Complexity) 2007.
+[28] Tamas Vicsek Complexity. The bigger picture. Nature 418, pg 131. 2002
+[29] Takahashi, S., Sallach, D., Rouchier J. (Eds.) Advancing Social Simulation: the
+First World Congress. 2007
+[30] Claudius Gross Complex and Adaptive Dynamical Systems. 2008
+
+42
+
+
