@@ -148,10 +148,13 @@ capabilities to the entities with the aim to get more accurate simulations and r
 \indent \textbf{Classic Simple Agent approach vs Rich Agents}\\
 \indent \textbf{Did Gujarat extreme enviromental conditions delayed the HG disappearence?}\\
 \newpage 
+
+
+
+
 \chapter{Methodology}
 
-
-% on poso el lifecycle del modelling procedure????
+% on poso els steps del modelling procedure????
 % specificacion --> expert's knowledge --> modelling --> prototipe --> { accept model | go to a previous state }
 % revisiting early stages to refine models : toy model --> reviewing your assumptions about the main purpose
 % interviews and ecotono meetings to motivate and help knowledge extraction
@@ -168,12 +171,39 @@ capabilities to the entities with the aim to get more accurate simulations and r
 
 % ATM mini intro
 
-Modelling is a widely extended methodology. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
+hi ha un problema, analitzar-lo per solventar-ho, rational activity -> models
+
+
+
+Modelling is a widely extended methodology to answer the kind of questions we set out. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
+
+
+
+%% Robinson2008
+In broad terms, conceptual modelling is the process of ab-
+stracting a model from the real world. The modeller is pre-
+sented with a problem situation that is amenable to simula-
+tion modelling and then has to determine what aspects of
+the real world to include, and exclude, from the model, and
+at what level of detail to model each aspect. These deci-
+sions should generally be a joint agreement between the
+modeller and the problem owners i.e. the stakeholders who
+require the model to aid decision-making.
+\cite{Robinson2008}
+
+%%Pidd
+Models are convenient worlds. They are artificial worlds that have been deliberately 
+created to help with understanding the possible consequences of particular actions. 
+They are part of a process of ‘‘reflection before action’’ (Boothroyd, 1978). The 
+models may be quantitative or qualitative, but in any case they will be simplified 
+abstractions of the system of interest.
+\cite{Pidd2003}
+
 
 %TODO Pidd's definition
-% A model is an external and explicit representation of part of reality as seen by the
-% people who wish to use that model to understand, to change, to manage and to control
-% that part of reality.
+A model is an external and explicit representation of part of reality as seen by the
+people who wish to use that model to understand, to change, to manage and to control
+that part of reality.
 
 
 Modelling will be our framework for communication between archeologists' and sociologists' knowledge and their conceptualizations with our formal representations from computer science practices( simulation, algorithms, AI ).
@@ -248,7 +278,7 @@ The main issues observed, individuals, units, processes or actions, flow and dyn
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/Gilbert_pg21.jpg}}
 \caption{The development of contemporary approaches to simulation in the social sciences (after Troitzsch )\cite{GilbertTroitzsch}}
 %by Gilbert \cite{GilbertTroitzsch}}
-\label{fig:SimTL}
+\label{fig:SimAppGilbTro}
 \end{figure}
 
 %possible paradigms. TOASK : Explico mes que son sistemes dinamics i la resta d'opcions?????
@@ -262,7 +292,7 @@ The first paradigms to model social processes were borrowed from the fields of p
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/statisticalModelling1.jpg}}
 \caption{The logic of statistical modelling (after Gilbert 1993)\cite{GilbertTroitzsch}}
 %by Gilbert \cite{GilbertTroitzsch}}
-\label{fig:SimTL}
+\label{fig:SimStatMod}
 \end{figure}
 
 Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems making them hard to represent or analitically unsolvable, hence, the following years saw the spreading of \textbf{simulation techniques}, first AI aproximations, cellular automatas and Petri's networks that allowed a finer granularity going from the top abstract groupings infered in social theories to the individual entities.\\
@@ -276,7 +306,7 @@ Gradually social modelling began to approach computational sciences keeping its 
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationModelling1.jpg}}
 \caption{The logic of simulation as a method (after Gilbert 1993)\cite{GilbertTroitzsch}}
 %by Gilbert \cite{GilbertTroitzsch}}
-\label{fig:SimTL}
+\label{fig:SimLog}
 \end{figure}
 
 %non covered issues that motivate ABM, 
@@ -325,7 +355,7 @@ of stages defined in simulation-based research.
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/simulationMethodlogy.jpg}}
 \caption{Stages defined in simulation-based research \cite{RussellNorvig}}
 %by Gilbert \cite{GilbertTroitzsch}}
-\label{fig:SimTL}
+\label{fig:SimStages}
 \end{figure}
 
 
@@ -399,7 +429,7 @@ future goals).
 	\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/agentArchitect0.jpg}}
 	\caption{Agents interact with environments through sensors and actuators.}
 	%by Wooldridge2002 \cite{Wooldridge2002}}
-	\label{fig:SimTL}
+	\label{fig:AgWool}
 	\end{figure}
 
 
@@ -636,7 +666,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/agentArchitect1.png}}
 		\caption{State Machine Reactive Agent Architecture}
 		%by Wooldridge2002 \cite{Wooldridge2002}}
-		\label{fig:SimTL}
+		\label{fig:StateMachine}
 		\end{figure}
 
 		\item if-then rules
