@@ -28,6 +28,7 @@
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{enumerate}
 \usepackage{algorithm2e}
+\usepackage{pdfcomment}
 %\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
 
 
@@ -77,7 +78,7 @@ that are not specified and not yet introduced in ABMs coming from Social Science
 
 We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decissions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearier match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.\\
 
-In order to study such posibilities Sugarscape[SugarScape] is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al[Epstein]. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.\\
+In order to study such posibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.\\
 
 \section{Simulation}
 
@@ -171,40 +172,47 @@ capabilities to the entities with the aim to get more accurate simulations and r
 
 % ATM mini intro
 
-hi ha un problema, analitzar-lo per solventar-ho, rational activity -> models
-
-
+%hi ha un problema, analitzar-lo per solventar-ho, rational activity -> models
 
 Modelling is a widely extended methodology to answer the kind of questions we set out. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
-
-
+The modelling activity determines aspects of the world to include or exclude from the details that
+will conform an abstraction of the world that will allow work the answers \cite{Robinson2008}.
+%TODO multiple ref resuse : split in chapters/paragraphs
 
 %% Robinson2008
-In broad terms, conceptual modelling is the process of ab-
-stracting a model from the real world. The modeller is pre-
-sented with a problem situation that is amenable to simula-
-tion modelling and then has to determine what aspects of
-the real world to include, and exclude, from the model, and
-at what level of detail to model each aspect. These deci-
-sions should generally be a joint agreement between the
-modeller and the problem owners i.e. the stakeholders who
-require the model to aid decision-making.
-\cite{Robinson2008}
+%% In broad terms, conceptual modelling is the process of ab-
+%% stracting a model from the real world. The modeller is pre-
+%% sented with a problem situation that is amenable to simula-
+%% tion modelling and then has to determine what aspects of
+%% the real world to include, and exclude, from the model, and
+%% at what level of detail to model each aspect. These deci-
+%% sions should generally be a joint agreement between the
+%% modeller and the problem owners i.e. the stakeholders who
+%% require the model to aid decision-making.
+
+%% >>> conceptual modelling is the process of ab-
+%% stracting a model from the real world.
+
+%% >>>then has to determine what aspects of
+%% the real world to include, and exclude, from the model, and
+%% at what level of detail to model each aspect.
+
+%% \cite{Robinson2008}
 
 %%Pidd
-Models are convenient worlds. They are artificial worlds that have been deliberately 
-created to help with understanding the possible consequences of particular actions. 
-They are part of a process of ‘‘reflection before action’’ (Boothroyd, 1978). The 
-models may be quantitative or qualitative, but in any case they will be simplified 
-abstractions of the system of interest.
-\cite{Pidd2003}
+%% Models are convenient worlds. They are artificial worlds that have been deliberately 
+%% created to help with understanding the possible consequences of particular actions. 
+%% They are part of a process of ‘‘reflection before action’’ (Boothroyd, 1978). The 
+%% models may be quantitative or qualitative, but in any case they will be simplified 
+%% abstractions of the system of interest.
 
+%% >>>> They are artificial worlds that have been deliberately 
+%% created to help with understanding the possible consequences of particular actions.
 
-%TODO Pidd's definition
-A model is an external and explicit representation of part of reality as seen by the
-people who wish to use that model to understand, to change, to manage and to control
-that part of reality.
+%% >>>> The models may be quantitative or qualitative, but in any case they will be simplified 
+%% abstractions of the system of interest.
 
+%% \cite{Pidd2003}
 
 Modelling will be our framework for communication between archeologists' and sociologists' knowledge and their conceptualizations with our formal representations from computer science practices( simulation, algorithms, AI ).
 The reason is that it is a procedure that will help to communicate the \textbf{discursive} nature of Social Sciences with the formal structures from Computer Science. The enginering of model development will allow us to reach a connection from experts' knowledge to a model that comprises the set of detail clearing out the ambiguity that language could filtrate. Also, modelling will help set a picture of the system without inconsistencies, with each fact sound, coherent and consistent from the logical point of view with the whole.\\ 
@@ -212,33 +220,72 @@ The reason is that it is a procedure that will help to communicate the \textbf{d
 \section{Why model}
 % ATM, que es modelar? i com es modela?
 %
-The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of study. Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototipe.\\
-As Epstein \cite{Epstein2008} says \textit{''Anyone who ventures a projection, or imagines how a social dynamic, epidemic, war, or migration would unfold is running some model``}.\\
-Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort \cite{Epstein2008}.\\
+The modelling process consists in identifying separable entities, processes, relationships and any rellevant information related to the question to solve and the domain of study. 
+This abstraction exercise yields an external and explicit representation of part of reality as seen by the
+people who wish to understand, to change, to manage or to control that part of reality \cite{Pidd2003}.\\
+Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototipe.\\
+As Epstein \cite{Epstein2008-p1} says \textit{''Anyone who ventures a projection, or imagines how a social dynamic, epidemic, war, or migration would unfold is running some model``}.\\
+Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort.\pdfcomment{Epstein buscant lloc concret on ho diu}\\
+%%TODO ''good-for-nothing'' : busca paragraf on Epstein diu aixo  
+%TODO reuse cite; split in chapter/paragraph?
 For instance, lets consider modelling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so it could be minimized the hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the courtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if the objective is to model the system to analyze the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
-This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible and, more importantly, if we better understand them we can better interpret their results. The K.I.S.S. Lemma sumarizes it ``Keep It Simple, Stupid''.\\
-% ATM:aqui o mes endevant? aprofondir molt?
-Another concern is that detail and granularity choice is attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
-The theory describes the domain as an ontological corpus of interelated conceptualizations where the pieces of knowledge can be related with equal to equal or relationships of subsumption and hierarchical connection. Following the distribution induced by such hierarchy the space of conceptualizations of the theory will have bounds in the higher and deeper concepts found in the top and bottom locations of the hierarchy. Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper. An ascending crystalization is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer. But can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons to some inner features related to their personality; now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.\\
+This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification\pdfcomment{XR:Verification or validation?} \pdfcomment{ATM:Verification. Comprovar que el model esta ben implementat.Model simple:dificil.Model complexe:+dificil} for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible. But the crucial point is if we better understand them we can better interpret their results. Constituents in models interact each other following the relationships established by the modellers. This produces a network or causality chain that is responsible of the state changes of the model along the simulation. These chains must be inspected to find the origin of the phenomena exhibited in the simulation. As we want to understand a system we must reconstruct the processes that lead to the outcome we observe or check against our assumptions or real world events. If we are designing models where constituents are grouped to conform more complicated constituents, if we design the model to exploit emergent phenomena,
+analisys of the outcome and the causality chain reconstruction will be a very difficult task to disentangle \cite{Premo2010_pg31}. Simplicity is a must. Besides, we are not aiming at a very rich and complex model that matches its outcomes almost perfectly with some referential real data. As it is explained below we have preference for a model that makes easier the task to explore social processes to answer and propose arising questions. We must find the causal conection between experimental parameters and model dynamics, which parameters under which diferent initial conditions make the system behave differently and say why.   
+
+Another concern is that detail and granularity choice are attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
+%TODO arrange
+Theories describe their domain as a corpus of interelated concepts where the pieces of knowledge are connected with mathematical, hierarchical, structural and logical relationships, to enumerate some. The hierarchical relationships induce a multilayered organization of knowledge, sometimes called ontology\footnote{We are not talking about knowledge representation from A.I.}. The hierarchy of layers is related to the level of the abstraction of the contained concepts, going from concrete concepts to abstract ones that contain or subsume the former. Also, the composition relationship makes arise a hierarchy of layers. For instance, considering individuals which are part of families, families which are part of social groups, and groups which conform a society. 
+
+%% granularity, precission, level of detail,...
+
+%% hunt, prey pack, 4 levels of detail
+%% 1.- number of preys
+%% 2.- number + probab distrib along the landscape
+%% 3.- number + gas dynamics
+%% 4.- swarm of agents (introduce lower level, from group to individual)
+
+%% hierarchy relationships -> abstraction -> contain, subsumption, isA...
+
+%% hierarchy relationships -> composition : cargol -> engranatge -> motor -> cotxe
+%% hierarchy relationships -> composition : individual -> family -> social group-> society
+
+% end arrange
+
+%TODO
+	%what is an atomic concept for you will be an abstract or compound concept for another theory.
+	%what is a top abstract concept for you will be a concrete concept for another theory
+%
+
+Usually, modelling methodology takes either the top, bottom or a midle layer to crystalize the model following the hierarchy in a direction towards the higher concepts or the deeper ones. An ascending crystalization from simpler to more complex is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystalization could begin in a midle layer and stop before arriving a top or bottom bound layer.\\ 
+For instance, some simulation would consider a necessity to model individual persons with agents taking decission at that scale. Other simulations would model households with the decission process without having to consider individual persons. Once set this issue, the modelization could keep considering more abstract structures like families or tribes as a composition of household and stop here instead of continuing adding villages or countries to the model.\\ 
+The point is that the range of concepts that you choose to include in the model is related to the level of detail you want apply to descrive the constituents of the model. The simplest chosen concepts that merge as constituents of other complex constituents and phenomena mark the granularity of your model. 
+
+% 
+% 1 .- set range of concepts, move either top-down or bott-up
+% 2.- concensus for one bound (bott or top) and begin to grow till you see it is enough
+%
+
+%George Box
+Although good modelling of the parts could be accomplished accurately lefting out the non-relevant entities and phenomena, let's remember the famous quote of George Box, essentially, all models are wrong, but some are useful.
+\pdfcomment{ATM:em vares que no calia posar un ref, nomes el nom i la frase celebre}\\
+
 %%% TODO posar dibuix : triangle, 2 fletxes: top->dw, bott->up
 %%% analisys of system
 %%% synthesis
 %%% sometimes you do a mix
-%George Box
-Although good modelling of the parts could be accomplished lefting out the non-relevant phenomena, citing the famous quote of George Box, essentially, all models are wrong, but some are useful.\\
 % multidiscpl ATM
+
+By the way, it can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons with some inner traits related to their personality as anxiety, generosity, aggressiveness. Now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth.\\
+Trespassing these borders and needing the help of experts able to manage and modelize the concepts will be the motivation for multidisciplinarity.\\ 
 As said before, Social Sciences represent their knowledge in discursive texts using natural language. In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures.\\ 
 Besides having to cope with implicit ambiguity in each discursive knowledge, all these branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities, other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modelling process will ellicite this structures and will match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole, the \textbf{conceptual framework}.\\
 Modelling will help to find a consensus for expressing the concepts and properties, will help to ellicite knowledge, arrange ambiguities, detect common points. It will allow as to embed the needed rigor to work under the same framework to make every part work together. Modelling shall be an exercise of shared development that can approach positions and circle a communication problem to solve the issues that will arise.\\
 % posar les 2 figures de multidiscp modelling
 
-%%%ellicitation 
+%%TODO
+%ellicitation 
 %posar l'exercici de comprensio entre BSC - IMF, elicitation, ecotonos...? o deixar-ho per capitols posteriors?
 
-
-%models que es contraduien-- camp de la fÃ­sica p.e.
-
-%tradiciÃ³ de modelat en ciÃ¨ncies socials
 
 \section{Modelling in social sciences}
 \label{sec:modelsinSC}
@@ -251,6 +298,15 @@ Modelling will help to find a consensus for expressing the concepts and properti
 %% diferents no es poden modelitzar amb fi­sica. 
 
 
+%TODO instroduce Premo ideas
+%ABM -> bottom-up -> specify bottom layer -> run -> we observe phenomena in the bottom and at the top layer.
+%too much detail in the bottom can obscure the process to disantingle causality affecing top phenomna.
+%asumptions and dynamical relationships --> top phenomena
+%the purpose is the core question of the system; around this axis we filter details not directly related to it(cultural issues, environmental details, time period). The question will be a guideline to put limits/bounds/scale and filters to
+%the non important/irrelevant details.
+%TODO
+%Due to EQF you cannot say "this is what happened". The model will and results of simulation will not say so,
+%but it will make explicit behaviours and processes to reason about and extract your conclussions.
 
 %%%% content
 
@@ -270,7 +326,7 @@ The social sciences seek to understand not only how individuals behave under the
 %%
 The main issues observed, individuals, units, processes or actions, flow and dynamics within units, are the frontline of the modelization aspects and motivation for the different paradigms appeared or adapted to solve the modelling objectives. New knowledge to infer from this identified phenomena will be the \textbf{descriptive} statement of observed behaviour, quantitative empirical \textbf{generalisations}, construction or assesment of \textbf{theories} and \textbf{prediction} models \cite{Coleman1964}.
 
-% reproducciÃ³ parcial, ilegal?
+
 \begin{figure}[h]
 \centering
 \setlength\fboxsep{0pt}
@@ -311,13 +367,59 @@ Gradually social modelling began to approach computational sciences keeping its 
 
 %non covered issues that motivate ABM, 
 %TOASK separo mÃ©s l'explicacio? part1: primers pseudo-agents part2:agents 100%, propietats aconseguides...
-This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entitites, bounded rationality, and complex psychology.\\ 
-Modelling from a bottom-up point of view with the inclusion of agents will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. Complex systems theory calls this \textbf{emergence}.
-A further section will describe this effect.
+This last improvement and the use of MultiAgent Modelling in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled, agent decission process modelling and embedding of the Rational Choice Theory, heterogeneity in the entities, bounded rationality, and complex psychology.\\ 
+Modelling from a bottom-up point of view including agents will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. Complex systems theory calls this \textbf{emergence}. 
+ 
+Considering specifically archeology, the introduction of modelling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a way\pdfcomment{atm: no m'agrada way} of statitistical distribution fitting. ABM models where thought as models that aproximated stochastic variables and patterns in the model. This was the scientific use of ABM. With the idea of producing more accurate explanations of the phenomena, ABM models began to be filled with more details. The objective was to approach the model to reality to obtain nearer outcomes to the data taken as reference. Those first models were designed to be a mirror of reality, and that is why some experts have been calling them Emulation Models. As it is discused by Premo \cite{Premo2010_pg33} this stalled the usability of models, first due to the difficult of interpreting the causality and processes in a simulation experiment that lead to the arising of phenomena, and second, due to the problem of \textbf{equifinality} \cite{Premo2010_EQF}.\\
+The simulation of a model produces a trace of the states visited by the system. If we execute a stochastic model, the states will be conformed by the exhibited values by the model variables following some distribution. That trace is just only one from all possibles that could appear from the combinations that randomness can produce in the variables. Hence, for a single model and an initial configuration, the stochasticity can lead to many different traces although the system finishes at some atractor state or the same patterns arise. The question is, which trace must be taken into account to explain evidences found in reality? This would be an example of equifinality (figure \ref{fig:Equifinality}). There is also equifinality when given different initial conditions or assumptions on the model  and the same outcome is reached. Which is the initial escenario that produced the evidences? Due to the long time of the history trace, all initial conditions could have the same probability. Equifinality also appears when the system exhibits sensivity to initial conditions. Sensivity is a typical trait of \textbf{complex systems} and it is better known as the \textbf{butterfly effect}. A small perturbation, that is considered \textbf{negligible}, in a initial condition can produce a trace with opposite conclusions to another one without that perturbation. Furthermore, due to sensivity again, an initial condition in different runs belonging to a same simulation experiment will have usual small perturbations appearing as differences between different traces. Sensivity to these small inner perturbations can lead to opposite outcomes in the experiment making it difficult to extract and deduce the common patterns or general behaviour we desire to check against data. It will be harder to separate noise from information.
+
+% different models can explain the outcome, which model must be chosen? -> EQF
+
+% . y aixo es un unsustainable situaion per a extraccio espitemologica. No pots deduir una llei general, perque es inestable...
+
+%And that is an example of equifinality. ... mention the other cases ... need to reduce detail .... another
+%epistemological target and strategy -> Explor. Models ... explo mod features
+
+\begin{figure}[h]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[keepaspectratio=true]{figures/eqf.png}}
+\caption{Equifinality in stochastic simulation models. For an initial state 
+	with its assumptions $\alpha$ a simulation generates a trace of states 
+	that lead to a final state or set of patterns and phenomena $\omega$.}
+\label{fig:Equifinality}
+\end{figure}
+% 
+
+The alternative are \textbf{Exploratory Models}. Models can be simplified to the bone. This would keep the most
+essential process to the scientific question that motivated the simulation. As it is said above, a simple model allows
+a clearer insight of what is happening, and the path of causality between the constituents and the phenomena. 
+Then, taking advantage of equifinality, the use of the model is to explore causality, how happens the connection between assumptions and parameters with phenomena and states. Simplicity allows to design controlled experiments for hypothesis generation about the model and enhance the knowledge about processes we model from reality. Generation of new hypothesis and questions can be of profit for theory enhacement or theory building and self-critcism in a loop of modelization and question-discovering feeding each other \pdfcomment{atm:cada 3 frases hauria de posar una ref a Premo, es excessiu? fau referencia en un punt i dic q tot el que he posat ve d'alla?}. 
+
+
+Explor Models This set of traces are the working group of events that will allow to reason about the behaviour of the model. 
+
+
+When you construct a model you must think how will you use it, how will you apply it to a rational process 
+for knowledge production. 
+
+You must give another epistemological use to your models. Another strategy to these techniques.... Explo Models
+
+do not replicate evidence, but investigate processes and interaction
+
+%ontological reductionism : MODEL({p1,p2,...p_n}) vs system
+
+%pragmatical reductionism : MODEL(p1)+MODEL(p2)+...+MODEL(p_n) vs system
+
+ 
+Bound wall : EQF + obscure causality networks. We reduce detail to reach the essential processes and apply this
+models to another line of thought. SImpler models -> more controlled experiments and more insight in the 
+behaviour of the constituents-> exploratory of the behaviour, it is more interesting to exploit EQF and multi histories
+to sample the causality space to test the initial assumptions,altres coses q miren...
+The reasoning about the model outcome will be channeled to a retroductive frame.
 
 % per on poses aixo? : ``Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems''. 
- 
-%% no diguis Lifecycle, es Methodology
 
 Modelling methodology will be materialized through the framework of simulation technique. It will follow a series
 of stages defined in simulation-based research. 
@@ -1644,6 +1746,11 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Kathy Kotiadis, Stewart Robinson
 	\emph{CONCEPTUAL MODELLING: KNOWLEDGE ACQUISITION AND MODEL ABSTRACTION}.
 	2008.
+
+\bibitem{Premo2010_pg31}
+	L.S.Premo
+	Equifinality and Explanation:The Role of Agent-Based Modeling in Postpositivist Archeology, published at Simulating Change; archeology into the twenty-first century Ed. Andre Costopoulos, Mark Lake.
+	2012.
 
 \bibitem{PerezAndBatten2006}
 	Pascal Perez and David Batten
