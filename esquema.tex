@@ -525,12 +525,12 @@ some enclosed set of mechanisms to be aware of the state of the system, a set of
 %%refine
 
 An agent is a computer system that is capable of independent action on behalf of its user or owner,
-figuring out what needs to be done to satisfy design objectives, rather than constantly being told.\cite{Wooldridge2002} An agent solves problems applying iteratively the schema of sense, decide and 
+figuring out what needs to be done to satisfy design objectives, rather than constantly being told.\cite[ch.1]{Wooldridge2002} An agent solves problems applying iteratively the schema of sense, decide and 
 act continously. Each of the steps can add new targets to fulfill which will keep the agent exploring 
 the environment and interacting with it and other agents to develop its strategies to solve the tasks 
 and achieve goals.\\
 
-Agents are \cite{WooldridgeJennings1995}:
+Agents are \cite[p.115-152]{WooldridgeJennings1995}:
 \begin{enumerate}[i-]
  \item clearly identifiable problem solving entities with well-defined boundaries and
 interfaces;
@@ -553,24 +553,24 @@ future goals).
 	\setlength\fboxsep{0pt}
 	\setlength\fboxrule{0.5pt}
 	\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/agentArchitect0.jpg}}
-	\caption{Agents interact with environments through sensors and actuators.}
+	\caption{Agents interact with environment through sensors and actuators.}
 	%by Wooldridge2002 \cite{Wooldridge2002}}
 	\label{fig:AgWool}
 	\end{figure}
 
-
- 	\begin{algorithm}[H]
-	\SetAlgoSkip{} 
-	\SetAlgoLined
-	initialization\;
-	\While{not end}
-	{
-		s = read environment current state\;
-		a = getAction(s)\;
-		launch(a)\;
-	}
-	\caption{Agents basic main loop.}
-	\end{algorithm}
+%% what is nicer? picture or algorithm?
+%% 	\begin{algorithm}[H]
+%%	\SetAlgoSkip{} 
+%%	\SetAlgoLined
+%%	initialization\;
+%%	\While{not end}
+%%	{
+%%		s = read environment current state\;
+%%		a = getAction(s)\;
+%%		launch(a)\;
+%%	}
+%%	\caption{Agents basic main loop.}
+%%	\end{algorithm}
 
 An example of a very simple agent would be a thermostat. It samples the environment with a probe/sensor, 
 checks if the temperature corresponds to the desired one. According to the measure it launches one of the two 
@@ -607,7 +607,7 @@ attached to these modules in the structure(table \ref{tab:hunterAgentSetting}).\
 
 %%\subsubsection{Agent Architecture Specification}
 
-\paragraph{Agent formal description}
+\paragraph{Agent brief formal description}
 	
 Let E be an environment with a finite set of states 
 \begin{equation}
@@ -664,6 +664,9 @@ An agent $X_i$ retrieves information from the history of environment states to c
 %%
 
 \paragraph{Agent Main Behaviours}
+
+There is a set of key points that an agent should accomplish to go beyond a simple AI application, a problem solver, or just a system process. AI has compiled some mandatory behaviours asked to a software to be considered an agent \cite[ch.2]{Wooldridge2002}\cite[ch.1, ch.2]{RussellNorvig}. 
+
 \begin{description}
 	\item [Autonomy] Other entities do not set the agent objectives nor decissions. With agents, 
 	we give a high-level description of the delegated goal, and let the control mechanism figure
@@ -743,7 +746,7 @@ state - action with a table or with a limited number of rules.
 As complexity of modelled systems grows, the number of states and possibilities become
 untractable. Theres no time nor space to specify each correspondence. The agents apply different 
 techniques for retrieving features and structure from the environment to proceed with the
-decission process from an abstraction to the action to perform \cite{RussellNorvig}.  
+decission process from an abstraction to the action to perform \cite[ch.2]{RussellNorvig}.  
 
 \begin{description} %% we are interested in this division
 	\item Reactive Architectures
@@ -1011,8 +1014,13 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Environment Features}
+
+The design of the agent is conditionated by what is considered ``the environment'' in the real system to model.
+It will facilitate or constraint the features and decisions in the development of the agent. Next, some common features that will guide in the characterization of the environment are enumerated \cite[section 2.3]{RussellNorvig}.
+
 \begin{description} 
-	\item [Environment Features]
 	\item [Accessible vs Inaccessible] An accessible environment is one in which the agent
 		can obtain complete, accurate, up-to-date information about the environment’s state.
 		Most moderately complex environments (including, for example, the everyday physical 
@@ -1158,8 +1166,8 @@ something is happening there that relates the constituents.\\
 
 %TODO Complex : emergence, self organizing, adaptive, descentralized 
 
-Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, a complex system is a system in
-which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Sumarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors.
+Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, ``a complex system is a system in
+which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Sumarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors''.
 
 %exemple -> analitzar-lo i posar de manifest la complexitat ???
 % and then state what comes next:
@@ -1692,7 +1700,7 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 
 \bibitem{RussellNorvig}
 	Stuart Russell and Peter Norvig.
-	\emph{Artificial Intelligence: A Modern Approach}
+	\emph{Artificial Intelligence: A Modern Approach} 3rd edition.
 	2009
 
 \bibitem{GilbertABM}
@@ -1731,6 +1739,11 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	\emph{Intelligent Agents: Theory and Practice}  Knowledge Engineering Review Volume 10 No 2. (c) Cambridge
 	University Press 
 	1995
+
+\bibitem{Wooldridge1997}
+	 Michael Wooldridge.
+	\emph{Agent-based software engineering}, IEE Proc. Software Engineering 144 (1) 
+	1997.
 
 \bibitem{Shoham1990}
 	Yoav Shoham.
