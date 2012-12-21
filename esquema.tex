@@ -496,16 +496,7 @@ The next checklist sumarizes the steps visited along the process of development 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conceptual Framework}
 
-This section introduces some definitions and explanations about the main needed concepts to expose the design of the model for the issues and questions stated in chapter one. The text begins explaining what agents consist on. The description of agents from AI covers their architecture and competences, and how different techniques and paradigms endow them with the different features and capabilities to solve the problems they are programmed for. An explanation about Complex Systems follows the section of multi agent systems. It is a necessity, due to the nature of the problem and the properties exhibited by models consisting in multiple agents interacting each other. The section links typical complex system phenomena to the arising properties of the models studied for the topics of these master thesis. Emergence is defined and stressed in a subsection for its own. This part finishes giving some brief ideas about what evolution is. The topic is introduced due to the evolutive component in the model to be run in the simulations. We seek to observe how either of the strategies adapts to the changing environment and how the dynamics favors one instead of the other producing adaptative changes in the agents. As we will study the different social groups in a competitive environment the section will introduce the concept of coevolution, the mutual feedback of evolutive changes between neighbour adaptative groups of entities.After this definitions the next part will retake the topic of agents in the section about Agent Base Models to introduce .....   
-
-
-MAS
-Complexity
-  emergence
-Evolution
-  coevolution
-ABM
-
+This section introduces some definitions and explanations about the main needed concepts to expose the design of the model for the issues and questions stated in chapter one. The text begins explaining what agents consist on. The description of agents from AI covers their architecture and competences, and how different techniques and paradigms endow them with the diverse features and capabilities to solve the problems they are programmed for. An explanation about complex systems follows the section of multi agent systems. It is a necessity due to the nature of the problem and the properties exhibited by models consisting in multiple agents interacting each other. The section links typical complex system phenomena to the arising properties of the models studied for the topics of these master thesis. Emergence is defined and stressed in a dedicated subsection. This part finishes giving some brief ideas about what evolution is. The topic is introduced due to the evolutive component in the model to be run in the simulations. We seek to observe how either of the strategies adapts to the changing environment and how the dynamics favors one instead of the other producing adaptative changes in the agents. As we will study the different social groups in a competitive environment the section will introduce the concept of coevolution, the mutual feedback of evolutive changes between neighbour adaptative groups of entities.After this definitions the next part will retake the topic of agents in the section about Agent Base Models to introduce more ideas and issues from Multi Agent Systems and social simulation.   
 
 
 \subsection{Multi Agent Systems} %% M.A.S.
@@ -1340,14 +1331,15 @@ position as our final work metaphor for evolution and natural selection\cite{Daw
 As it is mentioned, part of the working framework of our simulation is based on the ideas of evolution and ``natural selection''. We understand the ``natural selection'' as a process that "rewards" adaptive solutions and penalizes those less adapted. Darwinian Evolution is the result of the continued application of this screening and the persistence of adaptive patterns and what comes off of them. Persistence is produced through the reproductive process of agents. Regularly an agent generates a copy of itself with some disturbance in their features and takes charge of it for a period of time. The extraction capacity of system resources, adaptability,  marks their survival and that of their offspring. If the offspring survives, the configuration is maintained over time and gets another chance to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of configurations to respond more adaptively than others, working with the hypothesis that selected ones would correspond to reality. We simulate systems plus the evolutionary process. Our utility functions, birth \& mortality are filters to keep or remove agents of the system depending on its performance against its lifecycle.\\ 
 We are applying a parallelism between DNA information and configuration or features in the agent. The features stablish
 the policy of the agent. For instance, the Gujarat project would differentiate between HunterGatherer way of living from AgroPastoralist way of living through this features.
-
-\subsection{Coevolution}
+\pdfcomment{Caldria que, abans de començar a enumerar tots aquests conceptes, la secció "Conceptual Framework" tingués un paràgraf explicant el que es trobarà el lector a continuació. Si no, queda com raro perquè són conceptes molt diferents}
+\pdfcomment{ATM:done}
+\paragraph{Coevolution}
 %TODO \underline{	Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 %		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
 %		Close interrelationship, strong feedback. It is an environment prone to emergent patterns.
 %		}
 
-Coevolution; \textit{when two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes also in the other species} \cite{Gross2008}.
+\textit{When two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes also in the other species} \cite{Gross2008}.
 
 Long ago, bacteria and plancton dominated the seas. There was only microscopic life. Then appeared photonsynthesis
 based microbes. With Sun light and CO$_2$ chemistry they spread at a greater rate than their neighbours. Photosynthesis
@@ -1360,16 +1352,9 @@ When the adaptive process of an species produces a change that motivates selecti
 species which in turn affects the same way the first species we have coevolution. For instance, the relationship 
 between a prey and a predator will induce coevolution. The hunting activities produce death in the prey species, hence
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
-with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent 
-predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding 
-changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.
+with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.
 
-Although we will not wire explicitly coevolution in our social models we expect to see this phenomena. Sugarscape will
-be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project
-we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land.
-In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated 
-agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium 
-of the two adaptive strategies. 
+Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. Sugarscape will be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The adaptative strategies are considered as cultural traits. The ideas from Evolution will be adapted to study \textbf{Cultural Evolution}. We study the skills and strategies for resource explotaition. The succesful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classicla agent, will yield a greater probabilty of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social}\pdfcomment{ATM:ara si?} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ABM}
@@ -1377,7 +1362,8 @@ of the two adaptive strategies.
 %% definition - description
 
 ABM is a modelling methodology that relies on a application engineering architecture called Multi Agent Systems from A.I.
- 
+ \pdfcomment{Si acabes de parlar dels MAS. Com lligues les 2 coses?}.
+ \pdfcomment{ATM: desde el principi habia quedat separat, jo ho considerava una extensio, parlar dels beneficis q porta a la social simulation, etc... Ho parlem...Mirar paper PNAS}
 Following the paradigm of ABM, systems to model are decomposed into entities called agents, which have their behaviour defined,  how affect or are affected by environment, and how they interact with the other agents. The main activity for agents is decision making. Each agent individually assesses the current state of the environment, taking into account the other agents, and in accordance with its objectives takes an action that runs against the system, the environment plus the agents that may be involved. The system runs on a constant loop of evaluations, decisions and actions of the agents that inhabit it.
 This will lead to situations of iterated interactions between a set of agents in a framework of cooperation, coordination or competition. Although simple agents in such an interaction environment can  make emerge many complex patterns and be a good model of real world systems, the methodology considers also features like mind models, authomatic learning or evolution and natural selection in agents endowing the agents with enhanced adaptation.[Bonabeau 2002]  
 
@@ -1440,10 +1426,9 @@ and other protocols from model validation. This leads to computational expensive
 You have to come to terms with a post phase of analisys which could be computationally expensive, although improvements
 in current computer technology begins to lower the concern.
 \cite{Axtell2000}
+\pdfcomment{Home hi ha molts issues de ABM eh, alguns d'ells discutits al reading group (l'individualisme). Hauries de mostrar aquí algunes de les discussions que hem anat tenint (ben fonamentades i adientment citades, es clar}
 
 Other computational costs that encumber the model are the decission processes, even more if we talk about AI and Problem Solving techniques with intensive cpu consumption.%TODO un pel curt
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
