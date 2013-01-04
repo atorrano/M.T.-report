@@ -71,7 +71,7 @@ systems. Dynamical systems, differential equations have been used and an overall
 Mainly, reusing ideas from physical simulations, social sciences has modelled complex systems with dynamical
 atomic entities that apply a simple set of centralized rules to move around the environment modelled. It was seen that due to the deeper details in human behaviour the question that could be solved and asked to that kind of models could not go very further as expected.\\ 
 
-To solve non-linearity phenomena, heterogeneity, hysteressis and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more insight of the modelled systems achieving good results. But under 
+To solve non-linearity phenomena, heterogeneity, hysteresis\cite[p.571–597]{hysteresisDef} and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more insight of the modelled systems achieving good results. But under 
 some conditions of very complex relationships between agents, highly specialized decission taking procedures
 and issues in the environment led agents to need a sophysticated reasoning and problem solving capabilities
 that are not specified and not yet introduced in ABMs coming from Social Sciences.\\ 
@@ -357,15 +357,17 @@ Gradually social modelling began to approach computational sciences keeping its 
 %non covered issues that motivate ABM, 
 %TOASK separo mÃ©s l'explicacio? part1: primers pseudo-agents part2:agents 100%, propietats aconseguides...
 
-With its strong component from software engineering, considering the ABM(Agent Based Modelling) methodology to be applied to social modelling there are some striking features that make it stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable, natural to express things with that “language” giving more flexibility in the modelization.\\ 
+With its strong component from software engineering, considering the ABM(Agent Based Modelling) methodology to be applied to social modelling there are some striking features that make it stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable and natural to express things with that “language” giving more flexibility in the modelization.\\ 
 The use of ABM in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled that were very difficult or impossible to model with raw mathematics.
-Social entities, let's say people, or social groups, are not like particles which under the same conditions behave the same way. Two distinguishable entities will act differently under the same conditions. People have different perpectives on their social worlds, have a different knowledge corpus or skills \cite[p.19]{GilbertTroitzsch}. ABMs allows the introduction of this heterogeneity in the models, and also embedding of the Rational Choice Theory \cite{Scott2000}, bounded rationality, and complex cognitive processes. We can give each agent an individualized set of trait, features or methods that will model their different performance in the interactions. We can give them or allow them to catch a different picture from the world, the other agents and themselves. ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. It is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. By the way, because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties.  
+Social entities, let's say people, or social groups, are not like particles which under the same conditions behave the same way. Two distinguishable entities will act differently under the same conditions. People have different perspectives on their social worlds, have a different knowledge corpus or skills \cite[p.19]{GilbertTroitzsch}. ABMs allows the introduction of this heterogeneity in the models, and also embedding of the Rational Choice Theory \cite{Scott2000}, bounded rationality, and complex cognitive processes. We can give each agent an individualized set of traits, features or methods that will model their different performance in the interactions. We can give them or allow them to catch a different picture from the world, the other agents and themselves.\\ 
+ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. It is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. By the way, because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties\cite{Bonabeau2002}; ABM can manage agents at different levels of aggregation. The decission units can be a person but also social entities like families, couples or tribes with their own rules for intearaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decission-making and aggregation is clearly separated. The range of complexity of the agent, its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individualality, and groups. This allows the modeller to work with different levels of description or complexity in the same model.\pdfcomment{ATM:cites}
+
 
 Also, modelling with agents from a bottom-up point of view will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. 
 % cal afegir això? ``Complex systems theory calls this \textbf{emergence}''. 
-Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way.\\
+Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see table \ref{tab:columnExit} ).\\
 
-	\begin{table}[h]
+	\begin{table}[ht!]
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
@@ -381,12 +383,11 @@ Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape 
 \pdfcomment{Cal que parlis de l'avantatge en expressar models a on els agents són heterogenis. D'altra banda, caldria expressar millor que pots introduir processos cognitius avançats fent servir aquesta aproximació, com per exemple mapes mentals del món individualitzats}
 \pdfcomment{ATM:done}
 
+Under the next conditions it is advisable, natural and easier to use ABM.
 
-
-It is advisable, because it can be more natural and useful, to use ABM through the constituent units' activities under the next conditions.
 \begin{enumerate}[i-] 
 \item The behavior of individuals cannot be clearly defined through aggregate transition rates.
-\item Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behavior increases. Describing complex individual behavior with equations becomes intractable. For instance, the individual copes with hysteresis, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
+\item Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behavior increases. Describing complex individual behavior with equations becomes intractable. For instance, the individual copes with hysteresis\footnote{Hysteresis is the dependence of a system not only on its current environment but also on its past environment. This dependence arises because the system can be in more than one internal state. To predict its future development, either its internal state or its history must be known\cite[p.571–597]{hysteresisDef}.}, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
 \item When the interactions between the agents are complex, nonlinear, discontinuous, or discrete (for example, when the behavior of an agent can be altered dramatically, even discontinuously, by other agents).
 \item When space is crucial and the agents' positions are not fixed. Example: fire escape, trade, foraging in a stochastic spatial distribution of resources, traffic.
 \item Activities are a more natural way of describing the system than processes.
@@ -395,13 +396,10 @@ It is advisable, because it can be more natural and useful, to use ABM through t
 \end{enumerate}
 
 
-Besides naturality in expressing models, ABM models are flexible. ABM can manage agents at different levels of aggregation. The decission units can be a person but also social entities like families, couples or tribes with their own rules for intearaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decission-making and aggregation is clearly separated. The range of complexity of the agent, its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individualality, and groups. This allows the modeller to work with different levels of description or complexity in the same model.
-
 A last characteristic feature of agent computing, although not often noted, is that once a model has been created it provides not merely one aspect of the solution — the equilibria, say, or the stability — but rather entire solution trajectories \cite{Axtell2000}.\\
 \\
 \pdfcomment{ATM:next pdfcomment comes from section ABM. ABM section absorved by section Modelling in Social Sciences}\\
 \pdfcomment{Home hi ha molts issues de ABM eh, alguns d'ells discutits al reading group (l'individualisme). Hauries de mostrar aquí algunes de les discussions que hem anat tenint (ben fonamentades i adientment citades, es clar}
-
 
 
 Considering specifically archeology, the introduction of modelling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a way\pdfcomment{atm: no m'agrada way} of statitistical distribution fitting. ABM models where thought as models that aproximated stochastic variables and patterns in the model. This was the scientific use of ABM. With the idea of producing more accurate explanations of the phenomena, ABM models began to be filled with more details. The objective was to approach the model to reality to obtain nearer outcomes to the data taken as reference. Those first models were designed to be a mirror of reality, and that is why some experts have been calling them Emulation Models. As it is discused by Premo \cite[p.33]{Premo2010} this stalled the usability of models, first due to the difficult of interpreting the causality and processes in a simulation experiment that leads to the arising of phenomena, and second, due to the problem of \textbf{equifinality} \cite[p.31]{Premo2010}.\\
@@ -462,7 +460,7 @@ The explanation of the outcome and the evidences from reality arises from the as
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[keepaspectratio=true]{figures/pragmaticReduct.png}}
-\caption{Ontological Reductionims vs Pragmatical Reductionism.}
+\caption{Ontological Reductionism vs Pragmatical Reductionism.}
 \label{fig:Equifinality}
 \end{figure}
 
@@ -1839,6 +1837,10 @@ In our starting hypothesis HG groups are adapted to marked seasonality (due to m
 	Richard Dawkins
 	\emph{The Selfish Gene.Oxford University Press, 2nd edition}	
 	1990
+
+\bibitem{hysteresisDef}
+	Mielke, A.; Roubicek, T. (2003). \emph{"A Rate-Independent Model for Inelastic Behavior of Shape-Memory Alloys"}. Multiscale Model. Simul. 1 (4): 571–597. 
+	2003
 
 \end{thebibliography}
 
