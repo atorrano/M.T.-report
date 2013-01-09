@@ -381,8 +381,8 @@ ABM is most indicated for describing and simulating a system composed of “beha
 
 Also, modelling with agents from a bottom-up point of view will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. 
 % cal afegir això? ``Complex systems theory calls this \textbf{emergence}''. 
-Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see table \ref{tab:columnExit} ).\\
-
+Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see figure \ref{tab:columnExit} ).\\
+\pdfcomment{ATM:el grafic no es una table }
 	\begin{table}[ht!]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -392,7 +392,7 @@ Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape 
 		\includegraphics[width=60mm,keepaspectratio=true]{figures/column2.png}\\
 		\hline
 	\end{tabular}
-	\caption{Unexpected emergence of scape patterns under different situations.}
+	\caption{Unexpected emergence of scape patterns under different situations (from \cite{Bonabeau2002}).}
 	\label{tab:columnExit}
 	\end{table}
 
@@ -422,13 +422,14 @@ A last characteristic feature of agent computing, although not often noted, is t
 Issues for ABM applied to social simulation \pdfcomment {ATM : listilla cutre}
 
 \begin{enumerate}[i-]
-\item Parameter instantiation
-\item initial population(statistical sampling? emergence+selection?) 
-\item initial state of the world at step 0: amount of resources,... 
-\item initial state of the agents? age ditribution,...
+\item Parameter instantiation\\
+      initial population(statistical sampling? emergence+selection?)\\
+      initial state of the world at step 0: amount of resources,... \\
+      initial state of the agents? age ditribution,...\\
 \item stop event, time bound,... oscilations&attractors...
 \item bounded rationality : agents are not megamachines/superman, they commit erros, have mistakes... Not too perfect
 decission making is desirable
+\item validation
 \end{enumerate}
 
 
@@ -444,7 +445,7 @@ The simulation of a model produces a trace of the states visited by the system. 
 \fbox{\includegraphics[keepaspectratio=true]{figures/eqf.png}}
 \caption{Equifinality in stochastic simulation models. For an initial state 
 	with its assumptions $\alpha$ a simulation generates a trace of states 
-	that lead to a final state or set of patterns and phenomena $\omega$.}
+	that lead to a final state or set of patterns and phenomena $\omega$ (figured based on \cite{Premo2010}).}
 \label{fig:Equifinality}
 \end{figure}
 %
@@ -1294,42 +1295,6 @@ be paired with the response of it. To use an uninventive example, nonlinear emer
 arise from constituents interactions. It is here where emergence can appear. When a pattern is recognizable 
 and repeats usually along experiments, is plausible to be considered emergent \cite{Holland1997}.\\  
 
-%\begin{figure}[h]
-%\centering
-%\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.5pt}
-%\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm1.jpg}}
-%\caption{ A swarm of birds flying avoiding clashes and generating patterns in the air that sometimes defend them from %predators.}
-%\label{fig:swarm_1}
-%\end{figure}
-
-%\begin{figure}[h]
-%\centering
-%\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.5pt}
-%\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.png}}
-%\caption{ Swarms of fishes generating patterns in water sometimes defend them from predators.}
-%\label{fig:emergence_1}
-%\end{figure}
-
-	\begin{table}[h]
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		\includegraphics[width=60mm,keepaspectratio=true]{figures/swarm2.jpg}
-		&
-		\includegraphics[width=60mm,keepaspectratio=true]{figures/emergence_1.png}\\
-		\hline
-	\end{tabular}
-	\caption{Emergence of swarm patterns from the interaction of many moving actors.}
-	\label{tab:tableSwarm}
-	\end{table}
-\pdfcomment{ATM:he tret la foto de les formigues, aquestes son una mica mes ilustratives per a veure
-be un swarm, les deixo? o les trec de totes formes?}
-
-%TODO : la sorpresa que es demana sempre es sorpresa, no cansa : on surt?
-
-
 There is potential for emergent phenomena, i.e., when: 
 \begin{itemize}
  \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
@@ -1421,16 +1386,23 @@ Long ago, bacteria and plancton dominated the seas. There was only microscopic l
 based microbes. With Sun light and CO$_2$ chemistry they spread at a greater rate than their neighbours. Photosynthesis
 microbes filling the seas plus millennia produced the oxygen filled atmosphere of the planet. Changes in the atmosphere
 changed weather and many other chemical properties in the planet. The atmosphere contained ozone which barred the 
-UV rays of the Sun which forbidded life in the surface. Then some individuals appeared with capabilities to
-breath the air of the surface. It is an example of mutual feedback between the environment and the evolving life beings. 
-But this feedback can also happen between these beings, and then it is called coevolution\cite{Dawkins1990}.
+UV rays of the Sun which forbidded life in the surface. Then some individuals appeared with capabilities to get out of 
+the water and breath the air of the surface. It is an example of mutual feedback between the environment and the evolving 
+life beings. But this feedback can also happen between these beings, and then it is called coevolution\cite{Dawkins1990}.
 When the adaptive process of an species produces a change that motivates selection of new adapting traits in other
 species which in turn affects the same way the first species we have coevolution. For instance, the relationship 
 between a prey and a predator will induce coevolution. The hunting activities produce death in the prey species, hence
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
-with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.
+with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. 
+Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both 
+species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
+Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. Sugarscape 
+will be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project 
+we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The 
+cultural traits are considered an analogy of adaptive strategies. The ideas from Evolution have been adapted to study the 
+sociocultural dynamics in human society.
 
-Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. Sugarscape will be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptative strategies. The ideas from Evolution will be adapted to study \textbf{cultural evolution}. We study the skills and strategies for resource explotaition. The succesful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classical agent, will yield a greater probabilty of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social} \\ \pdfcomment{ATM:done} 
+ \textbf{cultural evolution}. We study the skills and strategies for resource explotaition. The successful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classical agent, will yield a greater probabilty of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social} \\ \pdfcomment{ATM:done} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
