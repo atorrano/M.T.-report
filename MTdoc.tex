@@ -1459,6 +1459,7 @@ Applying these ideas, concerning the Gujarat project, we will try to explain the
 
 We study the skills and strategies for resource exploitation. The successful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classical agent, will yield a greater probabilty of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. 
 
+%%TODO 
 %For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social} \\ \pdfcomment{ATM:done} 
 
 In our study of transition from HG to AP, both groups will be modelled as two different typologies of agents. Each typology will account as a differentiated group where members will belong to it along all their lifes. When an agent emancipates from its parents takes the decision of being HG or AP according to an evaluation of which of both groups seems more succesful. When an agent takes the same role of the parents it can be seen as vertical transmission of cultural traits. When an agent takes a role different from the parents we can assume that it learned these skills from neighbours in environment. It must be stressed that we pay attention to transition to agriculture, not to emergence of agriculture in a only HG environment. Somehow agropastoralist yet exists in the environment. We only want to know how different environmental conditions favor one or another strategy and why HG kept being a plausible strategy in Gujarat when it had dissappeared in other places.
@@ -1480,11 +1481,35 @@ Each group has particular actions representing their way of making their living.
 \section{Introduction}
 
 This chapter exposes the work in case study one in the Simulpast project. 
-The text follows the structure of ODD documents we have been using to register our decisions and models and as a comunication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclussions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts. We know there are more sophisticated protocols to guide the design of an agent system (KAZ... )\pdfcomment{ATM:llistar i referenciar}, but we wanted to ensure the communication part for ellicitation applying ODD phylosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
+The text follows the structure of ODD documents we have been using to register our decisions and models and as a comunication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclussions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know there are more sophisticated protocols to guide the design of an agent system (KAZ... )\pdfcomment{ATM:llistar i referenciar}, but we wanted to ensure the communication part for ellicitation applying ODD phylosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
 
-Centrat en HG encara que es donen detalls dels AP que s'estan afegint en la versi\'o actual.
+%TODO en algun punt parla d'AUML. perque no l'usem. La interactio agent-agent no es basa en un llenguatge ni
+% cap transferencia estructurada complexa, nomes els tokes d'informacio de recursos. NO HI HA DIALEG 
+
+%TODO que fem nomes HG enlloc de HG+AP es diu a la intro de la tesina
+%%Centrat en HG encara que es donen detalls dels AP que s'estan afegint en la versi\'o actual.
+
+%TODO the chapter dresses the main ODD structure with extra explanations extending its technical scope. The aim is not only to comunicate a model but the ``path''  that leads to it. <--- pero no ho tens ja aixo amb l'ODD??? 
 
 
+The first section of the chapter introduces the observations and hypothesis of archeologists that have been studying the scenario of Gujarat during the transition and settlement of agriculture. This part states the motivation that leads to the purpose of the model. The following sections get deep in the details of the system, enviromental features, resources, weather conditions and dynamics, the agents and the features for matching the relevant system dynamics to solve the question. After the modeling details the next section exposes the solution for solving the decision making of the agents. A planning strategy is needed to achieve maximum adaptability of the agents under the different weather conditions scenarios for stress experiments. Markov Decision Processes and UCT algorithm will be introduced. Once the decision making is explained, different solutions are presented to enhance efficiency and throughput of steps per second in the simulation. The last sections cover the experimental part of the project. It will be centered about the ressilience of the current social group modeled, hunter gatherers. %TODO posa una mica mes
+
+%%1.-target - purpose
+
+%%2.-model details and components following ODD guidelines ...
+
+%%TODO esta ben colocat??
+%%3.-information sharing : es part de la interaccio agent-agent,pero tambe un apartat cientific del model
+
+%%4.-decision making
+
+%%5.- the efficiency issue
+
+%%6.-results
+
+%%7.-discussion
+
+%%8.-future
 
 
 %dius que parlaras de gujarat a aquest cap\'itol.
@@ -1507,11 +1532,18 @@ Centrat en HG encara que es donen detalls dels AP que s'estan afegint en la vers
 %Smart Agent
 	
 %	Decision Making :\\
+%		stressful environ -> changing rules -> adaptability -> hypoth-deduc
+%		we do not have an algebra or HG rules to reason about system dynamic -->
+%		--> hypoth-deduc through planning schema --> bandit game --> mdp --> uct
 %	Hypoth-Deduct\\
 %	--------MDP\\
 %	--------UCT\\
 %	--------backed by OptForagTheory & RationalChoiceTheory\\
 %	--------BSC day!\\
+%	-------- ISSUE { other agents actions are not included in the Hypoth-Deduct schema of
+%		-------- UCT. the agents spread over the map more or less uniformly.
+%		-------- We do not want competition between them, we want fairplay.
+%		-------- We want the group dynamic... Some agent will be lucky, some none.}
 %	--------rule agent : we do not want fix set of rules\\
 %	----------------learn them? from a setting that we will alter\\
 %	----------------to induce change???\\
@@ -1550,14 +1582,9 @@ variability and b) the appearance of other specialized groups.
 What factors play a role in HG persistence or disappearance in arid margins? Is the advent of agro-
 pastoral behaviour a big enough change to explain the disappearance of HG behaviour? Does climate
 variability affect HG behaviour?
-The model description follows the ODD (Overview, Design concepts, Details) protocol for describing
-individual- and agent-based models (Grimm et al. 2006, 2010).
-
 The agent-based simulation here proposed explores the potential for the persistence of hunter-gatherer
 (HG) communities relative to climate-driven environmental change during the Holocene in N Gujarat, a
 semi-arid region in NW India.
-The model description follows the ODD (Overview, Design concepts, Details) protocol for describing
-individual- and agent-based models (Grimm et al. 2006, 2010).
 
 
 Note:
@@ -1875,6 +1902,7 @@ the JJAS-ONDJ boundary.
 
 
 \subsubsection{Agent planning}
+
 Each day the agent will update its knowledge about environment and choose an action to execute (the
 decision-making process is defined in the Submodels section 8). The list of available actions is:
 \begin{enumerate}
@@ -1925,9 +1953,12 @@ within behavioral ecology and Rational Choice Theory(RCT)\cite{Scott2000} from e
 
 \subsection{Emergence}
 The model explores the emergence of stable HG populations under different climatic conditions.
+
+
+
+
 %%TODO 
 %% afegir la part de comparació amb hard-wired technique vs UCT --> adaptació (BSC day)
-
 \subsection{Adaptation}
 At the present moment the model is not interested on the emergence of individual adaptive traits, and
 for this reason adaptive options for the agents are limited to the decision making process. The different
@@ -2102,15 +2133,39 @@ are found in North Gujarat.
 \section{Submodels}
 
 \subsection{Agent execution cycle}
+
+
+
+%%TODO
+%Smart Agent
+	
+%	Decision Making :\\
+%		stressful environ -> changing rules -> adaptability -> hypoth-deduc
+%		we do not have an algebra or HG rules to reason about system dynamic -->
+%		--> hypoth-deduc through planning schema --> bandit game --> mdp --> uct
+%	Hypoth-Deduct\\
+%	--------MDP\\
+%	--------UCT\\
+%	--------backed by OptForagTheory & RationalChoiceTheory\\
+%	--------BSC day!\\
+%	-------- ISSUE { other agents actions are not included in the Hypoth-Deduct schema of
+%		-------- UCT. the agents spread over the map more or less uniformly.
+%		-------- We do not want competition between them, we want fairplay.
+%		-------- We want the group dynamic... Some agent will be lucky, some none.}
+%	--------rule agent : we do not want fix set of rules\\
+%	----------------learn them? from a setting that we will alter\\
+%	----------------to induce change???\\
+%	----------------we want adaptability. To the current moment, we choose
+%			planning\\
+
+
 The majority of Agent-Based Models mix knowledge acquisition, decision-making and execution in the
 same phase of an agent's execution. This choice is useful if we deal with agents with simple decision-
 making processes where the choice of behaviors is predefined. However, this classical approach to
 ABM has a major drawback, and is the fact that the agent will have scripted strategies, and for this
 reason it won't be able to choose strategies different from the ones defined there.
 The model proposed here splits the different phases. During each time step every agent updates its
-knowledge about the environment (possibly including other agents). This action is combined with a set
-of possible actions, in order to choose which plan of actions will be executed. Several factors can be
-used to enrich the process:
+knowledge about the environment (in the future possibly including other agents)\pdfcomment{ATM: he afegit ``future'' a la frase tot i que a Betesa varem dir que res d'aix\`o}. This action is combined with a set of possible actions, in order to choose which plan of actions will be executed. Several factors can be used to enrich the process:
 
 %%TODO no acabo de pillar tot aquest paragraph. es aixi?
 
@@ -2125,12 +2180,9 @@ used to enrich the process:
 	actions are the ones defined in the document.
 
 %%TODO refine it
- This approach will allow to integrate Artificial
-	Intelligence techniques into the current decision-making process, depending on particular research
-	around this first model.
+ This approach will allow to integrate more sophisticated Artificial Intelligence techniques into the current decision-making process, depending on particular research around this first model.
 
 \end{enumerate}
-
 
 The execution of the agents during each time step is divided in three different phases:
 \begin{enumerate}[1.]
@@ -2164,8 +2216,21 @@ The execution of the agents during each time step is divided in three different 
 
 \section{Decision Making}
 
+bandits
 MDP
 UCT
+
+
+\begin{figure}[h]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=150mm,keepaspectratio=true]{figures/uctTree.png}}
+\caption{Figure. Uct search tree.}
+\label{fig:uctTree}
+\end{figure}
+
+
 performance
 LR
 MDPState reference
