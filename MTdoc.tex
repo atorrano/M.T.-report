@@ -1019,7 +1019,19 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		An agent under these circumstances will find a set of available goals where each one produce a
 		different benefit for the agent itself. The goals, the states of agent and environment must be 
 		weighted in function of probability of success, or benefit for the agent. Also, there is some related
-		optimization trend or related likelihood of achieving positive results. 
+		optimization trend or related likelihood of achieving positive results \ref{fig:utilityAgent_label}. 
+
+
+		\begin{figure}[htbp!]
+		\centering
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/utilityAgent.jpg}}
+		\caption{Utility Based Agent Architecture}
+		%by RussellNorvig \cite{RussellNorvig}}
+		\label{fig:utilityAgent_label}
+		\end{figure}
+
 
 		%%Uncertainty(chap13 Russell... maybe ch16)
 		A pure logical agent can find a cul-de-sac on its deductions if the possible contingencies overcome
@@ -2144,6 +2156,16 @@ are found in North Gujarat.
 %		we do not have an algebra or HG rules to reason about system dynamic -->
 %		--> hypoth-deduc through planning schema --> bandit game --> mdp --> uct
 %	Hypoth-Deduct\\
+%		Due to the nature of the problem of resource retrieval in the raster lattice we have not
+%		developed a logical model to reason about states and actions. We will follow an utility based
+%		architecture. The agent has to tackle with resource optimization, large number of uniform 
+%		possible cells for exploration and with associated uncertaint. We think it is more reasonable to take an optimization and heuristic search approach
+%		instead of a symbolic reasoning based one to synthesize the agent plan. 
+%		bandit--->
+
+
+
+
 %	--------MDP\\
 %	--------UCT\\
 %	--------backed by OptForagTheory & RationalChoiceTheory\\
@@ -2213,6 +2235,58 @@ The execution of the agents during each time step is divided in three different 
 
 \section{Knowledge}
 
+According to anthropological registers, HGs explore the area around their homes following a excentric direction. Just like a compass divisions, a HG has set of choice directions. Each direction leads to areas where some could be good for foraging and other ones could be poor in resources. Also, anthropological sources describe hunt parties. Sometimes males of the familiar groups join in a group of hunters and spend several days apart from the home hunting in the whereabouts of the home range. This first stage of our models is not considering yet agent coordination and cooperation, so we stick to simple hunt actions with one hunter (and grown children) with a few hours duration, which
+are subsumed under ForageAction.
+ 
+We decided to endow agents with a map of cells of the world bounded by their home range. The circled area by the home range is divided in equal slices called sectors. The number of sectors is parameterizable though a configuration file.   
+For each sector their cells are stored and an utility scoring is assigned. For foraging decissions the utility is the sum of resources of the cells that compose it and for the MoveHome action the utility is %TODO
+
+Each time step the amount of resources in each cell changes due to the growing dynamics of biomass and to the possible foraging practices of other agents. The updating of utilities must be done each time step. The default update of utilities is omniscient inside the home range. The agent acces directly to all the information inside the area of its home range, outside of it the agent does not map more cells. We assume the agent can read the last updated value in resources for any cell concerning the update procedure. 
+
+At this stage the agent does not stores knowledge about the other agents.
+
+\subsection{Low Ressolution map}
+
+In our experiments agents have been working with two different engines for decision making. The planning engine produces millions of acces to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
+This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Supporting this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. 
+They think about patches that would cover several high resolution cells of our model.
+
+Each agent has private lists of references to low ressolution cells, sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility of the low resolution cells and minds(sectors) of the agents is updated \ref{figLRRepr}.
+
+		\begin{figure}[!h]
+		\centering
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/LRmaps1.png}}
+		\caption{HR vs LR correspondence}
+		\label{fig:LRMaps1}
+		\end{figure}
+
+
+Extrapolation and integer division are used to translate coordinates from low resolution to high resolution. 
+
+The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. When the planning engine simulates the effect of actions processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells.      
+
+
+
+\subsection{Partial Information}
+
+parla del partial mind
+
+
+\subsection{Information Sharing}
+
+Information sharing and knowledge exchange is a crutial activity for performance enhancing on everyday challenges. In our study of resilience of social groups in arid environments we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first results are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information of the environment, but sharing it with other
+neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation.
+
+We have developed an agent based model to study the resilience of hunter-gatherer groups and agropastoralists groups in the edge of agriculture spreading(12000 BP). The aim is to study the environmental conditions that favor one group versus the other applying the dynamics of coevolution and movility of agent's strategies. The evolutive pression of the environment selects the social group according to the succes in resource retrieval. Each agent has a pack of skills to solve the problem of resource threshold for survival. The proficiency of these skills accounts as shareable knowledge that other agents can copy or learn. An agent will gain or loose proficiency based on the rate of use of some skills instead of the others. The dynamics of forgetting and learning will induce profiles of patterns of competence. The profiles are correlated with the dynamic of the environment. It will allow to discover if
+conditions favour one concrete group, or maybe favour a mix of strategies or a periodical change from one profile to another.
+
+We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions. A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies.
+
+Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
+
+
 
 \section{Decision Making}
 
@@ -2237,39 +2311,14 @@ MDPState reference
 Extrapolation
 
 
-\section{Information Sharing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Annex 1}
 
-Information sharing and knowledge exchange is a crutial activity for
-performance enhancing on everyday challenges. In our study of resilience of
-social groups in arid environments we try to explain the conditions that
-trigger or inhibite the change of social groups moving from hunting strategies
-to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first
-results are based on sharing environmental information concerning resource
-allocation in the environment. Our simulations show that simulating individuals
-with partial information of the environment, but sharing it with other
-neighbour agents, allows them to achieve a resource retrieval as good as if
-they would be endowed with complete perfect information of the resource allocation.
+%TODO diagrames de classes
 
-We have developed an agent based model to study the resilience of hunter-gatherer
-groups and agropastoralists groups in the edge of agriculture spreading(12000 BP). The aim is to study the environmental conditions that favor one group versus the other
-applying the dynamics of coevolution and movility of agent's strategies. The
-evolutive pression of the environment selects the social group according
-to the succes in resource retrieval. Each agent has a pack of skills to solve the problem of resource threshold for survival. The proficiency of these skills accounts as shareable knowledge that other agents can copy or learn. An agent will gain or loose proficiency based on the rate of use of some skills instead of the others. The dynamics of
-forgetting and learning will induce profiles of patterns of competence. The profiles
-are correlated with the dynamic of the environment. It will allow to discover if
-conditions favour one concrete group, or maybe favour a mix of strategies or a periodical change from one profile to another.
+\chapter {Annex 2}
 
-We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty
-of environment conditions. A social network will be a source of help in the form
-of resources, environmental information and transmission of knowledge for survival strategies.
-
-Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information
-consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that
-lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank.
-The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model.
-It puts the next milestone to include more social actions and the modelization of cultural transmission.
-
-
+%TODO elicitation procedures : ECOTONO,meetings,interviews,simulpast seminars (other CSx give opinion)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
