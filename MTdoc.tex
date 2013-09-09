@@ -1914,6 +1914,7 @@ the JJAS-ONDJ boundary.
 
 
 \subsubsection{Agent planning}
+\label{subsubsec:AgentPlanning}
 
 Each day the agent will update its knowledge about environment and choose an action to execute (the
 decision-making process is defined in the Submodels section 8). The list of available actions is:
@@ -2004,7 +2005,7 @@ know around its home location. Other issues about bounded rationality is treated
  
 \subsection{Interaction}
 The interaction between agents is currently limited to the \emph{fission} process that is executed when two
-agents with adult children are inside social range, and to \emph{information sharing} at the end of the day.
+agents with adult children are inside social range, and to \emph{information sharing}\ref{sec:InformationSharing} at the end of the day.
 
 
 \subsection{Stochasticity}
@@ -2245,47 +2246,58 @@ Each time step the amount of resources in each cell changes due to the growing d
 
 At this stage the agent does not stores knowledge about the other agents.
 
-\subsection{Low Ressolution map}
+\subsection{Low Ressolution map}\pdfcomment{ATM: a la section de efficiency}
 
-In our experiments agents have been working with two different engines for decision making. The planning engine produces millions of acces to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
-This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Supporting this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. 
-They think about patches that would cover several high resolution cells of our model.
+In our experiments agents have been working with two different engines for decision making. The planning engine produces hundreds of millions of access to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
+This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Holding this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. 
 
-Each agent has private lists of references to low ressolution cells, sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility of the low resolution cells and minds(sectors) of the agents is updated \ref{figLRRepr}.
+The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. They think about patches that would cover several high resolution cells of our model.
+
+Each agent has private lists of references to low ressolution cells, the sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility scoring of the low resolution cells and minds(sectors) of the agents is updated \ref{fig:LRMaps1}\footnote{The resolutions shown in the figure does not correspond to the one in the model. It is a even lower one to make clearer the graphics.}.
 
 		\begin{figure}[!h]
 		\centering
 		\setlength\fboxsep{0pt}
 		\setlength\fboxrule{0.5pt}
 		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/LRmaps1.png}}
-		\caption{HR vs LR correspondence}
+		\caption{HR vs LR correspondence.}
 		\label{fig:LRMaps1}
 		\end{figure}
 
-
-Extrapolation and integer division are used to translate coordinates from low resolution to high resolution. 
-
-The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. When the planning engine simulates the effect of actions processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells.      
-
+The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. These low resolution structures are the only information resource used by the planning engine. No more high resolution access is done. When the planning engine simulates the effect of actions in the virtual representation of the world it processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells. So, at each state of the search tree, the update of utilities happen in internal low resolution rasters and low resolution cell containers. The produced plan is a action to be performed in a chosen sector. The agent has also a representation of sectors with high resolution cells referenced. The sector and the action proposed by the planner are launched normally exploring the high resolution space as explained before in section~\ref{sec:AgentPlanning}.
 
 
 \subsection{Partial Information}
+\label{sec:PartialInformation}
 
-parla del partial mind
+Although real HGs have a direct acces to their domains they cannot traverse it as quickly as to say they have last minute updated information from the environment. The model for HG considers a home range of 10km, a large extension for keeping an updated account of the resources in it. Each foraging exploration is a bet for the HG. Although he can know that in average one zone has enough resources to cover the survival threshold it does not ensures that this estimation is not going to change. There is uncertainty mainly due to other agents actions. The partial-information add-on emulates this bounded rationality and uncertainty feature. The update of the knowledge of the agents is calculated with two different sources of information. When an agent visits one sector in some time step the process will read the cells of the high resolution raster (direct access to the world) corresponding to the sector.\\
+Utility values have a timestamp. Each low resolution cell in the private raster of the agent has associated a timestamp of \emph{one week}. Once the timestamp expires the low resolution cells of the private raster receive an utility value equal to the statistical mean value of resources in the world raster, that is the second source of information. 
+Sumarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
+Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilities.
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=130mm,keepaspectratio=true]{figures/LRmaps2partMind.png}}
+\caption{Pipeline of partial mind updating.}
+\label{fig:PartMind}
+\end{figure}
 
 
 \subsection{Information Sharing}
+\label{sec:InformationSharing}
 
-Information sharing and knowledge exchange is a crutial activity for performance enhancing on everyday challenges. In our study of resilience of social groups in arid environments we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first results are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information of the environment, but sharing it with other
-neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation.
+Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience).%TODO \ref{sec:InformationSharingExperiments}
 
-We have developed an agent based model to study the resilience of hunter-gatherer groups and agropastoralists groups in the edge of agriculture spreading(12000 BP). The aim is to study the environmental conditions that favor one group versus the other applying the dynamics of coevolution and movility of agent's strategies. The evolutive pression of the environment selects the social group according to the succes in resource retrieval. Each agent has a pack of skills to solve the problem of resource threshold for survival. The proficiency of these skills accounts as shareable knowledge that other agents can copy or learn. An agent will gain or loose proficiency based on the rate of use of some skills instead of the others. The dynamics of forgetting and learning will induce profiles of patterns of competence. The profiles are correlated with the dynamic of the environment. It will allow to discover if
-conditions favour one concrete group, or maybe favour a mix of strategies or a periodical change from one profile to another.
+We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
+A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around the home range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the home range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
 
-We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions. A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies.
+Results of the Information Sharing can be seen in the chapter of experimentation.
 
-Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
 
+%TODO move to EXPERIMENTS AND RESULTS 
+%Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
 
 
 \section{Decision Making}
@@ -2293,6 +2305,34 @@ Three experiments have been launched to compare three kind of mind models for hu
 bandits
 MDP
 UCT
+uct is executed to guess next action to launch, no to
+produce a policy to be used the rest of the simulation
+
+
+\subsection{Rule Based Agent}
+
+\subsection{Planning}
+
+Adaptability, changing environment conditions ... BSC days
+rules = hard wired situation solver, you change the situation,,, the rules become useless
+symbolic reasoning? we cannot provide facts about state of the system and logical model of the transiotions
+of the system -> optimization schema to maximize profit -> utility based -> planning 
+
+the agent everyday does a decision. Each decision should lead to the long term survival of the agent.
+Previous sections has described the uncertainty in the predictibility of the system. 
+The system exhibits the Markov Property. The state of a system depends only on the previous state. 
+The decision proces depends only in the state of the system in the current timestep.
+MDPr
+
+ 
+
+adaptability --> hypothetical deductive reasoning : hypothesis = node in a search tree.
+deductive = I know how to deduce the state of the system give the previous state and the action that
+induced the transition, we achieve this thourgh applying a simulation step to the hypothesis.
+
+UCT is a good planner : GO game
+
+MDP states : incremental raster, sectors, agent....
 
 
 \begin{figure}[h]
@@ -2309,6 +2349,13 @@ performance
 LR
 MDPState reference
 Extrapolation
+
+
+\section{Efficiency}
+
+\chapter{Experiments}
+
+\section{Information Sharing}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
