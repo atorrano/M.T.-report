@@ -1409,7 +1409,7 @@ Although we will not wire explicitly coevolution in the two studied social model
 
 
 \paragraph{Cultural Evolution}
-
+\label{sec:CultEvol}
 %The ideas from Evolution have been adapted to study the sociocultural dynamics in human society... blabla  \textbf{cultural evolution}.
 %%TODO 
 \pdfcomment{ATM:posa abstract de resilience de Montpellier}
@@ -2288,16 +2288,13 @@ Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilitie
 \subsection{Information Sharing}
 \label{sec:InformationSharing}
 
-Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience).%TODO \ref{sec:InformationSharingExperiments}
+Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience).%TODO \ref{sec:InformationSharingExperiments}
 
 We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
-A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around the home range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the home range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
+A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around a distance we have called social range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the social range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. Each agent will send and will receive an information token in the interaction with the other agents. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
 
-Results of the Information Sharing can be seen in the chapter of experimentation.
+Results of the Information Sharing can be seen in the chapter of experimentation\ref{sec:ExperInfoSharing}.
 
-
-%TODO move to EXPERIMENTS AND RESULTS 
-%Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
 
 
 \section{Decision Making}
@@ -2307,7 +2304,6 @@ MDP
 UCT
 uct is executed to guess next action to launch, no to
 produce a policy to be used the rest of the simulation
-
 
 \subsection{Rule Based Agent}
 
@@ -2355,7 +2351,41 @@ Extrapolation
 
 \chapter{Experiments}
 
+\section{Planning}
+
+rule vs mdp
+
 \section{Information Sharing}
+\label{sec:ExperInfoSharing}
+
+Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model in a population of 25 agents. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had \emph{partial information}\ref{sec:PartialInformation} consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information\ref{sec:InformationSharing} pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
+
+The figures compare a window of one year. The X axis represent the day of the year, from the first to the last. The Y axis representes the mean of collected resources from the population of 25 agents \ref{fig:expermInfoShar_1}.
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=90mm,keepaspectratio=true]{figures/expermInfoShar.png}}
+\caption{ Comparing yearly collected resources for the three kind of knowledge management.}
+\label{fig:expermInfoShar_1}
+\end{figure}
+
+
+\chapter{Conclussion}
+
+AI :
+1.- it produces more effective agents : empirical evidence
+2.- the behaviour specification becomes complex as the model of the system
+grows. Behaviour modelization techniques lead you to AI
+
+simul envir require special attention to performance and throughput.
+Extreme care in computational force for the agents
+
+From the modeling part. Many problems : AI raw power : clustering, planning, problem solving.
+You have to fit AI in sometimes not too much bounds defined for the behaviour to model
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
