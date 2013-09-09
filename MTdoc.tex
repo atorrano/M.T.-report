@@ -1790,6 +1790,7 @@ of it.
 
 
 \subsection{Agents}
+\label{sec:AgentAttribs}
 The following attributes have been chosen to account in our model.
 
 \begin{enumerate}
@@ -1814,7 +1815,7 @@ within a day (due to starvation). Needs are defined by the following table:
 \item[Available forage] - Daily time that an agent can spend on foraging. The total amount of
 foraging time for any given agent is computed as the sum of the foraging time of the
 individuals that compose it. Foraging time increases from infancy to adult life, modelling
-learning processes as defined in the following table:
+learning processes as defined in the table\ref{fig:caloricRequ}.
 
 
 \end{enumerate}
@@ -1847,9 +1848,16 @@ learning processes as defined in the following table:
 \end{figure}
 
 
-Tables. Individual caloric requirements (left), Individual foraging time (right)
 
-figures pg35 
+\begin{figure}[h]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/caloReqForageHour.jpeg}}
+\caption{Tables. Individual caloric requirements (left), Individual foraging time (right)}
+\label{fig:caloricRequ}
+\end{figure}
+
 
 
 \section{Process overview and scheduling}
@@ -2275,6 +2283,29 @@ Utility values have a timestamp. Each low resolution cell in the private raster 
 Sumarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
 Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilities.
 
+	\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|c|p{7cm}|}
+		\hline
+		PHASE	&	DESCRIPTION\\
+		\hline
+		1	&	The planner accesses to the private low res knowledge structures of the agent.\\
+		\hline
+		2	&	The planner proposes one action and one sector where the action will occur.\\
+		\hline
+		3	&	The agent has a high resolution version of its sectors, these lists of high resolution coordinates to actuate in the world.\\
+		\hline
+		4	&	The agent explores the world which will be materialied as a walk over the matrix of resources of the world.\\
+		\hline
+		5	&	The procedure of updating the low resolution rasters registers the changes happened in the high resolution raster.\\
+		\hline
+		6	&	The agent can copy directly the utility of a cell in the low resolution raster to its private low resolution raster if such low resolution cell was contained in the sector that was visited in the last action.\\
+		\hline
+	\end{tabular}
+	\caption{Explanation for steps in figure \ref{fig:PartMind}}
+	\label{tab:explainStepsPartMindUpdate}
+	\end{table}
+
 \begin{figure}[h!]
 \centering
 \setlength\fboxsep{0pt}
@@ -2288,16 +2319,62 @@ Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilitie
 \subsection{Information Sharing}
 \label{sec:InformationSharing}
 
-Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience).%TODO \ref{sec:InformationSharingExperiments}
+Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience)\ref{sec:ExperInfoSharing}.
 
 We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
 A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around a distance we have called social range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the social range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. Each agent will send and will receive an information token in the interaction with the other agents. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
 
 Results of the Information Sharing can be seen in the chapter of experimentation\ref{sec:ExperInfoSharing}.
 
-
-
 \section{Decision Making}
+\cite[chapter.17]{RussellNorvig}
+
+\subsection{Rule Based Agent}
+
+The rule based agent was developed as a representation of the classical agents in social simulation. The objective of having rule based agents is to compare its performance against the AI approach.
+The rule based agent follows a decision schema constructed by the modelers with advice from experts.
+The ingredients of decision are the set of actions (ForageAction and MoveHomeAction) and the set of zones where actions are perfomed, the eight sectors. The agent at each time step evaluates if there is enough resources in some of its sectors. Enough stands for allowing its family avoid starvation during one day. There is a survival threshold based on food-need parameters \ref{fig:caloricRequ}. The rules are expressed in the decision schema appearing in figure \ref{fig:decisionTree}.
+
+
+%	\begin{figure}[h]
+%	\centering
+%	\setlength\fboxsep{0pt}
+%	\setlength\fboxrule{0.5pt}
+%	\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/decisionTree.jpg}}
+%	\caption{Decision tree followed by the rule based agent.}
+%	\label{fig:decisionTree}
+%	\end{figure}
+
+
+.........
+\\......
+\\........
+\\........
+\\ ............
+\\ ..........
+\\..........
+\\......
+\\..........
+\\.........
+\\..........
+\\..........\\
+$v$ := max expected visited cells in a forage walk. The\\ 
+value is computed from the free time of the agent and\\
+how much costs in time forage a cell.\\
+\\
+$\sigma$ := the richest of the sectors of the agent.\\
+\\
+$R$ := the amount of resources in $\sigma$.\\
+\\
+$\theta$ := the daily food need of the agent.\\
+\\
+( $\frac{v}{\#cells(\sigma)}$ \· $R$ ) $\geq$ 2\·$\theta$
+\\
+$\sigma$ := Randomly selected sector with maximal\\
+utility between the set of sectors.\\
+
+\subsection{Planning}
+
 
 bandits
 MDP
@@ -2305,9 +2382,7 @@ UCT
 uct is executed to guess next action to launch, no to
 produce a policy to be used the rest of the simulation
 
-\subsection{Rule Based Agent}
 
-\subsection{Planning}
 
 Adaptability, changing environment conditions ... BSC days
 rules = hard wired situation solver, you change the situation,,, the rules become useless
