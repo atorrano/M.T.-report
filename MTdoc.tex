@@ -100,7 +100,7 @@ that are not specified and not yet introduced in ABMs coming from Social Science
 
 We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decissions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearier match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.
 
-In order to study such posibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.
+In order to study such posibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical  agents vs AI agents, therefore, giving an answer to one of the topics of the Master Project.
 
 \section{Simulation}
 
@@ -1427,7 +1427,7 @@ between a prey and a predator will induce coevolution. The hunting activities pr
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
 with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
 
-Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. Sugarscape will be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
+Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
 
 
 \paragraph{Cultural Evolution}
@@ -1816,6 +1816,9 @@ of it.
 The following attributes have been chosen to account in our model.
 
 \begin{enumerate}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+
 \item[Age] - A numeric variable that keeps track of how many time steps a given agent has been
 active in the simulation.
 \item[Children] - A collection of human entities. The number of children is bound by resource
@@ -2003,6 +2006,7 @@ The model explores the emergence of stable HG populations under different climat
 %%TODO 
 %% afegir la part de comparació amb hard-wired technique vs UCT --> adaptació (BSC day)
 \subsection{Adaptation}
+\label{sec:Adaptation}
 At the present moment the model is not interested on the emergence of individual adaptive traits, and
 for this reason adaptive options for the agents are limited to the decision making process. The different
 agents try to respond to the dynamics of environment choosing Home locations and Foraging actions
@@ -2276,27 +2280,6 @@ Each time step the amount of resources in each cell changes due to the growing d
 
 At this stage the agent does not stores knowledge about the other agents.
 
-\subsection{Low Ressolution map}\pdfcomment{ATM: a la section de efficiency}
-
-In our experiments agents have been working with two different engines for decision making. The planning engine produces hundreds of millions of access to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
-This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Holding this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. 
-
-The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. They think about patches that would cover several high resolution cells of our model.
-
-Each agent has private lists of references to low ressolution cells, the sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility scoring of the low resolution cells and minds(sectors) of the agents is updated \ref{fig:LRMaps1}\footnote{The resolutions shown in the figure does not correspond to the one in the model. It is a even lower one to make clearer the graphics.}.
-
-		\begin{figure}[!h]
-		\centering
-		\setlength\fboxsep{0pt}
-		\setlength\fboxrule{0.5pt}
-		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/LRmaps1.png}}
-		\caption{HR vs LR correspondence.}
-		\label{fig:LRMaps1}
-		\end{figure}
-
-The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. These low resolution structures are the only information resource used by the planning engine. No more high resolution access is done. When the planning engine simulates the effect of actions in the virtual representation of the world it processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells. So, at each state of the search tree, the update of utilities happen in internal low resolution rasters and low resolution cell containers. The produced plan is a action to be performed in a chosen sector. The agent has also a representation of sectors with high resolution cells referenced. The sector and the action proposed by the planner are launched normally exploring the high resolution space as explained before in section~\ref{sec:AgentPlanning}.
-
-
 \subsection{Partial Information}
 \label{sec:PartialInformation}
 
@@ -2358,44 +2341,39 @@ The rule based agent follows a decision schema constructed by the modelers with 
 The ingredients of decision are the set of actions (ForageAction and MoveHomeAction) and the set of zones where actions are perfomed, the eight sectors. The agent at each time step evaluates if there is enough resources in some of its sectors. Enough stands for allowing its family avoid starvation during one day. There is a survival threshold based on food-need parameters \ref{fig:caloricRequ}. The rules are expressed in the decision schema appearing in figure \ref{fig:decisionTree}.
 
 
-%	\begin{figure}[h]
-%	\centering
-%	\setlength\fboxsep{0pt}
-%	\setlength\fboxrule{0.5pt}
-%	\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/decisionTree.jpg}}
-%	\caption{Decision tree followed by the rule based agent.}
-%	\label{fig:decisionTree}
-%	\end{figure}
-
-
-.........
-\\......
-\\........
-\\........
-\\ ............
-\\ ..........
-\\..........
-\\......
-\\..........
-\\.........
-\\..........
-\\..........\\
-$v$ := max expected visited cells in a forage walk. The\\ 
-value is computed from the free time of the agent and\\
-how much costs in time forage a cell.\\
-\\
-$\sigma$ := the richest of the sectors of the agent.\\
-\\
-$R$ := the amount of resources in $\sigma$.\\
-\\
-$\theta$ := the daily food need of the agent.\\
-\\
-( $\frac{v}{\#cells(\sigma)}$ \· $R$ ) $\geq$ 2\·$\theta$
-\\
-$\sigma$ := Randomly selected sector with maximal\\
-utility between the set of sectors.\\
+	\begin{figure}[h!]
+	\centering
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.5pt}
+	\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/decisionTree.png}}
+	\caption{Decision tree followed by the rule based agent.}
+	\label{fig:decisionTree}
+	\end{figure}
 
 \subsection{Planning}
+
+
+
+\ref{sec:Adaptation}
+
+Previous sections have introduced the necessity of applying planning in the decision making of the 
+agents. The uncertainty of the world, the fact that agents make their decission on current time step
+world state and .... defines the decision making as a Markov Decision Problem(MDP).
+
+MDPs are characterized by the Markovian properties, by some utility function and a transition of
+states that is representable by a diarected graph where nodes are states of the world and edges denote
+and action perfomed the transforms the state of the world from the state associated to the origin node to
+the state associated to the target node. MDP are solvable through solving the Bellman equations. 
+The solving produces an association of state - action that shall be the police that an agent will have to
+follow.  
+
+
+
+\cite{BonetGeffner2012}
+
+
+
+
 
 
 bandits
@@ -2444,7 +2422,66 @@ MDPState reference
 Extrapolation
 
 
+
+%%TODO
+%Smart Agent
+	
+%	Decision Making :\\
+%		stressful environ -> changing rules -> adaptability -> hypoth-deduc
+%		we do not have an algebra or HG rules to reason about system dynamic -->
+%		--> hypoth-deduc through planning schema --> bandit game --> mdp --> uct
+%	Hypoth-Deduct\\
+%		Due to the nature of the problem of resource retrieval in the raster lattice we have not
+%		developed a logical model to reason about states and actions. We will follow an utility based
+%		architecture. The agent has to tackle with resource optimization, large number of uniform 
+%		possible cells for exploration and with associated uncertaint. We think it is more reasonable to take an optimization and heuristic search approach
+%		instead of a symbolic reasoning based one to synthesize the agent plan. 
+%		bandit--->
+
+
+
+
+%	--------MDP\\
+%	--------UCT\\
+%	--------backed by OptForagTheory & RationalChoiceTheory\\
+%	--------BSC day!\\
+%	-------- ISSUE { other agents actions are not included in the Hypoth-Deduct schema of
+%		-------- UCT. the agents spread over the map more or less uniformly.
+%		-------- We do not want competition between them, we want fairplay.
+%		-------- We want the group dynamic... Some agent will be lucky, some none.}
+%	--------rule agent : we do not want fix set of rules\\
+%	----------------learn them? from a setting that we will alter\\
+%	----------------to induce change???\\
+%	----------------we want adaptability. To the current moment, we choose
+%			planning\\
+
+
 \section{Efficiency}
+
+\subsection{Low Ressolution map}
+
+In our experiments agents have been working with two different engines for decision making. The planning engine produces hundreds of millions of access to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
+This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Holding this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. 
+
+The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. They think about patches that would cover several high resolution cells of our model.
+
+Each agent has private lists of references to low ressolution cells, the sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility scoring of the low resolution cells and minds(sectors) of the agents is updated \ref{fig:LRMaps1}\footnote{The resolutions shown in the figure does not correspond to the one in the model. It is a even lower one to make clearer the graphics.}.
+
+		\begin{figure}[!h]
+		\centering
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/LRmaps1.png}}
+		\caption{HR vs LR correspondence.}
+		\label{fig:LRMaps1}
+		\end{figure}
+
+The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. These low resolution structures are the only information resource used by the planning engine. No more high resolution access is done. When the planning engine simulates the effect of actions in the virtual representation of the world it processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells. So, at each state of the search tree, the update of utilities happen in internal low resolution rasters and low resolution cell containers. The produced plan is a action to be performed in a chosen sector. The agent has also a representation of sectors with high resolution cells referenced. The sector and the action proposed by the planner are launched normally exploring the high resolution space as explained before in section~\ref{sec:AgentPlanning}.
+
+
+\paragraph{Enhancement}
+
+
 
 \chapter{Experiments}
 
@@ -2469,7 +2506,7 @@ The figures compare a window of one year. The X axis represent the day of the ye
 \end{figure}
 
 
-\chapter{Conclussion}
+\chapter{Conclussions and Future}
 
 This master thesis reflects part of the experience of my contribution to Gujarat Project in
 its first stages. This part of the project had as objectives to find an stable model to begin
@@ -2507,37 +2544,38 @@ classical agents in their evolution and response to challenges. The second is th
 project force us to use AI tools to represent agents behaviour. There are many details and relationships.
 The environment is very changing due to the mutual interaction of agents. And simple classical models cannot 
 encompass a behaviour that will show succesful, reasonable and or realistic decisions under this environment.
-By the way, AI was born to emulate human performance in intelligent tasks. But it does not means AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds or the features of the behaviour chosen for the agents. 
+By the way, AI was born to emulate human performance in intelligent tasks. But it does not means AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
+\subsection{Future Work}
 
-Human behaviour has to be modele hard to find bounds 
+The current state of the Gujarat project has the principal building blocks to follow its schedulling. 
+The project will keep advancing through different parallel front lines in charge of subgroups of members of Gujarat case study. 
+\begin{enumerate}
 
-It is mandatory an adaptation effort.  
+\item AP Agents have their development in a very advanced phase. The decission making for APs will introduce
+planning at different scales. HGs launch actions that are resolved in one day. Launch, effect, reward
+happen in the same time step. But for APs the action of preparing a field for crop produces the reward
+two seasons later. As APs also have one-day-atomic actions the planner will manage short-term and long-term 
+decisions.
 
-Also, The big point is in modelization, about focusing in the bounds of the behaviour. 
+\item The efficiency solution based on delayed cell update will be finished. This enhancement will lower the
+running times to a point which would mean that less then one week of CPU will be needed to simulate one
+thousand years.
 
+\item Information sharing and Partial Information add-on will also see added a ``scouting'' action to the 
+agents for resource discovery.
 
-They are fuzzy sometimes, and one possible
-example that could be mentioned is that of producing an agent that could collapse  
+\item The model for dynamic social group based on skill profiles will be complemented with research in
+charge of two members of the Gujarat project with long experience in cultural transmission.
 
-From the modeling part. Many problems : AI raw power : clustering, planning, problem solving.
-You have to fit AI in sometimes not too much bounds defined for the behaviour to model
+\item A submission is waiting to be reviewd for ``Journal of Archaeological Method and Theory'' (JAMT).
 
- 
-Work prepares the building blocks -> ressilience, HG - AP dynamics
-		Modelo de Profiles de la skill evolution
-
-
-\chapter{Future Work}
-
--> future from BETESA meetings
--> efficiency
--> Cultural Transmission 
--> AP
--> AP & HG
+\end{enumerate}
 
 
 \chapter{Acknowledgement}
+
+	
 
 	CSIC ...
 
@@ -2559,20 +2597,101 @@ Work prepares the building blocks -> ressilience, HG - AP dynamics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Annex 1 : Platforms}
 
+Social Science Models can be implemented with a great number of optional tools and libraries.
+For small models or prototypes there are case-tools and graphical environments that 
+integrate a designer and an internal layer containing and interpreter. The model is executed
+by the interpreter it in some virtual machine. When the model demands high computational 
+requierements it is implemented with a procedural language like C++ or Java. To that end many 
+libraries have been developed to offer a framework of objects and procedures common to most of the simulations.
 
-Pandora : 
+\section{Pandora}
 
-MPI - OMP
+Social Science Simulation group at Barcelona Supercomputing Center(BSC) is an important collaborator
+in Simulpast project. The group has developed a library for agent based simulation models and a tool for 
+trace visualization. Simulpast project simulations and the library Pandora are highly interrelated. The use 
+of Pandora and Mare Nostrum allowed to aim to the purposes and questions stated in the case study of Gujarat.
 
-4 sections : 4 threads
+The aim was to produce an internal set of classes from scratch to get free of design decissions of other known packages used in agent simulation. The library Pandora has its strong point in parallelism. Pandora has been designed to get maximum profit from OpenMP threads and MPI layer. 
+
+Pandora executes its simulations aplying data parallelization\ref{fig:Pandora1.jpg}. The space representation of the world is split in parts that will be in charge of a cpu-core. Supercomputers arrange their CPUs in blades. Some blades
+contain two, some other four. CPUs in a blade share the same memory. Pandora makes the most of this architecture.
+The blade memory has the representation of the world. Each CPU processes the needed calculi for decision
+making ocurring in its slice of world. When an agent traverses from one slice to another the CPU exchange
+information through MPI. This comunication events happen inside of the blade, the simulation is no spread
+along the rack of blades of the supercomputer.
+Parallelizing the world this way produces a possible problem of corruption of data. Agents decide their next action
+on the information taken from their vicinity. The action can alter the state of some piece of the world in this
+vicinity. The issue arises when a agent is near enough of the bound that separates its world slice from the 
+adjacent one. An agent cannot interfere with agents in the same world slice. The assigned CPU is dedicated to
+the current agent, it is not possible data corruption. But if an agent can see and alter a location in another
+slice will collide with the agents of the adjacent world slice. The solution is to apply a next level of slicing.
+Each slice is again sliced in four. Each CPU visits the subslices in the same order. So all CPUs are working 
+on the same subslice $\sigma_i$. World subslices with same id are not touching each other so data corruption
+is avoided with the constraing that the radius of the vicinity of an agent is less the half the side of a subslice,
+otherwise an agent in subslice 0 would reach cells in subslice 1 also reachable to an agent in the subslice 0
+of the neighbour slice. 
 
 
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/Pandora1.jpg}}
+\caption{ World paralellization.}
+\label{fig:Pandora1}
+\end{figure}
 
-\chapter {Annex 2 : Software Design}
 
-%TODO elicitation procedures : ECOTONO,meetings,interviews,simulpast seminars (other CSx give opinion)
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/Pandora2.jpg}}
+\caption{ World subslicing.}
+\label{fig:Pandora2}
+\end{figure}
 
-%TODO diagrames de classes
+ 
+\section{Other platforms}
+
+\begin{enumerate}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\\
+\item[RePast-HPC]
+Repast-HPC is the most popular tool for tightly-coupled, large computing clusters and
+supercomputers \cite{CollierNorth2012}. It is based on the tool Repast for sequentially execute ABMs.
+Repast-HPC is intended for users with basic C++ expertise and access to high-performance computers.
+Repast HPC implements a dynamic discrete-event scheduler with conservative synchronization. It offers
+useful features such as data collection, specifying agent interactions by space and networks or automatic
+management of agent interactions across processes. Repast-HPC allocates a region of space to processors
+and manages the boundaries by copying them (and their agents) in the adjoin region. 
+\\
+\item[NetLogo]
+Netlogo\cite{netlogoCite} is an agent-based programming language and modelling environment for
+simulating complex phenomena.Netlogo uses a modified version of the Logo programming language.
+This is a different approach from other toolkits such as Swarm and Repast
+which make simulation facilities available to programs written in a general-purpose
+language such as Java. Despite being free, \emph{Netlogo is not open source}. Netlogo is
+written in Java so can be run on all major platforms, requiring Java version 1.4 to
+run the current Netlogo version 2.0. Although the majority of users find Netlogo
+fast enough for most purposes, we do not find easy adapting it to an HPC environment and
+due to the heavy load calculi Gujarat project is involved we need platforms where it could be
+easy to tackle with low level details to apply performance tricks.
+\\
+\item[DMason]
+DMASON is the Distributed Multi-agents simulation toolkit, based on Mason. As in Repast-HPC, users can create an ABM in MASON and then use the framework to easily distribute it over many machines. It provides a partitioning functionality that self-balances regions and requires and all-to-all communication. As opposite to Pandora and Repast-HPC, partitioning of the field is decided by the user in advance and, in our opinion, may cause an additional unbalance. Agents can migrate from one region to other and, therefore, it does not guarantee load balancing. However, it implements a simple balancing mechanism: when a region is overloaded it decides to split itself in smaller regions, dividing consequently the amount of agents in each of these regions. To deal with boundaries problems,
+neighboring regions communicate before each simulation step. DMASON is developed in Java and uses
+Java Message Service (JMS) for communication between workers.
+
+\item[GridABM]
+Using grid technology, the open source project GridABM \cite{SzemesDeBack2010} provides a
+set of templates to enable researchers to run ABMs in computing clusters and computational grids. It is
+based on Repast and depending on the topology of communication of agents it allow user to choose the
+appropriate schema and run their simulations in different parallel and distributed platforms. The
+programming is very similar to developing Repast sequential applications.
+
+\end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2843,6 +2962,26 @@ MPI - OMP
 	\emph{"A Rate-Independent Model for Inelastic Behavior of Shape-Memory Alloys"}. 
 	Multiscale Model. Simul. 1 (4). 
 	2003.
+
+\bibitem{BonetGeffner2012}
+	Hector Geffner, Blai Bonet.
+	\emph{Action Selection for MDPs: Anytime AO* Versus UCT.} 
+	Proceedings of the Twenty-Sixth AAAI Conference on Artificial Intelligence.	
+	2012.
+
+\bibitem{CollierNorth2012}
+	\emph{Repast for High Performance Computing}
+	http://repast.sourceforge.net/repast_hpc.html
+	2012.
+
+\bibitem{SzemesDeBack2010}
+	\emph{GridABM}
+	http://gridabm.sourceforge.net/
+	2010.
+
+\bibitem{netlogoCite}
+	\emph{NetLogo}
+	http://ccl.northwestern.edu/netlogo/index.shtml
 
 \end{thebibliography}
 
