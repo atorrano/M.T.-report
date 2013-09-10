@@ -34,28 +34,49 @@
 
 \begin{document}
 
-Master in Artificial
-Intelligence (UPC-URV-UB)
+\begin{titlepage}
+\begin{left}
+\includegraphics[width=0.30\textwidth]{./figures/MasterLogo.jpg}~\\[1cm]
+\end{left}
+\begin{center}
+\textsc{\LARGE Master in Artificial Intelligence (UPC-URV-UB)}\\[1.5cm]
+\HRule \\[0.4cm]
+\textsc{\Large Master of Science Thesis}\\[0.5cm]
 
-	\begin{figure}[h]
-	\centering
-	\setlength\fboxsep{0pt}
-	\setlength\fboxrule{0.5pt}
-	\fbox{\includegraphics[width=60mm,keepaspectratio=true]{figures/MasterLogo.jpg}}
-	\label{fig:MasterLogo}
-	\end{figure}
+{ \huge \bfseries \huge Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments \\[2.4cm] }
+
+{\large \today}
+
+\\[2.0cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushcenter} \large
+\emph{Author:}\\
+Alexis Torrano Mart\'inez
+\end{flushcenter}
+\end{minipage}
+
+%\author{Alexis Torrano Mart\'inez}
+\\[5.0cm]
 
 
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Advisor:}\\
+PhD. Xavier\\ Rubio Campillo.
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Co-advisor:} \\
+PhD. Llu\'is\\ M\`arquez Villodre.
+\end{flushright}
+\end{minipage}
 
-\title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
-\small{Master Thesis}}
-\author{Alexis Torrano Mart\'inez}
-\maketitle
 
-Advisor : Xavier Rubio Campillo.
-Co-Advisor : Llu\'is M\`arquez Villodre.
-
-
+\end{center}
+\end{titlepage}
 
 \newpage
 
@@ -1621,6 +1642,17 @@ The agent-based simulation here proposed explores the potential for the persiste
 semi-arid region in NW India.
 
 
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/jamt1.jpg}}
+\caption{ Gujarat area for HG and AP ressilience simulation.}
+\label{fig:jamt_1}
+\end{figure}
+
+
 Note:
 The modeling workflow is following these steps:
 1. Environmental settings and climate engine
@@ -1722,6 +1754,16 @@ season covering October, November, December, January. "FMAM" is for February Mar
 \item ONDJ (post-Monsoon: low precipitation, cool temperature, medium evapotranspiration)
 \item FMAM (dry season: low precipitation, high temperature, high evapotranspiration)
 \end{enumerate}
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamt2.jpg}}
+\caption{ .}
+\label{fig:jamt_2}
+\end{figure}
 
 
 It is important to note that any given “year” in the model starts with the beginning of the rain season
@@ -2352,28 +2394,23 @@ The ingredients of decision are the set of actions (ForageAction and MoveHomeAct
 
 \subsection{Planning}
 
+Previous sections have introduced the necessity of applying planning\ref{sec:Adaptation} in the decision 
+making of the agents. According to the aim of the project the agents face changing conditions that compromise their adaptability. Rule based decision making is associated to a hard wired knowledge. Something that works for a situation.
+If conditions change rules serve no more. A static and closed knowledge encumbers the agent's adaptability.
+The dimensionality of the world due to climate and agent interaction would make appear non predicted states
+making the agent receive a lower benefit from its actions.
 
+The uncertainty of the world, the fact that agents make their decision on current time step
+world state and decisions are taken sequentially defines the decision making as a Markov Decision Problem(MDP)
+\cite[chapter.17]{RussellNorvig}.
 
-\ref{sec:Adaptation}
+MDPs are characterized by the markovian property, by some utility function and a transition of
+states that is representable by a directed graph\ref{fig:mdp1} where nodes are states of the world and edges denote
+and action perfomed. Traversing an edge means that an action transforms the state of the world from the state associated to the origin node to the state associated to the target node. MDP are solvable through solving the Bellman equations. The solution is an association of states to executable actions that shall be the police that an agent will have to follow. A Bellman solution is too near to a rule based approach. The dynamic of events and indirect competitiveness for resource adquisition is an evidence to find a technique that solves scenarios like board games. State transition in board games depend on the current state. They work launching sequential actions. And boards exhibit a large number of configurations. 
 
-Previous sections have introduced the necessity of applying planning in the decision making of the 
-agents. The uncertainty of the world, the fact that agents make their decission on current time step
-world state and .... defines the decision making as a Markov Decision Problem(MDP).
+\subsubsection{UCT} 
 
-MDPs are characterized by the Markovian properties, by some utility function and a transition of
-states that is representable by a diarected graph where nodes are states of the world and edges denote
-and action perfomed the transforms the state of the world from the state associated to the origin node to
-the state associated to the target node. MDP are solvable through solving the Bellman equations. 
-The solving produces an association of state - action that shall be the police that an agent will have to
-follow.  
-
-
-
-\cite{BonetGeffner2012}
-
-
-
-
+UCT \cite{BonetGeffner2012} is an algorithm that calculates
 
 
 bandits
@@ -2381,7 +2418,6 @@ MDP
 UCT
 uct is executed to guess next action to launch, no to
 produce a policy to be used the rest of the simulation
-
 
 
 Adaptability, changing environment conditions ... BSC days
@@ -2395,7 +2431,6 @@ The system exhibits the Markov Property. The state of a system depends only on t
 The decision proces depends only in the state of the system in the current timestep.
 MDPr
 
- 
 
 adaptability --> hypothetical deductive reasoning : hypothesis = node in a search tree.
 deductive = I know how to deduce the state of the system give the previous state and the action that
@@ -2406,7 +2441,17 @@ UCT is a good planner : GO game
 MDP states : incremental raster, sectors, agent....
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/mdp1.png}}
+\caption{ Markov Decision Problem automata.}
+\label{fig:mdp1}
+\end{figure}
+
+
+\begin{figure}[h!]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
@@ -2485,9 +2530,91 @@ The utility of a low resolution cell is the sum of resources of the covered cell
 
 \chapter{Experiments}
 
-\section{Planning}
 
-rule vs mdp
+\section{Stable state and ressilience}
+
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure4B&W.jpg}}
+\caption{ .}
+\label{fig:jamtFigure4B&W.jpg}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure5.jpg}}
+\caption{ .}
+\label{fig:jamtFigure5.jpg}
+\end{figure}
+
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure3.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure3.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure5B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure5B&W.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure6.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure6.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure3B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure3B&W.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure4.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure4.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure6B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure6B&W.jpg}
+%\end{figure}
+
 
 \section{Information Sharing}
 \label{sec:ExperInfoSharing}
@@ -2575,23 +2702,18 @@ charge of two members of the Gujarat project with long experience in cultural tr
 
 \chapter{Acknowledgement}
 
-	
+I would like to take the oportunity to thank my director his supervision, dedication and example
+so this master thesis could be as best as possible. I cannot forget the rest of partners
+which has been as inspiration to learn in my first steps in research: Marco for his clear
+objectives and ideas, Bernardo for his open mind and motivation for new challenges, Carla
+for her order and team working skills, Andrea for his discourse abilities, Cristina for her 
+nerverending lists of books. I do not want to forget Andreas, Matthieu, Debora, Alexandre,
+Jito and many others.
 
-	CSIC ...
+I want to extend my gratitude to my co-advisor, Llu\'is M\`arquez, who always make things simpler 
+when troubles appear.
 
-	XAvi  
-
-	Miguel Ramirez in Australia & Nir : UCT
-
-	Matt : comunication & info sharing
-
-	Albore : efficiency
-
-	Family support, patience
-
-	my dog for forcing me to play with him, which was the only way to
-	disconnect for 30 minutes.
-
+Thanks to my family and friends because they have been supporting me tirelessly.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
