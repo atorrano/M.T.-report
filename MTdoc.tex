@@ -33,11 +33,54 @@
 
 
 \begin{document}
-\title{Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments.\\
-\small{Master Thesis}}
-\author{Alexis Torrano Mart\'inez}
-\maketitle
+
+\begin{titlepage}
+\begin{left}
+\includegraphics[width=0.30\textwidth]{./figures/MasterLogo.jpg}~\\[1cm]
+\end{left}
+\begin{center}
+\textsc{\LARGE Master in Artificial Intelligence (UPC-URV-UB)}\\[1.5cm]
+\HRule \\[0.4cm]
+\textsc{\Large Master of Science Thesis}\\[0.5cm]
+
+{ \huge \bfseries \huge Coevolutionary strategies in MultiAgent systems. An approach using socionatural realistic environments \\[2.4cm] }
+
+{\large \today}
+
+\\[2.0cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushcenter} \large
+\emph{Author:}\\
+Alexis Torrano Mart\'inez
+\end{flushcenter}
+\end{minipage}
+
+%\author{Alexis Torrano Mart\'inez}
+\\[5.0cm]
+
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Advisor:}\\
+PhD. Xavier\\ Rubio Campillo.
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Co-advisor:} \\
+PhD. Llu\'is\\ M\`arquez Villodre.
+\end{flushright}
+\end{minipage}
+
+
+\end{center}
+\end{titlepage}
+
 \newpage
+
+
 
 %\textwidth 6in \oddsidemargin 0.2in \evensidemargin -0.2in
 %\textheight 9in \topmargin -0.75in \headheight 0mm \headsep 25mm
@@ -78,18 +121,16 @@ that are not specified and not yet introduced in ABMs coming from Social Science
 
 We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat HunterGatherer(HG) way of life lasted more than in other place of Earth in its competition against AgroPastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decissions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decission making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearier match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.
 
-In order to study such posibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical SugarScape agents vs AI agents, therefore, giving an answer to the topic of the Master Project.
+In order to study such posibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analises different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical  agents vs AI agents, therefore, giving an answer to one of the topics of the Master Project.
 
 \section{Simulation}
-
 %brief description
 %hi ha altres aplicacions de simulacio on no hi ha component temporal i no ho estic esmentant! MonteCarlo,etc...
-Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modelled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhace or guide strategy development, decission taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the inmersion in virtual worlds responding to our input.
-
+Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modelled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhace or guide strategy development, decission taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the inmersion in virtual worlds responding to our input.\\
 % purpose, a priori, outcome, { deduction, induction, abduction(Alexis) } Axelrod's
 % crec que els agradara, marketing, saborcillo de IA impregnant els racons
-A simulation obeys some direction of experimentation, so a question must be set to drive the selection of features to model from the real system and give a direction to the modelling and the experiments design.These assumptions choice will prune the details not related to the questions to solve. It is not just for the sake of simplicity but for the practical reason that a model too near of the real system will be as hard as the original system to analyse.\\
-Simulation, like deduction, starts with a set of those explicit assumptions. But unlike deduction, it does not prove theorems. Instead, a simulation generates data that can be analysed inductively. Unlike typical induction, however, the simulated data comes from a rigorously specified artificial experiment rather than direct measurement of the real world. While induction can be used to find patterns in data, and deduction can be used to find consequences of assumptions, simulation modelling can be used as an aid intuition and hypothesis validation tool. Also as space search mechanism for parameter tunning or optimization. This links with abductive processes.
+A simulation obeys some direction of experimentation, so a question must be set to drive the selection of features to model from the real system and give a direction to the modelling and the experiments design.These assumptions choice will prune the details not related to the questions to solve. It is not just for the sake of simplicity but for the practical reason that a model too near of the real system will be as hard as the original system to analyse.
+Simulation, like deduction, starts with a set of those explicit assumptions. But unlike deduction, it does not prove theorems. Instead, a simulation generates data that can be analysed inductively. Unlike typical induction, however, the simulated data comes from a rigorously specified artificial experiment rather than direct measurement of the real world. While induction can be used to find patterns in data, and deduction can be used to find consequences of assumptions, simulation modelling can be used as an aid intuition and hypothesis validation tool. Also as space search mechanism for parameter tunning or optimization. This links with abductive processes.\\
 %abduction
 Just like in a tipical Sherlock Holmes case you pick the evidences, scenario for the experiment, and the common knowledge (the initial expert assumptions about the model). You enter in a refinement cycle where you test hypothesis and readjust them to discover the theory, the ``plot'', the explanation of what is happening. Following the abductive reasoning schema one looks for the hypothesis that would best explain the relevant evidence \cite{Axelrod2003}.\\
 %% no anava errat amb l'abduccio! :D
@@ -228,11 +269,15 @@ This abstraction exercise yields an external and explicit representation of part
 people who wish to understand, to change, to manage or to control that part of reality \cite{Pidd2003}.\\
 Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototipe.\\
 As Epstein \cite[p.1]{Epstein2008} says \textit{''Anyone who ventures a projection, or imagines how a social dynamic, epidemic, war, or migration would unfold is running some model``}.\\
-Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort.\pdfcomment{ATM:Epstein buscant lloc concret on ho diu}\\
+Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analisys. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort.
+%\pdfcomment{ATM:Epstein buscant lloc concret on ho diu}\\
 %%TODO ''good-for-nothing'' : busca paragraf on Epstein diu aixo  
 %TODO reuse cite; split in chapter/paragraph?
 For instance, lets consider modelling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so it could be minimized the hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the courtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if the objective is to model the system to analyze the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
-This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification\pdfcomment{XR:Verification or validation?}\\ \pdfcomment{ATM:Verification->Comprovar que el model esta ben implementat.Model simple:dificil.Model complexe:+dificil} for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible. But the crucial point is if we better understand them we can better interpret their results. Constituents in models interact each other following the relationships established by the modellers. This produces a network or causality chain that is responsible of the state changes of the model along the simulation. These chains must be inspected to find the origin of the phenomena exhibited in the simulation. As we want to understand a system we must reconstruct the processes that lead to the outcome we observe or check against our assumptions or real world events. If we are designing models where constituents are grouped to conform more complicated constituents, if we design the model to exploit emergent phenomena, analisys of the outcome and the causality chain reconstruction will be a very difficult task to disentangle \cite[p.31]{Premo2010}\label{myPremo_simplicity}. Simplicity is a must. Besides, we are not aiming at a very rich and complex model that matches its outcomes almost perfectly with some referential real data. As it is explained below we have preference for a model that makes easier the task to explore social processes to answer and propose arising questions. We must find the causal conection between experimental parameters and model dynamics, which parameters under which diferent initial conditions make the system behave differently and say why.
+This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification
+%\pdfcomment{XR:Verification or validation?}\\ 
+%\pdfcomment{ATM:Verification->Comprovar que el model esta ben implementat.Model simple:dificil.Model complexe:+dificil} 
+for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible. But the crucial point is if we better understand them we can better interpret their results. Constituents in models interact each other following the relationships established by the modellers. This produces a network or causality chain that is responsible of the state changes of the model along the simulation. These chains must be inspected to find the origin of the phenomena exhibited in the simulation. As we want to understand a system we must reconstruct the processes that lead to the outcome we observe or check against our assumptions or real world events. If we are designing models where constituents are grouped to conform more complicated constituents, if we design the model to exploit emergent phenomena, analisys of the outcome and the causality chain reconstruction will be a very difficult task to disentangle \cite[p.31]{Premo2010}\label{myPremo_simplicity}. Simplicity is a must. Besides, we are not aiming at a very rich and complex model that matches its outcomes almost perfectly with some referential real data. As it is explained below we have preference for a model that makes easier the task to explore social processes to answer and propose arising questions. We must find the causal conection between experimental parameters and model dynamics, which parameters under which diferent initial conditions make the system behave differently and say why.
 Another concern is that detail and granularity choice are attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
 %
 According to Oppenheim's and Putnam's\cite[p.1-2]{McGivernAndRueger}\cite{Unity_of_Science}, theories describe their domain as a corpus of interelated concepts where the pieces of knowledge are connected with mathematical, hierarchical, structural and logical relationships, to enumerate some. The hierarchical relationships induce a multilayered organization of knowledge, sometimes called ontology\footnote{We are not talking about knowledge representation from A.I.}. The hierarchy of layers is related to the level of the abstraction of the contained concepts, going from concrete concepts to abstract ones that contain or subsume the former. Also, the composition relationship makes arise a hierarchy of layers. For instance, in social sciences, considering individuals which are part of families, families which are part of social groups, and groups which conform a society. 
@@ -268,11 +313,14 @@ The point is that the range of concepts that you choose to include in the model 
 
 %George Box
 Although good modelling of the parts could be accomplished accurately lefting out the non-relevant entities and phenomena, let's remember the famous quote of George Box, ``essentially, all models are wrong, but some are useful'' \cite[p.2]{Box1979}.
-\pdfcomment{has de dir d'on surt la cita}\\ \pdfcomment{ATM:done}
+%\pdfcomment{has de dir d'on surt la cita}\\ \pdfcomment{ATM:done}
 
 % multidiscpl ATM
 
-By the way, it can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups, in our project, hunters, gatherers, agropastoralists \pdfcomment{differentiated groups? Vols dir different cultural identities, potser? Perquè no dius de quin tipus de grups parles.}\\ \pdfcomment{ATM:done. No deia els grups concrets perque volia anar a parar a la multidisciplinarity que era el target del paragraf}. We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons with some inner traits related to their personality as anxiety, generosity, aggressiveness, cooperation aptitude. Now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth\cite[p.56]{MWilliams1999}.\\
+By the way, it can also happen that the modelization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups, in our project, hunters, gatherers, agropastoralists. 
+%\pdfcomment{differentiated groups? Vols dir different cultural identities, potser? Perquè no dius de quin tipus de grups parles.}\\ 
+%\pdfcomment{ATM:done. No deia els grups concrets perque volia anar a parar a la multidisciplinarity que era el target del paragraf}. 
+We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons with some inner traits related to their personality as anxiety, generosity, aggressiveness, cooperation aptitude. Now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to mollecules, biochemistry, and so on and so forth\cite[p.56]{MWilliams1999}.\\
 Trespassing these borders and needing the help of experts able to manage and modelize the concepts will be the motivation for multidisciplinarity. 
 
 %TODO must I put it in Gujarat chapter? In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures.\\
@@ -299,28 +347,27 @@ Modelling will help to find a consensus for expressing the concepts and properti
 %%%% content
 
 Social science refers to the academic disciplines concerned with society and human behavior\cite[p.7,chap.3]{MWilliams1999}.
-\\
-We will take the point of view where the study of society or social groups considers its target as an adaptative ecosystem of people with interaction, other living entities, environmental conditions or environmental dynamics, information exchange and the mutual adaptative changes induced between the actors, co-evolution \cite[p.4]{PerezAndBatten2006}.\\
-\pdfcomment{aviam...només són alguns investigadors que consideren la societat com un sistema adaptatiu. La inmensa majoria no ho fa, et caldria refer això. D'altra banda, si cites un llibre has de dir la pàgina o pàgines a les que t'estàs referint}
-\\
-\pdfcomment{ATM: ?`trec la frase que diu que prenem el punt de vista d'alguns investigadors que consideren la 
-societat com un sistema adaptatiu? L'adaptabilitat va quedant esmentada sobretot en parlar d'agents, de sistemes
-complexes que exhibeixen adaptabilitat... Aixo ja impregna el nostre punt de vista,no? Es redundant tenir aquesta frase? per altra banda sobretot, l'objectiu d'aquests primers paragrafs es il.lustrar els items o issues a tenir
-en compte quan modeles sistemes socials. Aquests items surten esmentats a la ``definicio`` de ciencia social.Aixo
-motiva que diguis ''ei,aquests ingredients son els susceptibles de posar-los a un model``, la pedra angular per decidir
-l'aspecte o l'estrategia del model... i aixo fa portar a la proposta d'agents com a paradigma que va molt be
-per cobrir aquests issues... Per aixo, m'es mes important parlar de persones, grups socials, interaccions que no
-pas esmentar al principi sistemes adaptatitius; trobant-ho interessant de dir, no es prioritari en aquest punt.}
+%\\
+%We will take the point of view where the study of society or social groups considers its target as an adaptative ecosystem of people with interaction, other living entities, environmental conditions or environmental dynamics, information exchange and the mutual adaptative changes induced between the actors, co-evolution \cite[p.4]{PerezAndBatten2006}.\\
+%\pdfcomment{aviam...només són alguns investigadors que consideren la societat com un sistema adaptatiu. La inmensa majoria no ho fa, et caldria refer això. D'altra banda, si cites un llibre has de dir la pàgina o pàgines a les que t'estàs referint}
+%\\
+%\pdfcomment{ATM: ?`trec la frase que diu que prenem el punt de vista d'alguns investigadors que consideren la 
+%societat com un sistema adaptatiu? L'adaptabilitat va quedant esmentada sobretot en parlar d'agents, de sistemes
+%complexes que exhibeixen adaptabilitat... Aixo ja impregna el nostre punt de vista,no? Es redundant tenir aquesta frase? per altra banda sobretot, l'objectiu d'aquests primers paragrafs es il.lustrar els items o issues a tenir
+%en compte quan modeles sistemes socials. Aquests items surten esmentats a la ``definicio`` de ciencia social.Aixo
+%motiva que diguis ''ei,aquests ingredients son els susceptibles de posar-los a un model``, la pedra angular per decidir
+%l'aspecte o l'estrategia del model... i aixo fa portar a la proposta d'agents com a paradigma que va molt be
+%per cobrir aquests issues... Per aixo, m'es mes important parlar de persones, grups socials, interaccions que no
+%pas esmentar al principi sistemes adaptatitius; trobant-ho interessant de dir, no es prioritari en aquest punt.}
  
 %modelling targets/items, 
 Modelling societies implies being aware of constituents identified by the social theories. Interacting entities form a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. An individual leaves a trace of participations and interactions in the society through social processes. Such activities occur with other individuals, with some activity units or through them. Populations of individuals flow through the social structures, selectively participating and differentially performing \cite[p.8]{GordonBurt2010}. 
 Ordinary living involves a participation of people in the social activities of family, leisure and holidays, shopping, work and travel. These activities within units are structured by relationships and choices, rules, rituals and randomness. Ordinary living also involves the participation of cultural ideas and artefacts in social activities.
-\pdfcomment{Cal lligar millor aquest raonament}
-\\ 
-\pdfcomment{ATM:estic enumerant elements a modelar, els fenomens que han detectat les social sciences, per a saber quins elements son susceptibles d'incloure's a un model.On tinc l'error? em perdo}
+%\pdfcomment{Cal lligar millor aquest raonament}
+%\\ 
+%\pdfcomment{ATM:estic enumerant elements a modelar, els fenomens que han detectat les social sciences, per a saber quins elements son susceptibles d'incloure's a un model.On tinc l'error? em perdo}
 
-Social sciences seek to understand not only how individuals behave under the social influence, but also how the interaction of 
-many individuals leads to large-scale outcomes and global phenomena \cite[p.9]{GordonBurt2010}.\\ 
+Social sciences seek to understand not only how individuals behave under the social influence, but also how the interaction of many individuals leads to large-scale outcomes and global phenomena \cite[p.9]{GordonBurt2010}.\\ 
 Modelization will be the construction of an \textbf{analogy} between these constituents and processes identified by social sciences as elements, procedures, terms or expressions in some \textbf{representation language} that allows to manipulate and reason about them.\\  
 The main observed issues, individuals, units, processes or actions, flow and dynamics within units, are the frontline of the 
 modelization aspects and motivation for the different paradigms appeared or adapted to solve the modelling objectives. New 
@@ -340,7 +387,7 @@ empirical \textbf{generalisations}, construction or assesment of \textbf{theorie
 
 %possible paradigms. TOASK : Explico mes que son sistemes dinamics i la resta d'opcions?????
 
-The first paradigms to model social processes were borrowed from the fields of physics, operations research, and economics. The first social concepts considered were those related to social units or subgroups and large processes. Also, due to the main use of dynamical systems and differential equations, social phenomena was modelled as a flow between different containers that represent groups or state of individuals.\\
+The first paradigms to model social processes were borrowed from the fields of physics, operations research, and economics. The first social concepts considered were those related to social units or subgroups and large processes. Also, due to the main use of dynamical systems and differential equations, social phenomena was modelled as a flow between different containers that represent groups or state of individuals.
 
 \begin{figure}[h]
 \centering
@@ -379,7 +426,7 @@ ABM is most indicated for describing and simulating a system composed of “beha
 Also, modelling with agents from a bottom-up point of view will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. 
 % cal afegir això? ``Complex systems theory calls this \textbf{emergence}''. 
 Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see figure \ref{tab:columnExit} ).\\
-\pdfcomment{ATM:el grafic no es una table }
+%\pdfcomment{ATM:el grafic no es una table }
 	\begin{table}[ht!]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -393,9 +440,9 @@ Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape 
 	\label{tab:columnExit}
 	\end{table}
 
-\pdfcomment{Cal que parlis de l'avantatge en expressar models a on els agents són heterogenis. D'altra banda, caldria expressar millor que pots introduir processos cognitius avançats fent servir aquesta aproximació, com per exemple mapes mentals del món individualitzats}
-\\
-\pdfcomment{ATM:done}
+%\pdfcomment{Cal que parlis de l'avantatge en expressar models a on els agents són heterogenis. D'altra banda, caldria expressar millor que pots introduir processos cognitius avançats fent servir aquesta aproximació, com per exemple mapes mentals del món individualitzats}
+%\\
+%\pdfcomment{ATM:done}
 
 Under the next conditions it is advisable, natural and easier to use ABM.
 
@@ -410,11 +457,11 @@ Under the next conditions it is advisable, natural and easier to use ABM.
 \end{enumerate}
 
 A last characteristic feature of agent computing, although not often noted, is that once a model has been created it provides not merely one aspect of the solution — the equilibria, say, or the stability — but rather entire solution trajectories \cite{Axtell2000}.\\
-\\
-\pdfcomment{ATM:next pdfcomment comes from the removed section ABM. ABM section was absorved by section Modelling in Social Sciences}\\
-\pdfcomment{Home hi ha molts issues de ABM eh, alguns d'ells discutits al reading group (l'individualisme). Hauries de mostrar aquí algunes de les discussions que hem anat tenint (ben fonamentades i adientment citades, es clar}
-\\
-\pdfcomment{ATM:molts dels issues grossos surten al PREMO( equif, validacio ), i queden esmentats al paragraf que en parla... Jo anava a afegir issues propis de la metodologia : http://jasss.soc.surrey.ac.uk/12/1/1.html. }
+%\\
+%\pdfcomment{ATM:next pdfcomment comes from the removed section ABM. ABM section was absorved by section Modelling in Social Sciences}\\
+%\pdfcomment{Home hi ha molts issues de ABM eh, alguns d'ells discutits al reading group (l'individualisme). Hauries de mostrar aquí algunes de les discussions que hem anat tenint (ben fonamentades i adientment citades, es clar}
+%\\
+%\pdfcomment{ATM:molts dels issues grossos surten al PREMO( equif, validacio ), i queden esmentats al paragraf que en parla... Jo anava a afegir issues propis de la metodologia : http://jasss.soc.surrey.ac.uk/12/1/1.html. }
 
 %% TODO
 %Issues for ABM applied to social simulation \pdfcomment {ATM : listilla cutre}
@@ -433,7 +480,9 @@ A last characteristic feature of agent computing, although not often noted, is t
 
 \subsubsection{Epistemology of ABMs in Social Modelling}
 
-Considering specifically archeology, the introduction of modelling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a way\pdfcomment{atm: no m'agrada way} of statitistical distribution fitting. ABM models where thought as models that aproximated stochastic variables and patterns in the model. This was the scientific use of ABM. With the idea of producing more accurate explanations of the phenomena, ABM models began to be filled with more details. The objective was to approach the model to reality to obtain nearer outcomes to the data taken as reference. Those first models were designed to be a mirror of reality, and that is why some experts have been calling them Emulation Models. As it is discused by Premo \cite[p.33]{Premo2010} this stalled the usability of models, first due to the difficult of interpreting the causality and processes in a simulation experiment that leads to the arising of phenomena, and second, due to the problem of \textbf{equifinality} \cite[p.31]{Premo2010}.\\
+Considering specifically archeology, the introduction of modelling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a technique
+%\pdfcomment{atm: no m'agrada way}
+of statitistical distribution fitting. ABM models where thought as models that aproximated stochastic variables and patterns in the model. This was the scientific use of ABM. With the idea of producing more accurate explanations of the phenomena, ABM models began to be filled with more details. The objective was to approach the model to reality to obtain nearer outcomes to the data taken as reference. Those first models were designed to be a mirror of reality, and that is why some experts have been calling them Emulation Models. As it is discused by Premo \cite[p.33]{Premo2010} this stalled the usability of models, first due to the difficult of interpreting the causality and processes in a simulation experiment that leads to the arising of phenomena, and second, due to the problem of \textbf{equifinality} \cite[p.31]{Premo2010}.\\
 The simulation of a model produces a trace of the states visited by the system. If we execute a stochastic model, the states will be conformed by the exhibited values by the model variables following some distribution. That trace is just only one from all possibles that could appear from the combinations that randomness can produce in the variables. Hence, for a single model and an initial configuration, the stochasticity can lead to many different traces although the system finishes at some atractor state or the same patterns arise. The question is, which trace must be taken into account to explain evidences found in reality? This would be an example of equifinality.\\ 
 %
 \begin{figure}[h]
@@ -477,7 +526,8 @@ The connection between hypothesis, assumptions and outcomes is studied by the mo
 %the explanation process is retroduction aplication searching for the plausible chain of rules
 %that produced the facts and patterns of the outcome
 %
-The explanation of the outcome and the evidences from reality arises from the assemble of the knowledge and evidences we gather from experiments. The model becomes part of a pragmatic reductionism frame, what we comprehend from the inner processes is integrated for the comprehension of the whole. This comprehension will induce new questions and hypothesis (or purge them) that will motivate new experiments and modelling tasks producing a loop of model refinement. Generation of these new hypothesis and questions will also be of profit for theory improvement or theory building and self-criticism in a loop of modelization and question-discovering feeding each other. \pdfcomment{ATM:cada 3 frases hauria de posar una ref a Premo, es excessiu? faig referencia en un punt i dic q tot el que he posat ve d'alla?}.\\ 
+The explanation of the outcome and the evidences from reality arises from the assemble of the knowledge and evidences we gather from experiments. The model becomes part of a pragmatic reductionism frame, what we comprehend from the inner processes is integrated for the comprehension of the whole. This comprehension will induce new questions and hypothesis (or purge them) that will motivate new experiments and modelling tasks producing a loop of model refinement. Generation of these new hypothesis and questions will also be of profit for theory improvement or theory building and self-criticism in a loop of modelization and question-discovering feeding each other. 
+%\pdfcomment{ATM:cada 3 frases hauria de posar una ref a Premo, es excessiu? faig referencia en un punt i dic q tot el que he posat ve d'alla?}.\\ 
 
 %When you construct a model you must think how will you use it, how will you apply it to a rational process 
 %for knowledge production. 
@@ -1323,9 +1373,9 @@ There is potential for emergent phenomena, i.e., when:
 
 Evolution theory is the result of observations along several years made by Charles Darwin in his trips to Galapagos Islands and the study of native species of finche birds. 
 
-\pdfcomment{Home és força més complicat eh...si de cas digues que Darwin va començar a formular-la a partir de les nombroses observacions fetes en un viatge de varios anys, etc.}. 
-\\
-\pdfcomment{ATM:done?}
+%\pdfcomment{Home és força més complicat eh...si de cas digues que Darwin va començar a formular-la a partir de les nombroses observacions fetes en un viatge de varios anys, etc.}. 
+%\\
+%\pdfcomment{ATM:done?}
 Darwin proposed that the varieties and specializations of observed species was imposed by the topology of the 
 island and the local conditions of each one. The theory arised from the following points in conjunction of the observations. He based his deductions on the next hypothesis:
 \begin{itemize}
@@ -1343,7 +1393,8 @@ island and the local conditions of each one. The theory arised from the followin
 Darwin called \textbf{Evolution by Natural Selection} to the improvement by mutation and competition process 
 where individual beings produce offspring at a rate greater of the survival rate ( otherwise they 
 would extinct). The offspring is almost equal to the parents except from slight variations. At 
-some point the population will saturate the niche and they will compete for the resources.\pdfcomment{ATM:busco ref}
+some point the population will saturate the niche and they will compete for the resources.
+%\pdfcomment{ATM:busco ref}
 The more adapted individuals are considered those who will satisfy their resource needs and
 have higher reproduction success. This will imply that a great number of offspring that inherited
 features from their successful parents will populate the environment. These traits will persist
@@ -1382,8 +1433,8 @@ position as our final work metaphor for evolution and natural selection\cite{Daw
 As it is mentioned, part of the working framework of our simulation is based on the ideas of evolution and ``natural selection''. We understand ``natural selection'' as a process that "rewards" adaptive solutions and penalizes those less adapted. Darwinian Evolution is the result of the continued application of this screening and the persistence of adaptive patterns and what comes off of them. Persistence is produced through the reproductive process of agents. Regularly an agent generates a copy of itself with some disturbance in their features and takes charge of it for a period of time. The extraction capacity of system resources, adaptability,  marks their survival and that of their offspring. If the offspring survives, the configuration is maintained over time and gets another chance to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of configurations to respond more adaptively than others, working with the hypothesis that selected ones would correspond to reality. We simulate systems plus the evolutionary process. Our utility functions, birth \& mortality are filters to keep or remove agents of the system depending on its performance against its lifecycle.\\ 
 We are applying a parallelism between DNA information and configuration or features in the agent. The features stablish
 the policy of the agent. For instance, the Gujarat project would differentiate between HunterGatherer way of living from AgroPastoralist way of living through this features.
-\pdfcomment{Caldria que, abans de començar a enumerar tots aquests conceptes, la secció "Conceptual Framework" tingués un paràgraf explicant el que es trobarà el lector a continuació. Si no, queda com raro perquè són conceptes molt diferents}
-\\ \pdfcomment{ATM:done}
+%\pdfcomment{Caldria que, abans de començar a enumerar tots aquests conceptes, la secció "Conceptual Framework" tingués un paràgraf explicant el que es trobarà el lector a continuació. Si no, queda com raro perquè són conceptes molt diferents}
+%\\ \pdfcomment{ATM:done}
 \paragraph{Coevolution}
 %TODO \underline{	Dos grups responent al medi. Pressio Evolutiva. El que fa un afecta a l'altre, aixo provoca una
 %		resposta d'adaptabilitat. Estudiem el feedback evolutiu entre HG,AP, i medi.
@@ -1405,14 +1456,13 @@ between a prey and a predator will induce coevolution. The hunting activities pr
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
 with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
 
-Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. Sugarscape will be the framework for the competition between classical Sugarscape agents and sophisticated-AI ones. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
+Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
 
 
 \paragraph{Cultural Evolution}
-
+\label{sec:CultEvol}
 %The ideas from Evolution have been adapted to study the sociocultural dynamics in human society... blabla  \textbf{cultural evolution}.
 %%TODO 
-\pdfcomment{ATM:posa abstract de resilience de Montpellier}
 Behavioural Sciences trying to explain the cultural idiosyncrasy of human beings have traced a parallelism between its dynamics and Darwinian Evolution theories. Cultural Evolution \cite[ch11.]{Dawkins1990}\cite{Stanford_CultEvol}( socio-cultural evolution, CE ) states an analogy with the selection, adaptation and innovation processes descrived in the theories of darwinian evolution. Culture endows humans with a mental frame of assumptions and behaviours that affect their response to the environment. This has an impact in human performance to the treats of the environment and hence adaptation to it. Culture is a trait that like the physical features that conforms an individual will be crutial to its ressilience.\\ 
 Another important dimension of culture is transmission. Culture like genes is something parents can transfer to their offspring. Also, besides receiving a vertical endowment from parents, culture can also be adquired from other peers in a oblique way, maybe from brothers and sisters, or grandparents. This process is called cultural transmission. Just happens like in replication of parental genes, there exists the possibility of errors in the copy process. Either the communicator of cultural traits or the receiver can alter the information leading to errors or improvements. There could exist also improvement in knowledge due to revision and update of the results of the behaviours through experience. Next a table is presented to show the paralelisms between evolution theory and cultural evolution theory.
 
@@ -1493,7 +1543,7 @@ Each group has particular actions representing their way of making their living.
 \section{Introduction}
 
 This chapter exposes the work in case study one in the Simulpast project. 
-The text follows the structure of ODD documents we have been using to register our decisions and models and as a comunication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclussions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know there are more sophisticated protocols to guide the design of an agent system (KAZ... )\pdfcomment{ATM:llistar i referenciar}, but we wanted to ensure the communication part for ellicitation applying ODD phylosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
+The text follows the structure of ODD documents we have been using to register our decisions and models and as a comunication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclussions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know ODD is not perfect. It does not follows Object Oriented methodology o structure entities and its relationships, but we wanted to ensure the communication part for ellicitation applying ODD phylosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
 
 %TODO en algun punt parla d'AUML. perque no l'usem. La interactio agent-agent no es basa en un llenguatge ni
 % cap transferencia estructurada complexa, nomes els tokes d'informacio de recursos. NO HI HA DIALEG 
@@ -1599,6 +1649,17 @@ The agent-based simulation here proposed explores the potential for the persiste
 semi-arid region in NW India.
 
 
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/jamt1.jpg}}
+\caption{ Gujarat area for HG and AP ressilience simulation.}
+\label{fig:jamt_1}
+\end{figure}
+
+
 Note:
 The modeling workflow is following these steps:
 1. Environmental settings and climate engine
@@ -1702,6 +1763,16 @@ season covering October, November, December, January. "FMAM" is for February Mar
 \end{enumerate}
 
 
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamt2.jpg}}
+\caption{ .}
+\label{fig:jamt_2}
+\end{figure}
+
+
 It is important to note that any given “year” in the model starts with the beginning of the rain season
 (June). In fact, virtually all rain in the region is carried by the monsoon that falls between June and
 September (JJAS). Therefore, it is during the JJAS season that the totality of the generated yearly
@@ -1772,7 +1843,9 @@ available for humans.
 
 \paragraph{Domesticated cell} (work in progress)
 The model is prepared to tag cells wether they are domesticated or wild when we will introduce AP 
-agents in the runs\pdfcomment{ho deixo aqui o a future work?}. Domesticated plant resources define the density of domesticated plants found inside the cell. It is important to note that wild and domesticated types of resources 
+agents in the runs
+%%\pdfcomment{ho deixo aqui o a future work?}. 
+Domesticated plant resources define the density of domesticated plants found inside the cell. It is important to note that wild and domesticated types of resources 
 are mutually exclusive: i.e. wild resources are not found on cultivated plots. 
 
 The basic idea for a domestication cell is that of small scale shifting cultivation, in which a plot is
@@ -1790,9 +1863,13 @@ of it.
 
 
 \subsection{Agents}
+\label{sec:AgentAttribs}
 The following attributes have been chosen to account in our model.
 
 \begin{enumerate}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+
 \item[Age] - A numeric variable that keeps track of how many time steps a given agent has been
 active in the simulation.
 \item[Children] - A collection of human entities. The number of children is bound by resource
@@ -1814,7 +1891,7 @@ within a day (due to starvation). Needs are defined by the following table:
 \item[Available forage] - Daily time that an agent can spend on foraging. The total amount of
 foraging time for any given agent is computed as the sum of the foraging time of the
 individuals that compose it. Foraging time increases from infancy to adult life, modelling
-learning processes as defined in the following table:
+learning processes as defined in the table\ref{fig:caloricRequ}.
 
 
 \end{enumerate}
@@ -1847,9 +1924,16 @@ learning processes as defined in the following table:
 \end{figure}
 
 
-Tables. Individual caloric requirements (left), Individual foraging time (right)
 
-figures pg35 
+\begin{figure}[h]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/caloReqForageHour.jpeg}}
+\caption{Tables. Individual caloric requirements (left), Individual foraging time (right)}
+\label{fig:caloricRequ}
+\end{figure}
+
 
 
 \section{Process overview and scheduling}
@@ -1973,6 +2057,7 @@ The model explores the emergence of stable HG populations under different climat
 %%TODO 
 %% afegir la part de comparació amb hard-wired technique vs UCT --> adaptació (BSC day)
 \subsection{Adaptation}
+\label{sec:Adaptation}
 At the present moment the model is not interested on the emergence of individual adaptive traits, and
 for this reason adaptive options for the agents are limited to the decision making process. The different
 agents try to respond to the dynamics of environment choosing Home locations and Foraging actions
@@ -1981,7 +2066,7 @@ Adaptive options for the agents are based on the complexity of the decision maki
 costs and outcomes are predefined following the model's configuration, but the order and the use of
 them is entirely an agent's choice. Following this reasoning, the different agents will try to adapt the
 dynamics of environment (both ecological and social) planning a different set of orders each time step.
-\pdfcomment{ATM:future work}A further step in this model will see agents with mixed pool skills that are capable of choosing actions typical of HG and AP populations. Each agent will have different efficiency values for different actions, that will vary in time. In this way, the agent will also adapt specializing its actions.
+In a future step we will introduce in this model agents with mixed pool skills that are capable of choosing actions typical of HG and AP populations. Each agent will have different efficiency values for different actions, that will vary in time. In this way, the agent will also adapt specializing its actions.
 
 
 \subsection{Objectives}
@@ -2030,7 +2115,7 @@ Population dynamics are the most important concepts to derive from the model.
 Initial state of the model is divided by entities:
 
 \subsection{Climate}
-Rainfall yearly precipitation is a stochastic value calculated from input data, as seen in section 7\pdfcomment{dynamic link}.
+Rainfall yearly precipitation is a stochastic value calculated from historical data\cite{RainDataSource}
 Calculated values depend on the initialization seed used in the random number generation, that is
 stored as a parameter of the model's configuration. Next parameters can be modified during
 initialization time:
@@ -2042,7 +2127,7 @@ initialization time:
 
 
 \subsection{Environment}
-Ground Model and land features are raster maps created from real data (see also section 7\pdfcomment{symbolic link}). The
+Ground Model and land features are raster maps created from real data. The
 model is able to load any raster map with correct values. This process is done during init time from the
 file specified in the configuration.
 
@@ -2122,7 +2207,7 @@ imagery) and includes DEM and land features. Satellite data are transformed usin
 classification and clustered in the 3 classes (water, interdune and dune). The model is exported as a
 Raster map.
 
-\pdfcomment{ATM:future: passarem de 3 categories a 5 de terra. tindrem mes water bodies, rius, etc}
+%\pdfcomment{ATM:future: passarem de 3 categories a 5 de terra. tindrem mes water bodies, rius, etc}
 
 
 \subsection{Hunter-Gatherer behavior}
@@ -2141,7 +2226,6 @@ summer months with c. 400 mm annual average precipitation. The vegetation of the
 by plants of the Gramineae family (grasses) and a mixture of shrubs of the same genus/families that
 are found in North Gujarat.
 
-\pdfcomment{AMT:pg39 : poso la taula de surrogates??? nomes esmentar-los?}
 
 \section{Submodels}
 
@@ -2188,7 +2272,7 @@ making processes where the choice of behaviors is predefined. However, this clas
 ABM has a major drawback, and is the fact that the agent will have scripted strategies, and for this
 reason it won't be able to choose strategies different from the ones defined there.
 The model proposed here splits the different phases. During each time step every agent updates its
-knowledge about the environment (in the future possibly including other agents)\pdfcomment{ATM: he afegit ``future'' a la frase tot i que a Betesa varem dir que res d'aix\`o}. This action is combined with a set of possible actions, in order to choose which plan of actions will be executed. Several factors can be used to enrich the process:
+knowledge about the environment (possibly in the future including other agents state). This action is combined with a set of possible actions, in order to choose which plan of actions will be executed. Several factors can be used to enrich the process:
 
 %%TODO no acabo de pillar tot aquest paragraph. es aixi?
 
@@ -2246,7 +2330,162 @@ Each time step the amount of resources in each cell changes due to the growing d
 
 At this stage the agent does not stores knowledge about the other agents.
 
-\subsection{Low Ressolution map}\pdfcomment{ATM: a la section de efficiency}
+\subsection{Partial Information}
+\label{sec:PartialInformation}
+
+Although real HGs have a direct acces to their domains they cannot traverse it as quickly as to say they have last minute updated information from the environment. The model for HG considers a home range of 10km, a large extension for keeping an updated account of the resources in it. Each foraging exploration is a bet for the HG. Although he can know that in average one zone has enough resources to cover the survival threshold it does not ensures that this estimation is not going to change. There is uncertainty mainly due to other agents actions. The partial-information add-on emulates this bounded rationality and uncertainty feature. The update of the knowledge of the agents is calculated with two different sources of information. When an agent visits one sector in some time step the process will read the cells of the high resolution raster (direct access to the world) corresponding to the sector.\\
+Utility values have a timestamp. Each low resolution cell in the private raster of the agent has associated a timestamp of \emph{one week}. Once the timestamp expires the low resolution cells of the private raster receive an utility value equal to the statistical mean value of resources in the world raster, that is the second source of information. 
+Sumarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
+Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilities.
+
+	\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|c|p{7cm}|}
+		\hline
+		PHASE	&	DESCRIPTION\\
+		\hline
+		1	&	The planner accesses to the private low res knowledge structures of the agent.\\
+		\hline
+		2	&	The planner proposes one action and one sector where the action will occur.\\
+		\hline
+		3	&	The agent has a high resolution version of its sectors, these lists of high resolution coordinates to actuate in the world.\\
+		\hline
+		4	&	The agent explores the world which will be materialied as a walk over the matrix of resources of the world.\\
+		\hline
+		5	&	The procedure of updating the low resolution rasters registers the changes happened in the high resolution raster.\\
+		\hline
+		6	&	The agent can copy directly the utility of a cell in the low resolution raster to its private low resolution raster if such low resolution cell was contained in the sector that was visited in the last action.\\
+		\hline
+	\end{tabular}
+	\caption{Explanation for steps in figure \ref{fig:PartMind}}
+	\label{tab:explainStepsPartMindUpdate}
+	\end{table}
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=130mm,keepaspectratio=true]{figures/LRmaps2partMind.png}}
+\caption{Pipeline of partial mind updating.}
+\label{fig:PartMind}
+\end{figure}
+
+
+\subsection{Information Sharing}
+\label{sec:InformationSharing}
+
+Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience)\ref{sec:ExperInfoSharing}.
+
+We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
+A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around a distance we have called social range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the social range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. Each agent will send and will receive an information token in the interaction with the other agents. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
+
+Results of the Information Sharing can be seen in the chapter of experimentation\ref{sec:ExperInfoSharing}.
+
+\section{Decision Making}
+
+\subsection{Rule Based Agent}
+
+The rule based agent was developed as a representation of the classical agents in social simulation. The objective of having rule based agents is to compare its performance against the AI approach.
+The rule based agent follows a decision schema constructed by the modelers with advice from experts.
+The ingredients of decision are the set of actions (ForageAction and MoveHomeAction) and the set of zones where actions are perfomed, the eight sectors. The agent at each time step evaluates if there is enough resources in some of its sectors. Enough stands for allowing its family avoid starvation during one day. There is a survival threshold based on food-need parameters \ref{fig:caloricRequ}. The rules are expressed in the decision schema appearing in figure \ref{fig:decisionTree}.
+
+
+	\begin{figure}[h!]
+	\centering
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.5pt}
+	\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/decisionTree.png}}
+	\caption{Decision tree followed by the rule based agent.}
+	\label{fig:decisionTree}
+	\end{figure}
+
+\subsection{Planning}
+
+Previous sections have introduced the necessity of applying planning\ref{sec:Adaptation} in the decision 
+making of the agents. According to the aim of the project the agents face changing conditions that compromise their adaptability. Rule based decision making is associated to a hard wired knowledge. Something that works for a situation.
+If conditions change rules serve no more. A static and closed knowledge encumbers the agent's adaptability.
+The dimensionality of the world due to climate and agent interaction would make appear non predicted states
+making the agent receive a lower benefit from its actions.
+
+Rules are a mechanism that is applied blindly. Action is executed after conditions on the world are evaluated.
+For adaptability, when thinks change in the world, rules expire. We need to now the new conditions. So, the 
+new correspondence action - state. Although we are talking of change we asume that some bottom-essential mechanics remain inmovable. Agents will adopt an exploratory framework. Agents will use a hypothetical-deductive frame for decision. This is the ``what-if?'' question. An agent will test an hypothesis (launch some action $a$) and will
+try to predict the outcome or the state produced by the action. The nature of the problem of resource retrieval in the raster lattice does not allows to develop a logical model to reason about states and actions. We cannot provide facts about state of the system and a logical model of the transitions of the system.\\
+We will follow an utility based architecture as said before. The agent has to tackle with resource optimization, large number of uniform possible cells for exploration and with associated uncertaint. We think it is more reasonable to take an optimization and heuristic search approach instead of a symbolic reasoning based one to synthesize the agent plan.
+
+The uncertainty of the world, the fact that agents make their decision on current time step
+world state and decisions are taken sequentially defines the decision making as a Markov Decision Problem(MDP)
+\cite[chapter.17]{RussellNorvig}.\\
+MDPs are characterized by the markovian property, by some utility function and a transition of states. A MDP is represented by a directed graph\ref{fig:mdp1} where nodes are states of the world and edges denote
+and action perfomed. Traversing an edge means that an action transforms the state of the world from the state associated to the origin node to the state associated to the target node. MDP are solvable through solving the Bellman equations. The solution is an association of states to executable actions that shall be the policy that an agent will have to follow. A Bellman solution is too near to a rule based approach. The dynamic of events and indirect competitiveness for resource adquisition is an evidence to find a technique that solves scenarios like board games. State transition in board games depend on the current state. They work launching sequential actions. And boards exhibit a large number of configurations. 
+
+\subsubsection{UCT} 
+\label{sec:UCT}
+
+UCT \cite{BallaFern2009} \cite{BonetGeffner2012} is an algorithm that finds an expected optimal action to launch from some state of the system that is explored by the algorithm. UCT receives as input a state of the system and explores the outcome of applying actions to the input state. UCT expands a search tree applying actions to nodes
+that represent states. The strategy of UCT is to find the trace of actions that in long term returns maximum profit.
+UCT applies CPU power to promising traces. Traces are non deterministic sequences of actions and states. MDPs have probabilistic transitions and one action applied to a state can lead to different states with some probability distribution. Hence, UCT must apply a sampling and produce a statistical scoring for states and traces. The further a state is from the initial node the lesser its statistical significance will be. For the sake of statistical relevance and bounded resources the search tree has a maximum exploratory depth; this is a parameter for UCT, the horizon.
+The number of samples for a trace is called width. The winner trace indicates which is the next action to perform. UCT has provided good results for board games and a very respectable scoring in the japanese game \emph{Go}\cite{uctGO}. 
+
+UCT explores the board in a hypothetico-deductive manner desirable for our purposes. We could
+see that a new node to explore is a open hypothesis. And we can see the deductive part when UCT executes the hypothetical action against its private virtual copy of the world. Like in game Go, UCT will be executed to guess next action to launch; UCT is not used to produce a policy to be used the rest of the simulation. Each time step UCT will have to recalculate the most promisable posibilities for each action on each patch where it will be applied. 
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/mdp1.png}}
+\caption{ Markov Decision Problem automata.}
+\label{fig:mdp1}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=150mm,keepaspectratio=true]{figures/uctTree.png}}
+\caption{Figure. Uct search tree.}
+\label{fig:uctTree}
+\end{figure}
+
+
+%%TODO
+%Smart Agent
+	
+%	Decision Making :\\
+%		stressful environ -> changing rules -> adaptability -> hypoth-deduc
+%		we do not have an algebra or HG rules to reason about system dynamic -->
+%		--> hypoth-deduc through planning schema --> bandit game --> mdp --> uct
+%	Hypoth-Deduct\\
+%		Due to the nature of the problem of resource retrieval in the raster lattice we have not
+%		developed a logical model to reason about states and actions. We will follow an utility based
+%		architecture. The agent has to tackle with resource optimization, large number of uniform 
+%		possible cells for exploration and with associated uncertaint. We think it is more reasonable to take an optimization and heuristic search approach
+%		instead of a symbolic reasoning based one to synthesize the agent plan. 
+%		bandit--->
+
+
+
+
+%	--------MDP\\
+%	--------UCT\\
+%	--------backed by OptForagTheory & RationalChoiceTheory\\
+%	--------BSC day!\\
+%	-------- ISSUE { other agents actions are not included in the Hypoth-Deduct schema of
+%		-------- UCT. the agents spread over the map more or less uniformly.
+%		-------- We do not want competition between them, we want fairplay.
+%		-------- We want the group dynamic... Some agent will be lucky, some none.}
+%	--------rule agent : we do not want fix set of rules\\
+%	----------------learn them? from a setting that we will alter\\
+%	----------------to induce change???\\
+%	----------------we want adaptability. To the current moment, we choose
+%			planning\\
+
+
+\section{Efficiency}
+
+\subsection{Low Ressolution map}
 
 In our experiments agents have been working with two different engines for decision making. The planning engine produces hundreds of millions of access to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
 This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Holding this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. 
@@ -2267,105 +2506,335 @@ Each agent has private lists of references to low ressolution cells, the sectors
 The utility of a low resolution cell is the sum of resources of the covered cells. Now the sectors in the mind of the agent contain less items. These low resolution structures are the only information resource used by the planning engine. No more high resolution access is done. When the planning engine simulates the effect of actions in the virtual representation of the world it processes a low resolution cell iterating over a formula to emulate the steps the agent would do visiting the high resolution cells. So, at each state of the search tree, the update of utilities happen in internal low resolution rasters and low resolution cell containers. The produced plan is a action to be performed in a chosen sector. The agent has also a representation of sectors with high resolution cells referenced. The sector and the action proposed by the planner are launched normally exploring the high resolution space as explained before in section~\ref{sec:AgentPlanning}.
 
 
-\subsection{Partial Information}
-\label{sec:PartialInformation}
+\subsection{UCT efficiency improvement}
 
-Although real HGs have a direct acces to their domains they cannot traverse it as quickly as to say they have last minute updated information from the environment. The model for HG considers a home range of 10km, a large extension for keeping an updated account of the resources in it. Each foraging exploration is a bet for the HG. Although he can know that in average one zone has enough resources to cover the survival threshold it does not ensures that this estimation is not going to change. There is uncertainty mainly due to other agents actions. The partial-information add-on emulates this bounded rationality and uncertainty feature. The update of the knowledge of the agents is calculated with two different sources of information. When an agent visits one sector in some time step the process will read the cells of the high resolution raster (direct access to the world) corresponding to the sector.\\
-Utility values have a timestamp. Each low resolution cell in the private raster of the agent has associated a timestamp of \emph{one week}. Once the timestamp expires the low resolution cells of the private raster receive an utility value equal to the statistical mean value of resources in the world raster, that is the second source of information. 
-Sumarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
-Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilities.
+UCT replicates the world dynamics to generate the results of exploring some action in his internal search tree. UCT has a private copy of the raster and a private copy of the knowledge of the agent that runs UCT to guess the next action to launch.
+Each time the search moves forward to a new state in the search tree the costly procedures of ``update knowledge''
+are computed over the private copy of the agents knowledge. Some agent actions does not need a really exhaustive update. The solution was to reuse knowledge between search nodes through referencing shared knowledge structures stored
+in a dictionary. Avoiding all the unneeded calls to knowledge update and memory operations of creation and destruction
+of objects implied almost and order of magnitude of improvement.
+
+ 
+\subsection{Throughput measures}
+
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Number of UCT agents	& seconds per time step \\
+		\hline
+		100 agents		& 120 s/step
+		\hline
+	\end{tabular}
+	\caption{First throughput measures.}
+	\label{tab:secondsPerTimeStepInitial}
+	\end{table}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Number of UCT agents	& seconds per time step \\
+		\hline
+		500 agents		& 2.7 s/step
+		\hline
+	\end{tabular}
+	\caption{Throughput measures after efficiency upgrade.}
+	\label{tab:secondsPerTimeStepImproved}
+	\end{table}
+
+	\emph{We can simulate 1000 years of 500 sophisticated UCT agents in 11 days of CPU.}
+
+\chapter{Experiments}
+
+
+\section{Stable state and ressilience}
+
+
 
 \begin{figure}[h!]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
-\fbox{\includegraphics[width=130mm,keepaspectratio=true]{figures/LRmaps2partMind.png}}
-\caption{Pipeline of partial mind updating.}
-\label{fig:PartMind}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure4B&W.jpg}}
+\caption{ .}
+\label{fig:jamtFigure4B&W.jpg}
 \end{figure}
 
 
-\subsection{Information Sharing}
-\label{sec:InformationSharing}
-
-Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience).%TODO \ref{sec:InformationSharingExperiments}
-
-We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
-A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around the home range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the home range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
-
-Results of the Information Sharing can be seen in the chapter of experimentation.
-
-
-%TODO move to EXPERIMENTS AND RESULTS 
-%Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had partial information consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
-
-
-\section{Decision Making}
-
-bandits
-MDP
-UCT
-uct is executed to guess next action to launch, no to
-produce a policy to be used the rest of the simulation
-
-
-\subsection{Rule Based Agent}
-
-\subsection{Planning}
-
-Adaptability, changing environment conditions ... BSC days
-rules = hard wired situation solver, you change the situation,,, the rules become useless
-symbolic reasoning? we cannot provide facts about state of the system and logical model of the transiotions
-of the system -> optimization schema to maximize profit -> utility based -> planning 
-
-the agent everyday does a decision. Each decision should lead to the long term survival of the agent.
-Previous sections has described the uncertainty in the predictibility of the system. 
-The system exhibits the Markov Property. The state of a system depends only on the previous state. 
-The decision proces depends only in the state of the system in the current timestep.
-MDPr
-
- 
-
-adaptability --> hypothetical deductive reasoning : hypothesis = node in a search tree.
-deductive = I know how to deduce the state of the system give the previous state and the action that
-induced the transition, we achieve this thourgh applying a simulation step to the hypothesis.
-
-UCT is a good planner : GO game
-
-MDP states : incremental raster, sectors, agent....
-
-
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
-\fbox{\includegraphics[width=150mm,keepaspectratio=true]{figures/uctTree.png}}
-\caption{Figure. Uct search tree.}
-\label{fig:uctTree}
+\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure5.jpg}}
+\caption{ .}
+\label{fig:jamtFigure5.jpg}
 \end{figure}
 
 
-performance
-LR
-MDPState reference
-Extrapolation
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure3.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure3.jpg}
+%\end{figure}
 
 
-\section{Efficiency}
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure5B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure5B&W.jpg}
+%\end{figure}
 
-\chapter{Experiments}
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure6.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure6.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure3B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure3B&W.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure4.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure4.jpg}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=100mm,keepaspectratio=true]{figures/jamtFigure6B&W.jpg}}
+%\caption{ .}
+%\label{fig:jamtFigure6B&W.jpg}
+%\end{figure}
+
 
 \section{Information Sharing}
+\label{sec:ExperInfoSharing}
+
+Three experiments have been launched to compare three kind of mind models for hunter gatherer agents. Each experiment simulates one kind of mind model in a population of 25 agents. For the first experiment the agents had complete and updated information of the amount of resources around their settlement in a fixed distance radius estimated from anthropological observations. The second experiment considered agents that had \emph{partial information}\ref{sec:PartialInformation} consisting in statistical guessings and real information gathered when a terrain patch was explicit visited for hunting or foraging. The third experiment simulated agents that lived with partial information like the ones from experiment number two but with the addition of sharing of information\ref{sec:InformationSharing} pieces from their knowledge bank. The results confirm that information sharing increases resilience under conditions where partial information and uncertainty is taken into account as a phenomenon to model. It puts the next milestone to include more social actions and the modelization of cultural transmission.
+
+The figures compare a window of one year. The X axis represent the day of the year, from the first to the last. The Y axis representes the mean of collected resources from the population of 25 agents \ref{fig:expermInfoShar_1}.
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=90mm,keepaspectratio=true]{figures/expermInfoShar.png}}
+\caption{ Comparing yearly collected resources for the three kind of knowledge management.}
+\label{fig:expermInfoShar_1}
+\end{figure}
+
+
+\chapter{Conclussions and Future}
+
+This master thesis reflects part of the experience of my contribution to Gujarat Project in
+its first stages. This part of the project had as objectives to find an stable model to begin
+study ressilience of HG and AP in semi-arid environments, and the possibilities offered by the
+introduction of sophisticated decision making engine in the agents populating the simulation.
+
+The main hypothesis of HG ressilience, in comparasion to other cases where they dissapeared at 
+greater pace, is about climate variations and hard environmental conditions.
+The model has grown from a toy model based on Sugarscape\cite{EpsteinAxtell}. The initial prerequisite
+was to tune the model towards a stable set of conditions. Experts selected the set of conditions 
+for weather parameters and associated biomass from anthopological and climatic registers that would 
+allow a basic degree of stability. This stability floor must be altered applying variations in rain and
+other future factors to be introduced. The variability and extreme values induce stress in the 
+environment and will make more explicit the factors where we can asses the ressilience of HG in comparison AP. We 
+can say we have achieved the stability basic configuration of the environment. Agents survive, reach a carrying capacity and keep it along the generations. The system has plausible enviromental conditions and behaviour.
+
+A very important component in HG social organization is environmental information sharing. This feature
+is introduced to add another layer to the mechanisms of ressilience of HGs. Anthopologists in their
+field work have observed it is an important and necessary activity in the HG daily activities. 
+Information Sharing has been tested in three different scenarios and has shown positive results that
+confirm its a necessity in the model. Sumarizing, bounded knowledge plus information sharing approach 
+the agents to omniscient mind. This simple statement entails a question concerning the always present issue 
+of simple models, throughput and efficiency. Although this is not place to ask it, and surely the project will end up providing evidences to stick to information sharing, one would dare to say that the model could be simplified
+removing information sharing and following Ockham's razor running a lighter model applying omniscient
+knowledge in agents.
+
+The achievement in efficiency finally allows the project to seek results in a broader perspective. The 
+simulation of a millennia in less than two weeks of CPU will allow to detect and follow hidden drifts of patterns
+of slow movement. If the simulation is not long enough you do not give time to the system to develop many
+effects that in real world span centuries and millennia.
+
+The conclussions about introducing AI and more sophisticated techniques in social science simulation receive
+the confirmation for its use from two points. The empirical evidence show that sophisticated agents outperfom
+classical agents in their evolution and response to challenges. The second is that modeling requierements of this 
+project force us to use AI tools to represent agents behaviour. There are many details and relationships.
+The environment is very changing due to the mutual interaction of agents. And simple classical models cannot 
+encompass a behaviour that will show succesful, reasonable and or realistic decisions under this environment.
+By the way, AI was born to emulate human performance in intelligent tasks. But it does not means AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
+
+\subsection{Future Work}
+
+The current state of the Gujarat project has the principal building blocks to follow its schedulling. 
+The project will keep advancing through different parallel front lines in charge of subgroups of members of Gujarat case study. 
+\begin{enumerate}
+
+\item AP Agents have their development in a very advanced phase. The decission making for APs will introduce
+planning at different scales. HGs launch actions that are resolved in one day. Launch, effect, reward
+happen in the same time step. But for APs the action of preparing a field for crop produces the reward
+two seasons later. As APs also have one-day-atomic actions the planner will manage short-term and long-term 
+decisions.
+
+\item The efficiency solution based on delayed cell update will be finished. This enhancement will lower the
+running times to a point which would mean that less then one week of CPU will be needed to simulate one
+thousand years.
+
+\item Information sharing and Partial Information add-on will also see added a ``scouting'' action to the 
+agents for resource discovery.
+
+\item The model for dynamic social group based on skill profiles will be complemented with research in
+charge of two members of the Gujarat project with long experience in cultural transmission.
+
+\item A submission is waiting to be reviewd for ``Journal of Archaeological Method and Theory'' (JAMT).
+
+\end{enumerate}
+
+
+\chapter{Acknowledgement}
+
+I would like to take the oportunity to thank my director his supervision, dedication and example
+so this master thesis could be as best as possible. I cannot forget the rest of partners
+which has been as inspiration to learn in my first steps in research: Marco for his clear
+objectives and ideas, Bernardo for his open mind and motivation for new challenges, Carla
+for her order and team working skills, Andrea for his discourse abilities, Cristina for her 
+nerverending lists of books. I do not want to forget Andreas, Matthieu, Debora, Alexandre,
+Jito and many others.
+
+I want to extend my gratitude to my co-advisor, Llu\'is M\`arquez, who always make things simpler 
+when troubles appear.
+
+Thanks to my family and friends because they have been supporting me tirelessly.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Annex 1}
+\chapter{Annex 1 : Platforms}
 
-%TODO diagrames de classes
+Social Science Models can be implemented with a great number of optional tools and libraries.
+For small models or prototypes there are case-tools and graphical environments that 
+integrate a designer and an internal layer containing and interpreter. The model is executed
+by the interpreter it in some virtual machine. When the model demands high computational 
+requierements it is implemented with a procedural language like C++ or Java. To that end many 
+libraries have been developed to offer a framework of objects and procedures common to most of the simulations.
 
-\chapter {Annex 2}
+\section{Pandora}
 
-%TODO elicitation procedures : ECOTONO,meetings,interviews,simulpast seminars (other CSx give opinion)
+Social Science Simulation group at Barcelona Supercomputing Center(BSC) is an important collaborator
+in Simulpast project. The group has developed a library for agent based simulation models and a tool for 
+trace visualization. Simulpast project simulations and the library Pandora are highly interrelated. The use 
+of Pandora and Mare Nostrum allowed to aim to the purposes and questions stated in the case study of Gujarat.
+
+The aim was to produce an internal set of classes from scratch to get free of design decissions of other known packages used in agent simulation. The library Pandora has its strong point in parallelism. Pandora has been designed to get maximum profit from OpenMP threads and MPI layer. 
+
+Pandora executes its simulations aplying data parallelization\ref{fig:Pandora1.jpg}. The space representation of the world is split in parts that will be in charge of a cpu-core. Supercomputers arrange their CPUs in blades. Some blades
+contain two, some other four. CPUs in a blade share the same memory. Pandora makes the most of this architecture.
+The blade memory has the representation of the world. Each CPU processes the needed calculi for decision
+making ocurring in its slice of world. When an agent traverses from one slice to another the CPU exchange
+information through MPI. This comunication events happen inside of the blade, the simulation is no spread
+along the rack of blades of the supercomputer.
+Parallelizing the world this way produces a possible problem of corruption of data. Agents decide their next action
+on the information taken from their vicinity. The action can alter the state of some piece of the world in this
+vicinity. The issue arises when a agent is near enough of the bound that separates its world slice from the 
+adjacent one. An agent cannot interfere with agents in the same world slice. The assigned CPU is dedicated to
+the current agent, it is not possible data corruption. But if an agent can see and alter a location in another
+slice will collide with the agents of the adjacent world slice. The solution is to apply a next level of slicing.
+Each slice is again sliced in four. Each CPU visits the subslices in the same order. So all CPUs are working 
+on the same subslice $\sigma_i$. World subslices with same id are not touching each other so data corruption
+is avoided with the constraing that the radius of the vicinity of an agent is less the half the side of a subslice,
+otherwise an agent in subslice 0 would reach cells in subslice 1 also reachable to an agent in the subslice 0
+of the neighbour slice. 
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/Pandora1.jpg}}
+\caption{ World paralellization.}
+\label{fig:Pandora1}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.5pt}
+\fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/Pandora2.jpg}}
+\caption{ World subslicing.}
+\label{fig:Pandora2}
+\end{figure}
+
+ 
+\section{Other platforms}
+
+\begin{enumerate}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\\
+\item[RePast-HPC]
+Repast-HPC is the most popular tool for tightly-coupled, large computing clusters and
+supercomputers \cite{CollierNorth2012}. It is based on the tool Repast for sequentially execute ABMs.
+Repast-HPC is intended for users with basic C++ expertise and access to high-performance computers.
+Repast HPC implements a dynamic discrete-event scheduler with conservative synchronization. It offers
+useful features such as data collection, specifying agent interactions by space and networks or automatic
+management of agent interactions across processes. Repast-HPC allocates a region of space to processors
+and manages the boundaries by copying them (and their agents) in the adjoin region. 
+\\
+\item[NetLogo]
+Netlogo\cite{netlogoCite} is an agent-based programming language and modelling environment for
+simulating complex phenomena.Netlogo uses a modified version of the Logo programming language.
+This is a different approach from other toolkits such as Swarm and Repast
+which make simulation facilities available to programs written in a general-purpose
+language such as Java. Despite being free, \emph{Netlogo is not open source}. Netlogo is
+written in Java so can be run on all major platforms, requiring Java version 1.4 to
+run the current Netlogo version 2.0. Although the majority of users find Netlogo
+fast enough for most purposes, we do not find easy adapting it to an HPC environment and
+due to the heavy load calculi Gujarat project is involved we need platforms where it could be
+easy to tackle with low level details to apply performance tricks.
+\\
+\item[DMason]
+DMASON is the Distributed Multi-agents simulation toolkit, based on Mason. As in Repast-HPC, users can create an ABM in MASON and then use the framework to easily distribute it over many machines. It provides a partitioning functionality that self-balances regions and requires and all-to-all communication. As opposite to Pandora and Repast-HPC, partitioning of the field is decided by the user in advance and, in our opinion, may cause an additional unbalance. Agents can migrate from one region to other and, therefore, it does not guarantee load balancing. However, it implements a simple balancing mechanism: when a region is overloaded it decides to split itself in smaller regions, dividing consequently the amount of agents in each of these regions. To deal with boundaries problems,
+neighboring regions communicate before each simulation step. DMASON is developed in Java and uses
+Java Message Service (JMS) for communication between workers.
+
+\item[GridABM]
+Using grid technology, the open source project GridABM \cite{SzemesDeBack2010} provides a
+set of templates to enable researchers to run ABMs in computing clusters and computational grids. It is
+based on Repast and depending on the topology of communication of agents it allow user to choose the
+appropriate schema and run their simulations in different parallel and distributed platforms. The
+programming is very similar to developing Repast sequential applications.
+
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2601,6 +3070,16 @@ Extrapolation
 	\emph{Complexity. The bigger picture. Nature 418, pg 131.}
 	2002.	
 
+\bibitem{RainDataSource}
+	Sontakke and Singh 1996
+	Sontakke et al. 2008
+	Attri and Tyagi 2010
+	Singh and Ranade 2010
+	\emph{www.tropmet.res.in}
+	1871 - 2008. 
+
+
+
 
 \bibitem{TakahashiSallachRouchier2007}
 	Takahashi, Shingo; Sallach, David; Rouchier, Juliette
@@ -2636,6 +3115,38 @@ Extrapolation
 	Multiscale Model. Simul. 1 (4). 
 	2003.
 
+\bibitem{BallaFern2009}
+	Balla, R., and Fern, A. 
+	\emph{UCT for tactical assault planning in real-time strategy games}. In Proc. IJCAI-09, 40–45.
+	2009. 
+
+\bibitem{BonetGeffner2012}
+	Hector Geffner, Blai Bonet.
+	\emph{Action Selection for MDPs: Anytime AO* Versus UCT.} 
+	Proceedings of the Twenty-Sixth AAAI Conference on Artificial Intelligence.	
+	2012.
+
+\bibitem{CollierNorth2012}
+	\emph{Repast for High Performance Computing}
+	http://repast.sourceforge.net/repast_hpc.html
+	2012.
+
+\bibitem{SzemesDeBack2010}
+	\emph{GridABM}
+	http://gridabm.sourceforge.net/
+	2010.
+
+\bibitem{netlogoCite}
+	\emph{NetLogo}
+	http://ccl.northwestern.edu/netlogo/index.shtml
+
+
+\bibitem{uctGO}
+	\emph{http://senseis.xmp.net/?UCT}
+
+
+
 \end{thebibliography}
+
 
 \end{document}
