@@ -1,0 +1,493 @@
+1
+Introduction
+The agent-based simulation we propose explores the potential for the persistence of hunter-gatherer
+(HG) communities relative to climate-driven environmental change during the Holocene in N Gujarat, a
+semi-arid region in NW India.
+The model description follows the ODD (Overview, Design concepts, Details) protocol for describing
+individual- and agent-based models (Grimm et al. 2006, 2010).
+2
+Purpose
+In our starting hypothesis HG groups are adapted to marked seasonality (represented by the
+monsoon) in the arid margins of northern Gujarat. We intend to explore HG resilience (Holling 1973,
+Carpenter et al. 2001) considering climate variability.
+3
+Entities, state variables, scales
+The model explores the socio-ecological behaviour of HG populations. Agents interact within a given
+territory.
+3.1
+Scales
+3.1.a
+Agent Scale
+The basic agent is defined as a couple (one woman and one man). This is considered to be the entity
+engaging in all decision-making processes and actions modeled in the simulation.
+3.1.b
+Time Scale
+Time Scale for the simulation is one day. This time step is coherent with the granularity of agents’
+planning.
+
+
+3.1.c
+Space Scale
+The spatial resolution of the proposed simulation model is constrained by the resolution of available
+relevant geographic data and the nature of the agent mobility and resource gathering activities being
+modeled.
+Hence, it was decided to use 31.5m x 31.5m cells, corresponding to ca. 1000 square meters. This is
+the level of resolution of the most detailed geographical information available for the area. This surface
+fits the type of settlements recognized from archaeological surveys.
+3.2 Environment
+The simulation environment is large enough to develop all potential processes defined by the model. It
+extends over an area of 50 Km x 50 Km (2500 Km2). Space is represented as a regularly spaced grid
+of cells (a raster map). Each cell is a square of 31.5 m per side, and the total size of this environment
+translates into a space of 1600 x 1600 cells (50,400 m x 50,400 m).
+The ground model includes elevation and land features. Elevation is determined by a Digital Elevation
+Model (DEM), a raster map containing the elevation value for each cell calculated from contemporary
+satellite imagery. Land characteristics are reduced to three elemental features:
+•
+•
+•
+Water: represents rivers and lakes.
+Dune: represents elevated aeolian deposits. Home location of the agent will always be in a
+dune cell.
+Interdune: represents the depression between dune, where most resources grow. The
+different land features do not seasonally change in extension but their productivity (in terms of
+moist content and therefore resources supported) does.
+
+
+The cornerstone of our environmental modeling is the climatic 'engine'. The climate module
+determines the quantity of rain that precipitates evenly on the landscape on every time step.
+Precipitation is used in conjunction with the terrain model to calculate the amount of biomass for each
+cell and season. The climate model is based on historical data, as well as Holocene monsoon models.
+3.2.a Climate
+
+
+The focus on resource utilization strategies within a particular environment requires to make explicit
+the potential variations in the landscape. In particular for our case study, the presence of the monsoon
+generates a strong seasonality (asymmetrical precipitation patterns).
+Monsoon seasonality determines the presence of three critical “moments” in simulation time, each
+spanning 4 months. Therefore, the seasonal subdivision in three periods will be repeated in a cyclical
+way as follows:
+•
+•
+•
+JJAS (rain season: high precipitation, high temperature, low evapotranspiration)
+ONDJ (post-Monsoon: low precipitation, cool temperature, medium evapotranspiration)
+FMAM (dry season: low precipitation, high temperature, high evapotranspiration)
+It is important to note that any given “year” in the model starts with the beginning of the rain season
+(June). In fact, virtually all rain in the region is carried by the monsoon that falls between June and
+September (JJAS). Therefore, it is during the JJAS season that the totality of the generated yearly
+precipitation value is calculated (following a Gamma distribution). No additional precipitation is
+considered for the remaining eight months of the year (ONDJ and FMAM).
+
+
+3.2.b
+Resources
+Each cell has a finite number of resources. Resource availability for each cell is calculated from the
+following variables:
+•
+•
+•
+•
+Yearly precipitation (rainfall, using a Gamma distribution)
+Type of cell (Water, Interdune, Dune)
+Mean yearly Biomass per cell and type.
+Cell history (e.g. whether part of the resources in the cell were consumed before).
+Resources include the total biomass that can be found in a cell (fauna and flora). They are exploited
+by HG agents engaging into foraging activities. Foraging includes activities such as hunting animals
+and gathering plants, fruits, seeds, etc. Indeed, from a literature review it is clear that secondary
+biomass production (animals) is directly related to primary biomass quantity. Moreover, as there is no
+interest in our simulation to explore gender-based labour division we decided to consider hunting and
+gathering as a single activity (foraging) without distinguishing between plant or animal utilization. In the
+light of this, it was decided to consider a value for cell (dune vs interdune) based on published
+information of primary biomass production in desert (dune) and savannah (interdune) biomes (after
+Kelly 1983 – Table 3).
+
+
+Table. Parameters for resource parametrisation according to Kelly (1983; Table 3, p. 284)
+Cell type
+Yearly primary biomass production
+Dune (desert)
+700g/m2
+Interdune (savanna)
+4000g/m2
+Efficiency
+13.00%
+23%
+Energy
+KCal
+1820KJ/m2
+435KCa
+18400KJ/m2
+4395KCal
+Cell area = 1000m2
+1 g Primary Biomass = 20KJ
+1 kcal = 4.184 KJ
+
+paragraph
+Distance to water
+This average value of resources is modified based on the distance of a cell from the closest
+water body. This weight decreases linearly to the distance, and models the heterogeneity of
+biomass generated by a higher presence of flora and fauna near the zones where needed
+water can be collected.
+
+paragraph
+Efficiency
+The total primary biomass value does not constitute the entire primary biomass available for
+consumption to animals and humans. This value represents the entire biomass production
+including both edible (fruits, tubers some roots etc.) and non-edible (wood, stems, branches
+etc.) parts of the plants. The ratio of profitable biomass versus whole biomass will be the
+efficiency value specified in the above table that allow to calculate the energy effectively
+available for humans.
+
+3.3 Agents
+The following attributes have been chosen to account in our model
+
+enumerate
+•
+•
+•
+•
+Age – A numeric variable that keeps track of how many time steps a given agent has been
+active in the simulation.
+Children - number of children per agent. Birth and mortality rates are bound to resource
+availability.
+Home location - the cell where the agent resides and the spatial centre of the activities it
+carries out. Any number of agents can share a given cell.
+Home range - Maximum distance an agent may travel in one day. This attribute restricts
+foraging and social activities from taking place in cells too far from the agent Home location.
+The area enclosed in the circle of radius “Home range” is divided in six equal sectors. Such
+division models the idea of direction of exploration for the agent actions, while simplifying the
+decision-making process (an agent will choose to forage in one of the six sectors,
+independently of single cells).
+
+•
+•
+Food needs - Value that sets the minimum calories a given individual needs in each time step
+in order to survive. The total amount of food needs for an agent is computed as the sum of the
+food needs of the individuals that form a given agent. The probability of death increases for all
+the individuals that form a given agent when this basic quantity of resources is not foraged
+within a day (due to starvation). Needs are defined by the following table:
+Available forage - Daily time that an agent can spend on foraging. The total amount of
+foraging time for any given agent is computed as the sum of the foraging time of the
+individuals that compose it. Foraging time increases from infancy to adult life, modelling
+learning processes as defined in the following table:
+
+
+%%TODO
+Figure. Home range division for foraging and moving home actions
+pg 34
+
+4
+Process overview and scheduling
+Tables. Individual caloric requirements (left), Individual foraging time (right)
+
+figures pg35 
+
+Execution follows two time-scales. On the one hand, three processes (‘yearly precipitation’, ‘biomass
+yearly production’ and ‘population size adjustment’) are executed once every year. On the other hand,
+agents decision-making processes are updated on a daily base. The simulation follows this schedule,
+beginning the first day of the JJAS season:
+For each year:
+\begin{enumerate}
+	\item 1. Precipitation calculation
+	\item 2. Biomass yearly production
+	\item 3. For each day of the year:
+	\begin{enumerate}
+		\item a. Daily biomass availability
+		\item b. Agent planning:
+		\begin{enumerate}
+			\item i. Knowledge update
+			\item ii. Choice of actions
+		\end{enumerate}
+		\item c. Execution of agents actions
+	\end{enumerate}
+	\item 4. Population size adjustment
+\end{enumerate}
+
+
+Details for each simulation phase are given hereafter.
+
+
+4.1 Precipitation calculation
+The total amount of rain is calculated as a random number following the Gamma distribution defined in
+section 7 (Input Data)
+4.2 Biomass Yearly Production
+The biomass that a cell will produce in an entire year is calculated from rainfall and mean year
+production for its particular type, provided by historical records.
+We consider a linear relation between rain and biomass production. The deviation of rain in a given
+year from the period mean allows interpolating the amount of biomass deviation from the yearly mean
+biomass. That is, if the mean of rain is 100 liters and the climate model produces 80 liters the deviation
+to apply is 20%, and for that year the biomass will be a 80% of the mean yearly production for the
+period.
+4.3
+4.3.a
+Daily processes
+Biomass availability
+Yearly biomass production does not appear immediately in the cell in the first day of JJAS season.
+Resources increase gradually, following a cumulative pattern that accounts for the progressive
+accumulation of water through JJAS, until the beginning of ONDJ. From then on, resources decrease
+linearly to the end of the year, when they reach a percentage of the highest peak defined by the ‘end-
+of-year minimum residual resources’ parameter (EMR). Variations in EMR does not affect overall
+yearly biomass production so that the higher the EMR, the lower the maximum peak of resources at
+the JJAS-ONDJ boundary.
+
+
+pg 36 triangle grow resources
+
+Figure. Modelled biomass availability through the year
+
+
+4.3.b
+Agent planning
+Each day the agent will update its knowledge about environment and choose an action to execute (the
+decision-making process is defined in the Submodels section 8). The list of available actions is:
+\begin{enumerate}
+\item Forage - The agent takes multiple walks of a bounded length computed from available
+foraging time. Walks are limited to the agent’s Home range. From the visited cells, resource
+reward is retrieved based on biomass of the cells. The agent will halt the walk when reward
+achieves food needs.
+\item Move home - The agent moves from its current home location to a new one within Home
+range. The new home settlement is chosen randomly between the dune cells situated in the
+richest sectors (containing the highest amount of resources) within Home range. Afterwards, a
+Forage Action is executed using half the available daily Foraging time of the agent in order to
+include the time spent on movement.
+\end{enumerate}
+
+4.4 Adjustment of agent population size
+This processes are executed for each agent:
+
+\begin{enumerate}[1-]
+	\item Age. Agent aging (increment human objects age).
+	\item Death. Every individual inside an agent will have a probability of dying. At the end of the year
+	every individual within an agent must pass two tests to survive:
+	\begin{enumerate}
+		\item Natural death. Every individual has a 1.5\% annual death probability, except during the
+		first four years of life, when this probability is 10\%.
+		\item Starvation. Depends on the capability of an agent to fulfil its caloric requirements. Every
+		day the agent computes the percentage of needed resources that it was unable to collect.
+		This 'starvation value' is accumulated through the year. The cumulative starvation value is
+		translated into the overall percentage of full days of the year in which the agent was
+		unable to gather sufficient resources. This percentage is translated at the end of the year
+		as the probability for the agent to die of starvation.
+	\end{enumerate}
+	\item Removal. If all the individuals that form an agent are dead, the agent will be removed from
+	simulation.
+	\item Reproduction. At the end of the year every agent where both adults are still alive will have a
+	50\% chance of having a new child.
+	\item Emancipation. An agent with individuals coming of age will seek suitable matches among
+	agents within its social range. When two individuals coming of age from different agents join a
+	new agent is created.
+\end{enumerate}
+
+5
+5.1
+Design concepts
+Basic principles
+
+The behavior defined in this model is derived from the Optimal Foraging Theory (OFT), developed
+within behavioral ecology. The main principle of OFT is the maximization of long-term energy gain. In
+other words, it is usually assumed that animals attempt to maximize the benefit to cost ratio. Evidence
+exists e.g. among great tits, birds that show relatively successful strategies in terms of OFT. Although it
+is doubtful whether humans attain the optimal rate of energy gain, they do succeed in improving their
+foraging efficiencies, or 'memorising'.
+5.2 Emergence
+The model explores the emergence of stable HG populations under different climatic conditions.
+5.3 Adaptation
+At the present moment the model is not interested on the emergence of individual adaptive traits, and
+for this reason adaptive options for the agents are limited to the decision making process. The different
+agents try to respond to the dynamics of environment choosing Home locations and Foraging actions
+depending on their particular situation.
+5.4 Objectives
+Following the basic principles stated before, the objective for any agent is the survival of its individuals.
+This assumption is clearly from optimizing the system, as the different populations won't be guided by
+the mission of 'colonizing' the entire landscape. Anyway, this outcome will be seen following
+evolutionary mechanisms and positive selection. Well adapted agents will have more possibilities to
+survive, thus creating more children and agents with similar cultural traits.
+
+5.5 Learning
+Foraging learning process is modeled using vertical transmission. A child gradually learns to forage in
+an efficient way, and for this reason the available foraging time contributed by children increases until
+adulthood.
+5.6 Prediction
+An agent does not keep track of previous rainfall values, so it is not able to predict the future state of
+the environment.
+5.7 Sensing
+An issue seldom addressed in the literature of ABM applications into Social Sciences is the fact that
+agents do not have perfect information on their environment. Home range limits the zone that agent
+know around its home location.
+5.8 Interaction
+The interaction between agents is currently limited to the fission process that is executed when two
+agents with adult children are inside social range.
+
+5.9 Stochasticity
+Stochasticity is used in three different concepts:
+•
+•
+•
+Environment. Precipitation is calculated as a stochastic process following a Gamma
+distribution.
+Outcomes. Some actions have different outcomes depending on stochastic processes, like
+forage. It encapsulates the complex process of resources collection (i.e. risk, variability, etc.),
+and it is important due to the fact that Actions will be chosen depending on their outcomes and
+risk of failure.
+Life events. Death and reproduction are stochastic processes following realistic distributions.
+5.10 Collectives
+The agent, atom of the decision-making process, is itself a collective of different related individuals.
+5.11 Observation
+Population dynamics are the most important concepts to derive from the model.
+6
+Initialization
+Initial state of the model is divided by entities:
+
+6.1 Climate
+Rainfall yearly precipitation is a stochastic value calculated from input data, as seen in section 7.
+Calculated values depend on the initialization seed used in the random number generation, that is
+stored as a parameter of the model's configuration. Next parameters can be modified during
+initialization time:
+•
+•
+•
+EMR: End-of-year minimum residual resources
+AYP: Average Yearly Precipitation
+VYP: Variance in yearly precipitation
+6.2 Environment
+Ground Model and land features are raster maps created from real data (see also section 7). The
+model is able to load any raster map with correct values. This process is done during init time from the
+file specified in the configuration.
+6.3 Resources
+The conversion functions that create available biomass from landscape and rainfall for each cell use
+parameters specified in the configuration. They are based on published research; nevertheless they
+can be modified in order to explore different worlds.
+
+6.4 Agents
+Several parameters can be changed from the configuration. These values are loaded during init time,
+and remain stable during the entire execution. This is the list of parameters used for this model:
+
+\begin{enumerate}
+	\item Life-event related:
+	\begin{enumerate}
+		\item Adulthood age: 15
+		\item Number of agents: 100
+	\end{enumerate}
+	\item Resource related:
+	\begin{enumerate}
+		\item Home Range: 300 cells
+		\item Number of sectors: 8
+		\item Forage time cost: 30 minutes
+		\item Walking Speed: 3 km/hour
+	\end{enumerate}
+\end{enumerate}
+
+7
+Input data
+7.1 Rainfall
+Rainfall (yearly precipitation) is the 'environmental engine' of the model. Data for precipitation rate are
+extracted from historical data (1871 - 2008). The climate engine is defined as a probability distribution,
+from which the total precipitation during a year is derived. The Gamma distribution was the best fit for
+the available rainfall dataset.
+
+pg38 gamma fitting graphic
+Gamma distribution and historical data
+Figure. Precipitation Gamma distribution
+
+7.2 Ground Model
+This model is derived from LANDSAT and ASTER satellite imagery (combining pre- and post-monsoon
+imagery) and includes DEM and land features. Satellite data are transformed using unsupervised
+classification and clustered in the 3 classes (water, interdune and dune). The model is exported as a
+Raster map.
+7.3 Behavior
+Archaeological data are incomplete and limited in terms of derivable behavioural patterns. HG
+behaviour for the model was derived from published studies of historical and present-day populations
+in similar ecological settings. There are groups of HG that live near N Gujarat (the Van Vargis, see
+Nagar 2008). However, these communities have a high degree of interaction with and dependency
+from settled agricultural communities for their subsistence strategies. This occurrence constitutes a
+strong bias towards the use of these groups to model our HG agents. Instead, we used as surrogates
+of our HG population, African groups of the San communities.
+Among living and historical HG communities, the San (especially the G/wi and G//ana groups of
+Botswana) represent the best-fitting parallel in terms of ecosystem (Tanaka and Sugawara 1996).
+These groups are found on a flat plateau in the central part of the Kalahari desert. The landscape
+morphology is characterised by fossil rivers and traces of sand dunes. Rainfall is concentrated in the
+summer months with c. 400 mm annual average precipitation. The vegetation of the area is dominated
+by plants of the Gramineae family (grasses) and a mixture of shrubs of the same genus/families that
+are found in North Gujarat.
+
+pg39 : poso la taula de surrogates???
+
+8
+Submodels
+8.1 Agent execution cycle
+The majority of Agent-Based Models mix knowledge acquisition, decision-making and execution in the
+same phase of an agent's execution. This choice is useful if we deal with agents with simple decision-
+making processes where the choice of behaviors is predefined. However, this classical approach to
+ABM has a major drawback, and is the fact that the agent will have scripted strategies, and for this
+reason it won't be able to choose strategies different from the ones defined there.
+The model proposed here splits the different phases. During each time step every agent updates its
+knowledge about the environment (possibly including other agents). This action is combined with a set
+of possible actions, in order to choose which plan of actions will be executed. Several factors can be
+used to enrich the process:
+\begin{enumerate}
+	\item Agent's goals and agent's preferences referred to the choice of particular actions
+	\item The information that the agent perceives from the environment and the reliability of such
+	information.
+	\item The information collected from other Agents, as well as its reliability.
+	\item The feedback the agent receives from engaging into a given activity.
+	In this particular model the goal of every agent is to maintain alive its individuals, and the potential
+	actions are the ones defined in the document. This approach will allow to integrate Artificial
+	Intelligence techniques into the current decision-making process, depending on particular research
+	around this first model.
+\end{enumerate}
+
+
+The execution of the agents during each time step is divided in three different phases:
+\begin{enumerate}[1.]
+	\item[Knowledge update]
+	The agent collects information from the environment, and creates an individual representation of the
+	world using its preferences and objectives. Agents will calculate the amount of biomass available in
+	each directional sector, as well as potential settlement zones.
+	\item[Action choice]
+	The agent decides which actions to execute once knowledge has been collected, based on the
+	following steps:
+	\begin{enumerate}
+		\item Agents checks whether there is any sector inside its home range where resources can be
+		obtained. This is calculated based on available foraging time and resources on cells.
+		\item If needed resources can be obtained the agent will choose to Forage in one of the Sectors
+		where this is possible.
+		\item If this is not possible, the agent will choose to Move Home. A collection of possible new homes
+		is created based on the quantity of resources inside the Home range from this new location.
+		The final location is chosen amongst the ones that fulfill resource requirements.
+	\end{enumerate}
+	\item[Action]
+	Once every agent has defined a plan, all of them are executed sequentially following a randomized
+	order.
+\end{enumerate}
+
+
+9
+References
+
+Carpenter, Steve, Brian Walker, J. Marty Anderies, and Nick Abel (2001). “From Metaphor to Measurement:
+Resilience of What to What?” Ecosystems 4: 765–78 1
+Grimm V, Berger U, Bastiansen F, Eliassen S, Ginot V, Giske J, Goss-Custard J, Grand T, Heinz S K, Huse G, Huth A,
+Jepsen J U, Jørgensen C, Mooij W M, Müller B, Pe’er G, Piou C, Railsback S F, Robbins A M, Robbins M M,
+Rossmanith E, Rüger N, Strand E, Souissi S, Stillman R A, Vabø R, Visser U and DeAngelis D L (2006). “A standard
+protocol for describing individual-based and agent-based models”. Ecological Modelling 198 (1-2), 115-126.
+Grimm V, Berger U, DeAngelis D L, Polhill J G, Giske J and Railsback S F (2010). “The ODD protocol: A review and
+first update”. Ecological Modelling 221 (23), 2760-2768.
+Holling CS (1973). “Resilience and Stability of Ecological Systems Annual Review of Ecology and Systematics Vol. 4:
+1-23.
+Kelly, R.L. (1983). Huter-gatherer mobility strategies. Journal of Anthropological Research, 39(3), 277-306.
+Nagar, M. 2008. Hunter-gatherers of North and Central India: an Ethnoarchaeological Study. BAR International Series
+1749. Arcaheopress: Oxford.
+Tanaka, J., Sugawara, K. (1996). The /Gui and //Gana of Botswana. In In: Lee, R.B. And Daly, R. (eds). The
+Cambridge Encyclopedia of Hunters and Gatherers, CUP, Cambridge, pp. 195-199.
+
+
+
+
+
+
+
+
+
+
+
+

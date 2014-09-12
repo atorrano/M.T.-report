@@ -1,0 +1,100 @@
+\select@language {british}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Description}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Simulation}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Question}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Methodology}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Intro}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Why model}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Modelling in social sciences}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}ABMs in Social Modelling}{10}{subsection.2.3.1}
+\contentsline {subsubsection}{Epistemology of ABMs in Social Modelling}{13}{section*.2}
+\contentsline {subsection}{\numberline {2.3.2}Summary checklist}{16}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Conceptual Framework}{17}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Multi Agent Systems}{17}{subsection.2.4.1}
+\contentsline {subsubsection}{Agents}{18}{section*.3}
+\contentsline {paragraph}{Agent brief formal description}{19}{section*.4}
+\contentsline {paragraph}{Agent Main Behaviours}{20}{section*.5}
+\contentsline {paragraph}{Intelligent Agents Architecture}{22}{section*.6}
+\contentsline {paragraph}{Environment Features}{27}{section*.7}
+\contentsline {subsection}{\numberline {2.4.2}Complex Systems}{28}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Emergence}{30}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Evolution}{31}{subsection.2.4.4}
+\contentsline {paragraph}{Coevolution}{33}{section*.8}
+\contentsline {paragraph}{Cultural Evolution}{34}{section*.9}
+\contentsline {chapter}{\numberline {3}Gujarat}{42}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{42}{section.3.1}
+\contentsline {section}{\numberline {3.2}Target Description}{43}{section.3.2}
+\contentsline {section}{\numberline {3.3}Purpose}{44}{section.3.3}
+\contentsline {section}{\numberline {3.4}Entities, state variables, scales}{44}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Scales}{44}{subsection.3.4.1}
+\contentsline {paragraph}{Agent Scale}{44}{section*.10}
+\contentsline {paragraph}{Time Scale}{44}{section*.11}
+\contentsline {paragraph}{Space Scale}{44}{section*.12}
+\contentsline {subsection}{\numberline {3.4.2}Environment}{45}{subsection.3.4.2}
+\contentsline {subsubsection}{Climate}{45}{section*.13}
+\contentsline {subsubsection}{Resources}{46}{section*.14}
+\contentsline {paragraph}{Distance to water}{47}{section*.15}
+\contentsline {paragraph}{Efficiency}{47}{section*.16}
+\contentsline {paragraph}{Domesticated cell}{47}{section*.17}
+\contentsline {subsection}{\numberline {3.4.3}Agents}{48}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Process overview and scheduling}{49}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Precipitation calculation}{50}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Biomass Yearly Production}{50}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Daily processes}{50}{subsection.3.5.3}
+\contentsline {subsubsection}{Biomass availability}{50}{section*.18}
+\contentsline {subsubsection}{Agent planning}{51}{section*.19}
+\contentsline {subsubsection}{Adjustment of agent population size}{51}{section*.20}
+\contentsline {section}{\numberline {3.6}Design concepts}{52}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Basic principles}{52}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Emergence}{52}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Adaptation}{53}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Objectives}{53}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}Learning}{53}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.6}Prediction}{53}{subsection.3.6.6}
+\contentsline {subsection}{\numberline {3.6.7}Sensing \& Information Retrieval from Environment}{53}{subsection.3.6.7}
+\contentsline {subsection}{\numberline {3.6.8}Interaction}{54}{subsection.3.6.8}
+\contentsline {subsection}{\numberline {3.6.9}Stochasticity}{54}{subsection.3.6.9}
+\contentsline {subsection}{\numberline {3.6.10}Collectives}{54}{subsection.3.6.10}
+\contentsline {subsection}{\numberline {3.6.11}Observation}{54}{subsection.3.6.11}
+\contentsline {section}{\numberline {3.7}Initialization}{54}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Climate}{54}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Environment}{55}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Resources}{55}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}Agents}{55}{subsection.3.7.4}
+\contentsline {section}{\numberline {3.8}Input data}{55}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Rainfall}{55}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Ground Model}{57}{subsection.3.8.2}
+\contentsline {subsection}{\numberline {3.8.3}Hunter-Gatherer behavior}{57}{subsection.3.8.3}
+\contentsline {section}{\numberline {3.9}Submodels}{57}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Agent execution cycle}{57}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}Knowledge}{58}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Partial Information}{59}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Information Sharing}{60}{subsection.3.10.2}
+\contentsline {section}{\numberline {3.11}Decision Making}{61}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Rule Based Agent}{61}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}Planning}{62}{subsection.3.11.2}
+\contentsline {subsubsection}{UCT}{63}{section*.21}
+\contentsline {section}{\numberline {3.12}Reducing States of Search Tree}{64}{section.3.12}
+\contentsline {section}{\numberline {3.13}Divergent Trajectories}{64}{section.3.13}
+\contentsline {section}{\numberline {3.14}Efficiency}{64}{section.3.14}
+\contentsline {subsection}{\numberline {3.14.1}Low Ressolution map}{64}{subsection.3.14.1}
+\contentsline {subsection}{\numberline {3.14.2}UCT efficiency improvement}{66}{subsection.3.14.2}
+\contentsline {subsection}{\numberline {3.14.3}Throughput measures}{66}{subsection.3.14.3}
+\contentsline {chapter}{\numberline {4}Experiments}{68}{chapter.4}
+\contentsline {section}{\numberline {4.1}Tunning the planner ( State Reduction And Statistical Significance )}{69}{section.4.1}
+\contentsline {section}{\numberline {4.2}Divergence And Biomass Prediction}{72}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Finding the limits to Improvement by Biomass Prediction}{74}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Comparing the Rule Based Agent and the MDP Agent}{78}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Experiment 1: Mean Starvation Day Comparison}{78}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{87}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Experiment 3: Width Exploration}{89}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Conclusions}{90}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Future}{90}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclussions and Future}{98}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}Future Work}{99}{subsection.5.0.1}
+\contentsline {chapter}{\numberline {6}Acknowledgement}{101}{chapter.6}
+\contentsline {chapter}{\numberline {7}Annex 1 : Platforms}{102}{chapter.7}
+\contentsline {section}{\numberline {7.1}Pandora}{102}{section.7.1}
+\contentsline {section}{\numberline {7.2}Other platforms}{103}{section.7.2}

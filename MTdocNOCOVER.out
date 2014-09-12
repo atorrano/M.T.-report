@@ -1,0 +1,99 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Description}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Simulation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Question}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Methodology}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Intro}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Why model}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Modelling in social sciences}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{ABMs in Social Modelling}{section.2.3}% 10
+\BOOKMARK [3][-]{section*.2}{Epistemology of ABMs in Social Modelling}{subsection.2.3.1}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Summary checklist}{section.2.3}% 12
+\BOOKMARK [1][-]{section.2.4}{Conceptual Framework}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.4.1}{Multi Agent Systems}{section.2.4}% 14
+\BOOKMARK [3][-]{section*.3}{Agents}{subsection.2.4.1}% 15
+\BOOKMARK [4][-]{section*.4}{Agent brief formal description}{section*.3}% 16
+\BOOKMARK [4][-]{section*.5}{Agent Main Behaviours}{section*.3}% 17
+\BOOKMARK [4][-]{section*.6}{Intelligent Agents Architecture}{section*.3}% 18
+\BOOKMARK [4][-]{section*.7}{Environment Features}{section*.3}% 19
+\BOOKMARK [2][-]{subsection.2.4.2}{Complex Systems}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.3}{Emergence}{section.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.4.4}{Evolution}{section.2.4}% 22
+\BOOKMARK [3][-]{section*.8}{Coevolution}{subsection.2.4.4}% 23
+\BOOKMARK [4][-]{section*.9}{Cultural Evolution}{section*.8}% 24
+\BOOKMARK [0][-]{chapter.3}{Gujarat}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.2}{Target Description}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.3}{Purpose}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Entities, state variables, scales}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.4.1}{Scales}{section.3.4}% 30
+\BOOKMARK [3][-]{section*.10}{Agent Scale}{subsection.3.4.1}% 31
+\BOOKMARK [4][-]{section*.11}{Time Scale}{section*.10}% 32
+\BOOKMARK [4][-]{section*.12}{Space Scale}{section*.10}% 33
+\BOOKMARK [2][-]{subsection.3.4.2}{Environment}{section.3.4}% 34
+\BOOKMARK [3][-]{section*.13}{Climate}{subsection.3.4.2}% 35
+\BOOKMARK [3][-]{section*.14}{Resources}{subsection.3.4.2}% 36
+\BOOKMARK [4][-]{section*.15}{Distance to water}{section*.14}% 37
+\BOOKMARK [4][-]{section*.16}{Efficiency}{section*.14}% 38
+\BOOKMARK [4][-]{section*.17}{Domesticated cell}{section*.14}% 39
+\BOOKMARK [2][-]{subsection.3.4.3}{Agents}{section.3.4}% 40
+\BOOKMARK [1][-]{section.3.5}{Process overview and scheduling}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.5.1}{Precipitation calculation}{section.3.5}% 42
+\BOOKMARK [2][-]{subsection.3.5.2}{Biomass Yearly Production}{section.3.5}% 43
+\BOOKMARK [2][-]{subsection.3.5.3}{Daily processes}{section.3.5}% 44
+\BOOKMARK [3][-]{section*.18}{Biomass availability}{subsection.3.5.3}% 45
+\BOOKMARK [3][-]{section*.19}{Agent planning}{subsection.3.5.3}% 46
+\BOOKMARK [3][-]{section*.20}{Adjustment of agent population size}{subsection.3.5.3}% 47
+\BOOKMARK [1][-]{section.3.6}{Design concepts}{chapter.3}% 48
+\BOOKMARK [2][-]{subsection.3.6.1}{Basic principles}{section.3.6}% 49
+\BOOKMARK [2][-]{subsection.3.6.2}{Emergence}{section.3.6}% 50
+\BOOKMARK [2][-]{subsection.3.6.3}{Adaptation}{section.3.6}% 51
+\BOOKMARK [2][-]{subsection.3.6.4}{Objectives}{section.3.6}% 52
+\BOOKMARK [2][-]{subsection.3.6.5}{Learning}{section.3.6}% 53
+\BOOKMARK [2][-]{subsection.3.6.6}{Prediction}{section.3.6}% 54
+\BOOKMARK [2][-]{subsection.3.6.7}{Sensing \046 Information Retrieval from Environment}{section.3.6}% 55
+\BOOKMARK [2][-]{subsection.3.6.8}{Interaction}{section.3.6}% 56
+\BOOKMARK [2][-]{subsection.3.6.9}{Stochasticity}{section.3.6}% 57
+\BOOKMARK [2][-]{subsection.3.6.10}{Collectives}{section.3.6}% 58
+\BOOKMARK [2][-]{subsection.3.6.11}{Observation}{section.3.6}% 59
+\BOOKMARK [1][-]{section.3.7}{Initialization}{chapter.3}% 60
+\BOOKMARK [2][-]{subsection.3.7.1}{Climate}{section.3.7}% 61
+\BOOKMARK [2][-]{subsection.3.7.2}{Environment}{section.3.7}% 62
+\BOOKMARK [2][-]{subsection.3.7.3}{Resources}{section.3.7}% 63
+\BOOKMARK [2][-]{subsection.3.7.4}{Agents}{section.3.7}% 64
+\BOOKMARK [1][-]{section.3.8}{Input data}{chapter.3}% 65
+\BOOKMARK [2][-]{subsection.3.8.1}{Rainfall}{section.3.8}% 66
+\BOOKMARK [2][-]{subsection.3.8.2}{Ground Model}{section.3.8}% 67
+\BOOKMARK [2][-]{subsection.3.8.3}{Hunter-Gatherer behavior}{section.3.8}% 68
+\BOOKMARK [1][-]{section.3.9}{Submodels}{chapter.3}% 69
+\BOOKMARK [2][-]{subsection.3.9.1}{Agent execution cycle}{section.3.9}% 70
+\BOOKMARK [1][-]{section.3.10}{Knowledge}{chapter.3}% 71
+\BOOKMARK [2][-]{subsection.3.10.1}{Partial Information}{section.3.10}% 72
+\BOOKMARK [2][-]{subsection.3.10.2}{Information Sharing}{section.3.10}% 73
+\BOOKMARK [1][-]{section.3.11}{Decision Making}{chapter.3}% 74
+\BOOKMARK [2][-]{subsection.3.11.1}{Rule Based Agent}{section.3.11}% 75
+\BOOKMARK [2][-]{subsection.3.11.2}{Planning}{section.3.11}% 76
+\BOOKMARK [3][-]{section*.21}{UCT}{subsection.3.11.2}% 77
+\BOOKMARK [1][-]{section.3.12}{Reducing States of Search Tree}{chapter.3}% 78
+\BOOKMARK [1][-]{section.3.13}{Divergent Trajectories}{chapter.3}% 79
+\BOOKMARK [1][-]{section.3.14}{Efficiency}{chapter.3}% 80
+\BOOKMARK [2][-]{subsection.3.14.1}{Low Ressolution map}{section.3.14}% 81
+\BOOKMARK [2][-]{subsection.3.14.2}{UCT efficiency improvement}{section.3.14}% 82
+\BOOKMARK [2][-]{subsection.3.14.3}{Throughput measures}{section.3.14}% 83
+\BOOKMARK [0][-]{chapter.4}{Experiments}{}% 84
+\BOOKMARK [1][-]{section.4.1}{Tunning the planner \( State Reduction And Statistical Significance \)}{chapter.4}% 85
+\BOOKMARK [1][-]{section.4.2}{Divergence And Biomass Prediction}{chapter.4}% 86
+\BOOKMARK [2][-]{subsection.4.2.1}{Finding the limits to Improvement by Biomass Prediction}{section.4.2}% 87
+\BOOKMARK [1][-]{section.4.3}{Comparing the Rule Based Agent and the MDP Agent}{chapter.4}% 88
+\BOOKMARK [2][-]{subsection.4.3.1}{Experiment 1: Mean Starvation Day Comparison}{section.4.3}% 89
+\BOOKMARK [2][-]{subsection.4.3.2}{Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{section.4.3}% 90
+\BOOKMARK [2][-]{subsection.4.3.3}{Experiment 3: Width Exploration}{section.4.3}% 91
+\BOOKMARK [2][-]{subsection.4.3.4}{Conclusions}{section.4.3}% 92
+\BOOKMARK [1][-]{section.4.4}{Future}{chapter.4}% 93
+\BOOKMARK [0][-]{chapter.5}{Conclussions and Future}{}% 94
+\BOOKMARK [1][-]{subsection.5.0.1}{Future Work}{chapter.5}% 95
+\BOOKMARK [0][-]{chapter.6}{Acknowledgement}{}% 96
+\BOOKMARK [0][-]{chapter.7}{Annex 1 : Platforms}{}% 97
+\BOOKMARK [1][-]{section.7.1}{Pandora}{chapter.7}% 98
+\BOOKMARK [1][-]{section.7.2}{Other platforms}{chapter.7}% 99

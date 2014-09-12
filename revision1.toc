@@ -1,0 +1,96 @@
+\select@language {british}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Description}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Simulation}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Question}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Methodology}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Intro}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Why model}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Modelling in social sciences}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Conceptual Framework}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Multi Agent Systems}{12}{subsection.2.4.1}
+\contentsline {subsubsection}{Agents}{13}{section*.2}
+\contentsline {paragraph}{Agent formal description}{14}{section*.3}
+\contentsline {paragraph}{Agent Main Behaviours}{15}{section*.4}
+\contentsline {paragraph}{Intelligent Agents Architecture}{17}{section*.5}
+\contentsline {subsection}{\numberline {2.4.2}Complex Systems}{24}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Emergence}{26}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Evolution}{28}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Coevolution}{30}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}ABM}{31}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Benefits of ABM}{31}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}ABM issues}{33}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}Platforms / Software packages}{34}{chapter.3}
+\contentsline {subsubsection}{NetLogo...}{34}{section*.6}
+\contentsline {subsubsection}{Pandora/Cassandra}{34}{section*.7}
+\contentsline {chapter}{\numberline {4}SugarScape vs Advanced Sugarscape}{35}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.3}Planners, ...}{35}{subsection.4.0.3}
+\contentsline {section}{\numberline {4.1}What is SugarScape?}{36}{section.4.1}
+\contentsline {section}{\numberline {4.2}Added advanced features}{36}{section.4.2}
+\contentsline {paragraph}{Same deduced trends and emerging dynamics}{36}{section*.8}
+\contentsline {paragraph}{Realistic Adaptability to Parameter Perturbations}{36}{section*.9}
+\contentsline {section}{\numberline {4.3}Solving critics against classic SugarScape}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Experiments}{36}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Initial Conditions}{36}{subsection.4.4.1}
+\contentsline {subsubsection}{Montecarlo?}{36}{section*.10}
+\contentsline {paragraph}{Emergence of stationary state; initial state := stationary state}{36}{section*.11}
+\contentsline {subsection}{\numberline {4.4.2}Experiment features}{36}{subsection.4.4.2}
+\contentsline {paragraph}{Description}{36}{section*.12}
+\contentsline {paragraph}{Hypothesis}{36}{section*.13}
+\contentsline {paragraph}{Assumptions}{36}{section*.14}
+\contentsline {paragraph}{Config}{36}{section*.15}
+\contentsline {paragraph}{Results}{36}{section*.16}
+\contentsline {paragraph}{Validation}{37}{section*.17}
+\contentsline {chapter}{\numberline {5}Gujarat Case Modelization}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{38}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Hypotheses}{38}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Aims and objectives}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Knowledge Elicitation \& Brainstorming}{39}{subsection.5.1.3}
+\contentsline {subsubsection}{Interviews}{39}{section*.18}
+\contentsline {subsubsection}{ECOTONO (journal club)}{39}{section*.19}
+\contentsline {subsubsection}{ODD}{39}{section*.20}
+\contentsline {section}{\numberline {5.2}Physical World / Environment}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Statistical Modelling}{39}{subsection.5.2.1}
+\contentsline {subsubsection}{Data Sources}{39}{section*.21}
+\contentsline {subsubsection}{Resource Pipeline}{39}{section*.22}
+\contentsline {section}{\numberline {5.3}Antrophological Model}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}The Model}{39}{subsection.5.3.1}
+\contentsline {subsubsection}{Knowledge Represent}{39}{section*.23}
+\contentsline {subsubsection}{Decission Process}{39}{section*.24}
+\contentsline {paragraph}{Hypothesis:richer agents}{39}{section*.25}
+\contentsline {paragraph}{UPF hand to hand work:UCT algorithm}{39}{section*.26}
+\contentsline {paragraph}{Methods}{39}{section*.27}
+\contentsline {paragraph}{\IeC {\~A}\IeC {\quotesinglbase }\IeC {\^A}\IeC {\textquestiondown }state of the art?}{39}{section*.28}
+\contentsline {subsubsection}{Social Network}{39}{section*.29}
+\contentsline {paragraph}{\IeC {\~A}\IeC {\quotesinglbase }\IeC {\^A}\IeC {\textquestiondown }state of the art?}{39}{section*.30}
+\contentsline {subsubsection}{Design}{39}{section*.31}
+\contentsline {paragraph}{Organisational level design}{39}{section*.32}
+\contentsline {paragraph}{Social structure}{39}{section*.33}
+\contentsline {paragraph}{Interaction structure}{39}{section*.34}
+\contentsline {paragraph}{Communicative structure}{40}{section*.35}
+\contentsline {paragraph}{Normative structure}{40}{section*.36}
+\contentsline {subsubsection}{Coordination level design}{40}{section*.37}
+\contentsline {paragraph}{Action model}{40}{section*.38}
+\contentsline {paragraph}{Task model}{40}{section*.39}
+\contentsline {paragraph}{Agent model}{40}{section*.40}
+\contentsline {paragraph}{Plan model}{40}{section*.41}
+\contentsline {section}{\numberline {5.4}Experiments}{40}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Initial Conditions}{40}{subsection.5.4.1}
+\contentsline {subsubsection}{Montecarlo?}{40}{section*.42}
+\contentsline {paragraph}{Emergence of stationary state; initial state := stationary state}{40}{section*.43}
+\contentsline {subsection}{\numberline {5.4.2}Experiment features}{40}{subsection.5.4.2}
+\contentsline {paragraph}{Description}{40}{section*.44}
+\contentsline {paragraph}{Hypothesis}{40}{section*.45}
+\contentsline {paragraph}{Assumptions}{40}{section*.46}
+\contentsline {paragraph}{Config}{40}{section*.47}
+\contentsline {paragraph}{Results}{40}{section*.48}
+\contentsline {paragraph}{Validation}{40}{section*.49}
+\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Achieved Objectives}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Achieved Objectives}{41}{section.6.2}
+\contentsline {section}{\numberline {6.3}Comparison AI - Simple}{41}{section.6.3}
+\contentsline {section}{\numberline {6.4}Difficulties \& Issues}{41}{section.6.4}
+\contentsline {section}{\numberline {6.5}Publications/CAA}{41}{section.6.5}
+\contentsline {section}{\numberline {6.6}Future Issues}{41}{section.6.6}
+\contentsline {chapter}{\numberline {7}Bibliography}{42}{chapter.7}
