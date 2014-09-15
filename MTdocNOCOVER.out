@@ -75,12 +75,12 @@
 \BOOKMARK [2][-]{subsection.3.11.1}{Rule Based Agent}{section.3.11}% 75
 \BOOKMARK [2][-]{subsection.3.11.2}{Planning}{section.3.11}% 76
 \BOOKMARK [3][-]{section*.21}{UCT}{subsection.3.11.2}% 77
-\BOOKMARK [1][-]{section.3.12}{Reducing States of Search Tree}{chapter.3}% 78
-\BOOKMARK [1][-]{section.3.13}{Divergent Trajectories}{chapter.3}% 79
-\BOOKMARK [1][-]{section.3.14}{Efficiency}{chapter.3}% 80
-\BOOKMARK [2][-]{subsection.3.14.1}{Low Ressolution map}{section.3.14}% 81
-\BOOKMARK [2][-]{subsection.3.14.2}{UCT efficiency improvement}{section.3.14}% 82
-\BOOKMARK [2][-]{subsection.3.14.3}{Throughput measures}{section.3.14}% 83
+\BOOKMARK [3][-]{section*.22}{Reducing States of Search Tree}{subsection.3.11.2}% 78
+\BOOKMARK [3][-]{section*.23}{Divergent Trajectories}{subsection.3.11.2}% 79
+\BOOKMARK [1][-]{section.3.12}{Efficiency}{chapter.3}% 80
+\BOOKMARK [2][-]{subsection.3.12.1}{Low Ressolution map}{section.3.12}% 81
+\BOOKMARK [2][-]{subsection.3.12.2}{UCT efficiency improvement}{section.3.12}% 82
+\BOOKMARK [2][-]{subsection.3.12.3}{Throughput measures}{section.3.12}% 83
 \BOOKMARK [0][-]{chapter.4}{Experiments}{}% 84
 \BOOKMARK [1][-]{section.4.1}{Tunning the planner \( State Reduction And Statistical Significance \)}{chapter.4}% 85
 \BOOKMARK [1][-]{section.4.2}{Divergence And Biomass Prediction}{chapter.4}% 86
@@ -90,10 +90,9 @@
 \BOOKMARK [2][-]{subsection.4.3.2}{Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{section.4.3}% 90
 \BOOKMARK [2][-]{subsection.4.3.3}{Experiment 3: Width Exploration}{section.4.3}% 91
 \BOOKMARK [2][-]{subsection.4.3.4}{Conclusions}{section.4.3}% 92
-\BOOKMARK [1][-]{section.4.4}{Future}{chapter.4}% 93
-\BOOKMARK [0][-]{chapter.5}{Conclussions and Future}{}% 94
-\BOOKMARK [1][-]{subsection.5.0.1}{Future Work}{chapter.5}% 95
-\BOOKMARK [0][-]{chapter.6}{Acknowledgement}{}% 96
-\BOOKMARK [0][-]{chapter.7}{Annex 1 : Platforms}{}% 97
-\BOOKMARK [1][-]{section.7.1}{Pandora}{chapter.7}% 98
-\BOOKMARK [1][-]{section.7.2}{Other platforms}{chapter.7}% 99
+\BOOKMARK [0][-]{chapter.5}{Conclussions and Future}{}% 93
+\BOOKMARK [1][-]{subsection.5.0.5}{Future Work}{chapter.5}% 94
+\BOOKMARK [0][-]{chapter.6}{Acknowledgement}{}% 95
+\BOOKMARK [0][-]{chapter.7}{Annex 1 : Platforms}{}% 96
+\BOOKMARK [1][-]{section.7.1}{Pandora}{chapter.7}% 97
+\BOOKMARK [1][-]{section.7.2}{Other platforms}{chapter.7}% 98

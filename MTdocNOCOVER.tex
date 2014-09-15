@@ -2395,6 +2395,46 @@ that represent states. The strategy of UCT is to find the trace of actions that 
 UCT applies CPU power to promising traces. Traces are non deterministic sequences of actions and states. MDPs have probabilistic transitions and one action applied to a state can lead to different states with some probability distribution. Hence, UCT must apply a sampling and produce a statistical scoring for states and traces. The further a state is from the initial node the lesser its statistical significance will be. For the sake of statistical relevance and bounded resources the search tree has a maximum exploratory depth; this is a parameter for UCT, the horizon.
 The number of samples for a trace is called width. The winner trace indicates which is the next action to perform. UCT has provided good results for board games and a very respectable scoring in the japanese game \emph{Go}\cite{uctGO}. 
 
+
+%TODO pseudo codi de UCT tal com surt al paper de l'Hector Geffner i Bonet
+\begin{algorithm}[!ht]
+\caption{UCT algorithm}\label{alg:uctAlgorithm}
+		\SetAlgoLined
+		\BlankLine
+		UCT($s$,$d$):
+		{$s$ is current state; $d$ is remaining steps to depth bound; $G$ is a explicit graph, initially empty; $\pi$ is base policy; $C$ is exploration constant;}
+		\BlankLine
+		
+		\If{d=0 or $s$ is terminal}{ 
+		    \Return 0\;
+		}
+		\If{node($s$,$d$) not in G}
+		{
+		  add node ($s$,$d$) to $G$\;
+		  $N$($s$,$d$) := 0\;
+		  $N$($a$,$s$,$d$) := 0 for all $a \in A(s)$\;
+		  $Q$($a$,$s$,$d$) := 0 for all $a \in A(s)$\;
+		  Obtain sampled accumulated discounted reward $r$($\pi$, $s$, $d$)
+		  by simulating base policy $\pi$ for $d$ steps starting at state $s$\;
+		  \Return $r$($\pi$, $s$, $d$)\;
+		}
+		\If{node($s$,$d$) in G}
+		{		
+		$Bonus(a) = C\sqrt{2\log(N(s,d)/N(a,s,d))}$ if N($a$,$s$,$d$)$>$0,else $\infty$ for each $a \in A(s)$\;
+		Select action $a$ = argmax$_{a\in A(s)}$[$Q(a, s, d) + Bonus(a)$]\;
+		Sample state $s'$ with probability P$_a$($s'\mid s$)\;
+		$nv$ = $r$($s$, $a$) + $\gamma$UCT($s'$ , $d \--$ 1)\;
+		$N$($s$, $d$) := $N$($s$, $d$) + 1\;
+		$N$($a$, $s$, $d$) := $N$($a$, $s$, $d$) + 1\;
+		$Q$($a$, $s$, $d$) := $Q$($a$, $s$, $d$) + [$nv \-- Q$($a$, $s$, $d$)] / $N$($a$, $s$, $d$)\;
+		\Return $nv$\;
+		}		
+		\caption{UCT algorithm}
+		\end{algorithm}
+
+
+
+
 UCT explores the board in a hypothetico-deductive manner desirable for our purposes. We could
 see that a new node to explore is a open hypothesis. And we can see the deductive part when UCT executes the hypothetical action against its private virtual copy of the world. Like in game Go, UCT will be executed to guess next action to launch; UCT is not used to produce a policy to be used the rest of the simulation. Each time step UCT will have to recalculate the most promisable posibilities for each action on each patch where it will be applied. 
 
@@ -2416,6 +2456,8 @@ see that a new node to explore is a open hypothesis. And we can see the deductiv
 \caption{Figure. Uct search tree.}
 \label{fig:uctTree}
 \end{figure}
+
+
 
 
 %%TODO
@@ -2450,11 +2492,88 @@ see that a new node to explore is a open hypothesis. And we can see the deductiv
 %	----------------we want adaptability. To the current moment, we choose
 %			planning\\
 
-\section{Reducing States of Search Tree}
+\subsubsection{Reducing States of Search Tree}
 \label{sec:ReduccStates}
 
-\section{Divergent Trajectories}
+Recall that UCT is a planning algorithm through statistical sampling. Recall that each node of the search tree corresponds to a system state and that nodes generate their node offspring to fill the next level as the result of applying a stochastic process. This would correspond to the stochastic process of change which has been produced by the effect of applying an action of the agent. States are stored in a dictionary and can be revisited if another node induces a new state that is identical to one that already has been generated in the past (Fig.~\ref{fig:reducc1}). Revisiting a state changes its weight and it guides probabilistic search and selection of actions to continue generating the range of nodes. The selection of actions affects the generation of traces that lead to final states. After executing all the amount of shots  set by the width parameter, the algorithm has performed a statistical sampling of the different states and utilities in tree leaves that end up guiding the decision.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[height=8.2cm]{figures/diagram/reducc1}
+\caption{Past states can be revisited due to stochastic effect of actions in the UCT search tree.}
+\label{fig:reducc1}
+\end{figure}
+
+It is important to make relevant sampling and to crystallize significant probabilistic weights along the tree nodes, from the statistical point of view. The sampling should allow to recover an approximation of the distribution of states and utilities to filter the states which are preventable from which are desirable decisions. To visit and sample correctly traces is a need for the update factors of the underlying reinforcement learning that is done based on the sieve of the found positive and negative rewards.
+
+In the case of the model for HunterGatherers, states are characterized by attributes with a wide spectrum of values. Just to mention it the amount-of-resources is the core measure of this distinctive feature. The environment of an agent is divided into sectors where the amount of resources for each one can sum up to hundreds of miles of units of biomass. If the procedure in charge of declaring two states are alike or different is based on a strict comparison of this amount, most likely, any two nodes are going to be classified as different. Taking two states where everything is the same except for the northern sector where there are 899,999 registered units in one state and the other one has an amount of 900,000, the algorithm will see both states are different and the difference is only one unit of measure of a magnitude many times over.
+From the standpoint of this agent they should be considered in short-term identical because they were for survival purposes equivalent. From the point of view of the UCT algorithm, if the probability of equality between states is much lower (we trust that stochasticity after appling the action makes values match exactly by chance), part of the heuristic factors and strategies from the algorithm are not applied. The third conditional branch in code(Fig.~\ref{alg:uctAlgorithm}) will run just for a few nodes and it will hardly generate the count $N$ and $Q$ to follow the preference for rewarding promisable nodes that lead to a successful trace. Then, the node will count for UCT, most of the times, as a new non visited node and the update of heuristics will be empty. The multiplicity of states emerging due to the low probability of synonymy between states will make sampled traces to be disjoint between themselves. The distribution generated is very flat because you can not make the connection between state, action and effect of the factors of Q-learning. All UCT execution will be absorbed by the branch of code that executes the basic policy, usually a random sampling. 
+
+In order to stimulate synonymy between nodes, some changes were needed in the representation of data 
+from the node states.
+
+\begin{description}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\cdot$}
+\item [Value Range Reduction and Categorization] 
+The idea is to encompass the same information for the decision process but in a way we reduce the range/domain of the variables. Attributes related to agent resources and environment resources are simplified.
+The ammount is converted to average amount of individuals sustained for a unique day by the resources. If the
+original value is 400.000 units and an individual needs a mean of 2000 units to survive one day, the new value
+will belong to a new reduced range and its value will be now 200 individuals per day, 200 daily rations. 
+The value is reduced one step further. If an agent is composed of 4,6,10 individuals, eventually some reducted
+amounts also become indistinguishable for survival. The second reduction is a categorization we have seen works for our experiments (section \ref{sec:expStateReduction}). The final assigned value to the resource attributes of the nodes is one of the categories in the table (tab.~\ref{tab:secondReductionToCategories}).
+
+	\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|c|c c c|}
+		\hline
+		CATEGORY&   &                    & \\
+		\hline
+		0	& 0 & $\leqslant$ rations $<$ & 2 \\
+		\hline 
+		1	& 2 & $\leqslant$ rations $<$ & 15 \\
+		\hline
+		2	& 15 & $\leqslant$ rations $<$ & 40 \\
+		\hline
+		3	& 40 & $\leqslant$ rations $<$ & 100 \\
+		\hline
+		4	& 100 & $\leqslant$ rations $<$ & $\infty$ \\
+		\hline
+		
+	\end{tabular}
+	\caption{Second reduction, categories assigned to first reduction.}
+	\label{tab:secondReductionToCategories}
+	\end{table}
+
+\item [Manage Multiplicity due to Action Stochasticity] 
+    Each node has actions produced depending on the information of the world state in the trace it is
+    being explored. If actions are produced stochastically, same attribute sets characterizing the mensurable
+    part of the state will see associated different actions sets and hence it will yield two different
+    states which will end up not being equal(synonims). We force that for a state a fixed amount of actions 
+    is generated. If we allow to a state be associated to four move actions and there are eight locations
+    to choose for movement, the association must be done throwing the dice and chosing four sectors
+    from the eight possibilities to give four actions to the state. This increases stochasticity and
+    multiplicity of states due to the combinations of taking four items from a set of eight. The solution is
+    that all states open as many move actions as sectors there are, and the same for forage actions.
+    And the only features involved in node matching are the relative timestep inside the trace, the resources
+    of the agent, the resources of the environment, the location of the agent and the amount of accumulated days of starvation.
+    
+\end{description}
+    
+The results of applying state reduction can be found in the section of experiments ( sect. \ref{sec:expStateReduction})
+
+
+
+\subsubsection{Divergent Trajectories}
 \label{sec:Divergence}
+
+
+
+
+
+
+
+
 
 
 
@@ -2562,7 +2681,7 @@ to two time lapses in the year were opposite strategies were needed.
 
 
 \section{Tunning the planner ( State Reduction And Statistical Significance )}
-
+\label{sec:expStateReduction}
 
 %%quick descrip : 
 This section exposes the first results and issues of the tests of the mdp agent under the same conditions 
@@ -3144,7 +3263,7 @@ We represent in the plots (Fig.~\ref{fig:ecsi3_clim500}, Fig.~\ref{fig:ecsi3_cli
 
 
 A first approach based on the shallow evidence restates the observations from the past experiments. Horizon 6 and 10 go coupled and horizon 3 produces a lower performance of the survival skills. As rainfall increases the variability in the distribution of starvation rate decreases as decreases uncertainty and low resource states in the simulation.
-It seems roughly that there is no difference when the agent uses one width or another for some given horizon. But if we look back to experiment two, they appear; and it is caused by the pressence of other agents who introduce uncertainty. 
+It seems roughly that there is no difference when the agent uses one width or another for some given horizon. But if we look back to experiment two, they appear; it is caused by the pressence of other agents who introduce uncertainty. 
 When the vicinity displays greater variability in resource disponibility due to the other's activities it results in having a greater range of possible states to evaluate. To explore a bigger set and filter worthy trajectories from bad ones requires to increase the width to ensure a greater statistical significance when selecting and discarding trajectories. 
 And the plots from experiment two show that agents with greater width benefit from it.
 
@@ -3244,8 +3363,6 @@ charge of two members of the Gujarat project with long experience in cultural tr
 
 
 \end{enumerate}
-
-\\
 
 \begin{enumerate}
 
