@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.2.18)  15 SEP 2014 14:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.2.18)  15 SEP 2014 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1981,11 +1981,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 3818.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3818.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3818.
 
-Package rerunfilecheck Info: File `MTdocNOCOVER.out' has not changed.
-(rerunfilecheck)             Checksum: 4BD827C51DC288D8D808639B2C7F925F;6670.
 
+
+Package rerunfilecheck Warning: File `MTdocNOCOVER.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MTdocNOCOVER.out':
+(rerunfilecheck)             Before: 4BD827C51DC288D8D808639B2C7F925F;6670
+(rerunfilecheck)             After:  2784652185535AC7379CC5F9AEAB81BD;6671.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -1995,7 +2004,7 @@ Here is how much of TeX's memory you used:
  15375 multiletter control sequences out of 15000+600000
  47193 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,13n,36p,2406b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,36p,2408b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -2008,7 +2017,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on MTdocNOCOVER.pdf (114 pages, 16228672 bytes).
+Output written on MTdocNOCOVER.pdf (114 pages, 16228583 bytes).
 PDF statistics:
  1558 PDF objects out of 1728 (max. 8388607)
  1338 compressed objects within 14 object streams

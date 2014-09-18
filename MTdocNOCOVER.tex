@@ -2429,7 +2429,7 @@ The number of samples for a trace is called width. The winner trace indicates wh
 		$Q$($a$, $s$, $d$) := $Q$($a$, $s$, $d$) + [$nv \-- Q$($a$, $s$, $d$)] / $N$($a$, $s$, $d$)\;
 		\Return $nv$\;
 		}		
-		\caption{UCT algorithm}
+		\caption{UCT algorithm(\cite{BonetGeffner2012})}
 		\end{algorithm}
 
 
@@ -2506,8 +2506,8 @@ Recall that UCT is a planning algorithm through statistical sampling. Recall tha
 
 It is important to make relevant sampling and to crystallize significant probabilistic weights along the tree nodes, from the statistical point of view. The sampling should allow to recover an approximation of the distribution of states and utilities to filter the states which are preventable from which are desirable decisions. To visit and sample correctly traces is a need for the update factors of the underlying reinforcement learning that is done based on the sieve of the found positive and negative rewards.
 
-In the case of the model for HunterGatherers, states are characterized by attributes with a wide spectrum of values. Just to mention it the amount-of-resources is the core measure of this distinctive feature. The environment of an agent is divided into sectors where the amount of resources for each one can sum up to hundreds of miles of units of biomass. If the procedure in charge of declaring two states are alike or different is based on a strict comparison of this amount, most likely, any two nodes are going to be classified as different. Taking two states where everything is the same except for the northern sector where there are 899,999 registered units in one state and the other one has an amount of 900,000, the algorithm will see both states are different and the difference is only one unit of measure of a magnitude many times over.
-From the standpoint of this agent they should be considered in short-term identical because they were for survival purposes equivalent. From the point of view of the UCT algorithm, if the probability of equality between states is much lower (we trust that stochasticity after appling the action makes values match exactly by chance), part of the heuristic factors and strategies from the algorithm are not applied. The third conditional branch in code(Fig.~\ref{alg:uctAlgorithm}) will run just for a few nodes and it will hardly generate the count $N$ and $Q$ to follow the preference for rewarding promisable nodes that lead to a successful trace. Then, the node will count for UCT, most of the times, as a new non visited node and the update of heuristics will be empty. The multiplicity of states emerging due to the low probability of synonymy between states will make sampled traces to be disjoint between themselves. The distribution generated is very flat because you can not make the connection between state, action and effect of the factors of Q-learning. All UCT execution will be absorbed by the branch of code that executes the basic policy, usually a random sampling. 
+In the case of the model for Hunter-gatherers, states are characterized by attributes with a wide spectrum of values. Just to mention it the amount-of-resources is the core measure of this distinctive feature. The environment of an agent is divided into sectors where the amount of resources for each one can sum up to hundreds of miles of units of biomass. If the procedure in charge of declaring two states are alike or different is based on a strict comparison of this amount, most likely, any two nodes are going to be classified as different. Taking two states where everything is the same except for the northern sector where there are 899,999 registered units in one state and the other one has an amount of 900,000, the algorithm will see both states are different and the difference is only one unit of measure of a magnitude many times over.
+From the standpoint of this agent they should be considered in short-term identical because they were for survival purposes equivalent. From the point of view of the UCT algorithm, if the probability of equality between states is much lower (we trust that stochasticity after applying the action makes values match exactly by chance), part of the heuristic factors and strategies from the algorithm are not applied. The third conditional branch in code(appendix.~\ref{alg:uctAlgorithm}) will run just for a few nodes and it will hardly generate the count $N$ and $Q$ to follow the preference for rewarding promising nodes that lead to a successful trace. Then, the node will count for UCT, most of the times, as a new non visited node and the update of heuristics will be empty. The multiplicity of states emerging due to the low probability of synonymy between states will make sampled traces to be disjoint between themselves. The distribution generated is very flat because you can not make the connection between state, action and effect of the factors of Q-learning. All UCT execution will be absorbed by the branch of code that executes the basic policy, usually a random sampling. 
 
 In order to stimulate synonymy between nodes, some changes were needed in the representation of data 
 from the node states.
@@ -2517,10 +2517,10 @@ from the node states.
 \renewcommand{\labelitemii}{$\cdot$}
 \item [Value Range Reduction and Categorization] 
 The idea is to encompass the same information for the decision process but in a way we reduce the range/domain of the variables. Attributes related to agent resources and environment resources are simplified.
-The ammount is converted to average amount of individuals sustained for a unique day by the resources. If the
+The amount is converted to average amount of individuals sustained for a unique day by the resources. If the
 original value is 400.000 units and an individual needs a mean of 2000 units to survive one day, the new value
 will belong to a new reduced range and its value will be now 200 individuals per day, 200 daily rations. 
-The value is reduced one step further. If an agent is composed of 4,6,10 individuals, eventually some reducted
+The value is reduced one step further. If an agent is composed of 4,6,10 individuals, eventually some reduced
 amounts also become indistinguishable for survival. The second reduction is a categorization we have seen works for our experiments (section \ref{sec:expStateReduction}). The final assigned value to the resource attributes of the nodes is one of the categories in the table (tab.~\ref{tab:secondReductionToCategories}).
 
 	\begin{table}[ht!]
@@ -2549,13 +2549,13 @@ amounts also become indistinguishable for survival. The second reduction is a ca
     Each node has actions produced depending on the information of the world state in the trace it is
     being explored. If actions are produced stochastically, same attribute sets characterizing the mensurable
     part of the state will see associated different actions sets and hence it will yield two different
-    states which will end up not being equal(synonims). We force that for a state a fixed amount of actions 
+    states which will end up not being equal(synonyms). We force that for a state a fixed amount of actions 
     is generated. If we allow to a state be associated to four move actions and there are eight locations
-    to choose for movement, the association must be done throwing the dice and chosing four sectors
+    to choose for movement, the association must be done throwing the dice and choosing four sectors
     from the eight possibilities to give four actions to the state. This increases stochasticity and
     multiplicity of states due to the combinations of taking four items from a set of eight. The solution is
     that all states open as many move actions as sectors there are, and the same for forage actions.
-    And the only features involved in node matching are the relative timestep inside the trace, the resources
+    And the only features involved in node matching are the relative time-step inside the trace, the resources
     of the agent, the resources of the environment, the location of the agent and the amount of accumulated days of starvation.
     
 \end{description}
@@ -2650,11 +2650,11 @@ of objects implied almost and order of magnitude of improvement.
 The chapter of experimental results follows part of the trajectory of the experience of comparing the 
 performance of the AI agents versus the classical rule agents. The first results are related to the first
 experiments of rule based agents in the model for the Gujarat\cite{JARM2014}. Taking the same setting, 
-mdp agents were put to test showing us that they could not improve the rule based agent resillience capability.  
+mdp agents were put to test showing us that they could not improve the rule based agent resilience capability.  
 The multiplicity reduction of the planning search states(p.\pageref{sec:ReduccStates}), compacting the range of values and 
 limiting stochasticity, proved to be a good solution to solve it. Results are shown where it is obvious that 
 starvation is lower for mdp agents. Afterwards, some odd trends in the behaviour of parameters of the decision 
-making process motivated another analysis of the model for the knowledge of the agent 
+making process motivated another analysis of the model for the knowledge layer of the agent 
 (p.\pageref{sec:Divergence}). 
 Managing the change of biomass due to biological growth and decline of resources is introduced in the mdp 
 layer of the agent. Following, results showed that tackling with resource grow/decline prediction contributes 
@@ -2664,15 +2664,15 @@ that marks the distance to the ideal foraging, seems only to be explained by unc
 effects, and not a big advance can we get from refining further the biomass prediction procedures. Many of 
 these experiments are run under an scenario where the agent is alone in the world. One of the motivations is 
 to discover faults in the foraging and migration patterns and verify the modeling decisions.
-That is the reason that introducing divergence management due to neighbour pressence (multiagency) is left 
-for the next step of this model in the project. But anyway, although there is no multiagency awareness we 
-have tested the agent in a scenario of indirect competion for resources with other agents.
+That is the reason that introducing divergence management due to neighbour presence (multi-agency) is left 
+for the next step of this model in the project. But anyway, although there is no multi-agency awareness we 
+have tested the agent in a scenario of indirect competition for resources with other agents.
 
 Three more packs of experiments follow to complete the chapter now focused on the differences between AI 
 agents and classical simple agents. First there is a straightforward comparison of annual starvation rates
 between the random agent, the rule based one and several configurations of mdp agent. The next experiment
 is the extended version to a ten year trace. And finally there is an exploration of the relevance of adding 
-more iterations to the deliverative engine of the agent. We observe a consistent advantage of the mdp agent
+more iterations to the deliberative engine of the agent. We observe a consistent advantage of the mdp agent
 over the rule based agent. We will expose the evidence in the numbers and also in the patterns of mobility 
 produced by the logic of the rules. Following the trace of actions and change rate in starvation we could 
 glimpse that the mistakes of the rule based agent were directly related to a problem of inability to adapt 
@@ -2685,18 +2685,18 @@ to two time lapses in the year were opposite strategies were needed.
 
 %%quick descrip : 
 This section exposes the first results and issues of the tests of the mdp agent under the same conditions 
-that the rule based agent was run\cite{JARM2014}. An ABM of rule based agents was designed to study 
-ressilience and persistence of Hunter-Gatherers in the north zone of Gujarat, a north-east province in India
-(p.\pageref{sec:GujaratChapter}). The topic question was rooted in the premise that the main factors conditioning 
-the pressence of HG were related to climatic changing conditions and its effect on resource availability. 
+that the rule based agent was run\cite{JARM2014}. An Agent Based Model(ABM) of rule based agents was designed to study 
+resilience and persistence of Hunter-Gatherers(HG) in the north zone of Gujarat, a north-east province in India. 
+The topic question was rooted in the premise that the main factors conditioning the presence of HG were 
+related to climatic changing conditions and its effect on resource availability. 
 Simulations were run taking the climatic conditions of three spatial bounds, the zone of Kutch-Saurashtra 
 (north Gujarat), the region of Gujarat and the average rainfall of the whole continent. The combination of
 the regions, the extrapolation of climatic parameters to four selected time lapses in Holocene plus the 
 intervals of exploration of the rainfall ( average and yearly variation ) unfold the simulation scenarios.
-The analisys shows that historical decrease of average rainfall along millennia is not enough explanation 
+The analysis shows that historical decrease of average rainfall along millennia is not enough explanation 
 to answer the question about extinction of HG. On the other hand, variation associated to yearly precipitation
 played a strong role on population dynamics as the major cause for group collapse if a threshold is 
-surpassed. Although the conclusion is open to consider feasible that other factors coocurred with rainfall 
+surpassed. Although, the conclusion is open to consider feasible that other factors coocurred with rainfall 
 variation in the decline of the HGs.
 
 Against our intuitions the mdp agent could not break the starvation rate of the rule based agent. Statistical 
@@ -2725,7 +2725,7 @@ units/year.}
 The problem lied in the internal representation of the world for the search nodes of the mdp layer. The 
 representation scattered the states due to the wide domain of the features. It produced non matching states
 and led to search traces with low statistical significance needed to distinguish preferable traces
-from the harmful ones for the agent. The representation of the world states was reduced categorising numerical
+from the harmful ones for the agent. The representation of the world states was reduced categorizing numerical
 features and reducing stochasticity the children node states expansion as the corresponding section illustrates
 (p. \pageref{sec:ReduccStates}).
 After state reduction the results took the direction we were expecting. The figure 
@@ -2734,7 +2734,7 @@ interval from a quarter of the mean to the mean of rainfall in KS-Gujarat scenar
 in the axis there are ten runs with an associated starvation rate distribution as output measure. For
 each set of runs we register the mean of starvation rate and represent it in the plot with coordinates the 
 rainfall and starvation rate involved. Each of the dots is connected with lines to its adjacent neighbours 
-to reveal visualy the functional relationship between the variables. 
+to reveal visually the functional relationship between the variables. 
 The shape exposes an exponential growth of starvation as agents are deprived of resources due to scarcity of 
 rainfall. For the mdp agent the slope is not so high and the proportion is quite a few times lower than the 
 rule based agent. Also the shape of the starvation along the axis is far less bumpy, meaning that the response 
@@ -2752,7 +2752,7 @@ The plot shows an extra agent labeled as Random. This agent chooses an action wi
 probability from the combination of the actions and sectors where the action can be applied. This agent 
 was introduced to have its performance as reference in the comparisons. 
 
-Below you can find a detailed explanation of the results discovered for the rule based agent and why they 
+Below, you can find a detailed explanation of the results discovered for the rule based agent and why they 
 are worse(p.\pageref{sec:expEcsi1}).
 The enumerated reasons are related to the cause why we have the unexpected result of the random agent's 
 performance being better than the rule based one. The conditions of movement of the rule based agent polarize
@@ -2769,11 +2769,11 @@ Having managed to offer a better response than before (Fig.~\ref{fig:meanBoxplot
 the next step was to explore the best parameters for the simulation with mdp and find a lower bound to the 
 achievable starvation or a feasible balance between depth of reasoning and CPU time.
 
-Our simulations explored the parameter horizon and width of the UCT algorithm(p.\pageref{sec:UCT}). The expected 
-result was to find how starvation decreased as we increased horizon and width in paralel. We did not paired
+Our simulations explored the parameter horizon and width of the UCT algorithm\cite{BonetGeffner2012}. The expected 
+result was to find how starvation decreased as we increased horizon and width in parallel. We did not paired
 low values of width to the higher values of horizon of the exploration set. UCT follows a search tree of 
 states where depth is the horizon parameter and width the amount of traces that are launched against the tree 
-to retrieve a sample of its leaves to produce a elegible set of future desirable states. Horizon values in
+to retrieve a sample of its leaves to produce a eligible set of future desirable states. Horizon values in
 exploration must grow paired with width. Low values of width retrieve poor samples from a huge pool of leaves 
 if horizon is big enough. 
 
@@ -2806,10 +2806,10 @@ that will happen. We call this divergence of traces(p.\pageref{sec:Divergence});
 %%TODO move it to DivergenceModelChapter
 %%BEGIN
 UCT uses an internal model emulating the real world model in order to explore the choices that must offer 
-to the agent. The model that UCT executes in this decision making proces does not take into account two 
-important points of the mechanics of the environment. First, each timestep, resources authomaticaly grow or 
-decrese depending on the season of the year; they do not remain constant. Second, the agent is not aware of 
-any neighbour present in its homerange. 
+to the agent. The model that UCT executes in this decision making process does not take into account two 
+important points of the mechanics of the environment. First, each time-step, resources automatically grow or 
+decrease depending on the season of the year; they do not remain constant. Second, the agent is not aware of 
+any neighbour present in its home-range. 
 
 UCT launches a path from the root node to one leave node generating a search tree on-the-fly. There will be 
 as many shots as the amount assigned to the width parameter. Each step, from one parent node to a child node, 
@@ -2841,15 +2841,15 @@ Experiments in this section test the benefit from adding biomass growth predicti
 to bad biomass estimation in the planning process. 
 Equivalent scenarios were applied to search for a way to solve the phenomena announced above. 
 The experiment tests one single agent for a year against three different rainfall conditions. The first
-condition uses 500 rainfall units to set an environment that will ensure a noticiable amount of starvation 
+condition uses 500 rainfall units to set an environment that will ensure a noticeable amount of starvation 
 rate. The next scenario has a rainfall of 1500 units to have an intermediate stage between the first and
 the third which reproduces a mean rainfall similar to Gujarat, 4000 units.
 %%plot description
 The experiments register the starvation rate as an indicator of better performance of the agent that applies
-biomass prediction. We have labelled the agents as Guessing and NoGuessing in the plot, the former 
+biomass prediction. We have labeled the agents as Guessing and NoGuessing in the plot, the former 
 corresponding to biomass prediction to avoid divergence, and the later corresponding to not applying biomass
 growth prediction. For rainfall with 500 units, there are few resources and it is hard to mark a difference 
-because there is no space to exhibit a big explotation of the terrain 
+because there is no space to exhibit a big exploitation of the terrain 
 (Fig.~\ref{fig:guessVSnoguess_clim500.png}). With rainfall 1500 the improvement is less than 1\% 
 (Fig.~\ref{fig:guessVSnoguess_clim500.png}); and with 4000 units of rainfall the starvation falls only a 5\% 
 of the value (Fig.~\ref{fig:guessVSnoguess_clim500.png}), from 1.55 to 1.475 as an average.
@@ -2862,7 +2862,7 @@ in solving the biomass divergence.
 \centering
 \includegraphics[height=8.2cm]{figures/expm/guessVSnoguess_clim500.png}
 \caption{Mean Starvation days for an agent that predicts biomass grow and decrease versus
-an agent that does not applies a grow/decrease factor during the decision making. Experiment 
+an agent that does not apply a grow/decrease factor during the decision making. Experiment 
 run with 500 units of rainfall. }
 \label{fig:guessVSnoguess_clim500.png}
 \end{figure}
@@ -2871,7 +2871,7 @@ run with 500 units of rainfall. }
 \centering
 \includegraphics[height=8.2cm]{figures/expm/guessVSnoguess_clim1500.png}
 \caption{Mean Starvation days for an agent that predicts biomass grow and decrease versus
-an agent that does not applies a grow/decrease factor during the decision making. Experiment 
+an agent that does not apply a grow/decrease factor during the decision making. Experiment 
 run with 1500 units of rainfall. }
 \label{fig:guessVSnoguess_clim1500.png}
 \end{figure}
@@ -2880,26 +2880,26 @@ run with 1500 units of rainfall. }
 \centering
 \includegraphics[height=8.2cm]{figures/expm/guessVSnoguess_clim4000.png}
 \caption{Mean Starvation days for an agent that predicts biomass grow and decrease versus
-an agent that does not applies a grow/decrease factor during the decision making. Experiment 
+an agent that does not apply a grow/decrease factor during the decision making. Experiment 
 run with 4000 units of rainfall. }
 \label{fig:guessVSnoguess_clim4000.png}
 \end{figure}
 
 
 \subsection{Finding the limits to Improvement by Biomass Prediction}
-\label{sec:sectionNoDepletionExperiment}
+\label{sec:NoDepletionExperiment}
 
 %%quick descrip : 
 
 The results of the experiment in the previous section, contrary to the expected, do not show a substantial 
-improvement when the agent predicts biomass when compared to the agent that does not uses prediction. Clearly,
+improvement when the agent predicts biomass when compared to the agent that does not use prediction. Clearly,
 the depths of exploration we use, three, six, ten days forward, do not allow to accumulate an excessive 
 divergence because there is not enough length in the trace. In particular, when the agent is at the 
 end of the year, when the agent exhibits a greater movement rate, fewer days are spent camping in the same 
 settlement. The resources in the location are perceived along a very short segment of time. And reasoning
 about resources in a small window of time should not involve critical divergent traces. But on the other hand,
 decline of biomass moves forward and it is logical to expect that without biomass-prediction the planning
-proces will suggest to move when it is too late and you will fall into the error of waiting too much in a
+process will suggest to move when it is too late and you will fall into the error of waiting too much in a
 poor resource area. One of the two possibilities must be discarded. We could think that the procedure for 
 predicting biomass is not sufficiently accurate or incorrectly focused. 
 
@@ -2914,7 +2914,7 @@ will be related to why the mdp agent cannot get nearer the lower bound. The modi
 The normal agent receives normally distributed reward from the forage actions in the real world, and in the 
 planning process. When a move action is launched the reward of the day is halved compared to a foraging 
 day. The gap agent does not have stochasticity in rewards and receives full reward from foraging actions all 
-days. This modifications are related to uncertainty in reward and uncertainty in appropiate election for a 
+days. This modifications are related to uncertainty in reward and uncertainty in appropriate election for a 
 move action. Foraging actions without stochasticity produce better prediction of rewards in the planning part 
 of the agent. Removing uncertainty and seeing that the starvation rate for the gap-agent matches the 
 starvation rate of the no-depletion agent will tell us that the gap can be explained by uncertainty non 
@@ -2935,20 +2935,20 @@ is bonded to the movement action. The reward is half of a normal forage action t
 day where only forage happens. It is critical to choose the step to launch the movement and minimize the 
 effect of receiving only half of the reward. It is the most demanding feature for the planner apart of moving 
 the agent towards richer areas as a long term effect of the drift of the movement. The artificial ideal planner 
-would be imagined free from bad alocated move actions. The artificial ideal planner is imagined as proposing 
+would be imagined free from bad allocated move actions. The artificial ideal planner is imagined as proposing 
 always movement actions in the time step when they would not increase the starvation of the agent. So that is 
 what happens when you do not apply the depletion of resources to the environment after the execution of a 
 forage action. Because the resources stay unaltered as if the patch were new and the agent just would have 
-arrived in the last timestep. And then it seems that the sequence of actions does not disturb the flow of 
+arrived in the last time-step. And then it seems that the sequence of actions does not disturb the flow of 
 resources that the agent retrieves. It seems as if the planner would have been selecting each time the perfect 
-action to be launched. Either a normal foraging action or a move action in the time step before the system reaches 
+action to be launched; either a normal foraging action or a move action in the time step before the system reaches 
 a state low in resources, when the half forage does not cover the survival threshold. 
 Why do we not fill the environment with infinite resources, and then have forage actions returning always
 plenty of resources? The infinite resources setting would not exhibit phenomena like the ideal planner in the 
 original world model. There are seasons in the year, at the beginning and at the end, where biomass dynamics 
 produce a low load of resources in the environment. Applying infinite resources masks this phenomena and also
 would produce a too low lower bound. Doing no-depletion consists in reading the amount of resources, apply the 
-foraging formula and give the result to the agent without updating the world. But this does not masks the 
+foraging formula and give the result to the agent without updating the world. But this does not mask the 
 effect of biomass dynamics. Because in the poor days of the year the formula of foraging returns low rewards.
 At the beginning of the year there will be low resource because biomass has not fully grow and the end of the 
 year there will be less resources because of the effect of biomass decline procedure. The most perfect planner 
@@ -2956,7 +2956,7 @@ would find this situation, and could not give to the agent a recommendation that
 resources than the low amounts present in the poor days of the year. The ideal planner conceptualization must 
 not avoid the increase of starvation in these cases. It can manage to reduce it to a minimum but can not keep 
 it to level zero for ever and for any condition. This discards the option of using infinite resources as a 
-medium to produce a lower bound to starvation rates, and strenghten the use of no-depletion.
+medium to produce a lower bound to starvation rates, and strengthen the use of no-depletion.
 
 %%Settings : 
 
@@ -2974,7 +2974,7 @@ rain units .}
 \begin{figure}[!htb]
 \centering
 \includegraphics[height=12.2cm]{figures/expm/gapBoxplotsClimate500}
-\caption{Mean Starvation days at end of the year boxplots for ``No-Depletion'' experiment 
+\caption{Mean Starvation days at end of the year box-plots for ``No-Depletion'' experiment 
 with 500 rain units at the monsoon season.}
 \label{fig:gapBoxplotsClimate500}
 \end{figure}
@@ -2983,7 +2983,7 @@ with 500 rain units at the monsoon season.}
 \begin{figure}[!htb]
 \centering
 \includegraphics[height=12.2cm]{figures/expm/gapBoxplotsClimate1500}
-\caption{Mean Starvation days at end of the year boxplots for ``No-Depletion'' experiment 
+\caption{Mean Starvation days at end of the year box-plots for ``No-Depletion'' experiment 
 with 1500 rain units at the monsoon season.}
 \label{fig:gapBoxplotsClimate1500}
 \end{figure}
@@ -2992,18 +2992,18 @@ with 1500 rain units at the monsoon season.}
 \begin{figure}[!htb]
 \centering
 \includegraphics[height=12.2cm]{figures/expm/gapBoxplotsClimate4000}
-\caption{Mean Starvation days at end of the year boxplots for ``No-Depletion'' experiment 
+\caption{Mean Starvation days at end of the year box-plots for ``No-Depletion'' experiment 
 with 4000 rain units at the monsoon season.}
 \label{fig:gapBoxplotsClimate4000}
 \end{figure}
 
 
 Simulations show indeed that the yearly profile of the starvation rate for the gap agent follows quite 
-accuaretely the profile of the no-depletion agent. Most of the simulations show the pattern of the figure 
+accurately the profile of the no-depletion agent. Most of the simulations show the pattern of the figure 
 when overlapping the Starvation measure for mdp, no-depletion and gap agents corresponding to the same 
 simulation seed (Fig.~\ref{fig:gapExplainClimate500}).  
 
-For the different rainfall conditions we kept finding the same result. Boxplots show that the modifications
+For the different rainfall conditions we kept finding the same result. Box-plots show that the modifications
 used in the gap agent approach the performance to the lower bound ( Fig.~\ref{fig:gapBoxplotsClimate500},
 Fig.~\ref{fig:gapBoxplotsClimate1500},Fig.~\ref{fig:gapBoxplotsClimate4000} ). 
 
@@ -3012,7 +3012,7 @@ In conclusion, there is little space to consider the possibility that more effor
 prediction would reduce the starvation of the agent. The area enclosed between both starvation profiles, the 
 normal agent's and the no-depletion agent's is something we must assume due to the design and properties we 
 chose to design the model. It is up to future steps to push in the problem of divergence through introducing 
-multiagency and neighbour awareness.
+multi-agency and neighbour awareness.
 
 
 %\pagebreak[4]
@@ -3046,11 +3046,11 @@ runs start with the agent located in the upper left of the map, with two adults 
 are configured with the following combinations of parameters, horizon 10 plus width 1000, horizon 3 plus 
 width 500, horizon 6 plus width 1000 and horizon 6 plus width 500.
 We simulate runs with one single agent because do not want the noise introduced by other neighbours in the
-analisys of the agent getting on in the foraging and migration activities.
+analysis of the agent getting on in the foraging and migration activities.
 
 The data from the experiment is distributed producing a figure for each different rainfall.
-Each climatic condition contains a set of juxtaposed boxplots. 
-Each boxplot is the statistical summary of starvation rate for one configuration of agent engine. The 
+Each climatic condition contains a set of juxtaposed box-plots. 
+Each box-plot is the statistical summary of starvation rate for one configuration of agent engine. The 
 adjacent placement allows us to compare the deviation of the distributions and their averages.
 
 \begin{figure}[!htb]
@@ -3083,7 +3083,7 @@ MDPs exhibit a better performance than other agents. In the long term they will 
 Also, we have been surprised by the better performance of the Random agent versus the rule based. We can offer an explanation to this based on movement rate and penalty due to movement. Agents produce chains of movement actions and foraging actions. 
 One foraging action occupies the working time of a day. One movement action produces movement and some resource retrieval that could be understood as foraging along the trip path. We have represented it as a half reward from a secondary foraging action bonded to the movement action that take place in the same day.
 
-It is critical to know the correct timelapse when to move the settlement: The day you move you will only retrieve half of the resources you could take in a normal day of only foraging. As days pass you deplete your home range till the time step that you cannot make a living from the resources around home. 
+It is critical to know the correct time-lapse when to move the settlement: The day you move you will only retrieve half of the resources you could take in a normal day of only foraging. As days pass you deplete your home range till the time step that you cannot make a living from the resources around home. 
 For the rule based agent that is the condition to move. If you move when resources are under your survival threshold the “half reward” associated to a movement day will be much more below your survival threshold; and it is a severe penalty. 
 If you tune the decision rule to avoid an extreme depletion of the surrounding environment you will have an agent that moves too much which leads to half- reward penalty accumulation.
 
@@ -3096,7 +3096,7 @@ If you tune the decision rule to avoid an extreme depletion of the surrounding e
 \end{figure}
 
 
-The figure (Fig.~\ref{fig:markov_move}) shows a tipical profile of mean starvation along a year for three kind 
+The figure (Fig.~\ref{fig:markov_move}) shows a typical profile of mean starvation along a year for three kind 
 of agents, a rule based one, an mdp agent, an the one called hypothesis. Starvation increases in the firsts 
 days of the year from zero to some value that will be hold till the critical part of the year. The resource 
 dynamics depends on the first season of monsoon. At the beginning it rains but there are no resources. It 
@@ -3111,18 +3111,18 @@ will receive the penalty of the half-forage. By the other hand, the mdp agent ca
 ones that will make arise the penalty associated to movement actions it is not advisable to move. The mdp 
 agent waits. For the central part of the year there are enough resources and both type of agents can manage 
 well. But again, when there are low resources around the rule based agent will not behave optimally. In a 
-first aproach one could think that you cannot scape from starvation, there are low resources like at the 
-beginning of the year. Au contraire,the pressence of plateaus tagged in the profile of the starvation indicate 
+first approach one could think that you cannot scape from starvation, there are low resources like at the 
+beginning of the year. On the contrary, the presence of plateaus tagged in the profile of the starvation indicate 
 that for some steps the agent does not see its starvation rate increased, so there are enough resources to 
 survive for some days. The plateaus are correlated with the movement actions. And each time we have seen a 
 change from one plateau to another one there have been movement. These increments come from the penalty 
-associated to half rewards the days you move. The rule based agent waits til it is too late and there so low 
+associated to half rewards the days you move. The rule based agent waits till it is too late and there so low 
 resources that moving implies to receive a half-reward under the survival threshold of resources. 
-The mdp agent can manage to choose the timestep to move minimizing the penalty and moving before it is too 
+The mdp agent can manage to choose the time-step to move minimizing the penalty and moving before it is too 
 late while there are enough resources and a half-forage will not be as harmful as if you have waited too much. 
 We checked this hypothesis extending the rule based agent with two new rules. The rules are inspired in the 
 mistakes shown by the rule based agent. The first extra rule says “At the beginning of the year do not move 
-til timestep 7”. The second rule says “If last move action was launched more then 5 steps ago, move now”. 
+till time-step 7”. The second rule says “If last move action was launched more then 5 steps ago, move now”. 
 The extended rule agent corresponds to the dotted profile in the figure(Fig. ~\ref{fig:markov_move}) with the label “hypothesis”. 
 It is not our aim to enhance the rule based agent adding more and more rules, because many times any set of 
 rules will have a fail point that can be triggered by the changing conditions of the environment. But the 
@@ -3132,7 +3132,7 @@ And this is a by-product of putting side by side different decision making engin
 
 Besides, we also observed that configurations with horizon 6 in mdp agents performed like horizon 10 
 configurations. Our hypothesis is that after doing some statistics the size of time lapse between consecutive
-move actions is aproximately five or six steps in mean, or even less for the last days of the year, when resources are more scarce. It seems that the optimal time to exploit resources in a patch is no more than four
+move actions is approximately five or six steps in mean, or even less for the last days of the year, when resources are more scarce. It seems that the optimal time to exploit resources in a patch is no more than four
 or five days, then, if you exceed this bound you must leave launching a move action (as previously mentioned). 
 The decision process must foresee the best time step to move paying the minimum penalty. And if the horizon 
 covers such time lapse between move actions  it will cover the feasible days inside the set to choose the day
@@ -3173,7 +3173,7 @@ six and ten.The more two density plots match the more we could guess that the di
 \end{figure}
 
 
-The plots strenghten the evidence that configurations horizon 6 and horizon 10 besides having similar starvation and hence, survival performance, they have plausible matching distributions of lengths.
+The plots strengthen the evidence that configurations horizon 6 and horizon 10 besides having similar starvation and hence, survival performance, they have plausible matching distributions of lengths.
 
 
 \subsection{Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}
@@ -3182,13 +3182,13 @@ The plots strenghten the evidence that configurations horizon 6 and horizon 10 b
 The second experiment extends the simulation from two year runs to ten year runs. 
 A longer run will make explicit the response to accumulated changes through the years, mainly, the dynamics of individuals that conform the agent, as new children are born or some die due to starvation or the demographic mortality basic rules. 
 %%Settings : 
-We replicate the settings and configurations used in the first experiment, except that the random agent is not taken into acccount; we focus on comparing the drift of the classical rule agent with the mdp agent.
+We replicate the settings and configurations used in the first experiment, except that the random agent is not taken into account; we focus on comparing the drift of the classical rule agent with the mdp agent.
 
 %%describe plots :
 
 The ten year trace (Fig.~\ref{fig:popClim500_BW} for a rainfall of 500 units, Fig.~\ref{fig:popClim1500_BW} for a rainfall of 1500 units, Fig.~\ref{fig:popClim4000_BW} for a rainfall of 4000 units), contains a set of cells with a number indicating the year on top of them.
-For each year there will be a set of boxplots of the mean of starvation rates. The Y axis is the measure for starvation and the X axis contains the spread of configurations evaluated. The boxplots follow the order in the legend.
-The top most item of the legend, configuration ''h3\_w100'' ( horizon 3, width 100 ) corresponds to the most left boxplot in a year cell. As we go down in the legend we find the configurations that appear in a sorted manner from left to right. 
+For each year there will be a set of box-plots of the mean of starvation rates. The Y axis is the measure for starvation and the X axis contains the spread of configurations evaluated. The box-plots follow the order in the legend.
+The top most item of the legend, configuration ''h3\_w100'' ( horizon 3, width 100 ) corresponds to the most left box-plot in a year cell. As we go down in the legend we find the configurations that appear in a sorted manner from left to right. 
 
 \begin{figure}[!htb]
 \centering
@@ -3212,24 +3212,25 @@ The top most item of the legend, configuration ''h3\_w100'' ( horizon 3, width 1
 \end{figure}
 
 
-Boxplots for configurations from mdp agents appear clustered in two sets. The horizon 3 set and the  horizon 6 and 10 set. As we expected the rule based agent falls apart and exhibits a very different trend from the mdp agents. For the scenario with rainfall set to 500 the mdp agents thrive towards to an increase of population that maybe will settle in the carrying capacity. 
-But, the rule agent follows a decrease that by the last year gives us a first case that does not see its agents alive, the black dot under the rule based's boxplot at level zero. We could conclude that with enough time the rule based group will collapse although the decrease rate is asymptotic to forty. For the plot with rainfall 1500, things get easier and probably the rule based agent group would not collapse and remain stable around a population of one hundred fifteen.  
+Box-plots for configurations from mdp agents appear clustered in two sets. The horizon 3 set and the  horizon 6 and 10 set. As we expected the rule based agent falls apart and exhibits a very different trend from the mdp agents. For the scenario with rainfall set to 500 the mdp agents thrive towards to an increase of population that maybe will settle in the carrying capacity. 
+But, the rule agent follows a decrease that by the last year gives us a first case that does not see its agents alive, the black dot under the rule based's box-plot at level zero. We could conclude that with enough time the rule based group will collapse although the decrease rate is asymptotic to forty. For the plot with rainfall 1500, things get easier and probably the rule based agent group would not collapse and remain stable around a population of one hundred fifteen.  
 The third scenario is very friendly for agents, there are enough resources for groups of one hundred agents and all the types we are comparing evolve to greater sizes in their populations. The rule agents can not enjoy a same growing rate as the mdp ones.
-Let's see that as we increase rainfall the deviation in the boxplots of mdp agents decreases. There are more resources and it masks the depletion of the other agent for some agent that most calculate its plan. This reduces uncertainty and stochasticity in the rewards and starvation rates.
+Let's see that as we increase rainfall the deviation in the box-plots of mdp agents decreases. There are more resources and it masks the depletion of the other agent for some agent that most calculate its plan. This reduces uncertainty and stochasticity in the rewards and starvation rates.
 
 %%brief conclussion:
-The second experiment is the most critical one with its results when comparing two different approches to model the decision making module of agents. Configurations for mdp agents, when compared, gives us quantitative differences. We discover trends in the same direction with more or less intensity. And maybe it's sure we can find many systems sensitive to the mdp configuration parameters. 
-And would find runs producing different trends and conclussions for every configuration. But for the system we have been studying, the scale of differences discovered between rule based agents and mdp agents in our experiments, it points that maybe for some systems equivalent to ours, when we introduce the rule based agent or the mdp agent, the drift and the conclussions will be qualitatively different. 
-The dynamic of the mdp group is growing while for the rule based agent it is an stable or collapsing dynamic.
+The differences between the classical approach and the AI approach arise more explicitly in experiment number two. Indeed, one of the scenarios
+could allow to predict some collapsing dynamic or low recuperation rate in one type of agents while the other agents exhibit some proliferation.
+Configurations for mdp agents, when compared, gives us quantitative differences. We discover trends in the same direction with more or less intensity. And maybe it is sure we can find many systems which are sensitive to the mdp configuration parameters where we would find runs producing different trends and conclusions for every configuration with a soft slope from the range of classical agents performance to sophisticated agents performance. But for the system we have been studying, the scale of discovered differences between rule based agents and mdp agents points out that maybe for some systems equivalent to ours, when we introduce the rule based agent or the mdp agent, the drift and the conclusions will be qualitatively different. And it marks a border between classical rule agents and the mdp agents.
+
 
 %% ¿Comentar el cost computacional?
 
 \subsection{Experiment 3: Width Exploration}
 \label{sec:expEcsi3}
 %%quick descrip : 
-The third experiment explores configurations for mdp and its performance in optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision proces. 
+The third experiment explores configurations for mdp and its performance in optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision process. 
 Horizon sets the amount of steps you look in the future; and width sets the amount of hypothetical traces explored to get an statistical sample of eventual outcomes and distinguish between good actions from bad to apply in the next time step. 
-This exploration is needed  to detect sensitivies and interactions between horizon, width and the starvation rates for the sake of the tests in the evaluation of the mdp approach versus the rule based model. 
+This exploration is needed  to detect sensitivities and interactions between horizon, width and the starvation rates for the sake of the tests in the evaluation of the mdp approach versus the rule based model. 
 To test horizons with values one and  two is out of discussion because you cannot take all the advantage of the planning engine. And horizons above six we have seen are of great computational time expenditure. Even horizon six demands big amounts of hours making simulations non reasonable when applied to ranges in the scale of decades and hundreds of years.
 
 %%Settings : 
@@ -3263,12 +3264,11 @@ We represent in the plots (Fig.~\ref{fig:ecsi3_clim500}, Fig.~\ref{fig:ecsi3_cli
 
 
 A first approach based on the shallow evidence restates the observations from the past experiments. Horizon 6 and 10 go coupled and horizon 3 produces a lower performance of the survival skills. As rainfall increases the variability in the distribution of starvation rate decreases as decreases uncertainty and low resource states in the simulation.
-It seems roughly that there is no difference when the agent uses one width or another for some given horizon. But if we look back to experiment two, they appear; it is caused by the pressence of other agents who introduce uncertainty. 
-When the vicinity displays greater variability in resource disponibility due to the other's activities it results in having a greater range of possible states to evaluate. To explore a bigger set and filter worthy trajectories from bad ones requires to increase the width to ensure a greater statistical significance when selecting and discarding trajectories. 
+It seems roughly that there is no difference when the agent uses one width or another for some given horizon. But if we look back to experiment two, they appear; it is caused by the presence of other agents who introduce uncertainty. 
+When the vicinity displays greater variability in resource availability  due to the other's activities it results in having a greater range of possible states to evaluate. To explore a bigger set and filter worthy trajectories from bad ones it requires to increase the width to ensure a greater statistical significance when selecting and discarding trajectories. 
 And the plots from experiment two show that agents with greater width benefit from it.
 
-The second point, from the technical point of view, is that if with a same width with diferent horizons, we achieve same statistical results for the output variables in the system (e.g. starvation rate), we could extract the same conclussions. Then, the model would be statistically equivalent  under the simulated scenario and hence we could choose the configurations that imply less computational power to run cheaper and longer simulations.
-
+The second point, from the technical point of view, is that if with a same width with different horizons, we achieve same statistical results for the output variables in the system (e.g. starvation rate), we could extract the same conclusions. Then, the model would be statistically equivalent  under the simulated scenario and hence we could choose the configurations that imply less computational power to run cheaper and longer simulations.
 
 %%brief conclussion:
 
@@ -3280,16 +3280,26 @@ For environments with no indirect competition the widths we have applied for eac
 
 \subsection{Conclusions}
 
-Repetir en plan summary les observacions clau dels experiments.
+\begin{enumerate}
 
-Una mentalitat greedy en el disseny de regles pot fer escapar detalls I tenir un agent incomplert.
-Un mateix escenari pot tenir fases on el requeriment de comportament sigui el contrari
-d'una a un altre : en els primers dies crítics del any no et moguis; al final del any no esperis
-massa, move the agent often. I aquest és el punt d'adaptabilitat on el rule based s'encalla.
+	\item summary of key evidences and conclusions from the experiments 1, 2, and 3.
+
+	\item Una strategia basada en regles greedy pot fer escapar detalls i fer acabar dissenyant un agent poc adaptat.
+	Un mateix escenari pot tenir fases on el requeriment de comportament sigui el contrari d'una a un altre; e.g. en els primers 
+	dies crítics del any no et moguis; al final del any no esperis massa, move the agent often. 
+	I aquest és el punt d'adaptabilitat on el rule based s'encalla.
+	
+	\item Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, 
+	i com horizon 6 es comporta bastant semblant a horizon 10 podríem dir que s'ha arribat al punt de saturació,
+	més horizon no reportaria un benefici tant gran o que pogués aportar noves observacions i patrons a la 
+	comparativa. Esmentant que queda prou reflexat amb aquests paràmetres que hi ha una diferència en l'us de regles versus 
+	planning. ( l'experiment d'exploració de widths vs horizons ens donarà la última paraula)
 
 Com es constata al experiment 2 l'agent rule based segueix una trajectoria oposada. S'acosta a un posible 
 colapse futur mentre els agents mdp es mantenen prou be i profiliferen.
 
+\item \textit{Una reflexio sobre agafar la AI i colocar-la en un mark diferent.}
+	By the way, AI was born to emulate human performance in intelligent tasks. But it does not mean AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgment. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, 
 i com horizon 6 es comporta bastant semblant a horizon 10 podríem dir que s'ha arribat al punt de saturació,
 més horizon no reportaria un benefici tant gran o que pogués aportar noves observacions i patrons a la 
@@ -3340,6 +3350,22 @@ encompass a behaviour that will show succesful, reasonable and or realistic deci
 By the way, AI was born to emulate human performance in intelligent tasks. But it does not means AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
 \subsection{Future Work}
+
+\end{enumerate}
+
+\subsection{Future Work}
+
+\begin{enumerate}
+
+	\item Introduce multi-agency.
+	
+	\item Extrude UCT for Learning and Pattern Discovery	
+	
+	\item Learn social, foraging and migration rules from the stochastic explorations of UCT.
+	
+\end{enumerate}
+
+
 
 The current state of the Gujarat project has the principal building blocks to follow its schedulling. 
 The project will keep advancing through different parallel front lines in charge of subgroups of members of Gujarat case study. 
