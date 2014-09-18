@@ -3309,28 +3309,28 @@ planning.
 
 
 
-\chapter{Conclussions and Future}
+\chapter{Conclusions and Future}
 
 This master thesis reflects part of the experience of my contribution to Gujarat Project in
 its first stages. This part of the project had as objectives to find an stable model to begin
-study ressilience of HG and AP in semi-arid environments, and the possibilities offered by the
+study resilience of HG and AP in semi-arid environments, and the possibilities offered by the
 introduction of sophisticated decision making engine in the agents populating the simulation.
 
-The main hypothesis of HG ressilience, in comparasion to other cases where they dissapeared at 
+The main hypothesis of HG resilience, in comparison to other cases where they disappeared at 
 greater pace, is about climate variations and hard environmental conditions.
 The model has grown from a toy model based on Sugarscape\cite{EpsteinAxtell}. The initial prerequisite
 was to tune the model towards a stable set of conditions. Experts selected the set of conditions 
-for weather parameters and associated biomass from anthopological and climatic registers that would 
+for weather parameters and associated biomass from anthropological and climatic registers that would 
 allow a basic degree of stability. This stability floor must be altered applying variations in rain and
 other future factors to be introduced. The variability and extreme values induce stress in the 
-environment and will make more explicit the factors where we can asses the ressilience of HG in comparison AP. We 
-can say we have achieved the stability basic configuration of the environment. Agents survive, reach a carrying capacity and keep it along the generations. The system has plausible enviromental conditions and behaviour.
+environment and will make more explicit the factors where we can asses the resilience of HG in comparison AP. We 
+can say we have achieved the stability basic configuration of the environment. Agents survive, reach a carrying capacity and keep it along the generations. The system has plausible environmental conditions and behaviour.
 
 A very important component in HG social organization is environmental information sharing. This feature
-is introduced to add another layer to the mechanisms of ressilience of HGs. Anthopologists in their
+is introduced to add another layer to the mechanisms of resilience of HGs. Anthropologists in their
 field work have observed it is an important and necessary activity in the HG daily activities. 
 Information Sharing has been tested in three different scenarios and has shown positive results that
-confirm its a necessity in the model. Sumarizing, bounded knowledge plus information sharing approach 
+confirm its a necessity in the model. Summarizing, bounded knowledge plus information sharing approach 
 the agents to omniscient mind. This simple statement entails a question concerning the always present issue 
 of simple models, throughput and efficiency. Although this is not place to ask it, and surely the project will end up providing evidences to stick to information sharing, one would dare to say that the model could be simplified
 removing information sharing and following Ockham's razor running a lighter model applying omniscient
@@ -3341,12 +3341,12 @@ simulation of a millennia in less than two weeks of CPU will allow to detect and
 of slow movement. If the simulation is not long enough you do not give time to the system to develop many
 effects that in real world span centuries and millennia.
 
-The conclussions about introducing AI and more sophisticated techniques in social science simulation receive
-the confirmation for its use from two points. The empirical evidence show that sophisticated agents outperfom
-classical agents in their evolution and response to challenges. The second is that modeling requierements of this 
+The conclusions about introducing AI and more sophisticated techniques in social science simulation receive
+the confirmation for its use from two points. The empirical evidence show that sophisticated agents outperform
+classical agents in their evolution and response to challenges. The second is that modelling requirements of this 
 project force us to use AI tools to represent agents behaviour. There are many details and relationships.
 The environment is very changing due to the mutual interaction of agents. And simple classical models cannot 
-encompass a behaviour that will show succesful, reasonable and or realistic decisions under this environment.
+encompass a behaviour that will show successful, reasonable and or realistic decisions under this environment.
 By the way, AI was born to emulate human performance in intelligent tasks. But it does not means AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
 \subsection{Future Work}
@@ -3367,11 +3367,11 @@ By the way, AI was born to emulate human performance in intelligent tasks. But i
 
 
 
-The current state of the Gujarat project has the principal building blocks to follow its schedulling. 
+The current state of the Gujarat project has the principal building blocks to follow its scheduling. 
 The project will keep advancing through different parallel front lines in charge of subgroups of members of Gujarat case study. 
 \begin{enumerate}
 
-\item AP Agents have their development in a very advanced phase. The decission making for APs will introduce
+\item AP Agents have their development in a very advanced phase. The decision making for APs will introduce
 planning at different scales. HGs launch actions that are resolved in one day. Launch, effect, reward
 happen in the same time step. But for APs the action of preparing a field for crop produces the reward
 two seasons later. As APs also have one-day-atomic actions the planner will manage short-term and long-term 
@@ -3392,7 +3392,7 @@ charge of two members of the Gujarat project with long experience in cultural tr
 
 \begin{enumerate}
 
-	\item Introduce multiagency.
+	\item Introduce multi-agency.
 	
 	\item Extrude UCT
 	
@@ -3416,7 +3416,7 @@ Social Science Models can be implemented with a great number of optional tools a
 For small models or prototypes there are case-tools and graphical environments that 
 integrate a designer and an internal layer containing and interpreter. The model is executed
 by the interpreter it in some virtual machine. When the model demands high computational 
-requierements it is implemented with a procedural language like C++ or Java. To that end many 
+requirements it is implemented with a procedural language like C++ or Java. To that end many 
 libraries have been developed to offer a framework of objects and procedures common to most of the simulations.
 
 \section{Pandora}
@@ -3426,13 +3426,13 @@ in Simulpast project. The group has developed a library for agent based simulati
 trace visualization. Simulpast project simulations and the library Pandora are highly interrelated. The use 
 of Pandora and Mare Nostrum allowed to aim to the purposes and questions stated in the case study of Gujarat.
 
-The aim was to produce an internal set of classes from scratch to get free of design decissions of other known packages used in agent simulation. The library Pandora has its strong point in parallelism. Pandora has been designed to get maximum profit from OpenMP threads and MPI layer. 
+The aim was to produce an internal set of classes from scratch to get free of design decisions of other known packages used in agent simulation. The library Pandora has its strong point in parallelism. Pandora has been designed to get maximum profit from OpenMP threads and MPI layer. 
 
-Pandora executes its simulations aplying data parallelization\ref{fig:Pandora1.jpg}. The space representation of the world is split in parts that will be in charge of a cpu-core. Supercomputers arrange their CPUs in blades. Some blades
+Pandora executes its simulations applying data parallelization\ref{fig:Pandora1.jpg}. The space representation of the world is split in parts that will be in charge of a cpu-core. Supercomputers arrange their CPUs in blades. Some blades
 contain two, some other four. CPUs in a blade share the same memory. Pandora makes the most of this architecture.
 The blade memory has the representation of the world. Each CPU processes the needed calculi for decision
-making ocurring in its slice of world. When an agent traverses from one slice to another the CPU exchange
-information through MPI. This comunication events happen inside of the blade, the simulation is no spread
+making occurring in its slice of world. When an agent traverses from one slice to another the CPU exchange
+information through MPI. This communication events happen inside of the blade, the simulation is no spread
 along the rack of blades of the supercomputer.
 Parallelizing the world this way produces a possible problem of corruption of data. Agents decide their next action
 on the information taken from their vicinity. The action can alter the state of some piece of the world in this
@@ -3440,10 +3440,10 @@ vicinity. The issue arises when a agent is near enough of the bound that separat
 adjacent one. An agent cannot interfere with agents in the same world slice. The assigned CPU is dedicated to
 the current agent, it is not possible data corruption. But if an agent can see and alter a location in another
 slice will collide with the agents of the adjacent world slice. The solution is to apply a next level of slicing.
-Each slice is again sliced in four. Each CPU visits the subslices in the same order. So all CPUs are working 
-on the same subslice $\sigma_i$. World subslices with same id are not touching each other so data corruption
-is avoided with the constraing that the radius of the vicinity of an agent is less the half the side of a subslice,
-otherwise an agent in subslice 0 would reach cells in subslice 1 also reachable to an agent in the subslice 0
+Each slice is again sliced in four. Each CPU visits the sub-slices in the same order. So all CPUs are working 
+on the same sub-slice $\sigma_i$. World sub-slices with same id are not touching each other so data corruption
+is avoided with the constraint that the radius of the vicinity of an agent is less the half the side of a sub-slice,
+otherwise an agent in sub-slice 0 would reach cells in sub-slice 1 also reachable to an agent in the sub-slice 0
 of the neighbour slice. 
 
 
@@ -3462,7 +3462,7 @@ of the neighbour slice.
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=45mm,keepaspectratio=true]{figures/Pandora2.jpg}}
-\caption{ World subslicing.}
+\caption{ World sub-slicing.}
 \label{fig:Pandora2}
 \end{figure}
 
@@ -3495,7 +3495,7 @@ easy to tackle with low level details to apply performance tricks.
 \\
 \item[DMason]
 DMASON is the Distributed Multi-agents simulation toolkit, based on Mason. As in Repast-HPC, users can create an ABM in MASON and then use the framework to easily distribute it over many machines. It provides a partitioning functionality that self-balances regions and requires and all-to-all communication. As opposite to Pandora and Repast-HPC, partitioning of the field is decided by the user in advance and, in our opinion, may cause an additional unbalance. Agents can migrate from one region to other and, therefore, it does not guarantee load balancing. However, it implements a simple balancing mechanism: when a region is overloaded it decides to split itself in smaller regions, dividing consequently the amount of agents in each of these regions. To deal with boundaries problems,
-neighboring regions communicate before each simulation step. DMASON is developed in Java and uses
+neighbouring regions communicate before each simulation step. DMASON is developed in Java and uses
 Java Message Service (JMS) for communication between workers.
 
 \item[GridABM]
