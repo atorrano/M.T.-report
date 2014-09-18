@@ -761,7 +761,7 @@ There is a set of key points that an agent should accomplish to go beyond a simp
 	\end{equation}
 	\item [Proactivity] It means anticipation, taking initiative, detect opportunities. This
 	could materialize in prediction of a future event an realize a set of a priori actions 
-	before it occurs. For instance, if you are modelling a population of farmers and agent A1 
+	before it occurs. For instance, if you are modeling a population of farmers and agent A1 
 	sees the state of low resources of its neighbour agent A2 at the end of the season. As 
 	a social action, A1 makes a present of food to A2 before it begins to starve or asks for
 	help. We also know that this kind of action will produce stronger bonds and could have their
@@ -822,7 +822,7 @@ state of the agent determine the actions and future internal state of the agent.
 The thermostat example contains an environment with a bounded and tractable number of states.
 Such situations can be solved with a direct implementation setting the bijective function 
 state - action with a table or with a limited number of rules.
-As complexity of modelled systems grows, the number of states and possibilities become
+As complexity of modeled systems grows, the number of states and possibilities become
 intractable. Theres no time nor space to specify each correspondence. The agents apply different 
 techniques for retrieving features and structure from the environment to proceed with the
 decision process from an abstraction to the action to perform \cite[ch.2]{RussellNorvig}.  
@@ -889,7 +889,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 	base. The perceptions from the environment become facts to add to the internal representation of
 	the environment. From this internal world model the agent can deduce trends for prediction besides
 	the next action to launch. A state of the environment or of the agent is specified. The agent must find 
-	the way to fulfil this within his reach of perceptions and actions. Desirable situations are sought, 
+	the way to fulfill this within his reach of perceptions and actions. Desirable situations are sought, 
 	called goals, that is environment states or agent states. 
 
 	Given some systems or situations, goals are non achievable from a single action execution. The agent 
@@ -904,7 +904,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		a logic of some level, CP0, CP1. Each new change in the knowledge base will allow to deduce
 		new facts from the status of the system to check against the goals and other issues the agent
 		is considering to produce an action coherent with the planning and the mechanics of the environment
-		to fulfil a new step to get nearer to the goals.
+		to fulfill a new step to get nearer to the goals.
 		%%TODO dibuix de la taula i els objectes mes la representacio interna : on(), above(),under()
 		The agent will use its knowledge base as a theory of the world and things plus the dynamic facts
 		that represent the volatile states.\\
@@ -1038,7 +1038,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 
 		%%Uncertainty(chap13 Russell... maybe ch16)
 		A pure logical agent can find a cul-de-sac on its deductions if the possible contingencies overcome
-		the reasoning to deduce the actions to fulfil the goal. These issues are what is called
+		the reasoning to deduce the actions to fulfill the goal. These issues are what is called
 		\textbf{uncertainty}. Uncertainty is the term used when there are many solutions that lead to the
 		goal or if the goal is something not sure to be achieved and the agent faces a choice with no 
 		success ensured. 
@@ -1067,9 +1067,9 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 			\begin{equation}
 			 u\ :\ E \rightarrow \ \mathbb{R}
 			\end{equation}
-		Utility functions map desired states to a quantitative dimension, a scoring. Utility ponderation 
+		Utility functions map desired states to a quantitative dimension, a scoring. Utility weighting 
 		allows to break ties in sub-goal selection. Utility functions will give extra heuristic information
-		about the likelihood achieving a goal. If the hunter agent has acces to two areas of hunting, $valley$
+		about the likelihood achieving a goal. If the hunter agent has access to two areas of hunting, $valley$
 		and $wood$ and is more likely to find dangerous predators in the $wood$ although the same preys can 
 		be found on both areas, the utility function would assign greater utility to the $valley$. Utility
  		provides a way in which the likelihood of success can be weighted against the importance of the goals.\\
@@ -1083,7 +1083,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		\textit{An agent is \textbf{rational} if and only if it chooses the action that yields the highest
 		expected utility, averaged over all the possible outcomes of the action.}\cite{RussellNorvig}.
 		This feature is interesting due to its fit in the Rational Choice Theory \cite{rationalchoicetheo} which tries to give a frame for the explanation of behaviours and decisions in an economical domain.
-		It is one of the justifications of using planning strategies in the agents we have developt.
+		It is one of the justifications of using planning strategies in the agents we have developed.
 		%TODO a la section de MDP fes una refer\`encia cap aqui
 		%\item[Utility and Planning]
 		%utility functions applied to runs... 
@@ -1108,7 +1108,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 
 \paragraph{Environment Features}
 
-The design of the agent is conditionated by what is considered ``the environment'' in the real system to model.
+The design of the agent is conditioned by what is considered ``the environment'' in the real system to model.
 It will facilitate or constraint the features and decisions in the development of the agent. Next, some common features that will guide in the characterization of the environment are enumerated \cite[section 2.3]{RussellNorvig}.
 
 \begin{description} 
@@ -1117,7 +1117,7 @@ It will facilitate or constraint the features and decisions in the development o
 		Most moderately complex environments (including, for example, the everyday physical 
 		world) are inaccessible.\\
 		The more accessible an environment is, the simpler it is to build agents to operate in it.
-		Accuracy and completeness about information retrieved is key to decission making.
+		Accuracy and completeness about information retrieved is key to decision making.
 		All the missing stretch must be supplied with uncertainty managing techniques.
 	\item [Deterministic vs non-Deterministic] As we have already mentioned, a deterministic
 		environment is one in which any action has a single guaranteed effect — there is no 
@@ -1150,7 +1150,7 @@ It will facilitate or constraint the features and decisions in the development o
 		Chess with a clock	& Fully & Strategic     & Sequential & Semi   & Discrete & Multi	\\ \hline
 		Poker			& Partially & Stochastic & Sequential & Static & Discrete & Multi	\\ \hline
 		Backgammon		& Fully & Stochastic    & Sequential & Static & Discrete & Multi	\\ \hline
-		Taxi driving		& Partially & Stochastic & Sequential & Dynamic & Continuons & Multi	\\ \hline
+		Taxi driving		& Partially & Stochastic & Sequential & Dynamic & Continuous & Multi	\\ \hline
 		Medical diagnosis	& Partially & Stochastic & Sequential & Dynamic & Continuous & Single	\\ \hline
 		Image-analysis		& Fully	& Deterministic & Episodic & Semi & Continuous & Single 	\\ \hline
 		Part-picking robot	& Partially & Stochastic & Episodic & Dynamic & Continuous & Single	\\ \hline
@@ -1190,33 +1190,33 @@ It will facilitate or constraint the features and decisions in the development o
 
 \subsection{Complex Systems}
 
-Complexity is a discipline that studies systems that cannot be studied through the analisys of its
-parts and the simple composition of those analisys. Usually, \textbf{reductionism} has coped with complicated systems
-where the supression of constituents does not change the main trend of its behaviour, and it is used to
+Complexity is a discipline that studies systems that cannot be studied through the analysis of its
+parts and the simple composition of those analysis. Usually, \textbf{reductionism} has coped with complicated systems
+where the suppression of constituents does not change the main trend of its behaviour, and it is used to
 work with simplified questions. Let's think for instance in a car which more or less keeps running although 
 you remove its seats, the doors, and the lights, to mention some. That is what could be called a complicated 
 system \cite{MillerPage2007}.
-There are systems where the interrelationship is so rich that supression of one part dismembers all the coherence
-of the system. Taking again the car exemple, if we think about the engine, the suppression of a most tiny
+There are systems where the interrelationship is so rich that suppression of one part dismembers all the coherence
+of the system. Taking again the car example, if we think about the engine, the suppression of a most tiny
 gear will change the things, everything will stop. Historically, those systems have been an issue that was 
 of concern to many disciplines, Economics, Physics and Biological sciences, that gave arise through an
 interdisciplinary effort to complexity science \footnote{here we are not talking about the computational
 concept of algorithm complexity.}  \cite{MelanieMitchell2009}. 
 Complex science tries to find out how the interactions of a set of constituents build a system that exhibits 
-adaptive traits, descentralized organization, and macroscale behaviour patterns.\\
+adaptive traits, decentralized organization, and macro-scale behaviour patterns.\\
 
 One of the most known systems studied by its complexity are ant colonies. The colony is formed by a limited range
-of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odor of the nest. Unloaded workers follow explorer's pheromons. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defense and many
-other adaptations to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an especific task. The colony is ductile, malleable. The ant 
+of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odor of the nest. Unloaded workers follow explorer's pheromones. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defense and many
+other adaptations to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an specific task. The colony is ductile, malleable. The ant 
 colony acts has a whole with very rich global behaviours. That is a complex system.\\
 
 %TODO exemples : swarm, ecosystems, weather,Belousov-Zhabotinsky reaction, real economic systems, markets
 %TODO game of life, we give the pressence of entitty to patterns arising from cell behaviour.
 
-Researchers observed that woods under a fire dissappear at different rates not completely dependent to the intensity
+Researchers observed that woods under a fire disappear at different rates not completely dependent to the intensity
 of the focus, nor the climatic conditions. It was observed that under some tree topologies and certain wood
 density a small change in the number of trees would mean sometimes the complete combustion of all the wood, and
-other times the wood would only burn in a small controlled area. This topology dependant condition is called
+other times the wood would only burn in a small controlled area. This topology dependent condition is called
 \textbf{percolation}. It arises from the spatial relationship between the trees. Considering an ideal situation
 where topology protects the wood from percolation appearance, slight changes in some trees distribution will make
 them sensible to fire, but the rest of the wood will not burn. These conditions are an example of robustness
@@ -1234,7 +1234,7 @@ Percolation was not discovered studying one tree. It was detected taking into ac
 \label{fig:percolation_1}
 \end{figure}
 
-Indeed we observe that there is a system due to the pressence of the macro phenomena. It is the evidence that
+Indeed we observe that there is a system due to the presence of the macro phenomena. It is the evidence that
 something is happening there that relates the constituents.\\
 
 \begin{figure}[h]
@@ -1258,22 +1258,22 @@ something is happening there that relates the constituents.\\
 %TODO Complex : emergence, self organizing, adaptive, descentralized 
 
 Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, ``a complex system is a system in
-which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Sumarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors''.
+which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Summarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors''.
 
 %exemple -> analitzar-lo i posar de manifest la complexitat ???
 % and then state what comes next:
 The laws that describe its behaviour are qualitatively different from those that govern its individual units.
 The advances of computational techniques for scientific discovering is changing the way we confront the models 
 and the manipulation of these issues. Computers have allowed new ways of learning about them. Computational techniques 
-allow the modelling of many constituents and its relationships, how they assemble to a whole system. It allows us 
+allow the modeling of many constituents and its relationships, how they assemble to a whole system. It allows us 
 to understand and play with the experimental manipulation of the behaviour in a easier way. Computers not only help 
 us in studying the surface of the behavioral phenomena but also the internals of complex systems giving insight 
 to our explanations and deductions. Besides, computational experimentation has the advantage of controlling the trace 
 and generating rich databases of events for posterior analyses \cite{Vicsek2002}.
 
 %TODO ara lligues Complex amb Emergence i pots passar al següent punt
-Complex behaviour is tied to a non central global decission process. But, on the other hand, the emerged pattern is
-something that does not belongs to a identifiable constituent. It is build from the descentralized dynamic of all 
+Complex behaviour is tied to a non central global decision process. But, on the other hand, the emerged pattern is
+something that does not belongs to a identifiable constituent. It is build from the decentralized dynamic of all 
 the constituents. That feature is called \textbf{emergence}.
 
 \subsection{Emergence}
@@ -1295,7 +1295,7 @@ A phenomenon will be considered emergent when it is repeatable and surprising, n
 level rules and the relationships of basic constituents of the system.
 Emergence cannot be predicted, given our current means, from only the constituents and their addition, 
 following the reverse way of reductionism. Reductionism is one of paradigms of science. A system is observed
-to detect differentiated parts. Then each part is analized to extract its behaviour. Reductionism states
+to detect differentiated parts. Then each part is analyzed to extract its behaviour. Reductionism states
 that the behaviour of the system can be understood from the constituents specifications plus a simple or 
 direct aggregation step. This idea can be applied recursively on the same constituents till some atomic element
 considered the bottom of the process. The thing is that due to nonlinear relationships, following the inverse
@@ -1310,10 +1310,10 @@ and repeats usually along experiments, is plausible to be considered emergent \c
 
 There is potential for emergent phenomena, i.e., when: 
 \begin{itemize}
- \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continous manner.
+ \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continuous manner.
  \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
  \item Heterogeneous interactions between agents.
- \item When there is unstability to perturbations although the system could be defined linearly.
+ \item When there is instability to perturbations although the system could be defined linearly.
 \end{itemize}
 
 
@@ -1330,7 +1330,7 @@ Evolution theory is the result of observations along several years made by Charl
 %\\
 %\pdfcomment{ATM:done?}
 Darwin proposed that the varieties and specializations of observed species was imposed by the topology of the 
-island and the local conditions of each one. The theory arised from the following points in conjunction of the observations. He based his deductions on the next hypothesis:
+island and the local conditions of each one. The theory arose from the following points in conjunction of the observations. He based his deductions on the next hypothesis:
 \begin{itemize}
 	\item Gradual change over long periods can produce very large effects.
 	\item Population growth combined with limited resources creates a struggle for
@@ -1379,13 +1379,13 @@ To summarize the major ideas of Darwin’s theory:
 
 Darwin theory had some points to be clarified. How did parents pass their traits to the offspring?
 The process of refining these theories comprised the addition of Mendel's theories lasting till 
-the past century where everything was unified with the descovering of DNA and genomics. DNA is the 
+the past century where everything was unified with the discovering of DNA and genomics. DNA is the 
 way in which are encoded the traits that the organic being will probably exhibit in his life, and 
 also DNA is the transmission medium of the traits in the reproduction process. We will take \textbf{Richard Dawkins} 
 position as our final work metaphor for evolution and natural selection\cite{Dawkins1990}.\\ 
-As it is mentioned, part of the working framework of our simulation is based on the ideas of evolution and ``natural selection''. We understand ``natural selection'' as a process that "rewards" adaptive solutions and penalizes those less adapted. Darwinian Evolution is the result of the continued application of this screening and the persistence of adaptive patterns and what comes off of them. Persistence is produced through the reproductive process of agents. Regularly an agent generates a copy of itself with some disturbance in their features and takes charge of it for a period of time. The extraction capacity of system resources, adaptability,  marks their survival and that of their offspring. If the offspring survives, the configuration is maintained over time and gets another chance to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of configurations to respond more adaptively than others, working with the hypothesis that selected ones would correspond to reality. We simulate systems plus the evolutionary process. Our utility functions, birth \& mortality are filters to keep or remove agents of the system depending on its performance against its lifecycle.\\ 
-We are applying a parallelism between DNA information and configuration or features in the agent. The features stablish
-the policy of the agent. For instance, the Gujarat project would differentiate between HunterGatherer way of living from AgroPastoralist way of living through this features.
+As it is mentioned, part of the working framework of our simulation is based on the ideas of evolution and ``natural selection''. We understand ``natural selection'' as a process that "rewards" adaptive solutions and penalizes those less adapted. Darwinian Evolution is the result of the continued application of this screening and the persistence of adaptive patterns and what comes off of them. Persistence is produced through the reproductive process of agents. Regularly an agent generates a copy of itself with some disturbance in their features and takes charge of it for a period of time. The extraction capacity of system resources, adaptability,  marks their survival and that of their offspring. If the offspring survives, the configuration is maintained over time and gets another chance to be perpetuated when this new generation begets his sons / daughters. We use evolution as a tool for selection of configurations to respond more adaptively than others, working with the hypothesis that selected ones would correspond to reality. We simulate systems plus the evolutionary process. Our utility functions, birth \& mortality are filters to keep or remove agents of the system depending on its performance against its life-cycle.\\ 
+We are applying a parallelism between DNA information and configuration or features in the agent. The features establish
+the policy of the agent. For instance, the Gujarat project would differentiate between Hunter-gatherer way of living from Agro-pastoralist way of living through this features.
 %\pdfcomment{Caldria que, abans de començar a enumerar tots aquests conceptes, la secció "Conceptual Framework" tingués un paràgraf explicant el que es trobarà el lector a continuació. Si no, queda com raro perquè són conceptes molt diferents}
 %\\ \pdfcomment{ATM:done}
 \paragraph{Coevolution}
@@ -1396,28 +1396,28 @@ the policy of the agent. For instance, the Gujarat project would differentiate b
 
 \textit{When two or more species form an interdependent ecosystem the evolutionary progress of part of the ecosystem will generally induce co-evolutionary changes also in the other species} \cite[p.154]{Gross2008}.
 
-Long ago, bacteria and plancton dominated the seas. There was only microscopic life. Then appeared photonsynthesis
+Long ago, bacteria and plankton dominated the seas. There was only microscopic life. Then appeared photosynthesis
 based microbes. With Sun light and CO$_2$ chemistry they spread at a greater rate than their neighbours. Photosynthesis
 microbes filling the seas plus millennia produced the oxygen filled atmosphere of the planet. Changes in the atmosphere
 changed weather and many other chemical properties in the planet. The atmosphere contained ozone which barred the 
-UV rays of the Sun which forbidded life in the surface. Then some individuals appeared with capabilities to get out of 
+UV rays of the Sun which forbid life in the surface. Then some individuals appeared with capabilities to get out of 
 the water and breath the air of the surface. It is an example of mutual feedback between the environment and the evolving 
 life beings. But this feedback can also happen between these beings, and then it is called coevolution\cite{Dawkins1990}.
 When the adaptive process of an species produces a change that motivates selection of new adapting traits in other
 species which in turn affects the same way the first species we have coevolution. For instance, the relationship 
 between a prey and a predator will induce coevolution. The hunting activities produce death in the prey species, hence
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
-with feble traits. Old feble traits dissappear. Then predators must hunt the individuals without the feble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pression is stablished between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
+with feeble traits. Old feeble traits disappear. Then predators must hunt the individuals without the feeble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pressure is established between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
 
-Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. In Gujarat project we expect to observe coevolution between HunterGatherers and AgroPastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
+Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. In Gujarat project we expect to observe coevolution between Hunter-gatherers and Agro-pastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
 
 
 \paragraph{Cultural Evolution}
 \label{sec:CultEvol}
 %The ideas from Evolution have been adapted to study the sociocultural dynamics in human society... blabla  \textbf{cultural evolution}.
 %%TODO 
-Behavioural Sciences trying to explain the cultural idiosyncrasy of human beings have traced a parallelism between its dynamics and Darwinian Evolution theories. Cultural Evolution \cite[ch11.]{Dawkins1990}\cite{Stanford_CultEvol}( socio-cultural evolution, CE ) states an analogy with the selection, adaptation and innovation processes descrived in the theories of darwinian evolution. Culture endows humans with a mental frame of assumptions and behaviours that affect their response to the environment. This has an impact in human performance to the treats of the environment and hence adaptation to it. Culture is a trait that like the physical features that conforms an individual will be crutial to its ressilience.\\ 
-Another important dimension of culture is transmission. Culture like genes is something parents can transfer to their offspring. Also, besides receiving a vertical endowment from parents, culture can also be adquired from other peers in a oblique way, maybe from brothers and sisters, or grandparents. This process is called cultural transmission. Just happens like in replication of parental genes, there exists the possibility of errors in the copy process. Either the communicator of cultural traits or the receiver can alter the information leading to errors or improvements. There could exist also improvement in knowledge due to revision and update of the results of the behaviours through experience. Next a table is presented to show the paralelisms between evolution theory and cultural evolution theory.
+Behavioural Sciences trying to explain the cultural idiosyncrasy of human beings have traced a parallelism between its dynamics and Darwinian Evolution theories. Cultural Evolution \cite[ch11.]{Dawkins1990}\cite{Stanford_CultEvol}( socio-cultural evolution, CE ) states an analogy with the selection, adaptation and innovation processes described in the theories of darwinian evolution. Culture endows humans with a mental frame of assumptions and behaviours that affect their response to the environment. This has an impact in human performance to the treats of the environment and hence adaptation to it. Culture is a trait that like the physical features that conforms an individual will be crucial to its resilience.\\ 
+Another important dimension of culture is transmission. Culture like genes is something parents can transfer to their offspring. Also, besides receiving a vertical endowment from parents, culture can also be acquired from other peers in a oblique way, maybe from brothers and sisters, or grandparents. This process is called cultural transmission. Just happens like in replication of parental genes, there exists the possibility of errors in the copy process. Either the communicator of cultural traits or the receiver can alter the information leading to errors or improvements. There could exist also improvement in knowledge due to revision and update of the results of the behaviours through experience. Next a table is presented to show the parallelisms between evolution theory and cultural evolution theory.
 
 	\begin{table}[ht!]
 	\centering
@@ -1431,13 +1431,13 @@ Another important dimension of culture is transmission. Culture like genes is so
 		&
 		The cultural corpus, containing ideas, mental frames, patterns and know-how, is added to the behaviour of the individual.\\
 		\hline
-		The physiological traits achieve some level of fitness to the environment setting the adaptability and ressilience of the individual.
+		The physiological traits achieve some level of fitness to the environment setting the adaptability and resilience of the individual.
 		&
-		Behaviour and know-how conditions the response  and adaptability to environment(physical world and other entities) challenges. How well the individual responses defines its fitness and ressilience.\\
+		Behaviour and know-how conditions the response  and adaptability to environment(physical world and other entities) challenges. How well the individual responses defines its fitness and resilience.\\
 		\hline
-		Higher ressilience gives higher oportunities for offspring generation. The fittest individual retrieves more resources and avoids best the treats. The fittest reproduces more.
+		Higher resilience gives higher opportunities for offspring generation. The fittest individual retrieves more resources and avoids best the treats. The fittest reproduces more.
 		&
-		The individual endowed with a culture that enhances its ressilience survives to transfer it to its offspring / partners / peers. Higher ressilience gives higher oportunities for offspring generation. The fittest individual retrieves more resources and avoids best the treats. The fittest reproduces more.\\
+		The individual endowed with a culture that enhances its resilience survives to transfer it to its offspring / partners / peers. Higher resilience gives higher opportunities for offspring generation. The fittest individual retrieves more resources and avoids best the treats. The fittest reproduces more.\\
 		\hline
 		Parents transfer their gene information to offspring : vertical transmission.
 		&
@@ -1445,11 +1445,11 @@ Another important dimension of culture is transmission. Culture like genes is so
 		\hline
 		Copying dna although it is a process with correction mechanism has a ratio of error that introduces mutations in the copy and hence new information that entails new traits, which can report benefit or lead the individual to a lesser fitness than its parents.
 		&
-		Learning is a process where the absorved corpus can be altered by the comunicator, the receiver, or due to added new knowledge. The error in transference or execution of learned skills and knowledge can lead to innovation.\\
+		Learning is a process where the absorbed corpus can be altered by the communicator, the receiver, or due to added new knowledge. The error in transference or execution of learned skills and knowledge can lead to innovation.\\
 		\hline
 		Offspring inherits traits. There is a correlation of parents' fitness respect offspring's fitness. Usually , strong parents produce strong offspring which will find easier to develop in the environment and hence reproduce, repeating the process from generation to generation.
 		&
-		The individual endowed with a culture that enhances its ressilience survives to transfer it to its offspring, partners or peers. The individual acts as the medium through which culture is transferred.\\ 
+		The individual endowed with a culture that enhances its resilience survives to transfer it to its offspring, partners or peers. The individual acts as the medium through which culture is transferred.\\ 
 		\hline
 		Fit gene combinations persist in time displacing less adapted ones.
 		&
@@ -1460,9 +1460,9 @@ Another important dimension of culture is transmission. Culture like genes is so
 	\label{tab:EvolThVSCultevol}
 	\end{table}
 
-CE theory assumes a morphism with contemporary evolutionary theory; CE theory states that the current state of culture for some social group is a result of natural selection upon the individuals exhibiting some cultural traits that changes its ressilience in the environment. Environment preassure will be a selection and scanning mechanism of cultural traits.
+CE theory assumes a morphism with contemporary evolutionary theory; CE theory states that the current state of culture for some social group is a result of natural selection upon the individuals exhibiting some cultural traits that changes its resilience in the environment. Environment pressure will be a selection and scanning mechanism of cultural traits.
 
-Applying these ideas, concerning the Gujarat project, we will try to explain the change from one adaptation strategy of hunter and gathering to an agropastoralist one based on the assumptions of selection and ressilience applied to both strategies. 
+Applying these ideas, concerning the Gujarat project, we will try to explain the change from one adaptation strategy of hunter and gathering to an agropastoralist one based on the assumptions of selection and resilience applied to both strategies. 
 
 %TODO
 %ara justifica que CE et fa la seleccio etc etc...
@@ -1472,13 +1472,13 @@ Applying these ideas, concerning the Gujarat project, we will try to explain the
 %HG way of life.
 %Produce the steep process for the transition from one strategy to another
 
-We study the skills and strategies for resource exploitation. The successful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classical agent, will yield a greater probabilty of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. 
+We study the skills and strategies for resource exploitation. The successful strategy, hunting and gathering versus agropastoralist activities or sophisticated AI versus classical agent, will yield a greater probability of success to the agent. The evolutive-coevolutive framework will trigger a dynamic of selection and gradual change. In the long term we will observe the equilibrium properties reached by coevolution. 
 
 %%TODO 
 %For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social} \\ \pdfcomment{ATM:done} 
 
-In our study of transition from HG to AP, both groups will be modelled as two different typologies of agents. Each typology will account as a differentiated group where members will belong to it along all their lifes. When an agent emancipates from its parents takes the decision of being HG or AP according to an evaluation of which of both groups seems more succesful. When an agent takes the same role of the parents it can be seen as vertical transmission of cultural traits. When an agent takes a role different from the parents we can assume that it learned these skills from neighbours in environment. It must be stressed that we pay attention to transition to agriculture, not to emergence of agriculture in a only HG environment. Somehow agropastoralist yet exists in the environment. We only want to know how different environmental conditions favor one or another strategy and why HG kept being a plausible strategy in Gujarat when it had dissappeared in other places.
-Each group has particular actions representing their way of making their living. HG execute Forage actions and AP execute Crop actions ( with subtasks of preparing, cropping and harvesting fields ). But there societies where both strategies coexists inside a group. Individuals show competence and skills to survive applying a mix of HG and AP actions. So the final aim is to remove groups. If we understand strategies as knowledge, knowledge will be contained in the agents in a fuzzy and dynamic way instead of wired elegible actions. There will be mixed agents that will execute HG actions and AP actions with different proficiency on them. We will call \emph{skills} to this construct. And these skills represent the ''genetic'' traits that we want observe evolving from this framework of CE. Each agent will have proficiency in the four skills from the merge of HG and AP groups : hunter, gather, crop, shepperd. A typical Hunter Gatherer considered in the scope of this master-thesis work would be an individual with a near 100\% proficiency in hunting and gathering while having 0\% on the other actions. And a pure AP individual would be endowed with the complementary asignation, 0\% for hunting and gathering with almost 100\% for actions Crop and Shepperd\ref{fig:SkillProfiles}. In the long term we want to observe the gradual transformation from one strategy to another through the change of profiles of proficiency. As knowledge is something where skills are not mutually exclusive, we consider reasonable that agents can execute the same set of actions. The dynamics of selection and environment preassure will benefit some configurations from others. This can lead to profile attractors or cyclic emergence of profile patterns according to the periodicity of climatic fluctuations.
+In our study of transition from HG to AP, both groups will be modeled as two different typologies of agents. Each typology will account as a differentiated group where members will belong to it along all their life. When an agent emancipates from its parents takes the decision of being HG or AP according to an evaluation of which of both groups seems more successful. When an agent takes the same role of the parents it can be seen as vertical transmission of cultural traits. When an agent takes a role different from the parents we can assume that it learned these skills from neighbours in environment. It must be stressed that we pay attention to transition to agriculture, not to emergence of agriculture in a only HG environment. Somehow agropastoralist yet exists in the environment. We only want to know how different environmental conditions favor one or another strategy and why HG kept being a plausible strategy in Gujarat when it had disappeared in other places.
+Each group has particular actions representing their way of making their living. HG execute Forage actions and AP execute Crop actions ( with subtasks of preparing, cropping and harvesting fields ). But there societies where both strategies coexists inside a group. Individuals show competence and skills to survive applying a mix of HG and AP actions. So the final aim is to remove groups. If we understand strategies as knowledge, knowledge will be contained in the agents in a fuzzy and dynamic way instead of wired eligible actions. There will be mixed agents that will execute HG actions and AP actions with different proficiency on them. We will call \emph{skills} to this construct. And these skills represent the ''genetic'' traits that we want observe evolving from this framework of CE. Each agent will have proficiency in the four skills from the merge of HG and AP groups : hunter, gather, crop, shepherd. A typical Hunter Gatherer considered in the scope of this master-thesis work would be an individual with a near 100\% proficiency in hunting and gathering while having 0\% on the other actions. And a pure AP individual would be endowed with the complementary assignation, 0\% for hunting and gathering with almost 100\% for actions Crop and Shepperd\ref{fig:SkillProfiles}. In the long term we want to observe the gradual transformation from one strategy to another through the change of profiles of proficiency. As knowledge is something where skills are not mutually exclusive, we consider reasonable that agents can execute the same set of actions. The dynamics of selection and environment pressure will benefit some configurations from others. This can lead to profile attractors or cyclic emergence of profile patterns according to the periodicity of climatic fluctuations.
 
 
 \begin{figure}[h!]
@@ -1496,7 +1496,7 @@ Each group has particular actions representing their way of making their living.
 \section{Introduction}
 
 This chapter exposes the work in case study one in the Simulpast project. 
-The text follows the structure of ODD documents we have been using to register our decisions and models and as a comunication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclussions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know ODD is not perfect. It does not follows Object Oriented methodology o structure entities and its relationships, but we wanted to ensure the communication part for ellicitation applying ODD phylosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
+The text follows the structure of ODD documents we have been using to register our decisions and models and as a communication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclusions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know ODD is not perfect. It does not follows Object Oriented methodology o structure entities and its relationships, but we wanted to ensure the communication part for elicitation applying ODD philosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
 
 %TODO en algun punt parla d'AUML. perque no l'usem. La interactio agent-agent no es basa en un llenguatge ni
 % cap transferencia estructurada complexa, nomes els tokes d'informacio de recursos. NO HI HA DIALEG 
@@ -1507,7 +1507,7 @@ The text follows the structure of ODD documents we have been using to register o
 %TODO the chapter dresses the main ODD structure with extra explanations extending its technical scope. The aim is not only to comunicate a model but the ``path''  that leads to it. <--- pero no ho tens ja aixo amb l'ODD??? 
 
 
-The first section of the chapter introduces the observations and hypothesis of archeologists that have been studying the scenario of Gujarat during the transition and settlement of agriculture. This part states the motivation that leads to the purpose of the model. The following sections get deep in the details of the system, enviromental features, resources, weather conditions and dynamics, the agents and the features for matching the relevant system dynamics to solve the question. After the modeling details the next section exposes the solution for solving the decision making of the agents. A planning strategy is needed to achieve maximum adaptability of the agents under the different weather conditions scenarios for stress experiments. Markov Decision Processes and UCT algorithm will be introduced. Once the decision making is explained, different solutions are presented to enhance efficiency and throughput of steps per second in the simulation. The last sections cover the experimental part of the project. It will be centered about the ressilience of the current social group modeled, hunter gatherers. %TODO posa una mica mes
+The first section of the chapter introduces the observations and hypothesis of archaeologists that have been studying the scenario of Gujarat during the transition and settlement of agriculture. This part states the motivation that leads to the purpose of the model. The following sections get deep in the details of the system, environmental features, resources, weather conditions and dynamics, the agents and the features for matching the relevant system dynamics to solve the question. After the modeling details the next section exposes the solution for solving the decision making of the agents. A planning strategy is needed to achieve maximum adaptability of the agents under the different weather conditions scenarios for stress experiments. Markov Decision Processes and UCT algorithm will be introduced. Once the decision making is explained, different solutions are presented to enhance efficiency and throughput of steps per second in the simulation. The last sections cover the experimental part of the project. It will be centered about the resilience of the current social group modeled, hunter gatherers. %TODO posa una mica mes
 
 %%1.-target - purpose
 
@@ -1623,7 +1623,7 @@ semi-arid region in NW India.
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=80mm,keepaspectratio=true]{figures/jamt1.jpg}}
-\caption{ Gujarat area for HG and AP ressilience simulation.}
+\caption{ Gujarat area for HG and AP resilience simulation.}
 \label{fig:jamt_1}
 \end{figure}
 
@@ -1662,7 +1662,7 @@ the two populations will be combined in a single simulation execution. These wil
 independent groups, and interaction between agents will be limited to other agents belonging to the
 same population. But the scope of this work is focused on exploring the socio-ecological behaviour of HG populations.
 
-Agents from one population will interact within a given territory. It is characterised in terms of: a)
+Agents from one population will interact within a given territory. It is characterized in terms of: a)
 geographical information derived (height, slope), and b) landscape (soil types, resources). This
 territory and its characteristics will generate an environment that will allow to portray differences in
 strategies regarding settlement, mobility and resource use.
@@ -1810,7 +1810,7 @@ efficiency value specified in the above table that allow to calculate the energy
 available for humans.
 
 \paragraph{Domesticated cell} (work in progress)
-The model is prepared to tag cells wether they are domesticated or wild when we will introduce AP 
+The model is prepared to tag cells whether they are domesticated or wild when we will introduce AP 
 agents in the runs
 %%\pdfcomment{ho deixo aqui o a future work?}. 
 Domesticated plant resources define the density of domesticated plants found inside the cell. It is important to note that wild and domesticated types of resources 
@@ -1939,7 +1939,7 @@ The biomass that a cell will produce in an entire year is calculated from rainfa
 production for its particular type, provided by historical records.
 We consider a linear relation between rain and biomass production. The deviation of rain in a given
 year from the period mean allows interpolating the amount of biomass deviation from the yearly mean
-biomass. That is, if the mean of rain is 100 liters and the climate model produces 80 liters the deviation
+biomass. That is, if the mean of rain is 100 litres and the climate model produces 80 litres the deviation
 to apply is 20\%, and for that year the biomass will be a 80\% of the mean yearly production for the
 period.
 
@@ -1987,7 +1987,7 @@ include the time spent on movement.
 This processes are executed for each agent:
 
 \begin{enumerate}[1-]
-	\item Age. Agent aging (increment human objects age).
+	\item Age. Agent ageing (increment human objects age).
 	\item Death. Every individual inside an agent will have a probability of dying. At the end of the year
 	every individual within an agent must pass two tests to survive:
 	\begin{enumerate}
@@ -2012,8 +2012,8 @@ This processes are executed for each agent:
 \section{Design concepts}
 
 \subsection{Basic principles}
-The behavior defined in this model is derived from the Optimal Foraging Theory (OFT)\cite{Holling1973}, developed
-within behavioral ecology and Rational Choice Theory(RCT)\cite{Scott2000} from economics. The main principle of OFT is the maximization of long-term energy gain. In other words, it is usually assumed that animals attempt to maximize the benefit to cost ratio. Evidence exists e.g. among great tits(Parus major), birds that show relatively successful strategies in terms of OFT. Although it is doubtful whether humans attain the optimal rate of energy gain, they do succeed in improving their foraging efficiencies, or 'memorising'. Also, RCT framework backs the decissions of not taking a choice that implies some negative outcome. The term Rational stands for balancing cost of choices in a way that maximizes personal advantage.
+The behaviour defined in this model is derived from the Optimal Foraging Theory (OFT)\cite{Holling1973}, developed
+within behavioural ecology and Rational Choice Theory(RCT)\cite{Scott2000} from economics. The main principle of OFT is the maximization of long-term energy gain. In other words, it is usually assumed that animals attempt to maximize the benefit to cost ratio. Evidence exists e.g. among great tits(Parus major), birds that show relatively successful strategies in terms of OFT. Although it is doubtful whether humans attain the optimal rate of energy gain, they do succeed in improving their foraging efficiencies, or 'memorising'. Also, RCT framework backs the decisions of not taking a choice that implies some negative outcome. The term Rational stands for balancing cost of choices in a way that maximizes personal advantage.
 
 
 \subsection{Emergence}
@@ -2029,7 +2029,7 @@ The model explores the emergence of stable HG populations under different climat
 At the present moment the model is not interested on the emergence of individual adaptive traits, and
 for this reason adaptive options for the agents are limited to the decision making process. The different
 agents try to respond to the dynamics of environment choosing Home locations and Foraging actions
-depending on their particular situation. The aim is not policy discovering, just adaptative planning.
+depending on their particular situation. The aim is not policy discovering, just adaptive planning.
 Adaptive options for the agents are based on the complexity of the decision making process. Actions
 costs and outcomes are predefined following the model's configuration, but the order and the use of
 them is entirely an agent's choice. Following this reasoning, the different agents will try to adapt the
@@ -2045,7 +2045,7 @@ evolutionary mechanisms and positive selection. Well adapted agents will have mo
 survive, thus creating more children and agents with similar cultural traits.
 
 \subsection{Learning}
-Foraging learning process is modeled using vertical transmission. A child gradually learns to forage in
+Foraging learning process is modelled using vertical transmission. A child gradually learns to forage in
 an efficient way, and for this reason the available foraging time contributed by children increases until
 adulthood.
 \subsection{Prediction}
@@ -2064,7 +2064,7 @@ agents with adult children are inside social range, and to \emph{information sha
 \subsection{Stochasticity}
 Stochasticity is used in three different concepts:
 \begin{enumerate}
-\item Environment. Precipitation is calculated as a estochastical process following a Weibull
+\item Environment. Precipitation is calculated as a stochastic process following a Weibull
 distribution.
 \item Outcomes. Some actions have different outcomes depending on stochastic processes,
 like forage and harvest. It encapsulates the complex process of resources collection (i.e.
@@ -2134,9 +2134,9 @@ Rainfall (yearly precipitation) is the 'environmental engine' of the model. Data
 extracted from historical data (1871 - 2008). The climate engine is defined as a probability distribution,
 from which the total precipitation during a year is derived. The Gamma distribution was the best fit for
 the available rainfall dataset. The first approximation was the Weibull distribution. But we wanted to explore
-the parameters of mean and stdev in the rain fluctuations to experiment with stressful scenarios and verify
-the ressilience of the agents. The characterization of the scenerios was prefigured by the mean and the 
-standard deviation of the yearly rain. Weibull distributions are paremeterized with an alpha and a beta 
+the parameters of mean and stddev in the rain fluctuations to experiment with stressful scenarios and verify
+the resilience of the agents. The characterization of the scenarios was prefigured by the mean and the 
+standard deviation of the yearly rain. Weibull distributions are parametrized with an alpha and a beta 
 parameter that would be found with a fit function of the platform R from the historical data we have. The connection
 of these parameters with the mean and the standard deviation were not simple formulae in the straight way we wanted. 
 The second option, with an excellent match for the shape of our data, was a Gamma distribution\ref{fig:GammaRain}. Again, its parameters alpha and beta are found with a R command. This time, alpha and beta can directly be altered with perturbations derived from the mean and standard deviation explored in the experiments. Table \ref{tab:GammaVSWeibull} a comparison of the relationship of distributions gamma and weibull with the mean and variance parameters.
@@ -2178,7 +2178,7 @@ Raster map.
 %\pdfcomment{ATM:future: passarem de 3 categories a 5 de terra. tindrem mes water bodies, rius, etc}
 
 
-\subsection{Hunter-Gatherer behavior}
+\subsection{Hunter-Gatherer behaviour}
 Archaeological data are incomplete and limited in terms of derivable behavioural patterns. HG
 behaviour for the model was derived from published studies of historical and present-day populations
 in similar ecological settings. There are groups of HG that live near N Gujarat (the Van Vargis, see
@@ -2236,7 +2236,7 @@ are found in North Gujarat.
 
 The majority of Agent-Based Models mix knowledge acquisition, decision-making and execution in the
 same phase of an agent's execution. This choice is useful if we deal with agents with simple decision-
-making processes where the choice of behaviors is predefined. However, this classical approach to
+making processes where the choice of behaviours is predefined. However, this classical approach to
 ABM has a major drawback, and is the fact that the agent will have scripted strategies, and for this
 reason it won't be able to choose strategies different from the ones defined there.
 The model proposed here splits the different phases. During each time step every agent updates its
@@ -2275,7 +2275,7 @@ The execution of the agents during each time step is divided in three different 
 		where this is possible.
 		\item If this is not possible, the agent will choose to Move Home. A collection of possible new homes
 		is created based on the quantity of resources inside the Home range from this new location.
-		The final location is chosen amongst the ones that fulfill resource requirements.
+		The final location is chosen amongst the ones that fulfil resource requirements.
 	\end{enumerate}
 	\item[Action]
 	After every agent has defined a plan, all of them are executed sequentially following a randomized
@@ -2288,22 +2288,22 @@ The execution of the agents during each time step is divided in three different 
 
 \section{Knowledge}
 
-According to anthropological registers, HGs explore the area around their homes following a excentric direction. Just like a compass divisions, a HG has set of choice directions. Each direction leads to areas where some could be good for foraging and other ones could be poor in resources. Also, anthropological sources describe hunt parties. Sometimes males of the familiar groups join in a group of hunters and spend several days apart from the home hunting in the whereabouts of the home range. This first stage of our models is not considering yet agent coordination and cooperation, so we stick to simple hunt actions with one hunter (and grown children) with a few hours duration, which
+According to anthropological registers, HGs explore the area around their homes following a eccentric direction. Just like a compass divisions, a HG has set of choice directions. Each direction leads to areas where some could be good for foraging and other ones could be poor in resources. Also, anthropological sources describe hunt parties. Sometimes males of the familiar groups join in a group of hunters and spend several days apart from the home hunting in the whereabouts of the home range. This first stage of our models is not considering yet agent coordination and cooperation, so we stick to simple hunt actions with one hunter (and grown children) with a few hours duration, which
 are subsumed under ForageAction.
  
-We decided to endow agents with a map of cells of the world bounded by their home range. The circled area by the home range is divided in equal slices called sectors. The number of sectors is parameterizable though a configuration file.   
-For each sector their cells are stored and an utility scoring is assigned. For foraging decissions the utility is the sum of resources of the cells that compose it and for the MoveHome action the utility is %TODO
+We decided to endow agents with a map of cells of the world bounded by their home range. The circled area by the home range is divided in equal slices called sectors. The number of sectors is parametrizable though a configuration file.   
+For each sector their cells are stored and an utility scoring is assigned. For foraging decisions the utility is the sum of resources of the cells that compose it and for the MoveHome action the utility is %TODO
 
-Each time step the amount of resources in each cell changes due to the growing dynamics of biomass and to the possible foraging practices of other agents. The updating of utilities must be done each time step. The default update of utilities is omniscient inside the home range. The agent acces directly to all the information inside the area of its home range, outside of it the agent does not map more cells. We assume the agent can read the last updated value in resources for any cell concerning the update procedure. 
+Each time step the amount of resources in each cell changes due to the growing dynamics of biomass and to the possible foraging practices of other agents. The updating of utilities must be done each time step. The default update of utilities is omniscient inside the home range. The agent access directly to all the information inside the area of its home range, outside of it the agent does not map more cells. We assume the agent can read the last updated value in resources for any cell concerning the update procedure. 
 
 At this stage the agent does not stores knowledge about the other agents.
 
 \subsection{Partial Information}
 \label{sec:PartialInformation}
 
-Although real HGs have a direct acces to their domains they cannot traverse it as quickly as to say they have last minute updated information from the environment. The model for HG considers a home range of 10km, a large extension for keeping an updated account of the resources in it. Each foraging exploration is a bet for the HG. Although he can know that in average one zone has enough resources to cover the survival threshold it does not ensures that this estimation is not going to change. There is uncertainty mainly due to other agents actions. The partial-information add-on emulates this bounded rationality and uncertainty feature. The update of the knowledge of the agents is calculated with two different sources of information. When an agent visits one sector in some time step the process will read the cells of the high resolution raster (direct access to the world) corresponding to the sector.\\
+Although real HGs have a direct access to their domains they cannot traverse it as quickly as to say they have last minute updated information from the environment. The model for HG considers a home range of 10km, a large extension for keeping an updated account of the resources in it. Each foraging exploration is a bet for the HG. Although he can know that in average one zone has enough resources to cover the survival threshold it does not ensures that this estimation is not going to change. There is uncertainty mainly due to other agents actions. The partial-information add-on emulates this bounded rationality and uncertainty feature. The update of the knowledge of the agents is calculated with two different sources of information. When an agent visits one sector in some time step the process will read the cells of the high resolution raster (direct access to the world) corresponding to the sector.\\
 Utility values have a timestamp. Each low resolution cell in the private raster of the agent has associated a timestamp of \emph{one week}. Once the timestamp expires the low resolution cells of the private raster receive an utility value equal to the statistical mean value of resources in the world raster, that is the second source of information. 
-Sumarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
+Summarizing, the utility in the knowledge structures of the agents is initialized to the mean, and as the agent visits sectors the overall information in the knowledge structures is renewed; information expires and then receives as utility scoring the statistical mean of resources. 
 Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilities.
 
 	\begin{table}[ht!]
@@ -2318,7 +2318,7 @@ Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilitie
 		\hline
 		3	&	The agent has a high resolution version of its sectors, these lists of high resolution coordinates to actuate in the world.\\
 		\hline
-		4	&	The agent explores the world which will be materialied as a walk over the matrix of resources of the world.\\
+		4	&	The agent explores the world which will be materialised as a walk over the matrix of resources of the world.\\
 		\hline
 		5	&	The procedure of updating the low resolution rasters registers the changes happened in the high resolution raster.\\
 		\hline
@@ -2342,10 +2342,10 @@ Figure~\ref{fig:PartMind} shows the pipeline of flow of information and utilitie
 \subsection{Information Sharing}
 \label{sec:InformationSharing}
 
-Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibite the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience)\ref{sec:ExperInfoSharing}.
+Information sharing and knowledge exchange is a crucial activity for performance enhancing on everyday challenges. In our study of resilience we try to explain the conditions that trigger or inhibit the change of social groups moving from hunting strategies to agropastoralist strategies. The most successful strategies will be passed between agents of our simulation in a cultural transmission modelized framework\ref{sec:CultEvol}. Our first results of agent communication are based on sharing environmental information concerning resource allocation in the environment. Our simulations show that simulating individuals with partial information\ref{sec:PartialInformation} of the environment, but sharing it with other neighbour agents, allows them to achieve a resource retrieval as good as if they would be endowed with complete perfect information of the resource allocation (omniscience)\ref{sec:ExperInfoSharing}.
 
-We consider the introduction of social networks as an important factor for ressilience as it acts as a safety network for unlucky agents affected by detrimental variabilty of environment conditions.%TODO ref to section about soc nets
-A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modeling of information sharing we stick to two anthopological evidences. HGs ussually share information with other HGs living around a distance we have called social range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the social range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. Each agent will send and will receive an information token in the interaction with the other agents. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
+We consider the introduction of social networks as an important factor for resilience as it acts as a safety network for unlucky agents affected by detrimental variability of environment conditions.%TODO ref to section about soc nets
+A social network will be a source of help in the form of resources, environmental information and transmission of knowledge for survival strategies. For the first modelling of information sharing we stick to two anthropological evidences. HGs usually share information with other HGs living around a distance we have called social range, and many times they do that at the end of the day. Second, the information token is some resource information concerning some patch area which would correspond to the abstract mental construct that inspired the low resolution cells for the mind knowledge representation of the agent. The agents will execute a procedure of information sharing at the end of the simulation step. For every agent inside the social range of an agent, each one will give the central agent an information token which is composed of a low resolution coordinate and an amount representing the utility of the low resolution cell shared. Each agent will send and will receive an information token in the interaction with the other agents. The information is accepted and written over the private raster only if the timestamp is newer than the owned one.
 
 Results of the Information Sharing can be seen in the chapter of experimentation\ref{sec:ExperInfoSharing}.
 
@@ -2354,8 +2354,8 @@ Results of the Information Sharing can be seen in the chapter of experimentation
 \subsection{Rule Based Agent}
 
 The rule based agent was developed as a representation of the classical agents in social simulation. The objective of having rule based agents is to compare its performance against the AI approach.
-The rule based agent follows a decision schema constructed by the modelers with advice from experts.
-The ingredients of decision are the set of actions (ForageAction and MoveHomeAction) and the set of zones where actions are perfomed, the eight sectors. The agent at each time step evaluates if there is enough resources in some of its sectors. Enough stands for allowing its family avoid starvation during one day. There is a survival threshold based on food-need parameters \ref{fig:caloricRequ}. The rules are expressed in the decision schema appearing in figure \ref{fig:decisionTree}.
+The rule based agent follows a decision schema constructed by the modellers with advice from experts.
+The ingredients of decision are the set of actions (ForageAction and MoveHomeAction) and the set of zones where actions are performed, the eight sectors. The agent at each time step evaluates if there is enough resources in some of its sectors. Enough stands for allowing its family avoid starvation during one day. There is a survival threshold based on food-need parameters \ref{fig:caloricRequ}. The rules are expressed in the decision schema appearing in figure \ref{fig:decisionTree}.
 
 
 	\begin{figure}[h!]
@@ -2377,15 +2377,15 @@ making the agent receive a lower benefit from its actions.
 
 Rules are a mechanism that is applied blindly. Action is executed after conditions on the world are evaluated.
 For adaptability, when thinks change in the world, rules expire. We need to now the new conditions. So, the 
-new correspondence action - state. Although we are talking of change we asume that some bottom-essential mechanics remain inmovable. Agents will adopt an exploratory framework. Agents will use a hypothetical-deductive frame for decision. This is the ``what-if?'' question. An agent will test an hypothesis (launch some action $a$) and will
+new correspondence action - state. Although we are talking of change we assume that some bottom-essential mechanics remain unmovable. Agents will adopt an exploratory framework. Agents will use a hypothetical-deductive frame for decision. This is the ``what-if?'' question. An agent will test an hypothesis (launch some action $a$) and will
 try to predict the outcome or the state produced by the action. The nature of the problem of resource retrieval in the raster lattice does not allows to develop a logical model to reason about states and actions. We cannot provide facts about state of the system and a logical model of the transitions of the system.\\
-We will follow an utility based architecture as said before. The agent has to tackle with resource optimization, large number of uniform possible cells for exploration and with associated uncertaint. We think it is more reasonable to take an optimization and heuristic search approach instead of a symbolic reasoning based one to synthesize the agent plan.
+We will follow an utility based architecture as said before. The agent has to tackle with resource optimization, large number of uniform possible cells for exploration and with associated uncertainty. We think it is more reasonable to take an optimization and heuristic search approach instead of a symbolic reasoning based one to synthesize the agent plan.
 
 The uncertainty of the world, the fact that agents make their decision on current time step
 world state and decisions are taken sequentially defines the decision making as a Markov Decision Problem(MDP)
 \cite[chapter.17]{RussellNorvig}.\\
 MDPs are characterized by the markovian property, by some utility function and a transition of states. A MDP is represented by a directed graph\ref{fig:mdp1} where nodes are states of the world and edges denote
-and action perfomed. Traversing an edge means that an action transforms the state of the world from the state associated to the origin node to the state associated to the target node. MDP are solvable through solving the Bellman equations. The solution is an association of states to executable actions that shall be the policy that an agent will have to follow. A Bellman solution is too near to a rule based approach. The dynamic of events and indirect competitiveness for resource adquisition is an evidence to find a technique that solves scenarios like board games. State transition in board games depend on the current state. They work launching sequential actions. And boards exhibit a large number of configurations. 
+and action performed. Traversing an edge means that an action transforms the state of the world from the state associated to the origin node to the state associated to the target node. MDP are solvable through solving the Bellman equations. The solution is an association of states to executable actions that shall be the policy that an agent will have to follow. A Bellman solution is too near to a rule based approach. The dynamic of events and indirect competitiveness for resource acquisition is an evidence to find a technique that solves scenarios like board games. State transition in board games depend on the current state. They work launching sequential actions. And boards exhibit a large number of configurations. 
 
 \subsubsection{UCT} 
 \label{sec:UCT}
@@ -2436,7 +2436,7 @@ The number of samples for a trace is called width. The winner trace indicates wh
 
 
 UCT explores the board in a hypothetico-deductive manner desirable for our purposes. We could
-see that a new node to explore is a open hypothesis. And we can see the deductive part when UCT executes the hypothetical action against its private virtual copy of the world. Like in game Go, UCT will be executed to guess next action to launch; UCT is not used to produce a policy to be used the rest of the simulation. Each time step UCT will have to recalculate the most promisable posibilities for each action on each patch where it will be applied. 
+see that a new node to explore is a open hypothesis. And we can see the deductive part when UCT executes the hypothetical action against its private virtual copy of the world. Like in game Go, UCT will be executed to guess next action to launch; UCT is not used to produce a policy to be used the rest of the simulation. Each time step UCT will have to recalculate the most promising possibilities for each action on each patch where it will be applied. 
 
 \begin{figure}[h!]
 \centering
@@ -2579,14 +2579,14 @@ The results of applying state reduction can be found in the section of experimen
 
 \section{Efficiency}
 
-\subsection{Low Ressolution map}
+\subsection{Low Resolution map}
 
 In our experiments agents have been working with two different engines for decision making. The planning engine produces hundreds of millions of access to the cell storages in the search of profitable traces of actions. Each state in the search tree requires updates and many calculi managing the cells in the sector visited by the action. 
 This represents around 40,000 cells per sector to manage for a home range with a radius of 300 cells. Holding this amount of information and accesses in a simulation with 100 agents implied traces that lasted more than eight hours of computation per year simulated. This is not affordable for the scales we need to simulate. Some real world cultural transitions last about the order of hundreds of years. 
 
-The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high ressolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. They think about patches that would cover several high resolution cells of our model.
+The direction taken to reduce the load of the planning synthesis was to reduce the resolution of the representation of the world in the mind of the agent. Indeed real HGs when think about profitable patches in his domains do not have a high resolution representation of the resources. They have fuzzy mind maps of more or less large rich areas. They do not think with a granularity of few meters when planning the day. They think about patches that would cover several high resolution cells of our model.
 
-Each agent has private lists of references to low ressolution cells, the sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility scoring of the low resolution cells and minds(sectors) of the agents is updated \ref{fig:LRMaps1}\footnote{The resolutions shown in the figure does not correspond to the one in the model. It is a even lower one to make clearer the graphics.}.
+Each agent has private lists of references to low resolution cells, the sectors. The low resolution cells belong to a shared raster. Each low resolution cell covers an area of 60x60 high resolution cells. Each time step, once the high resolution raster world receives all the updates, the utility scoring of the low resolution cells and minds(sectors) of the agents is updated \ref{fig:LRMaps1}\footnote{The resolutions shown in the figure does not correspond to the one in the model. It is a even lower one to make clearer the graphics.}.
 
 		\begin{figure}[!h]
 		\centering
