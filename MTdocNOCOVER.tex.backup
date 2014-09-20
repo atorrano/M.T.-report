@@ -2663,7 +2663,7 @@ rate based from biomass guessing and optimality of resource retrieval(p.\pageref
 that marks the distance to the ideal foraging, seems only to be explained by uncertainty an stochasticity 
 effects, and not a big advance can we get from refining further the biomass prediction procedures. Many of 
 these experiments are run under an scenario where the agent is alone in the world. One of the motivations is 
-to discover faults in the foraging and migration patterns and verify the modeling decisions.
+to discover faults in the foraging and migration patterns and verify the modelling decisions.
 That is the reason that introducing divergence management due to neighbour presence (multi-agency) is left 
 for the next step of this model in the project. But anyway, although there is no multi-agency awareness we 
 have tested the agent in a scenario of indirect competition for resources with other agents.
@@ -2680,7 +2680,7 @@ to two time lapses in the year were opposite strategies were needed.
 
 
 
-\section{Tunning the planner ( State Reduction And Statistical Significance )}
+\section{Tuning the planner ( State Reduction And Statistical Significance )}
 \label{sec:expStateReduction}
 
 %%quick descrip : 
@@ -2702,7 +2702,7 @@ variation in the decline of the HGs.
 Against our intuitions the mdp agent could not break the starvation rate of the rule based agent. Statistical 
 sampling of the starvation rates showed us a performance equivalent to the rule based agent. Furthermore, 
 the exploration of different parameters in the planning engine did not produce improvement and results were unstable. 
-We saw agents with deeper future prospection and greater sampling in the search tree to perform sometimes 
+We saw agents with deeper future prospecting and greater sampling in the search tree to perform sometimes 
 worse than other configurations.
 
 %%describe plots : 
