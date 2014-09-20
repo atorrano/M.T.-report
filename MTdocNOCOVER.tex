@@ -45,7 +45,7 @@
 \begin{abstract}
 The aim of this master thesis is the development of a multiagent model for a simulation of two populations whose interactions are strongly influenced by a realistic landscape.\\
 This research will be in line with Consolider-Simulpast (www.simulpast.es), an interdisciplinary project aimed to create simulations designed to be used in archaeological studies of human-environment interaction, decision-making processes and coevolutionary/competition behaviours of past societies.\\
-The work plan will be focused on the development of first-stage models for two societies in the age of agriculture spreading surpassing the hunting and foraging way of living. The simulation will involve a climate engine for seasonality depending primarily on variable rainfall rate. Landscape information will be created from satellite image rasters. Constants, and variable relationship shall be modeled from measures and interviews with the experts. Data analysis tasks will be undertaken to validate the models and detect patterns in the archaeological record. Furthermore a comparison will be established between the classical simple models used in social simulation[1][2][8] and more advanced approaches.
+The work plan will be focused on the development of first-stage models for two societies in the age of agriculture spreading surpassing the hunting and foraging way of living. The simulation will involve a climate engine for seasonality depending primarily on variable rainfall rate. Landscape information will be created from satellite image rasters. Constants, and variable relationship shall be modelled from measures and interviews with the experts. Data analysis tasks will be undertaken to validate the models and detect patterns in the archaeological record. Furthermore a comparison will be established between the classical simple models used in social simulation[1][2][8] and more advanced approaches.
 \end{abstract}
 \newpage 
 
@@ -64,26 +64,26 @@ The work plan will be focused on the development of first-stage models for two s
 
 Simulation has been following an evolution in the models and paradigms applied to represent its target
 systems. Dynamical systems, differential equations have been used and an overall simplification of the parts of the systems in the history of simulation to operate with the abstraction and simplification of the problems.
-Mainly, reusing ideas from physical simulations, social sciences has modeled complex systems with dynamical
-atomic entities that apply a simple set of centralized rules to move around the environment modeled. It was seen that due to the deeper details in human behaviour the question that could be solved and asked to that kind of models could not go very further as expected.
+Mainly, reusing ideas from physical simulations, social sciences has modelled complex systems with dynamical
+atomic entities that apply a simple set of centralized rules to move around the environment modelled. It was seen that due to the deeper details in human behaviour the question that could be solved and asked to that kind of models could not go very further as expected.
 
-To solve non-linearity phenomena, heterogeneity, hysteresis\cite[p.571–597]{hysteresisDef} and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more insight of the modeled systems achieving good results. But under 
+To solve non-linearity phenomena, heterogeneity, hysteresis\cite[p.571–597]{hysteresisDef} and other issues typical of complex systems, Agent Based Models(ABMs) where introduced to gain more insight of the modelled systems achieving good results. But under 
 some conditions of very complex relationships between agents, highly specialized decision taking procedures
 and issues in the environment led agents to need a sophisticated reasoning and problem solving capabilities
 that are not specified and not yet introduced in ABMs coming from Social Sciences.
 
-We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat Hunter-gatherer(HG) way of life lasted more than in other place of Earth in its competition against Agro-pastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decisions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decision making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearer match of modeled behaviours with the real ones, and clearer, richer and robust scientific conclusions.
+We have found an example of that situation in our case study located in Gujarat from Simulpast project. Our agents must interact with a regular but changing environment to get resources, plan its actions, coordinate with its group and compete with other groups in a \textbf{co-evolution} dynamic. Because we want to find out why the Gujarat Hunter-gatherer(HG) way of life lasted more than in other place of Earth in its competition against Agro-pastoralist(AP), we need to embed the behaviours of the survival strategies used by these groups. A simply reactive agent cannot cope with short term plus long term decisions in that competitive environment. So the question stated as topic for this Master Thesis project is \textbf{``do we get better results in social sciences simulations adding deeper AI techniques to make richer the behaviour or decision making engines of the entities in the system?''}. As we understand ``better results``, the outcome from the use of AI should be a more sound validation of the model, a nearer match of modelled behaviours with the real ones, and clearer, richer and robust scientific conclusions.
 
 In order to study such possibilities Sugarscape is a good framework to extend. Sugarscape is an artificial society developed by Joshua Epstein et al \cite{EpsteinAxtell}. where a number of inhabitants move to collect resources they need to live. Sugarscape models perception, lattice scanning in search of resources, sexual reproduction of the agents in the simulation, market relationships, immunology and spreading of diseases, and feature evolution. Epstein analyses different experiments executed in the Sugarscape offering his conclusions and the dynamics emerging from the simulations. The results and conclusions will feed our AI experiments in order to make the comparisons of classical  agents vs AI agents, therefore, giving an answer to one of the topics of the Master Project.
 
 \section{Simulation}
 %brief description
 %hi ha altres aplicacions de simulacio on no hi ha component temporal i no ho estic esmentant! MonteCarlo,etc...
-Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modeled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhance or guide strategy development, decision taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the immersion in virtual worlds responding to our input.\\
+Simulation is a discipline for performing virtual experiments in a computer. Computational techniques are used to build a model that represents your system. The dynamics of that system is codified in an algorithm that computes a calculus imitating the changes of state in the model, hence having a representation of that change along the time of the system modelled. Simulate is to play to ''what happens if...?'', and it is aimed to discover and explain the dynamics of a system to enhance or guide strategy development, decision taking, management, solving problems without analytical solutions or knowledge discovering and research. Although, we could get other positive benefits from it like theory checking or training through the immersion in virtual worlds responding to our input.\\
 % purpose, a priori, outcome, { deduction, induction, abduction(Alexis) } Axelrod's
 % crec que els agradara, marketing, saborcillo de IA impregnant els racons
-A simulation obeys some direction of experimentation, so a question must be set to drive the selection of features to model from the real system and give a direction to the modeling and the experiments design.These assumptions choice will prune the details not related to the questions to solve. It is not just for the sake of simplicity but for the practical reason that a model too near of the real system will be as hard as the original system to analyze.
-Simulation, like deduction, starts with a set of those explicit assumptions. But unlike deduction, it does not prove theorems. Instead, a simulation generates data that can be analyzed inductively. Unlike typical induction, however, the simulated data comes from a rigorously specified artificial experiment rather than direct measurement of the real world. While induction can be used to find patterns in data, and deduction can be used to find consequences of assumptions, simulation modeling can be used as an aid intuition and hypothesis validation tool. Also as space search mechanism for parameter tunning or optimization. This links with abductive processes.\\
+A simulation obeys some direction of experimentation, so a question must be set to drive the selection of features to model from the real system and give a direction to the modelling and the experiments design.These assumptions choice will prune the details not related to the questions to solve. It is not just for the sake of simplicity but for the practical reason that a model too near of the real system will be as hard as the original system to analyse.
+Simulation, like deduction, starts with a set of those explicit assumptions. But unlike deduction, it does not prove theorems. Instead, a simulation generates data that can be analysed inductively. Unlike typical induction, however, the simulated data comes from a rigorously specified artificial experiment rather than direct measurement of the real world. While induction can be used to find patterns in data, and deduction can be used to find consequences of assumptions, simulation modelling can be used as an aid intuition and hypothesis validation tool. Also as space search mechanism for parameter tuning or optimization. This links with abductive processes.\\
 %abduction
 Just like in a typical Sherlock Holmes case you pick the evidences, scenario for the experiment, and the common knowledge (the initial expert assumptions about the model). You enter in a refinement cycle where you test hypothesis and readjust them to discover the theory, the ``plot'', the explanation of what is happening. Following the abductive reasoning schema one looks for the hypothesis that would best explain the relevant evidence \cite{Axelrod2003}.\\
 %% no anava errat amb l'abduccio! :D
@@ -92,11 +92,11 @@ Just like in a typical Sherlock Holmes case you pick the evidences, scenario for
 %--: simulation connected to abduction
 % connect abduction with the simulation lifecycle 
 
-Social simulation is a research field that applies computational methods to study issues in the social sciences. The issues explored include problems in psychology, sociology, political science, economics, anthropology, geography, archeology and linguistics \cite{TakahashiSallachRouchier2007}.\\
-Social simulation aims to cross the gap between the descriptive approach used in the social sciences and the formal approach used in the hard sciences, by moving the focus on the processes/mechanisms/behaviors that build the social reality.\\
+Social simulation is a research field that applies computational methods to study issues in the social sciences. The issues explored include problems in psychology, sociology, political science, economics, anthropology, geography, archaeology and linguistics \cite{TakahashiSallachRouchier2007}.\\
+Social simulation aims to cross the gap between the descriptive approach used in the social sciences and the formal approach used in the hard sciences, by moving the focus on the processes/mechanisms/behaviours that build the social reality.\\
 In social simulation, computers supports human reasoning activities by executing these mechanisms. This field explores the simulation of societies as complex non-linear systems, which are difficult to study with classical mathematical equation-based models.
 %reducibility 
-Most of the times, studying complex systems implies to cope with non reducibility. One of the examples is Gravitational Dynamics. If our assumption is the use of Newton's mechanics, we can predict the state at any time or not, depending on the scenario. For a one dimension world you can predict the state at time $t_n$ from the initial state $t_0$ without computing all the preceding ones. For two and more dimensions you can only compute directly state $t_n$ if less the three bodies are implied. So in a real environment of many bodies in a 3D world you need to compute all the states from the initial to the one you consider as the last one. The system is non analytically reducible and you are forced to apply simulation to visit all the states and develop the behaviour of the model. It happens in most of the complex systems models, they have a nonlinear specification. Nonlinear models do not have a simple or computational reasonable analytical solution. 
+Most of the times, studying complex systems implies to cope with non reducibility. One of the examples is Gravitational Dynamics. If our assumption is the use of Newton's mechanics, we can predict the state at any time or not, depending on the scenario. For a one dimension world you can predict the state at time $t_n$ from the initial state $t_0$ without computing all the preceding ones. For two and more dimensions you can only compute directly state $t_n$ if less the three bodies are implied. So in a real environment of many bodies in a 3D world you need to compute all the states from the initial to the one you consider as the last one. The system is non analytically reducible and you are forced to apply simulation to visit all the states and develop the behaviour of the model. It happens in most of the complex systems models, they have a non-linear specification. Non-linear models do not have a simple or computational reasonable analytical solution. 
 % ( Classical Physics formulae used are non linear, acceleration is a quadratic factor in position <-- revisa aquesta fantasmada ) 
 
 %emergence
@@ -128,11 +128,11 @@ There are some models, however, in which emergent properties can be formally ded
 % trobo a faltar m\'es xixa te\`orica, aix\`o s'hauria de semblar m\'es a un cap\'itol del Norvig.
 In classical simulation approaches, specifically in the branch of Social Simulation, active entities which model human actors are designed with very simple behaviour engines. The classical hypothesis is that a complex mind for entities in the simulation are not that needed and maybe even could lead to difficult analysis of final results of the simulations (too daring statement?). 
 
-Our statement is that, on the contrary, the mind engine of a simulation entity should not be bounded to that limit but special attention must be paid to give any necessary sophistication to give the entity a correct behaviour, real enough, sensible to the changes in the environment and competent to solve the issues that will have to solve along its lifetime in the system. Even more, we think that this entities' capability to respond with complex behaviours is the core that roots the modeling granularity needed to catch the essential of the social systems that we want to model.
+Our statement is that, on the contrary, the mind engine of a simulation entity should not be bounded to that limit but special attention must be paid to give any necessary sophistication to give the entity a correct behaviour, real enough, sensible to the changes in the environment and competent to solve the issues that will have to solve along its lifetime in the system. Even more, we think that this entities' capability to respond with complex behaviours is the core that roots the modelling granularity needed to catch the essential of the social systems that we want to model.
 %TODO ( a l'apartat de ABMs ho tornem a dir perÃƒÂ² afegint que cal adaptabilitat, resposta no lineal, aprenentatge depenent del temps, histeresis,...).\\
 %( i aixo motivaria els ABMs) 
 Applying such premises we will explore the possibility to give or enhance decision making, problem solving
-capabilities to the entities with the aim to get more accurate simulations and realistic models with higher matching against our job hypothesis and premises. We will take the framework of ABMs to integrate the AI techniques in a decision making schema of action-response dynamics sensible to a modeled world.
+capabilities to the entities with the aim to get more accurate simulations and realistic models with higher matching against our job hypothesis and premises. We will take the framework of ABMs to integrate the AI techniques in a decision making schema of action-response dynamics sensible to a modelled world.
 
 %% ABM -> Decentralization of Decision-Making
 
@@ -171,8 +171,8 @@ capabilities to the entities with the aim to get more accurate simulations and r
 
 %hi ha un problema, analitzar-lo per solventar-ho, rational activity -> models
 
-Modeling is a widely extended methodology to answer the kind of questions we set out. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
-The modeling activity determines aspects of the world to include or exclude from the details that
+Modelling is a widely extended methodology to answer the kind of questions we set out. It comes from the natural observation of the world and the curiosity or need to reproduce it.\\
+The modelling activity determines aspects of the world to include or exclude from the details that
 will conform an abstraction of the world that will allow work the answers \cite{Robinson2008}.
 %TODO multiple ref resuse : split in chapters/paragraphs
 
@@ -211,26 +211,26 @@ will conform an abstraction of the world that will allow work the answers \cite{
 
 %% \cite{Pidd2003}
 
-Modeling will be our framework for communication between archaeologists' and sociologists' knowledge and their conceptualizations with our formal representations from computer science practices( simulation, algorithms, AI ).
-The reason is that it is a procedure that will help to communicate the \textbf{discursive} nature of Social Sciences with the formal structures from Computer Science. The engineering of model development will allow us to reach a connection from experts' knowledge to a model that comprises the set of detail clearing out the ambiguity that language could filtrate. Also, modeling will help set a picture of the system without inconsistencies, with each fact sound, coherent and consistent from the logical point of view with the whole.
+Modelling will be our framework for communication between archaeologists' and sociologists' knowledge and their conceptualizations with our formal representations from computer science practices( simulation, algorithms, AI ).
+The reason is that it is a procedure that will help to communicate the \textbf{discursive} nature of Social Sciences with the formal structures from Computer Science. The engineering of model development will allow us to reach a connection from experts' knowledge to a model that comprises the set of detail clearing out the ambiguity that language could filtrate. Also, modelling will help set a picture of the system without inconsistencies, with each fact sound, coherent and consistent from the logical point of view with the whole.
 
 \section{Why model}
 % ATM, que es modelar? i com es modela?
 %
-The modeling process consists in identifying separable entities, processes, relationships and any relevant information related to the question to solve and the domain of study. 
+The modelling process consists in identifying separable entities, processes, relationships and any relevant information related to the question to solve and the domain of study. 
 This abstraction exercise yields an external and explicit representation of part of reality as seen by the
 people who wish to understand, to change, to manage or to control that part of reality \cite{Pidd2003}.\\
 Indeed just thinking about something implies an unconscious projection of our mental frame hence producing a set of concepts and relationships that give birth to a model. The missed step is that it was not made explicit through some formal representation. A model is a logical and conceptual prototype.\\
 As Epstein \cite[p.1]{Epstein2008} says \textit{''Anyone who ventures a projection, or imagines how a social dynamic, epidemic, war, or migration would unfold is running some model``}.\\
-Modeling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modeling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analysis. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematic justification, adding good-for-nothing effort.
+Modelling is an introspection exercise where you take into account the domain to elaborate a \textbf{formal} representation of the conceptualizations you develop around the problem. Mainly, it will have to do with mathematical expressions from calculus or algebra and logics. That is called \textbf{conceptual modelling}. This phase comprises the development of a relevant simplification, which must be complete according to the phenomena that inspires the question. Anything left out will change the outcome of the simulation, and non-relevant added items will produce noise that will difficult posterior analysis. All the involved facts must be correctly well grounded taking into account that any unneeded compound in the model will also be added to the scientific and mathematical justification, adding good-for-nothing effort.
 %\pdfcomment{ATM:Epstein buscant lloc concret on ho diu}\\
 %%TODO ''good-for-nothing'' : busca paragraf on Epstein diu aixo  
 %TODO reuse cite; split in chapter/paragraph?
-For instance, lets consider modeling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so it could be minimized the hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the curtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if the objective is to model the system to analyze the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
+For instance, lets consider modelling the dynamics of a restaurant to find an optimum allocation of waiters between interior and terrace tables and their serving policy, so it could be minimized the hired waiters while lowering the waiting time of clients. Variables like client arrival rate, kitchen serving time, number of interior tables, number of terrace tables are reasonable parts of the system to add to the simplification. The colour of the curtains, the outfit of the waiters most probably will not account for the stated optimization objective. Someone could argue about the topology of the tables whether it should be added or not to the model. But if the objective is to model the system to analyse the survival rate when there is a fire and people must exit from the building as soon as possible, table and furniture topology is an unquestionable variable.\\
 This kind of criteria should lead to a preference for simpler models. There are many reasons which force to design consciously with this premise. More complex models require harder effort to work their credibility, verification
 %\pdfcomment{XR:Verification or validation?}\\ 
 %\pdfcomment{ATM:Verification->Comprovar que el model esta ben implementat.Model simple:dificil.Model complexe:+dificil} 
-for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modeling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible. But the crucial point is if we better understand them we can better interpret their results. Constituents in models interact each other following the relationships established by the modelers. This produces a network or causality chain that is responsible of the state changes of the model along the simulation. These chains must be inspected to find the origin of the phenomena exhibited in the simulation. As we want to understand a system we must reconstruct the processes that lead to the outcome we observe or check against our assumptions or real world events. If we are designing models where constituents are grouped to conform more complicated constituents, if we design the model to exploit emergent phenomena, analysis of the outcome and the causality chain reconstruction will be a very difficult task to disentangle \cite[p.31]{Premo2010}\label{myPremo_simplicity}. Simplicity is a must. Besides, we are not aiming at a very rich and complex model that matches its outcomes almost perfectly with some referential real data. As it is explained below we have preference for a model that makes easier the task to explore social processes to answer and propose arising questions. We must find the causal connection between experimental parameters and model dynamics, which parameters under which different initial conditions make the system behave differently and say why.
+for the correct implementation of the conceptual model, and from the formal point of view, validation of the model and the scientific conclusions. Considering the system conceptualization and formalization, a more complex model is more open to criticism for the objective or subjective choice of features and modelling decisions. Why the present features were chosen and the missing ones were left out? why one expert point of view, and not other one? Also, as Robinson \cite{Robinson2008} states, simple models have many advantages, such as they are faster, require less data, are more flexible. But the crucial point is if we better understand them we can better interpret their results. Constituents in models interact each other following the relationships established by the modellers. This produces a network or causality chain that is responsible of the state changes of the model along the simulation. These chains must be inspected to find the origin of the phenomena exhibited in the simulation. As we want to understand a system we must reconstruct the processes that lead to the outcome we observe or check against our assumptions or real world events. If we are designing models where constituents are grouped to conform more complicated constituents, if we design the model to exploit emergent phenomena, analysis of the outcome and the causality chain reconstruction will be a very difficult task to disentangle \cite[p.31]{Premo2010}\label{myPremo_simplicity}. Simplicity is a must. Besides, we are not aiming at a very rich and complex model that matches its outcomes almost perfectly with some referential real data. As it is explained below we have preference for a model that makes easier the task to explore social processes to answer and propose arising questions. We must find the causal connection between experimental parameters and model dynamics, which parameters under which different initial conditions make the system behave differently and say why.
 Another concern is that detail and granularity choice are attached to the overall direction that takes the construction of the model in terms of structure. At this point it is interesting to mention how does a model can be grown.\\
 %
 According to Oppenheim's and Putnam's\cite[p.1-2]{McGivernAndRueger}\cite{Unity_of_Science}, theories describe their domain as a corpus of interrelated concepts where the pieces of knowledge are connected with mathematical, hierarchical, structural and logical relationships, to enumerate some. The hierarchical relationships induce a multi-layered organization of knowledge, sometimes called ontology\footnote{We are not talking about knowledge representation from A.I.}. The hierarchy of layers is related to the level of the abstraction of the contained concepts, going from concrete concepts to abstract ones that contain or subsume the former. Also, the composition relationship makes arise a hierarchy of layers. For instance, in social sciences, considering individuals which are part of families, families which are part of social groups, and groups which conform a society. 
@@ -255,8 +255,8 @@ According to Oppenheim's and Putnam's\cite[p.1-2]{McGivernAndRueger}\cite{Unity_
 	%what is a top abstract concept for you will be a concrete concept for another theory
 %
 
-Usually, modeling methodology takes either the top, bottom or a middle layer to crystallize the model following the hierarchy in a direction towards the higher concepts or the deeper ones. An ascending crystallization from simpler to more complex is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystallization could begin in a middle layer and stop before arriving a top or bottom bound layer.\\ 
-For instance, some simulation would consider a necessity to model individual persons with agents taking decision at that scale. Other simulations would model households with the decision process without having to consider individual persons. Once set this issue, the modelization could keep considering more abstract structures like families or tribes as a composition of households and stop here instead of continuing adding villages or countries to the model.\\ 
+Usually, modelling methodology takes either the top, bottom or a middle layer to crystallize the model following the hierarchy in a direction towards the higher concepts or the deeper ones. An ascending crystallization from simpler to more complex is called \textbf{bottom-up} and the inverse direction is known as \textbf{top-down}. Crystallization could begin in a middle layer and stop before arriving a top or bottom bound layer.\\ 
+For instance, some simulation would consider a necessity to model individual persons with agents taking decision at that scale. Other simulations would model households with the decision process without having to consider individual persons. Once set this issue, the modellization could keep considering more abstract structures like families or tribes as a composition of households and stop here instead of continuing adding villages or countries to the model.\\ 
 The point is that the range of concepts that you choose to include in the model is related to the level of detail you want apply to describe the constituents of the model. The simplest chosen concepts that merge as constituents of other complex constituents and phenomena mark the granularity of your model. 
 
 % 
@@ -265,12 +265,12 @@ The point is that the range of concepts that you choose to include in the model 
 %
 
 %George Box
-Although good modeling of the parts could be accomplished accurately discarding the non-relevant entities and phenomena, let's remember the famous quote of George Box, ``essentially, all models are wrong, but some are useful'' \cite[p.2]{Box1979}.
+Although good modelling of the parts could be accomplished accurately discarding the non-relevant entities and phenomena, let's remember the famous quote of George Box, ``essentially, all models are wrong, but some are useful'' \cite[p.2]{Box1979}.
 %\pdfcomment{has de dir d'on surt la cita}\\ \pdfcomment{ATM:done}
 
 % multidiscpl ATM
 
-By the way, it can also happen that the modelization requires go further the bound. For instance, consider we are modeling a society to see the emergence of some differentiated groups, in our project, hunters, gatherers, agropastoralists. 
+By the way, it can also happen that the modellization requires go further the bound. For instance, consider we are modelling a society to see the emergence of some differentiated groups, in our project, hunters, gatherers, agropastoralists. 
 %\pdfcomment{differentiated groups? Vols dir different cultural identities, potser? Perquè no dius de quin tipus de grups parles.}\\ 
 %\pdfcomment{ATM:done. No deia els grups concrets perque volia anar a parar a la multidisciplinarity que era el target del paragraf}. 
 We could model towns, neighbourhoods, go down to families and then arrive to the person. Maybe we would like to characterize persons with some inner traits related to their personality as anxiety, generosity, aggressiveness, cooperation aptitude. Now we are entering in a layer belonging to psychology sciences, we have surpassed the bottom conceptualization in sociology. If we go further we could arrive to the brain structures entering the field of neurology. We could continue to molecules, biochemistry, and so on and so forth\cite[p.56]{MWilliams1999}.\\
@@ -278,8 +278,8 @@ Trespassing these borders and needing the help of experts able to manage and mod
 
 %TODO must I put it in Gujarat chapter? In our Gujarat project we are experiencing interaction between different disciplines of social sciences : anthropology, archeology, and sociology. Each one of these branches has its own terminology, target problems and argue their discurse with different structures.\\
 
-Besides having to cope with implicit ambiguity in each discursive knowledge (as said before, Social Sciences usually represent their knowledge in discursive texts using natural language), all these branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities, other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modeling process will elicit this structures and will match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole, the \textbf{conceptual framework}.\\
-Modeling will help to find a consensus for expressing the concepts and properties, will help to elicit knowledge, arrange ambiguities, detect common points. It will allow as to embed the needed rigor to work under the same framework to make every part work together. Modeling shall be an exercise of shared development that can approach positions and circle a communication problem to solve the issues that will arise.
+Besides having to cope with implicit ambiguity in each discursive knowledge (as said before, Social Sciences usually represent their knowledge in discursive texts using natural language), all these branches must cooperate in a common framework connecting the different used conceptualizations. Some branches can organize their knowledge in concepts of entities, other use processes or actions, for instance. We cannot collapse this frameworks directly in a formal model. The modelling process will elicit this structures and will match them with the mathematical tools offered by the chosen paradigm( lets say Dynamical System Theory, Agent Based Models, Petri Nets ). We will translate the conceptualizations to a common language that will connect the formalizations in a whole, the \textbf{conceptual framework}.\\
+Modelling will help to find a consensus for expressing the concepts and properties, will help to elicit knowledge, arrange ambiguities, detect common points. It will allow as to embed the needed rigour to work under the same framework to make every part work together. Modelling shall be an exercise of shared development that can approach positions and circle a communication problem to solve the issues that will arise.
 % posar les 2 figures de multidiscp modelling
 
 %%TODO
@@ -287,7 +287,7 @@ Modeling will help to find a consensus for expressing the concepts and propertie
 %posar l'exercici de comprensio entre BSC - IMF, elicitation, ecotonos...? o deixar-ho per capitols posteriors?
 
 
-\section{Modeling in social sciences}
+\section{Modelling in social sciences}
 \label{sec:modelsinSC}
 
 %%TODO afegeixo quelcom com aixo?
@@ -299,7 +299,7 @@ Modeling will help to find a consensus for expressing the concepts and propertie
 
 %%%% content
 
-Social science refers to the academic disciplines concerned with society and human behavior\cite[p.7,chap.3]{MWilliams1999}.
+Social science refers to the academic disciplines concerned with society and human behaviour\cite[p.7,chap.3]{MWilliams1999}.
 %\\
 %We will take the point of view where the study of society or social groups considers its target as an adaptative ecosystem of people with interaction, other living entities, environmental conditions or environmental dynamics, information exchange and the mutual adaptative changes induced between the actors, co-evolution \cite[p.4]{PerezAndBatten2006}.\\
 %\pdfcomment{aviam...només són alguns investigadors que consideren la societat com un sistema adaptatiu. La inmensa majoria no ho fa, et caldria refer això. D'altra banda, si cites un llibre has de dir la pàgina o pàgines a les que t'estàs referint}
@@ -314,8 +314,8 @@ Social science refers to the academic disciplines concerned with society and hum
 %pas esmentar al principi sistemes adaptatitius; trobant-ho interessant de dir, no es prioritari en aquest punt.}
  
 %modelling targets/items, 
-Modeling societies implies being aware of constituents identified by the social theories. Interacting entities form a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. An individual leaves a trace of participations and interactions in the society through social processes. Such activities occur with other individuals, with some activity units or through them. Populations of individuals flow through the social structures, selectively participating and differentially performing \cite[p.8]{GordonBurt2010}. 
-Ordinary living involves a participation of people in the social activities of family, leisure and holidays, shopping, work and travel. These activities within units are structured by relationships and choices, rules, rituals and randomness. Ordinary living also involves the participation of cultural ideas and artifacts in social activities.
+Modelling societies implies being aware of constituents identified by the social theories. Interacting entities form a society. Such entities are observed and abstracted from identifiable individuals, people, and activity units, for instance families, neighbourhoods or job partners, composed also of the same individuals. An individual leaves a trace of participations and interactions in the society through social processes. Such activities occur with other individuals, with some activity units or through them. Populations of individuals flow through the social structures, selectively participating and differentially performing \cite[p.8]{GordonBurt2010}. 
+Ordinary living involves a participation of people in the social activities of family, leisure and holidays, shopping, work and travel. These activities within units are structured by relationships and choices, rules, rituals and randomness. Ordinary living also involves the participation of cultural ideas and artefacts in social activities.
 %\pdfcomment{Cal lligar millor aquest raonament}
 %\\ 
 %\pdfcomment{ATM:estic enumerant elements a modelar, els fenomens que han detectat les social sciences, per a saber quins elements son susceptibles d'incloure's a un model.On tinc l'error? em perdo}
@@ -323,7 +323,7 @@ Ordinary living involves a participation of people in the social activities of f
 Social sciences seek to understand not only how individuals behave under the social influence, but also how the interaction of many individuals leads to large-scale outcomes and global phenomena \cite[p.9]{GordonBurt2010}.\\ 
 Modelization will be the construction of an \textbf{analogy} between these constituents and processes identified by social sciences as elements, procedures, terms or expressions in some \textbf{representation language} that allows to manipulate and reason about them.\\  
 The main observed issues, individuals, units, processes or actions, flow and dynamics within units, are the front-line of the 
-modelization aspects and motivation for the different paradigms appeared or adapted to solve the modeling objectives. New 
+modellization aspects and motivation for the different paradigms appeared or adapted to solve the modelling objectives. New 
 knowledge to infer from this identified phenomena will be the \textbf{descriptive} statement of observed behaviour, quantitative 
 empirical \textbf{generalizations}, construction or assessment of \textbf{theories} and \textbf{prediction} models \cite[p.9-53]{Coleman1964}.
 
@@ -340,23 +340,23 @@ empirical \textbf{generalizations}, construction or assessment of \textbf{theori
 
 %possible paradigms. TOASK : Explico mes que son sistemes dinamics i la resta d'opcions?????
 
-The first paradigms to model social processes were borrowed from the fields of physics, operations research, and economics. The first social concepts considered were those related to social units or subgroups and large processes. Also, due to the main use of dynamical systems and differential equations, social phenomena was modeled as a flow between different containers that represent groups or state of individuals.
+The first paradigms to model social processes were borrowed from the fields of physics, operations research, and economics. The first social concepts considered were those related to social units or subgroups and large processes. Also, due to the main use of dynamical systems and differential equations, social phenomena was modelled as a flow between different containers that represent groups or state of individuals.
 
 \begin{figure}[!htb]
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 \fbox{\includegraphics[width=120mm,keepaspectratio=true]{figures/statisticalModelling1.jpg}}
-\caption{The logic of statistical modeling (after Gilbert 1993)\cite{GilbertTroitzsch}}
+\caption{The logic of statistical modelling (after Gilbert 1993)\cite{GilbertTroitzsch}}
 %by Gilbert \cite{GilbertTroitzsch}}
 \label{fig:SimStatMod}
 \end{figure}
 
-Richer representations to cope with reality led to nonlinear specifications and the introduction of heterogeneity present in social systems making them hard to represent or analytically unsolvable, hence, the following years saw the spreading of \textbf{simulation techniques}, first AI approximations, cellular automatas and Petri's networks that allowed a finer granularity going from the top abstract groupings inferred in social theories to the individual entities\cite[chap.1,p.6-9]{GilbertTroitzsch}. 
+Richer representations to cope with reality led to non-linear specifications and the introduction of heterogeneity present in social systems making them hard to represent or analytically unsolvable, hence, the following years saw the spreading of \textbf{simulation techniques}, first AI approximations, cellular automatas and Petri's networks that allowed a finer granularity going from the top abstract groupings inferred in social theories to the individual entities\cite[chap.1,p.6-9]{GilbertTroitzsch}. 
 %%TODO \cite{historic reference}
 
 
-Gradually social modeling began to approach computational sciences keeping its connections to mathematics and statistics. Programming languages are more expressive, less abstract than most mathematical techniques. Programs deal more easily with parallel processes and processes without a well-defined order of actions compared to math equations. There is a quite long experience on studying programs and their properties from Algorithmics, Soft Engineering, and Operating Systems. The engineering of big models benefits from these branches endowing them with the desirable properties of modularity, extendibility, the experience of combining programs to grow huge program systems, error detection and maintenance, to mention some \cite{TaberAndTimpone1996}.
+Gradually social modelling began to approach computational sciences keeping its connections to mathematics and statistics. Programming languages are more expressive, less abstract than most mathematical techniques. Programs deal more easily with parallel processes and processes without a well-defined order of actions compared to math equations. There is a quite long experience on studying programs and their properties from Algorithmics, Soft Engineering, and Operating Systems. The engineering of big models benefits from these branches endowing them with the desirable properties of modularity, extendibility, the experience of combining programs to grow huge program systems, error detection and maintenance, to mention some \cite{TaberAndTimpone1996}.
 
 \begin{figure}[!htb]
 \centering
@@ -370,15 +370,15 @@ Gradually social modeling began to approach computational sciences keeping its c
 
 %non covered issues that motivate ABM, 
 %TOASK separo mÃ©s l'explicacio? part1: primers pseudo-agents part2:agents 100%, propietats aconseguides...
-\subsection{ABMs in Social Modeling}
-With its strong component from software engineering, considering the ABM(Agent Based Modeling) methodology to be applied to social modeling there are some striking features that make it stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modelization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable and natural to express things with that “language” giving more flexibility in the modelization.\\ 
-The use of ABM in social modeling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modeling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modeled that were very difficult or impossible to model with raw mathematics.
+\subsection{ABMs in Social Modelling}
+With its strong component from software engineering, considering the ABM(Agent Based Modelling) methodology to be applied to social modelling there are some striking features that make it stand out from other paradigms or approaches. ABM copes with the simple and bottom constituents of social science implicated in the modellization of a system, hence it can sometimes allow to describe a system naturally. It is not easy to develop an agent, but you are working with a metaphor  with a structure and concepts that we have at hand everyday. So it is more manageable and natural to express things with that “language” giving more flexibility in the modellization.\\ 
+The use of ABM in social modelling allowed to introduce the bottom layer of the hierarchy of concepts of social science, \textbf{people} and all the package of phenomena and issues associated to it. Once you are modelling a person you can work directly with personal or social relationships and their properties, arity, creation and destruction mechanisms, transitivity and interaction rules. This allows to solve models non solved before, like some cooperation, coordination and competition scenarios from game theory where several agents are involved, for instance. Also the direct interaction and feedback effects between the entities and the environment can be represented in the model. Before this step, other paradigms could not cope with the intrinsic phenomena of people interacting in a social scenario. Different issues had to be modelled that were very difficult or impossible to model with raw mathematics.
 Social entities, let's say people, or social groups, are not like particles which under the same conditions behave the same way. Two distinguishable entities will act differently under the same conditions. People have different perspectives on their social worlds, have a different knowledge corpus or skills \cite[p.19]{GilbertTroitzsch}. ABMs allows the introduction of this heterogeneity in the models, and also embedding of the Rational Choice Theory \cite{Scott2000}, bounded rationality, and complex cognitive processes. We can give each agent an individualized set of traits, features or methods that will model their different performance in the interactions. We can give them or allow them to catch a different picture from the world, the other agents and themselves.\\ 
-ABM is most indicated for describing and simulating a system composed of “behavioral” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. It is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. By the way, because the density equations result from the behavior of hunters, the ABM approach will also enable the user to study aggregate properties\cite[p.2]{Bonabeau2002}; ABM can manage agents at different levels of aggregation. The decision units can be a person but also social entities like families, couples or tribes with their own rules for interaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decision-making and aggregation is clearly separated. The range of complexity of the agent, its behavior, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individuality, and groups. This allows the modeler to work with different levels of description or complexity in the same model\cite[p.2]{Bonabeau2002}.
+ABM is most indicated for describing and simulating a system composed of “behavioural” entities. Whether one is attempting to describe a traffic jam, the stock market, voters, or how an organization works, ABM makes the model seem closer to reality. It is more natural to describe how a party of hunters move in a terrain and circle their preys than to come up with the equations that govern the dynamics of the density of hunters. By the way, because the density equations result from the behaviour of hunters, the ABM approach will also enable the user to study aggregate properties\cite[p.2]{Bonabeau2002}; ABM can manage agents at different levels of aggregation. The decision units can be a person but also social entities like families, couples or tribes with their own rules for interaction and behaviour. You can tune your model easily moving between different layers of abstraction from social sciences. ABM works with models where decision-making and aggregation is clearly separated. The range of complexity of the agent, its behaviour, degree of rationality, ability to learn and evolve, and rules of interactions can be tuned more independently of the range of complexity of the aggregation, individuality, and groups. This allows the modeller to work with different levels of description or complexity in the same model\cite[p.2]{Bonabeau2002}.
 
-Also, modeling with agents from a bottom-up point of view will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. 
+Also, modelling with agents from a bottom-up point of view will allow to be near the real causes of macroscopic large scale phenomena non predicted from the microscopic local issues. 
 % cal afegir això? ``Complex systems theory calls this \textbf{emergence}''. 
-Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theater or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counterintuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see figure \ref{tab:columnExit} ).\\
+Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape situation in a confined space: a movie theatre or a concert hall. Let us assume that there is one exit available. How can one increase the outflow of people? Narrowing down the problem, one could ask: what is the effect of putting a column (a pillar) just before exit, slightly asymmetrically (for example, to the left of the exit), about 1 m away from the exit? Intuitively, one might think the column will slow down the outflow of people. However, ABM, backed by real-world experiments, indicates that the column regulates the flow, leading to fewer injured people and a significant increase in the flow, especially if one assumes that injured people cannot move and impede the flow. This result is an example of a \textbf{counter-intuitive} consequence of an emergent phenomena: who would think of putting a column in front of an emergency exit? ABM captures that emergent phenomenon in a natural way ( see figure \ref{tab:columnExit} ).\\
 %\pdfcomment{ATM:el grafic no es una table }
 	\begin{table}[ht!]
 	\centering
@@ -400,13 +400,13 @@ Lets mention an example from Helbing,\cite{Helbing2000}; consider a fire escape 
 Under the next conditions it is advisable, natural and easier to use ABM.
 
 \begin{enumerate}[i-] 
-\item The behavior of individuals cannot be clearly defined through aggregate transition rates.
-\item Individual behavior is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behavior increases. Describing complex individual behavior with equations becomes intractable. For instance, the individual copes with hysteresis\footnote{Hysteresis is the dependence of a system not only on its current environment but also on its past environment. This dependence arises because the system can be in more than one internal state. To predict its future development, either its internal state or its history must be known\cite[p.571–597]{hysteresisDef}.}, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
-\item When the interactions between the agents are complex, nonlinear, discontinuous, or discrete (for example, when the behavior of an agent can be altered dramatically, even discontinuously, by other agents).
+\item The behaviour of individuals cannot be clearly defined through aggregate transition rates.
+\item Individual behaviour is complex. Everything can be done with equations, in principle, but the complexity of differential equations increases exponentially as the complexity of behaviour increases. Describing complex individual behaviour with equations becomes intractable. For instance, the individual copes with hysteresis\footnote{Hysteresis is the dependence of a system not only on its current environment but also on its past environment. This dependence arises because the system can be in more than one internal state. To predict its future development, either its internal state or its history must be known\cite[p.571–597]{hysteresisDef}.}, or there is heterogeneity in the set of behaviours or there are learning procedures and adaptability.
+\item When the interactions between the agents are complex, non-linear, discontinuous, or discrete (for example, when the behaviour of an agent can be altered dramatically, even discontinuously, by other agents).
 \item When space is crucial and the agents' positions are not fixed. Example: fire escape, trade, foraging in a stochastic spatial distribution of resources, traffic.
 \item Activities are a more natural way of describing the system than processes.
-\item Validation and calibration of the model through expert judgment is crucial. ABM is often the most appropriate way of describing what is actually happening in the real world, and the experts can easily “connect” to the model and have a feeling of “ownership”. 
-\item Stochasticity applies to the agents' behavior. With ABM, sources of randomness are applied to the right places as opposed to a noise term added more or less arbitrarily to an aggregate equation. 
+\item Validation and calibration of the model through expert judgement is crucial. ABM is often the most appropriate way of describing what is actually happening in the real world, and the experts can easily “connect” to the model and have a feeling of “ownership”. 
+\item Stochasticity applies to the agents' behaviour. With ABM, sources of randomness are applied to the right places as opposed to a noise term added more or less arbitrarily to an aggregate equation. 
 \end{enumerate}
 
 A last characteristic feature of agent computing, although not often noted, is that once a model has been created it provides not merely one aspect of the solution — the equilibrium, say, or the stability — but rather entire solution trajectories \cite{Axtell2000}.\\
@@ -431,9 +431,9 @@ A last characteristic feature of agent computing, although not often noted, is t
 %\end{enumerate}
 
 
-\subsubsection{Epistemology of ABMs in Social Modeling}
+\subsubsection{Epistemology of ABMs in Social Modelling}
 
-Considering specifically archeology, the introduction of modeling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a technique
+Considering specifically archaeology, the introduction of modelling led to the first use of these models as emulation of reality. ABM was used to reproduce the patterns in the material samples found. This led to think ABM as a technique
 %\pdfcomment{atm: no m'agrada way}
 of statistical distribution fitting. ABM models where thought as models that approximated stochastic variables and patterns in the model. This was the scientific use of ABM. With the idea of producing more accurate explanations of the phenomena, ABM models began to be filled with more details. The objective was to approach the model to reality to obtain nearer outcomes to the data taken as reference. Those first models were designed to be a mirror of reality, and that is why some experts have been calling them Emulation Models. As it is discussed by Premo \cite[p.33]{Premo2010} this stalled the usability of models, first due to the difficult of interpreting the causality and processes in a simulation experiment that leads to the arising of phenomena, and second, due to the problem of \textbf{equifinality} \cite[p.31]{Premo2010}.\\
 The simulation of a model produces a trace of the states visited by the system. If we execute a stochastic model, the states will be conformed by the exhibited values by the model variables following some distribution. That trace is just only one from all possibles that could appear from the combinations that randomness can produce in the variables. Hence, for a single model and an initial configuration, the stochasticity can lead to many different traces although the system finishes at some attractor state or the same patterns arise. The question is, which trace must be taken into account to explain evidences found in reality? This would be an example of equifinality.\\ 
@@ -463,7 +463,7 @@ one without that perturbation. Furthermore, due to sensitivity again, an initial
 There is another alternative to replicating evidence, another way of exploiting ABMs within another epistemological strategy described by Premo \cite[p.33-34]{Premo2010} named \textbf{Exploratory Models}. Models can be simplified to the bone. This would keep the most essential processes related to the scientific question that motivated the simulation. As it is said above\ref{myPremo_simplicity}, a simple model allows a clearer insight of what is happening, and of the path of causality between the constituents and the phenomena. Then, taking advantage of equifinality, the use of the model is to explore causality and tendency in the different traces, how happens the connection between assumptions and parameters with phenomena and states. Simplicity in the model allows to design controlled experiments and very explicit and bounded assumptions for hypothesis generation about the model to enhance the knowledge of the processes we model from reality. Then, these experiments will explore the space of parameters under sensitivity to detect ranges, tendencies or configurations that produce patterns similar or far from the empirical observations.\\ 
 % data contrast : initial assumptions revision -> hypoth revision -> new experiments -> loop -> refine theory & hypothesis 
 %generation of hypoth linked to abduction/retroduction, Premo pg 34, last paragraph
-The connection between hypothesis, assumptions and outcomes is studied by the modelers applying \textbf{retroductive reasoning}\cite[p.34]{Premo2010}. Retroductive reasoning, also known as \textbf{abduction} is an inference frame that connects effects with its causes in a coherent way with an a-priori theory. The best example to catch the concept is to show it compared to other syllogisms.\\ \textbf{Deduction} makes explicit the facts that some premises entail through some general rules. Given that \textit{``all human are mortal''} and \textit{``Socrates is a human''} I state that \textit{``Socrates is mortal''}. You could see this as a kind of prediction engine. \textbf{Induction} produces the general rules, it is an abstraction inference process. For some set of sampled particular cases $x_i$ I observe both properties, \textit{``$x_i$ is mortal''} and \textit{``$x_i$ is a human''}. Then, I could express this correlation inducing the rule \textit{``all mortals are human''} or \textit{``if someone is mortal then it is a human''}, but as we all have seen flies and ants dying, the statement would cover incorrect cases. The final produced general rule shall be \textit{``all human are mortal''}. Abduction tries to discover the facts that act as cause for some observed evidences. This inference process produces a causal \textbf{explanation}. For instance, I find a dead entity $e$, \textit{``$e$ is mortal''}. I have at hand my a-priori knowledge about the domain, \textit{``all human are mortal''}, and produce my explanation : \textit{``$e$ is mortal''} because \textit{``$e$ is a human''}. That is a plausible explanation, but as shown above, flies and ants are also mortal and it is plausible to say \textit{``$e$ is mortal''} because \textit{``$e$ is an ant''}. Explanation must be refined. Observations and hypothesis trigger new hypothesis to be included in the retroductive inference. New evidences produced by experiments will filter explanations that will allow decide whether $e$ is a human or an ant. According to Peirce, retroduction can provide good reasons to pursue a hypothesis but does not, by itself, provide good reasons to believe the hypothesis. In successful applications of retroduction, pursuit leads to the accumulation of evidence that will fix the remaining accepted hypothesis for the explanation \cite{Peirce_Abduction}.\\  
+The connection between hypothesis, assumptions and outcomes is studied by the modellers applying \textbf{retroductive reasoning}\cite[p.34]{Premo2010}. Retroductive reasoning, also known as \textbf{abduction} is an inference frame that connects effects with its causes in a coherent way with an a-priori theory. The best example to catch the concept is to show it compared to other syllogisms.\\ \textbf{Deduction} makes explicit the facts that some premises entail through some general rules. Given that \textit{``all human are mortal''} and \textit{``Socrates is a human''} I state that \textit{``Socrates is mortal''}. You could see this as a kind of prediction engine. \textbf{Induction} produces the general rules, it is an abstraction inference process. For some set of sampled particular cases $x_i$ I observe both properties, \textit{``$x_i$ is mortal''} and \textit{``$x_i$ is a human''}. Then, I could express this correlation inducing the rule \textit{``all mortals are human''} or \textit{``if someone is mortal then it is a human''}, but as we all have seen flies and ants dying, the statement would cover incorrect cases. The final produced general rule shall be \textit{``all human are mortal''}. Abduction tries to discover the facts that act as cause for some observed evidences. This inference process produces a causal \textbf{explanation}. For instance, I find a dead entity $e$, \textit{``$e$ is mortal''}. I have at hand my a-priori knowledge about the domain, \textit{``all human are mortal''}, and produce my explanation : \textit{``$e$ is mortal''} because \textit{``$e$ is a human''}. That is a plausible explanation, but as shown above, flies and ants are also mortal and it is plausible to say \textit{``$e$ is mortal''} because \textit{``$e$ is an ant''}. Explanation must be refined. Observations and hypothesis trigger new hypothesis to be included in the retroductive inference. New evidences produced by experiments will filter explanations that will allow decide whether $e$ is a human or an ant. According to Peirce, retroduction can provide good reasons to pursue a hypothesis but does not, by itself, provide good reasons to believe the hypothesis. In successful applications of retroduction, pursuit leads to the accumulation of evidence that will fix the remaining accepted hypothesis for the explanation \cite{Peirce_Abduction}.\\  
 %
 %Surprising phenomenon P is observed
 %If hypothesis H were true, H would explain why P would be expected
@@ -479,7 +479,7 @@ The connection between hypothesis, assumptions and outcomes is studied by the mo
 %the explanation process is retroduction aplication searching for the plausible chain of rules
 %that produced the facts and patterns of the outcome
 %
-The explanation of the outcome and the evidences from reality arises from the assemble of the knowledge and evidences we gather from experiments. The model becomes part of a pragmatic reductionism frame, what we comprehend from the inner processes is integrated for the comprehension of the whole. This comprehension will induce new questions and hypothesis (or purge them) that will motivate new experiments and modeling tasks producing a loop of model refinement. Generation of these new hypothesis and questions will also be of profit for theory improvement or theory building and self-criticism in a loop of modelization and question-discovering feeding each other. 
+The explanation of the outcome and the evidences from reality arises from the assemble of the knowledge and evidences we gather from experiments. The model becomes part of a pragmatic reductionism frame, what we comprehend from the inner processes is integrated for the comprehension of the whole. This comprehension will induce new questions and hypothesis (or purge them) that will motivate new experiments and modelling tasks producing a loop of model refinement. Generation of these new hypothesis and questions will also be of profit for theory improvement or theory building and self-criticism in a loop of modellization and question-discovering feeding each other. 
 %\pdfcomment{ATM:cada 3 frases hauria de posar una ref a Premo, es excessiu? faig referencia en un punt i dic q tot el que he posat ve d'alla?}.\\ 
 
 %When you construct a model you must think how will you use it, how will you apply it to a rational process 
@@ -529,9 +529,9 @@ The explanation of the outcome and the evidences from reality arises from the as
 
 %%********************************************************
 
-\subsection{Summary checklist}
+\subsection{Summary check-list}
 
-The next checklist summarizes the steps visited along the process of development and execution of our model. The ABM methodology fits in the the series of defined stages for simulation based research. 
+The next check-list summarizes the steps visited along the process of development and execution of our model. The ABM methodology fits in the the series of defined stages for simulation based research. 
 
 \begin{description}
 \renewcommand{\labelitemi}{$\bullet$}
@@ -539,7 +539,7 @@ The next checklist summarizes the steps visited along the process of development
 \item [Definition of the target] A purpose for the model or a question over the target system is stated. The model will be aimed to prediction or prognosis; diagnosis, to construct an explanation for the dynamics or the state of the system; it also can be aimed to theory validation or theory discovering, or study future possible worlds configurations or attractors in the system.
 \item [Observations] Data gathering, parameters and initial conditions retrieval is done from the target real system using bibliography, interviews and experts' supervision.
 \item [Assumptions] Relevant simplifications or principal concepts are considered. 
-\item [Design model] Translation of the experts' conceptualizations to a formal modeling language or structure. 
+\item [Design model] Translation of the experts' conceptualizations to a formal modelling language or structure. 
 \item [Computer programming] Implementation of the model in a computational language. A verification phase will test that the program matches the specifications and features of the formal model.
 \item [Run simulation] Perform the experiments. The runs will generate the traces that will conform the picture of the exploration space for the stochastic variables in the system and the emergent top level phenomena.
 \item [Gather results] Extract conclusions from the simulation data, establish correlations and dynamics. This phase will allow to detect evidences for new hypothesis and conclusions or their discarding.  
@@ -572,7 +572,7 @@ The next checklist summarizes the steps visited along the process of development
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conceptual Framework}
 
-This section introduces some definitions and explanations about the main needed concepts to expose the design of the model for the issues and questions stated in chapter one. The text begins explaining what agents consist on. The description of agents from AI covers their architecture and competences, and how different techniques and paradigms endow them with the diverse features and capabilities to solve the problems they are programmed for. An explanation about complex systems follows the section of multi agent systems. It is a necessity due to the nature of the problem and the properties exhibited by models consisting in multiple agents interacting each other. The section links typical complex system phenomena to the arising properties of the models studied for the topics of these master thesis. Emergence is defined and stressed in a dedicated subsection. This part finishes giving some brief ideas about what evolution is. The topic is introduced due to the evolutive component in the model to be run in the simulations. We seek to observe how either of the strategies adapts to the changing environment and how the dynamics favors one instead of the other producing adaptive changes in the agents. As we will study the different social groups in a competitive environment the section will introduce the concept of coevolution, the mutual feedback of evolutive changes between neighbour adaptive groups of entities.After this definitions the next part will retake the topic of agents in the section about Agent Base Models to introduce more ideas and issues from Multi Agent Systems and social simulation.   
+This section introduces some definitions and explanations about the main needed concepts to expose the design of the model for the issues and questions stated in chapter one. The text begins explaining what agents consist on. The description of agents from AI covers their architecture and competences, and how different techniques and paradigms endow them with the diverse features and capabilities to solve the problems they are programmed for. An explanation about complex systems follows the section of multi agent systems. It is a necessity due to the nature of the problem and the properties exhibited by models consisting in multiple agents interacting each other. The section links typical complex system phenomena to the arising properties of the models studied for the topics of these master thesis. Emergence is defined and stressed in a dedicated subsection. This part finishes giving some brief ideas about what evolution is. The topic is introduced due to the evolutive component in the model to be run in the simulations. We seek to observe how either of the strategies adapts to the changing environment and how the dynamics favours one instead of the other producing adaptive changes in the agents. As we will study the different social groups in a competitive environment the section will introduce the concept of coevolution, the mutual feedback of evolutive changes between neighbour adaptive groups of entities.After this definitions the next part will retake the topic of agents in the section about Agent Base Models to introduce more ideas and issues from Multi Agent Systems and social simulation.   
 
 
 \subsection{Multi Agent Systems} %% M.A.S.
@@ -587,7 +587,7 @@ This section introduces some definitions and explanations about the main needed 
 %% definition
 Multi Agent System(MAS) is an architecture for software development based on designing a solution for a problem that 
 executes of a set of computational entities called agents that interact themselves in a defined environment\cite[chapter.1]{Wooldridge2002}.\\
-Such entities are active decision making actors in the modeled system. The modeling life-cycle of an MAS will consider a stage where decision making processes must be identified from the system. Usually those decision making actions are carried along by more or less clear individual entities from the system. The modeling process will take the task to set the matching between these entities and the agent that will form the MAS. The concept ''agent`` condenses a set of features that will specify the modeling metaphor that an agent represents:
+Such entities are active decision making actors in the modelled system. The modelling life-cycle of an MAS will consider a stage where decision making processes must be identified from the system. Usually those decision making actions are carried along by more or less clear individual entities from the system. The modelling process will take the task to set the matching between these entities and the agent that will form the MAS. The concept ''agent`` condenses a set of features that will specify the modelling metaphor that an agent represents:
 some enclosed set of mechanisms to be aware of the state of the system, a set of goals to accomplish and the engine to decide from a bounded perception of the world, the actions to apply on it to achieve these goals. Besides the reasoning component of the agents, MASs have a strong component of inter-agent relationship. How one agent interacts with other agents could as important or more as how it reacts to world changes.
 
 %%bottom-up approach, reductionist way of looking at the things, we try to understand the parts\\
@@ -605,7 +605,7 @@ some enclosed set of mechanisms to be aware of the state of the system, a set of
 
 An agent is a computer system that is capable of independent action on behalf of its user or owner,
 figuring out what needs to be done to satisfy design objectives, rather than constantly being told.\cite[ch.1]{Wooldridge2002} An agent solves problems applying iteratively the schema of sense, decide and 
-act continuously. Each of the steps can add new targets to fulfill which will keep the agent exploring 
+act continuously. Each of the steps can add new targets to fulfil which will keep the agent exploring 
 the environment and interacting with it and other agents to develop its strategies to solve the tasks 
 and achieve goals.\\
 
@@ -616,7 +616,7 @@ interfaces;
 \item situated (embedded) in a particular environment—they receive inputs related to the
 state of their environment through sensors and they act on the environment through
 effectors;
-\item designed to fulfill a specific purpose—they have particular objectives (goals) to
+\item designed to fulfil a specific purpose—they have particular objectives (goals) to
 achieve;
 \item autonomous—they have control both over their internal state and over their own
 behaviour;
@@ -656,7 +656,7 @@ checks if the temperature corresponds to the desired one. According to the measu
 actions, to set the heater to ON or to OFF.\\
 But we could have something as complex as an agent representing a car in a traffic simulation while drives 
 from one point to another in the city. The agent would have accessible a knowledge base of traffic rules 
-constraining its actions. The agent at each time step of the simulation would control the swarm of other 
+that constrain its actions. The agent at each time step of the simulation would control the swarm of other 
 vehicles to avoid collisions and would follow paths and perform actions coherent to the rules of traffic. 
 The traffic rules would act as middle interface consensus of fair driving that coordinates all the cars 
 and allows some prediction of the adjacent cars. The agent can be designed a step further. When congestion 
@@ -761,7 +761,7 @@ There is a set of key points that an agent should accomplish to go beyond a simp
 	\end{equation}
 	\item [Proactivity] It means anticipation, taking initiative, detect opportunities. This
 	could materialize in prediction of a future event an realize a set of a priori actions 
-	before it occurs. For instance, if you are modeling a population of farmers and agent A1 
+	before it occurs. For instance, if you are modelling a population of farmers and agent A1 
 	sees the state of low resources of its neighbour agent A2 at the end of the season. As 
 	a social action, A1 makes a present of food to A2 before it begins to starve or asks for
 	help. We also know that this kind of action will produce stronger bonds and could have their
@@ -822,8 +822,8 @@ state of the agent determine the actions and future internal state of the agent.
 The thermostat example contains an environment with a bounded and tractable number of states.
 Such situations can be solved with a direct implementation setting the bijective function 
 state - action with a table or with a limited number of rules.
-As complexity of modeled systems grows, the number of states and possibilities become
-intractable. Theres no time nor space to specify each correspondence. The agents apply different 
+As complexity of modelled systems grows, the number of states and possibilities become
+intractable. There is no time nor space to specify each correspondence. The agents apply different 
 techniques for retrieving features and structure from the environment to proceed with the
 decision process from an abstraction to the action to perform \cite[ch.2]{RussellNorvig}.  
 
@@ -889,7 +889,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 	base. The perceptions from the environment become facts to add to the internal representation of
 	the environment. From this internal world model the agent can deduce trends for prediction besides
 	the next action to launch. A state of the environment or of the agent is specified. The agent must find 
-	the way to fulfill this within his reach of perceptions and actions. Desirable situations are sought, 
+	the way to fulfil this within his reach of perceptions and actions. Desirable situations are sought, 
 	called goals, that is environment states or agent states. 
 
 	Given some systems or situations, goals are non achievable from a single action execution. The agent 
@@ -904,7 +904,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		a logic of some level, CP0, CP1. Each new change in the knowledge base will allow to deduce
 		new facts from the status of the system to check against the goals and other issues the agent
 		is considering to produce an action coherent with the planning and the mechanics of the environment
-		to fulfill a new step to get nearer to the goals.
+		to fulfil a new step to get nearer to the goals.
 		%%TODO dibuix de la taula i els objectes mes la representacio interna : on(), above(),under()
 		The agent will use its knowledge base as a theory of the world and things plus the dynamic facts
 		that represent the volatile states.\\
@@ -1011,7 +1011,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		Goal-based models are a dichotomic approach that rely on bi-valued logics. A goal is considered
 		achievable or not achievable, an agent is committed to a goal or is not committed to that goal. But
 		many fields have shown things usually work in a fuzzy manner or probabilistically or with multivalued
-		assignations. Mentioning some example, robot soccers. In a match, eventually, you could pass the 
+		assignations. Mentioning some example, robot soccer. In a match, eventually, you could pass the 
 		ball to a partner or try to score. If you launch the action “pass” things will happen different 
 		from launching action “score” but a priori you cannot predict which will be of more help. And if 
 		you stop to think about it the opponent will steal the ball from you. Another example, a fire
@@ -1038,7 +1038,7 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 
 		%%Uncertainty(chap13 Russell... maybe ch16)
 		A pure logical agent can find a cul-de-sac on its deductions if the possible contingencies overcome
-		the reasoning to deduce the actions to fulfill the goal. These issues are what is called
+		the reasoning to deduce the actions to fulfil the goal. These issues are what is called
 		\textbf{uncertainty}. Uncertainty is the term used when there are many solutions that lead to the
 		goal or if the goal is something not sure to be achieved and the agent faces a choice with no 
 		success ensured. 
@@ -1054,15 +1054,15 @@ only motivated by an event in the environment, the agent is pure reactive.\\
 		through a non perfect solution. The decision engine should be changed to accept fallible solutions 
 		for its goal seeking. Another hunt area should be eligible in the decision process. But maybe,
 		although the other area is free of contingencies, it cannot offer a good outcome because is almost
-		desert. Someway the agent should express a \textbf{preference} and deduce the action planning
+		desert. Some way the agent should express a \textbf{preference} and deduce the action planning
 		according to it. Preference over the outcomes of and action in the goal seeking activities of the 
-		agent encompass the modeling of success probability and benefit quantification. A particular outcome
+		agent encompass the modelling of success probability and benefit quantification. A particular outcome
 		should be the fact that the hunter returned home without getting injured and a certain amount of 
 		Kg. of meat. 
 
 		\textbf{Utility theory} is used to represent and reason with preferences. Utility theory says that
 		every state has a degree of usefulness, or utility, to an agent and that the agent will prefer 
-		states with higher utility \cite{RussellNorvig}. Preference and similar issues are modeled through
+		states with higher utility \cite{RussellNorvig}. Preference and similar issues are modelled through
 		\textbf{utility functions}. 
 			\begin{equation}
 			 u\ :\ E \rightarrow \ \mathbb{R}
@@ -1206,7 +1206,7 @@ Complex science tries to find out how the interactions of a set of constituents 
 adaptive traits, decentralized organization, and macro-scale behaviour patterns.\\
 
 One of the most known systems studied by its complexity are ant colonies. The colony is formed by a limited range
-of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odor of the nest. Unloaded workers follow explorer's pheromones. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defense and many
+of roles, a queen, soldiers and workers/explorers. Each role exhibits a limited spectrum of behaviours activated by pheromones or stimulus from the environment. Soldiers attack anything that moves non impregnated by the odour of the nest. Unloaded workers follow explorer's pheromones. When food is found a worker returns home. Dead bodies or garbage found are put near other garbage, generating dump patterns. More or less this is the program of ants. And this executed by a huge amount of ants produces an ant colony that manages food resources, reproduction and care, defence and many
 other adaptations to the wild life in the forest. It can loose part of its population, can balance workload, a same specific individual group of ants is not needed for an specific task. The colony is ductile, malleable. The ant 
 colony acts has a whole with very rich global behaviours. That is a complex system.\\
 
@@ -1258,16 +1258,16 @@ something is happening there that relates the constituents.\\
 %TODO Complex : emergence, self organizing, adaptive, descentralized 
 
 Just to give a compact definition from Melanie Mitchel \cite{MelanieMitchell2009}, ``a complex system is a system in
-which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Summarizing, a complex system exhibits nontrivial emergent and self-organizing behaviors''.
+which large networks of components with no central control and simple rules of operation give rise to complex collective behaviour, sophisticated information processing, and adaptation via learning or evolution. Summarizing, a complex system exhibits non-trivial emergent and self-organizing behaviours.
 
 %exemple -> analitzar-lo i posar de manifest la complexitat ???
 % and then state what comes next:
 The laws that describe its behaviour are qualitatively different from those that govern its individual units.
 The advances of computational techniques for scientific discovering is changing the way we confront the models 
 and the manipulation of these issues. Computers have allowed new ways of learning about them. Computational techniques 
-allow the modeling of many constituents and its relationships, how they assemble to a whole system. It allows us 
+allow the modelling of many constituents and its relationships, how they assemble to a whole system. It allows us 
 to understand and play with the experimental manipulation of the behaviour in a easier way. Computers not only help 
-us in studying the surface of the behavioral phenomena but also the internals of complex systems giving insight 
+us in studying the surface of the behavioural phenomena but also the internals of complex systems giving insight 
 to our explanations and deductions. Besides, computational experimentation has the advantage of controlling the trace 
 and generating rich databases of events for posterior analyses \cite{Vicsek2002}.
 
@@ -1288,22 +1288,22 @@ complex systems.\cite{MillerPage2007}
 %TODO elabora. Emergence es un key concept
 
 Although we can give features and descriptions, emergence cannot be fully specified due to the vague 
-concepts of ``surprising'' and non deducibility \cite{Holland1997} . But some signals can 
+concepts of ``surprising'' and non deductibility \cite{Holland1997} . But some signals can 
 be enumerated to circle the concept of emergence. 
 
 A phenomenon will be considered emergent when it is repeatable and surprising, non deducible from lower 
 level rules and the relationships of basic constituents of the system.
 Emergence cannot be predicted, given our current means, from only the constituents and their addition, 
 following the reverse way of reductionism. Reductionism is one of paradigms of science. A system is observed
-to detect differentiated parts. Then each part is analyzed to extract its behaviour. Reductionism states
+to detect differentiated parts. Then each part is analysed to extract its behaviour. Reductionism states
 that the behaviour of the system can be understood from the constituents specifications plus a simple or 
 direct aggregation step. This idea can be applied recursively on the same constituents till some atomic element
-considered the bottom of the process. The thing is that due to nonlinear relationships, following the inverse
+considered the bottom of the process. The thing is that due to non-linear relationships, following the inverse
 path to reconstruct a sense for the whole system is practically impossible.\\
 
 Even a small and simple set of rules can make a dynamic system generate emergent phenomena. 
 If these rules induce non linear relationships the proportion of a perturbation in the system will not 
-be paired with the response of it. To use an uninventive example, nonlinear emergence occurs when someone 
+be paired with the response of it. To use an uninventive example, non-linear emergence occurs when someone 
 \textbf{calmly} says “fire” in a crowded room and produces \textbf{explosive} panic. Unpredictable results 
 arise from constituents interactions. It is here where emergence can appear. When a pattern is recognizable 
 and repeats usually along experiments, is plausible to be considered emergent \cite{Holland1997}.\\  
@@ -1311,7 +1311,7 @@ and repeats usually along experiments, is plausible to be considered emergent \c
 There is potential for emergent phenomena, i.e., when: 
 \begin{itemize}
  \item Agent behaviour is non linear ( weight sum of variables), or is expressed with discontinuities, if-then rules in a categorical framework or in discrete non continuous manner.
- \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation. 
+ \item Under memory phenomena, path-dependence, and hysteresis, non-markovian behaviour, or temporal correlations, including learning and adaptation. 
  \item Heterogeneous interactions between agents.
  \item When there is instability to perturbations although the system could be defined linearly.
 \end{itemize}
@@ -1374,7 +1374,7 @@ To summarize the major ideas of Darwin’s theory:
 	offspring, causing the number of organisms with those traits to increase over 
 	subsequent generations.
 	\item Evolutionary change is constant and gradual via the accumulation of
-	small, favorable variations.
+	small, favourable variations.
 \end{itemize}
 
 Darwin theory had some points to be clarified. How did parents pass their traits to the offspring?
@@ -1407,7 +1407,7 @@ When the adaptive process of an species produces a change that motivates selecti
 species which in turn affects the same way the first species we have coevolution. For instance, the relationship 
 between a prey and a predator will induce coevolution. The hunting activities produce death in the prey species, hence
 motivating the selection of traits that give more probabilities in front of a predator attack. Predators feast on preys 
-with feeble traits. Old feeble traits disappear. Then predators must hunt the individuals without the feeble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pressure is established between both species feeding changes of new ``attacks'' and ``counterattacks'' and ``counterattacks'' to the ``counterattacks''.\\
+with feeble traits. Old feeble traits disappear. Then predators must hunt the individuals without the feeble traits. Incompetent predators will starve and a new elite will appear. A mutual selection pressure is established between both species feeding changes of new ``attacks'' and ``counter-attacks and ``counter-attacks to the ``counter-attacks.\\
 
 Although we will not wire explicitly coevolution in the two studied social models we expect to see this phenomena. In Gujarat project we expect to observe coevolution between Hunter-gatherers and Agro-pastoralist as they compete for resources and land. The cultural traits are considered an analogy of adaptive strategies. 
 
@@ -1477,8 +1477,8 @@ We study the skills and strategies for resource exploitation. The successful str
 %%TODO 
 %For Sugarscape we think sophisticated agents will overcome classical ones, but for Gujarat our aim is to reach the coevolution results that lead to a equilibrium of the two adaptive strategies.\pdfcomment{Coevolution és un concepte lligat a Evolution, no a banda. A més, caldria que parlessis sobre el concepte d'evolució cultural, perquè si no, és difícil entendre per quin motiu volem aplicar-ho a simulació social} \\ \pdfcomment{ATM:done} 
 
-In our study of transition from HG to AP, both groups will be modeled as two different typologies of agents. Each typology will account as a differentiated group where members will belong to it along all their life. When an agent emancipates from its parents takes the decision of being HG or AP according to an evaluation of which of both groups seems more successful. When an agent takes the same role of the parents it can be seen as vertical transmission of cultural traits. When an agent takes a role different from the parents we can assume that it learned these skills from neighbours in environment. It must be stressed that we pay attention to transition to agriculture, not to emergence of agriculture in a only HG environment. Somehow agropastoralist yet exists in the environment. We only want to know how different environmental conditions favor one or another strategy and why HG kept being a plausible strategy in Gujarat when it had disappeared in other places.
-Each group has particular actions representing their way of making their living. HG execute Forage actions and AP execute Crop actions ( with subtasks of preparing, cropping and harvesting fields ). But there societies where both strategies coexists inside a group. Individuals show competence and skills to survive applying a mix of HG and AP actions. So the final aim is to remove groups. If we understand strategies as knowledge, knowledge will be contained in the agents in a fuzzy and dynamic way instead of wired eligible actions. There will be mixed agents that will execute HG actions and AP actions with different proficiency on them. We will call \emph{skills} to this construct. And these skills represent the ''genetic'' traits that we want observe evolving from this framework of CE. Each agent will have proficiency in the four skills from the merge of HG and AP groups : hunter, gather, crop, shepherd. A typical Hunter Gatherer considered in the scope of this master-thesis work would be an individual with a near 100\% proficiency in hunting and gathering while having 0\% on the other actions. And a pure AP individual would be endowed with the complementary assignation, 0\% for hunting and gathering with almost 100\% for actions Crop and Shepperd\ref{fig:SkillProfiles}. In the long term we want to observe the gradual transformation from one strategy to another through the change of profiles of proficiency. As knowledge is something where skills are not mutually exclusive, we consider reasonable that agents can execute the same set of actions. The dynamics of selection and environment pressure will benefit some configurations from others. This can lead to profile attractors or cyclic emergence of profile patterns according to the periodicity of climatic fluctuations.
+In our study of transition from HG to AP, both groups will be modelled as two different typologies of agents. Each typology will account as a differentiated group where members will belong to it along all their life. When an agent emancipates from its parents takes the decision of being HG or AP according to an evaluation of which of both groups seems more successful. When an agent takes the same role of the parents it can be seen as vertical transmission of cultural traits. When an agent takes a role different from the parents we can assume that it learned these skills from neighbours in environment. It must be stressed that we pay attention to transition to agriculture, not to emergence of agriculture in a only HG environment. Somehow agropastoralist yet exists in the environment. We only want to know how different environmental conditions favour one or another strategy and why HG kept being a plausible strategy in Gujarat when it had disappeared in other places.
+Each group has particular actions representing their way of making their living. HG execute Forage actions and AP execute Crop actions ( with subtasks of preparing, cropping and harvesting fields ). But there societies where both strategies coexists inside a group. Individuals show competence and skills to survive applying a mix of HG and AP actions. So the final aim is to remove groups. If we understand strategies as knowledge, knowledge will be contained in the agents in a fuzzy and dynamic way instead of wired eligible actions. There will be mixed agents that will execute HG actions and AP actions with different proficiency on them. We will call \emph{skills} to this construct. And these skills represent the ''genetic'' traits that we want observe evolving from this framework of CE. Each agent will have proficiency in the four skills from the merge of HG and AP groups : hunter, gather, crop, shepherd. A typical Hunter Gatherer considered in the scope of this master-thesis work would be an individual with a near 100\% proficiency in hunting and gathering while having 0\% on the other actions. And a pure AP individual would be endowed with the complementary assignation, 0\% for hunting and gathering with almost 100\% for actions Crop and Shepherd\ref{fig:SkillProfiles}. In the long term we want to observe the gradual transformation from one strategy to another through the change of profiles of proficiency. As knowledge is something where skills are not mutually exclusive, we consider reasonable that agents can execute the same set of actions. The dynamics of selection and environment pressure will benefit some configurations from others. This can lead to profile attractors or cyclic emergence of profile patterns according to the periodicity of climatic fluctuations.
 
 
 \begin{figure}[h!]
@@ -1496,7 +1496,7 @@ Each group has particular actions representing their way of making their living.
 \section{Introduction}
 
 This chapter exposes the work in case study one in the Simulpast project. 
-The text follows the structure of ODD documents we have been using to register our decisions and models and as a communication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclusions. We think this feature is a good point for expert-modeler communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know ODD is not perfect. It does not follows Object Oriented methodology o structure entities and its relationships, but we wanted to ensure the communication part for elicitation applying ODD philosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
+The text follows the structure of ODD documents we have been using to register our decisions and models and as a communication report in the group. ODD is a document structure with an overall look of high-level specification but open to detailed explanations \cite{GrimmBergerODD2012}. ODD documents have been thought to be able to yield enough details so another researcher can replicate the system and produce the same results and conclusions. We think this feature is a good point for expert-modeller communication. It helps to keep an account of the details and the refinement of the discursive part of knowledge from social science experts into formal components of the model. We know ODD is not perfect. It does not follows Object Oriented methodology, structure, or entities and its relationships, but we wanted to ensure the communication part for elicitation applying ODD philosophy following a growing procedure of a seed system based in Sugarscape \cite{EpsteinAxtell}.
 
 %TODO en algun punt parla d'AUML. perque no l'usem. La interactio agent-agent no es basa en un llenguatge ni
 % cap transferencia estructurada complexa, nomes els tokes d'informacio de recursos. NO HI HA DIALEG 
@@ -1507,7 +1507,7 @@ The text follows the structure of ODD documents we have been using to register o
 %TODO the chapter dresses the main ODD structure with extra explanations extending its technical scope. The aim is not only to comunicate a model but the ``path''  that leads to it. <--- pero no ho tens ja aixo amb l'ODD??? 
 
 
-The first section of the chapter introduces the observations and hypothesis of archaeologists that have been studying the scenario of Gujarat during the transition and settlement of agriculture. This part states the motivation that leads to the purpose of the model. The following sections get deep in the details of the system, environmental features, resources, weather conditions and dynamics, the agents and the features for matching the relevant system dynamics to solve the question. After the modeling details the next section exposes the solution for solving the decision making of the agents. A planning strategy is needed to achieve maximum adaptability of the agents under the different weather conditions scenarios for stress experiments. Markov Decision Processes and UCT algorithm will be introduced. Once the decision making is explained, different solutions are presented to enhance efficiency and throughput of steps per second in the simulation. The last sections cover the experimental part of the project. It will be centered about the resilience of the current social group modeled, hunter gatherers. %TODO posa una mica mes
+The first section of the chapter introduces the observations and hypothesis of archaeologists that have been studying the scenario of Gujarat during the transition and settlement of agriculture. This part states the motivation that leads to the purpose of the model. The following sections get deep in the details of the system, environmental features, resources, weather conditions and dynamics, the agents and the features for matching the relevant system dynamics to solve the question. After the modelling details the next section exposes the solution for solving the decision making of the agents. A planning strategy is needed to achieve maximum adaptability of the agents under the different weather conditions scenarios for stress experiments. Markov Decision Processes and UCT algorithm will be introduced. Once the decision making is explained, different solutions are presented to enhance efficiency and throughput of steps per second in the simulation. The last sections cover the experimental part of the project. It will be centred about the resilience of the current social group modelled, hunter gatherers. %TODO posa una mica mes
 
 %%1.-target - purpose
 
@@ -1605,7 +1605,7 @@ Saurashtra. This region is an ecotone, characterized by the seasonal influence o
 contrasting ecological niches are in tension and small climatic shifts can generate significant
 environmental changes, eventually affecting resource availability. Archaeological evidence points to
 the presence and possible coexistence in the area of groups of people with different resource
-management strategies and mobility behaviors: hunter-gatherers (HG); agropastoralists (AP).
+management strategies and mobility behaviours: hunter-gatherers (HG); agropastoralists (AP).
 The aim of this study is to model resource management and decision making among hunter-gatherer
 groups in this region to explore adaptive trajectories and performance in relation to a) environmental
 variability and b) the appearance of other specialized groups.
@@ -1629,7 +1629,7 @@ semi-arid region in NW India.
 
 
 Note:
-The modeling workflow is following these steps:
+The modelling work-flow is following these steps:
 1. Environmental settings and climate engine
 2. Resources and energy flow
 3. Socio-ecological behaviour of HG
@@ -1637,7 +1637,7 @@ The modeling workflow is following these steps:
 5. Cultural transmission
 
 This scaling approach includes three main theoretical and methodological research aspects:
-1. Human behavioral ecological approach and socio-ecological co-evolutionary framework
+1. Human behavioural ecological approach and socio-ecological co-evolutionary framework
 2. Model based vs rule based action planner of the agents
 Up to the date, steps 1, 2 and 3 have been developed . Work regarding AP models and cultural
 transmission is in progress.
@@ -1657,7 +1657,7 @@ Future : We intend to explore HG resilience considering the appearance of AP
 The model is designed to explore separately socio-ecological behaviours of two isolated populations: 1)
 Hunter-Gatherers (HG) agents and 2) Agro-Pastoralist (AP) agents. This separate simulation of the
 two groups is needed to obtain independent, coherent and consistent models of HG and AP decision
-making. Once the dynamics of the modeled systems are understood for each population, agents from
+making. Once the dynamics of the modelled systems are understood for each population, agents from
 the two populations will be combined in a single simulation execution. These will be considered as
 independent groups, and interaction between agents will be limited to other agents belonging to the
 same population. But the scope of this work is focused on exploring the socio-ecological behaviour of HG populations.
@@ -1671,7 +1671,7 @@ strategies regarding settlement, mobility and resource use.
 \subsection{Scales}
 \paragraph{Agent Scale}
 The basic agent is defined as a couple (one woman and one man). This is considered to be the entity
-engaging in all decision-making processes and actions modeled in the simulation.
+engaging in all decision-making processes and actions modelled in the simulation.
 \paragraph{Time Scale}
 Time Scale for the simulation is one day. This time step is coherent with the granularity of agents’
 planning. The decision making of HG happens at the level of their daily action.
@@ -1681,7 +1681,7 @@ planning. The decision making of HG happens at the level of their daily action.
 
 The spatial resolution of the proposed simulation model is constrained by the resolution of available
 relevant geographic data and the nature of the agent mobility and resource gathering activities being
-modeled.
+modelled.
 Hence, it was decided to use 31.5m x 31.5m cells, corresponding to ca. 1000 square meters. This is
 the level of resolution of the most detailed geographical information available for the area. This surface
 fits the type of settlements recognized from archaeological surveys.
@@ -1705,7 +1705,7 @@ features do not seasonally change in extension but their productivity (in terms 
 and therefore resources supported) does.
 \end{enumerate}
 
-The cornerstone of our environmental modeling is the climatic 'engine'. The climate module
+The cornerstone of our environmental modelling is the climatic 'engine'. The climate module
 determines the quantity of rain that precipitates evenly on the landscape on every time step.
 Precipitation is used in conjunction with the terrain model to calculate the amount of biomass for each
 cell and season. The climate model is based on historical data, as well as Holocene monsoon models.
@@ -1779,7 +1779,7 @@ Kelly 1983 – Table 3).
 	\hline
 	Dune (desert) & $700g/m^2$ & $13\%$ & $1820KJ/m^2$ & $435KCal$ \\ 
 	\hline
-	Interdune (savanna) & $4000g/m^2$ & $23\%$ & $18400KJ/m^2$ & $4395KCal$ \\
+	Interdune (savannah) & $4000g/m^2$ & $23\%$ & $18400KJ/m^2$ & $4395KCal$ \\
 	\hline
 	\end{tabular}
 	\caption{Parameters for resource parametrisation according to Kelly (1983; Table 3, p. 284).}
@@ -1804,8 +1804,8 @@ to the nearest water body representing this information.
 \paragraph{Efficiency}
 The total primary biomass value does not constitute the entire primary biomass available for
 consumption to animals and humans. This value represents the entire biomass production
-including both edible (fruits, tubers some roots etc.) and non-edible (wood, stems, branches
-etc.) parts of the plants. The ratio of profitable biomass versus whole biomass will be the
+including both edible (fruits, tubers or some roots) and non-edible (wood, stems, branches
+ for instance) parts of the plants. The ratio of profitable biomass versus whole biomass will be the
 efficiency value specified in the above table that allow to calculate the energy effectively
 available for humans.
 
@@ -2663,7 +2663,7 @@ rate based from biomass guessing and optimality of resource retrieval(p.\pageref
 that marks the distance to the ideal foraging, seems only to be explained by uncertainty an stochasticity 
 effects, and not a big advance can we get from refining further the biomass prediction procedures. Many of 
 these experiments are run under an scenario where the agent is alone in the world. One of the motivations is 
-to discover faults in the foraging and migration patterns and verify the modeling decisions.
+to discover faults in the foraging and migration patterns and verify the modelling decisions.
 That is the reason that introducing divergence management due to neighbour presence (multi-agency) is left 
 for the next step of this model in the project. But anyway, although there is no multi-agency awareness we 
 have tested the agent in a scenario of indirect competition for resources with other agents.
@@ -2680,7 +2680,7 @@ to two time lapses in the year were opposite strategies were needed.
 
 
 
-\section{Tunning the planner ( State Reduction And Statistical Significance )}
+\section{Tuning the planner ( State Reduction And Statistical Significance )}
 \label{sec:expStateReduction}
 
 %%quick descrip : 
@@ -2702,7 +2702,7 @@ variation in the decline of the HGs.
 Against our intuitions the mdp agent could not break the starvation rate of the rule based agent. Statistical 
 sampling of the starvation rates showed us a performance equivalent to the rule based agent. Furthermore, 
 the exploration of different parameters in the planning engine did not produce improvement and results were unstable. 
-We saw agents with deeper future prospection and greater sampling in the search tree to perform sometimes 
+We saw agents with deeper future prospecting and greater sampling in the search tree to perform sometimes 
 worse than other configurations.
 
 %%describe plots : 
