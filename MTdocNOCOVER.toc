@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2.3}Modelling in social sciences}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}ABMs in Social Modelling}{10}{subsection.2.3.1}
 \contentsline {subsubsection}{Epistemology of ABMs in Social Modelling}{13}{section*.2}
-\contentsline {subsection}{\numberline {2.3.2}Summary checklist}{16}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Summary check-list}{16}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Conceptual Framework}{17}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Multi Agent Systems}{17}{subsection.2.4.1}
 \contentsline {subsubsection}{Agents}{18}{section*.3}
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.4.2}Complex Systems}{28}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Emergence}{30}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Evolution}{31}{subsection.2.4.4}
-\contentsline {paragraph}{Co-evolution}{33}{section*.8}
+\contentsline {paragraph}{Coevolution}{33}{section*.8}
 \contentsline {paragraph}{Cultural Evolution}{34}{section*.9}
 \contentsline {chapter}{\numberline {3}Gujarat}{42}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{42}{section.3.1}
@@ -66,7 +66,7 @@
 \contentsline {section}{\numberline {3.8}Input data}{55}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Rainfall}{55}{subsection.3.8.1}
 \contentsline {subsection}{\numberline {3.8.2}Ground Model}{57}{subsection.3.8.2}
-\contentsline {subsection}{\numberline {3.8.3}Hunter-Gatherer behavior}{57}{subsection.3.8.3}
+\contentsline {subsection}{\numberline {3.8.3}Hunter-Gatherer behaviour}{57}{subsection.3.8.3}
 \contentsline {section}{\numberline {3.9}Submodels}{57}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Agent execution cycle}{57}{subsection.3.9.1}
 \contentsline {section}{\numberline {3.10}Knowledge}{58}{section.3.10}
@@ -79,11 +79,11 @@
 \contentsline {subsubsection}{Reducing States of Search Tree}{65}{section*.22}
 \contentsline {subsubsection}{Divergent Trajectories}{68}{section*.23}
 \contentsline {section}{\numberline {3.12}Efficiency}{68}{section.3.12}
-\contentsline {subsection}{\numberline {3.12.1}Low Ressolution map}{68}{subsection.3.12.1}
+\contentsline {subsection}{\numberline {3.12.1}Low Resolution map}{68}{subsection.3.12.1}
 \contentsline {subsection}{\numberline {3.12.2}UCT efficiency improvement}{69}{subsection.3.12.2}
 \contentsline {subsection}{\numberline {3.12.3}Throughput measures}{70}{subsection.3.12.3}
 \contentsline {chapter}{\numberline {4}Experiments}{71}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tunning the planner ( State Reduction And Statistical Significance )}{72}{section.4.1}
+\contentsline {section}{\numberline {4.1}Tuning the planner ( State Reduction And Statistical Significance )}{72}{section.4.1}
 \contentsline {section}{\numberline {4.2}Divergence And Biomass Prediction}{75}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Finding the limits to Improvement by Biomass Prediction}{77}{subsection.4.2.1}
 \contentsline {section}{\numberline {4.3}Comparing the Rule Based Agent and the MDP Agent}{81}{section.4.3}
@@ -91,9 +91,9 @@
 \contentsline {subsection}{\numberline {4.3.2}Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{90}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Experiment 3: Width Exploration}{92}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Conclusions}{93}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Conclussions and Future}{100}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.5}Future Work}{101}{subsection.5.0.5}
-\contentsline {chapter}{\numberline {6}Acknowledgement}{103}{chapter.6}
-\contentsline {chapter}{\numberline {7}Annex 1 : Platforms}{104}{chapter.7}
-\contentsline {section}{\numberline {7.1}Pandora}{104}{section.7.1}
-\contentsline {section}{\numberline {7.2}Other platforms}{105}{section.7.2}
+\contentsline {chapter}{\numberline {5}Conclusions, Future and Recommendations}{101}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.5}Future Work}{102}{subsection.5.0.5}
+\contentsline {chapter}{\numberline {6}Acknowledgement}{104}{chapter.6}
+\contentsline {chapter}{\numberline {7}Annex 1 : Platforms}{105}{chapter.7}
+\contentsline {section}{\numberline {7.1}Pandora}{105}{section.7.1}
+\contentsline {section}{\numberline {7.2}Other platforms}{106}{section.7.2}

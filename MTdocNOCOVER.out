@@ -9,7 +9,7 @@
 \BOOKMARK [1][-]{section.2.3}{Modelling in social sciences}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.3.1}{ABMs in Social Modelling}{section.2.3}% 10
 \BOOKMARK [3][-]{section*.2}{Epistemology of ABMs in Social Modelling}{subsection.2.3.1}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{Summary checklist}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Summary check-list}{section.2.3}% 12
 \BOOKMARK [1][-]{section.2.4}{Conceptual Framework}{chapter.2}% 13
 \BOOKMARK [2][-]{subsection.2.4.1}{Multi Agent Systems}{section.2.4}% 14
 \BOOKMARK [3][-]{section*.3}{Agents}{subsection.2.4.1}% 15
@@ -20,7 +20,7 @@
 \BOOKMARK [2][-]{subsection.2.4.2}{Complex Systems}{section.2.4}% 20
 \BOOKMARK [2][-]{subsection.2.4.3}{Emergence}{section.2.4}% 21
 \BOOKMARK [2][-]{subsection.2.4.4}{Evolution}{section.2.4}% 22
-\BOOKMARK [3][-]{section*.8}{Co-evolution}{subsection.2.4.4}% 23
+\BOOKMARK [3][-]{section*.8}{Coevolution}{subsection.2.4.4}% 23
 \BOOKMARK [4][-]{section*.9}{Cultural Evolution}{section*.8}% 24
 \BOOKMARK [0][-]{chapter.3}{Gujarat}{}% 25
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 26
@@ -65,7 +65,7 @@
 \BOOKMARK [1][-]{section.3.8}{Input data}{chapter.3}% 65
 \BOOKMARK [2][-]{subsection.3.8.1}{Rainfall}{section.3.8}% 66
 \BOOKMARK [2][-]{subsection.3.8.2}{Ground Model}{section.3.8}% 67
-\BOOKMARK [2][-]{subsection.3.8.3}{Hunter-Gatherer behavior}{section.3.8}% 68
+\BOOKMARK [2][-]{subsection.3.8.3}{Hunter-Gatherer behaviour}{section.3.8}% 68
 \BOOKMARK [1][-]{section.3.9}{Submodels}{chapter.3}% 69
 \BOOKMARK [2][-]{subsection.3.9.1}{Agent execution cycle}{section.3.9}% 70
 \BOOKMARK [1][-]{section.3.10}{Knowledge}{chapter.3}% 71
@@ -78,11 +78,11 @@
 \BOOKMARK [3][-]{section*.22}{Reducing States of Search Tree}{subsection.3.11.2}% 78
 \BOOKMARK [3][-]{section*.23}{Divergent Trajectories}{subsection.3.11.2}% 79
 \BOOKMARK [1][-]{section.3.12}{Efficiency}{chapter.3}% 80
-\BOOKMARK [2][-]{subsection.3.12.1}{Low Ressolution map}{section.3.12}% 81
+\BOOKMARK [2][-]{subsection.3.12.1}{Low Resolution map}{section.3.12}% 81
 \BOOKMARK [2][-]{subsection.3.12.2}{UCT efficiency improvement}{section.3.12}% 82
 \BOOKMARK [2][-]{subsection.3.12.3}{Throughput measures}{section.3.12}% 83
 \BOOKMARK [0][-]{chapter.4}{Experiments}{}% 84
-\BOOKMARK [1][-]{section.4.1}{Tunning the planner \( State Reduction And Statistical Significance \)}{chapter.4}% 85
+\BOOKMARK [1][-]{section.4.1}{Tuning the planner \( State Reduction And Statistical Significance \)}{chapter.4}% 85
 \BOOKMARK [1][-]{section.4.2}{Divergence And Biomass Prediction}{chapter.4}% 86
 \BOOKMARK [2][-]{subsection.4.2.1}{Finding the limits to Improvement by Biomass Prediction}{section.4.2}% 87
 \BOOKMARK [1][-]{section.4.3}{Comparing the Rule Based Agent and the MDP Agent}{chapter.4}% 88
@@ -90,7 +90,7 @@
 \BOOKMARK [2][-]{subsection.4.3.2}{Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{section.4.3}% 90
 \BOOKMARK [2][-]{subsection.4.3.3}{Experiment 3: Width Exploration}{section.4.3}% 91
 \BOOKMARK [2][-]{subsection.4.3.4}{Conclusions}{section.4.3}% 92
-\BOOKMARK [0][-]{chapter.5}{Conclussions and Future}{}% 93
+\BOOKMARK [0][-]{chapter.5}{Conclusions, Future and Recommendations}{}% 93
 \BOOKMARK [1][-]{subsection.5.0.5}{Future Work}{chapter.5}% 94
 \BOOKMARK [0][-]{chapter.6}{Acknowledgement}{}% 95
 \BOOKMARK [0][-]{chapter.7}{Annex 1 : Platforms}{}% 96

@@ -3228,10 +3228,10 @@ Configurations for mdp agents, when compared, gives us quantitative differences.
 \subsection{Experiment 3: Width Exploration}
 \label{sec:expEcsi3}
 %%quick descrip : 
-The third experiment explores configurations for mdp and its performance in optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision process. 
-Horizon sets the amount of steps you look in the future; and width sets the amount of hypothetical traces explored to get an statistical sample of eventual outcomes and distinguish between good actions from bad to apply in the next time step. 
+The third experiment explores configurations for mdp and its performance for optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision process. 
+Horizon sets the amount of steps you look in the future; and width sets the amount of hypothetical traces explored to get an statistical sample of eventual outcomes and distinguish between good actions from bad to be applied in the next time step. 
 This exploration is needed  to detect sensitivities and interactions between horizon, width and the starvation rates for the sake of the tests in the evaluation of the mdp approach versus the rule based model. 
-To test horizons with values one and  two is out of discussion because you cannot take all the advantage of the planning engine. And horizons above six we have seen are of great computational time expenditure. Even horizon six demands big amounts of hours making simulations non reasonable when applied to ranges in the scale of decades and hundreds of years.
+To test horizons with values '1' and '2' is out of discussion because you cannot take all the advantage of the planning engine. And horizons above '6' we have seen are of great computational time expenditure. Even horizon '6' demands big amounts of hours making simulations non reasonable when applied to ranges in the scale of decades and hundreds of years.
 
 %%Settings : 
 The configurations are explored under the same conditions as the experiment one. The chosen combinations follow, h10 and w500, h10 and w1000, h10 and w5000, h10 and w10000, h6 and w200, h6 and w500, h6 and w1000, h3 and w50, h3 and w100, h3 and w500.
@@ -3343,11 +3343,9 @@ classical agents in their evolution and response to challenges. The second is th
 project force us to use AI tools to represent agents behaviour. There are many details and relationships.
 The environment is very changing due to the mutual interaction of agents. And simple classical models cannot 
 encompass a behaviour that will show successful, reasonable and or realistic decisions under this environment.
-By the way, AI was born to emulate human performance in intelligent tasks. But it does not mean AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
-\subsection{Future Work}
+%% mou aqui el paragraph del chapter anterior que comenca amb : By the way, AI was born to emulate human
 
-\end{enumerate}
 
 \subsection{Future Work}
 
