@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.24)  22 SEP 2014 01:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.24)  22 SEP 2014 02:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1641,10 +1641,10 @@ File: figures/expm/noReduccClim4000.png Graphic file (type png)
 
 <use figures/expm/noReduccClim4000.png>
 Package pdftex.def Info: figures/expm/noReduccClim4000.png used on input line 2
-717.
+716.
 (pdftex.def)             Requested size: 360.5022pt x 347.12354pt.
 
-Overfull \hbox (0.5022pt too wide) in paragraph at lines 2717--2719
+Overfull \hbox (0.5022pt too wide) in paragraph at lines 2716--2718
  [][] 
  []
 
@@ -1655,15 +1655,15 @@ File: figures/expm/meanBoxplots_Rain1000to4000_rule_rand_mdp.png Graphic file (
 type png)
  <use figures/expm/meanBoxplots_Rain1000to4000_rule_rand_mdp.png>
 Package pdftex.def Info: figures/expm/meanBoxplots_Rain1000to4000_rule_rand_mdp
-.png used on input line 2746.
+.png used on input line 2745.
 (pdftex.def)             Requested size: 462.82172pt x 347.12354pt.
 
-Overfull \hbox (102.82172pt too wide) in paragraph at lines 2746--2747
+Overfull \hbox (102.82172pt too wide) in paragraph at lines 2745--2746
  [][] 
  []
 
 [74 <./figures/expm/meanBoxplots_Rain1000to4000_rule_rand_mdp.png>]
-Overfull \hbox (24.89365pt too wide) in paragraph at lines 2772--2779
+Overfull \hbox (24.89365pt too wide) in paragraph at lines 2771--2778
 []\OT1/ptm/m/n/10.95 Our sim-u-la-tions ex-plored the pa-ram-e-ter hori-zon and
  width of the UCT algorithm[[]].
  []
@@ -1672,7 +1672,7 @@ Overfull \hbox (24.89365pt too wide) in paragraph at lines 2772--2779
 File: figures/expm/widths.png Graphic file (type png)
 
 <use figures/expm/widths.png>
-Package pdftex.def Info: figures/expm/widths.png used on input line 2793.
+Package pdftex.def Info: figures/expm/widths.png used on input line 2792.
 (pdftex.def)             Requested size: 311.07939pt x 233.3125pt.
  [75 <./figures/expm/widths.png>] [76]
 <figures/expm/guessVSnoguess_clim500.png, id=1177, 547.04375pt x 525.965pt>
@@ -1680,7 +1680,7 @@ File: figures/expm/guessVSnoguess_clim500.png Graphic file (type png)
 
 <use figures/expm/guessVSnoguess_clim500.png>
 Package pdftex.def Info: figures/expm/guessVSnoguess_clim500.png used on input 
-line 2863.
+line 2862.
 (pdftex.def)             Requested size: 242.66158pt x 233.3125pt.
 
 <figures/expm/guessVSnoguess_clim1500.png, id=1178, 547.04375pt x 525.965pt>
@@ -1688,7 +1688,7 @@ File: figures/expm/guessVSnoguess_clim1500.png Graphic file (type png)
 
 <use figures/expm/guessVSnoguess_clim1500.png>
 Package pdftex.def Info: figures/expm/guessVSnoguess_clim1500.png used on input
- line 2872.
+ line 2871.
 (pdftex.def)             Requested size: 242.66158pt x 233.3125pt.
 
 <figures/expm/guessVSnoguess_clim4000.png, id=1179, 547.04375pt x 525.965pt>
@@ -1696,7 +1696,7 @@ File: figures/expm/guessVSnoguess_clim4000.png Graphic file (type png)
 
 <use figures/expm/guessVSnoguess_clim4000.png>
 Package pdftex.def Info: figures/expm/guessVSnoguess_clim4000.png used on input
- line 2881.
+ line 2880.
 (pdftex.def)             Requested size: 242.66158pt x 233.3125pt.
  [77 <./figures/expm/guessVSnoguess_clim500.png (PNG copy)>] [78 <./figures/exp
 m/guessVSnoguess_clim1500.png (PNG copy)>] [79 <./figures/expm/guessVSnoguess_c
@@ -1706,10 +1706,10 @@ File: figures/expm/gapExplainClimate500.png Graphic file (type png)
 
 <use figures/expm/gapExplainClimate500.png>
 Package pdftex.def Info: figures/expm/gapExplainClimate500.png used on input li
-ne 2967.
+ne 2966.
 (pdftex.def)             Requested size: 361.22365pt x 347.12354pt.
 
-Overfull \hbox (1.22365pt too wide) in paragraph at lines 2967--2969
+Overfull \hbox (1.22365pt too wide) in paragraph at lines 2966--2968
  [][] 
  []
 
@@ -1718,10 +1718,10 @@ File: figures/expm/gapBoxplotsClimate500.png Graphic file (type png)
 
 <use figures/expm/gapBoxplotsClimate500.png>
 Package pdftex.def Info: figures/expm/gapBoxplotsClimate500.png used on input l
-ine 2976.
+ine 2975.
 (pdftex.def)             Requested size: 360.5022pt x 347.12354pt.
 
-Overfull \hbox (0.5022pt too wide) in paragraph at lines 2976--2978
+Overfull \hbox (0.5022pt too wide) in paragraph at lines 2975--2977
  [][] 
  []
 
@@ -1730,10 +1730,10 @@ File: figures/expm/gapBoxplotsClimate1500.png Graphic file (type png)
 
 <use figures/expm/gapBoxplotsClimate1500.png>
 Package pdftex.def Info: figures/expm/gapBoxplotsClimate1500.png used on input 
-line 2985.
+line 2984.
 (pdftex.def)             Requested size: 360.5022pt x 347.12354pt.
 
-Overfull \hbox (0.5022pt too wide) in paragraph at lines 2985--2987
+Overfull \hbox (0.5022pt too wide) in paragraph at lines 2984--2986
  [][] 
  []
 
@@ -1742,10 +1742,10 @@ File: figures/expm/gapBoxplotsClimate4000.png Graphic file (type png)
 
 <use figures/expm/gapBoxplotsClimate4000.png>
 Package pdftex.def Info: figures/expm/gapBoxplotsClimate4000.png used on input 
-line 2994.
+line 2993.
 (pdftex.def)             Requested size: 360.5022pt x 347.12354pt.
 
-Overfull \hbox (0.5022pt too wide) in paragraph at lines 2994--2996
+Overfull \hbox (0.5022pt too wide) in paragraph at lines 2993--2995
  [][] 
  []
 
@@ -1755,7 +1755,7 @@ lotsClimate500.png (PNG copy)>]
 File: figures/expm/ecsi1_clim500.png Graphic file (type png)
 
 <use figures/expm/ecsi1_clim500.png>
-Package pdftex.def Info: figures/expm/ecsi1_clim500.png used on input line 3058
+Package pdftex.def Info: figures/expm/ecsi1_clim500.png used on input line 3057
 .
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
 
@@ -1764,7 +1764,7 @@ File: figures/expm/ecsi1_clim1500.png Graphic file (type png)
 
 <use figures/expm/ecsi1_clim1500.png>
 Package pdftex.def Info: figures/expm/ecsi1_clim1500.png used on input line 306
-5.
+4.
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
 
 <figures/expm/ecsi1_clim4000.png, id=1222, 752.8125pt x 752.8125pt>
@@ -1772,7 +1772,7 @@ File: figures/expm/ecsi1_clim4000.png Graphic file (type png)
 
 <use figures/expm/ecsi1_clim4000.png>
 Package pdftex.def Info: figures/expm/ecsi1_clim4000.png used on input line 307
-2.
+1.
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
  [83 <./figures/expm/gapBoxplotsClimate1500.png (PNG copy)>]
 <figures/expm/BW_markovMoveHypothesis_TAGGED.png, id=1234, 578.16pt x 550.055pt
@@ -1780,10 +1780,10 @@ Package pdftex.def Info: figures/expm/ecsi1_clim4000.png used on input line 307
 File: figures/expm/BW_markovMoveHypothesis_TAGGED.png Graphic file (type png)
  <use figures/expm/BW_markovMoveHypothesis_TAGGED.png>
 Package pdftex.def Info: figures/expm/BW_markovMoveHypothesis_TAGGED.png used o
-n input line 3093.
+n input line 3092.
 (pdftex.def)             Requested size: 364.86908pt x 347.12354pt.
 
-Overfull \hbox (4.86908pt too wide) in paragraph at lines 3093--3094
+Overfull \hbox (4.86908pt too wide) in paragraph at lines 3092--3093
  [][] 
  []
 
@@ -1795,10 +1795,10 @@ pm/ecsi1_clim4000.png>] [88 <./figures/expm/BW_markovMoveHypothesis_TAGGED.png>
 File: figures/expm/segmLength_clim4000_begin320.png Graphic file (type png)
 <use figures/expm/segmLength_clim4000_begin320.png>
 Package pdftex.def Info: figures/expm/segmLength_clim4000_begin320.png used on 
-input line 3156.
+input line 3155.
 (pdftex.def)             Requested size: 362.71358pt x 347.12354pt.
 
-Overfull \hbox (2.71358pt too wide) in paragraph at lines 3156--3157
+Overfull \hbox (2.71358pt too wide) in paragraph at lines 3155--3156
  [][] 
  []
 
@@ -1807,10 +1807,10 @@ Overfull \hbox (2.71358pt too wide) in paragraph at lines 3156--3157
 File: figures/expm/segmLength_clim1500_begin320.png Graphic file (type png)
 <use figures/expm/segmLength_clim1500_begin320.png>
 Package pdftex.def Info: figures/expm/segmLength_clim1500_begin320.png used on 
-input line 3163.
+input line 3162.
 (pdftex.def)             Requested size: 362.71358pt x 347.12354pt.
 
-Overfull \hbox (2.71358pt too wide) in paragraph at lines 3163--3164
+Overfull \hbox (2.71358pt too wide) in paragraph at lines 3162--3163
  [][] 
  []
 
@@ -1820,10 +1820,10 @@ File: figures/expm/segmLength_clim500_begin320.png Graphic file (type png)
 
 <use figures/expm/segmLength_clim500_begin320.png>
 Package pdftex.def Info: figures/expm/segmLength_clim500_begin320.png used on i
-nput line 3170.
+nput line 3169.
 (pdftex.def)             Requested size: 362.71358pt x 347.12354pt.
 
-Overfull \hbox (2.71358pt too wide) in paragraph at lines 3170--3171
+Overfull \hbox (2.71358pt too wide) in paragraph at lines 3169--3170
  [][] 
  []
 
@@ -1833,41 +1833,41 @@ Length_clim1500_begin320.png>]
 File: figures/expm/popClim500_BW.png Graphic file (type png)
 
 <use figures/expm/popClim500_BW.png>
-Package pdftex.def Info: figures/expm/popClim500_BW.png used on input line 3195
+Package pdftex.def Info: figures/expm/popClim500_BW.png used on input line 3194
 .
 (pdftex.def)             Requested size: 344.86208pt x 574.74557pt.
 
 
-LaTeX Warning: Float too large for page by 18.5159pt on input line 3198.
+LaTeX Warning: Float too large for page by 18.5159pt on input line 3197.
 
 <figures/expm/popClim1500_BW.png, id=1289, 752.8125pt x 1254.6875pt>
 File: figures/expm/popClim1500_BW.png Graphic file (type png)
 
 <use figures/expm/popClim1500_BW.png>
 Package pdftex.def Info: figures/expm/popClim1500_BW.png used on input line 320
-2.
+1.
 (pdftex.def)             Requested size: 344.86208pt x 574.74557pt.
 
 
-LaTeX Warning: Float too large for page by 18.5159pt on input line 3205.
+LaTeX Warning: Float too large for page by 18.5159pt on input line 3204.
 
 <figures/expm/popClim4000_BW.png, id=1290, 752.8125pt x 1254.6875pt>
 File: figures/expm/popClim4000_BW.png Graphic file (type png)
 
 <use figures/expm/popClim4000_BW.png>
 Package pdftex.def Info: figures/expm/popClim4000_BW.png used on input line 320
-9.
+8.
 (pdftex.def)             Requested size: 344.86208pt x 574.74557pt.
 
 
-LaTeX Warning: Float too large for page by 18.5159pt on input line 3212.
+LaTeX Warning: Float too large for page by 18.5159pt on input line 3211.
 
 [91 <./figures/expm/segmLength_clim500_begin320.png>]
 <figures/expm/ecsi3_clim500.png, id=1299, 752.8125pt x 752.8125pt>
 File: figures/expm/ecsi3_clim500.png Graphic file (type png)
 
 <use figures/expm/ecsi3_clim500.png>
-Package pdftex.def Info: figures/expm/ecsi3_clim500.png used on input line 3246
+Package pdftex.def Info: figures/expm/ecsi3_clim500.png used on input line 3245
 .
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
 
@@ -1876,15 +1876,15 @@ File: figures/expm/ecsi3_clim1500.png Graphic file (type png)
 
 <use figures/expm/ecsi3_clim1500.png>
 Package pdftex.def Info: figures/expm/ecsi3_clim1500.png used on input line 325
-3.
+2.
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
 
 <figures/expm/ecsi3_clim4000.png, id=1301, 752.8125pt x 752.8125pt>
 File: figures/expm/ecsi3_clim4000.png Graphic file (type png)
 
 <use figures/expm/ecsi3_clim4000.png>
-Package pdftex.def Info: figures/expm/ecsi3_clim4000.png used on input line 326
-0.
+Package pdftex.def Info: figures/expm/ecsi3_clim4000.png used on input line 325
+9.
 (pdftex.def)             Requested size: 347.13649pt x 347.12354pt.
  [92] [93] [94] [95 <./figures/expm/popClim500_BW.png>] [96 <./figures/expm/pop
 Clim1500_BW.png>] [97 <./figures/expm/popClim4000_BW.png>] [98 <./figures/expm/
@@ -1896,7 +1896,7 @@ Chapter 5.
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3350.
+(hyperref)                than one, level fixed on input line 3349.
 
 [102] [103]
 Chapter 6.
@@ -1906,7 +1906,7 @@ Chapter 6.
 Chapter 7.
 
 LaTeX Warning: Reference `fig:Pandora1.jpg' on page 105 undefined on input line
- 3425.
+ 3424.
 
 [105
 
@@ -1914,73 +1914,73 @@ LaTeX Warning: Reference `fig:Pandora1.jpg' on page 105 undefined on input line
 File: figures/Pandora1.jpg Graphic file (type jpg)
 
 <use figures/Pandora1.jpg>
-Package pdftex.def Info: figures/Pandora1.jpg used on input line 3448.
+Package pdftex.def Info: figures/Pandora1.jpg used on input line 3447.
 (pdftex.def)             Requested size: 128.0374pt x 129.72592pt.
 
 <figures/Pandora2.jpg, id=1381, 297.11pt x 253.94875pt>
 File: figures/Pandora2.jpg Graphic file (type jpg)
 
 <use figures/Pandora2.jpg>
-Package pdftex.def Info: figures/Pandora2.jpg used on input line 3458.
+Package pdftex.def Info: figures/Pandora2.jpg used on input line 3457.
 (pdftex.def)             Requested size: 128.0374pt x 109.43994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3470--3478
+Underfull \hbox (badness 10000) in paragraph at lines 3469--3477
 
  []
 
 [106 <./figures/Pandora1.jpg> <./figures/Pandora2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 3479--3490
+Underfull \hbox (badness 10000) in paragraph at lines 3478--3489
 
  []
 
 [107] [108
 
 ]
-Overfull \hbox (11.93425pt too wide) in paragraph at lines 3606--3608
+Overfull \hbox (11.93425pt too wide) in paragraph at lines 3605--3607
 []\OT1/ptm/m/n/10.95 Sugarscape. \OT1/ptm/m/it/10.95 http://ccl.northwestern.ed
 u/netlogo/models/community/Sugarscape 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3646--3649
+Underfull \hbox (badness 10000) in paragraph at lines 3645--3648
 []\OT1/ptm/m/it/10.95 The Unity of Sci-ence\OT1/ptm/m/n/10.95 , Stan-ford En-cy
 -clo-pe-dia of Phi-los-o-phy
  []
 
 [109] [110]
-Underfull \hbox (badness 7012) in paragraph at lines 3781--3786
+Underfull \hbox (badness 7012) in paragraph at lines 3780--3785
 []\OT1/ptm/m/n/10.95 Tim Lewens \OT1/ptm/m/it/10.95 "Cul-tural Evo-lu-tion", Th
 e Stan-ford En-cy-clo-pe-dia of
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 3781--3786
+Underfull \hbox (badness 2903) in paragraph at lines 3780--3785
 \OT1/ptm/m/it/10.95 Phi-los-o-phy\OT1/ptm/m/n/10.95 . (Spring 2013 Edi-tion), E
 d-ward N. Zalta (ed.), URL =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3781--3786
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3785
 \OT1/ptm/m/n/10.95 <http://plato.stanford.edu/archives/spr2013/entries/evolutio
 n-cultural/>.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3805--3807
+Underfull \hbox (badness 10000) in paragraph at lines 3804--3806
 []\OT1/ptm/m/it/10.95 Repast for High Per-for-mance Com-put-ing \OT1/ptm/m/n/10
 .95 :
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3826.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3825.
 [111]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3826.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3825.
  (./MTdocNOCOVER.aux
 * soulpos - computing points - it may take a few seconds *
 \openout3 = `MTdocNOCOVER.upb'.
 
  (./MTdocNOCOVER.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3826.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3826.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3825.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3825.
 
 Package rerunfilecheck Info: File `MTdocNOCOVER.out' has not changed.
 (rerunfilecheck)             Checksum: 3FDA93705C089C66747FC65251DC2347;6686.
@@ -2009,7 +2009,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on MTdocNOCOVER.pdf (115 pages, 16228959 bytes).
+Output written on MTdocNOCOVER.pdf (115 pages, 16228894 bytes).
 PDF statistics:
  1570 PDF objects out of 1728 (max. 8388607)
  1349 compressed objects within 14 object streams

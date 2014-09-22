@@ -2651,8 +2651,7 @@ The chapter of experimental results follows part of the trajectory of the experi
 performance of the AI agents versus the classical rule agents. The first results are related to the first
 experiments of rule based agents in the model for the Gujarat\cite{JARM2014}. Taking the same setting, 
 mdp agents were put to test showing us that they could not improve the rule based agent resilience capability.  
-The multiplicity reduction of the planning search states(p.\pageref{sec:ReduccStates}), compacting the range of values and 
-limiting stochasticity, proved to be a good solution to solve it. Results are shown where it is obvious that 
+Multiplicity reduction of the planning search states(p.\pageref{sec:ReduccStates}), compacting the range of values and limiting stochasticity proved to be a good solution to solve it. Results are shown where it is obvious that 
 starvation is lower for mdp agents. Afterwards, some odd trends in the behaviour of parameters of the decision 
 making process motivated another analysis of the model for the knowledge layer of the agent 
 (p.\pageref{sec:Divergence}). 
@@ -2692,7 +2691,7 @@ related to climatic changing conditions and its effect on resource availability.
 Simulations were run taking the climatic conditions of three spatial bounds, the zone of Kutch-Saurashtra 
 (north Gujarat), the region of Gujarat and the average rainfall of the whole continent. The combination of
 the regions, the extrapolation of climatic parameters to four selected time lapses in Holocene plus the 
-intervals of exploration of the rainfall ( average and yearly variation ) unfold the simulation scenarios.
+intervals of exploration of the rainfall unfold the simulation scenarios.
 The analysis shows that historical decrease of average rainfall along millennia is not enough explanation 
 to answer the question about extinction of HG. On the other hand, variation associated to yearly precipitation
 played a strong role on population dynamics as the major cause for group collapse if a threshold is 
@@ -2726,7 +2725,7 @@ The problem lied in the internal representation of the world for the search node
 representation scattered the states due to the wide domain of the features. It produced non matching states
 and led to search traces with low statistical significance needed to distinguish preferable traces
 from the harmful ones for the agent. The representation of the world states was reduced categorizing numerical
-features and reducing stochasticity the children node states expansion as the corresponding section illustrates
+features and reducing stochasticity at the children node expansion as the corresponding section illustrates
 (p. \pageref{sec:ReduccStates}).
 After state reduction the results took the direction we were expecting. The figure 
 ~\ref{fig:meanBoxplots_Rain1000to4000_rule_rand_mdp} corresponds to an exploration of the rainfall in the 
@@ -2938,7 +2937,7 @@ the agent towards richer areas as a long term effect of the drift of the movemen
 would be imagined free from bad allocated move actions. The artificial ideal planner is imagined as proposing 
 always movement actions in the time step when they would not increase the starvation of the agent. So that is 
 what happens when you do not apply the depletion of resources to the environment after the execution of a 
-forage action. Because the resources stay unaltered as if the patch were new and the agent just would have 
+forage action. Because the resources stay unaltered as if the patches were new and the agent just would have 
 arrived in the last time-step. And then it seems that the sequence of actions does not disturb the flow of 
 resources that the agent retrieves. It seems as if the planner would have been selecting each time the perfect 
 action to be launched; either a normal foraging action or a move action in the time step before the system reaches 
