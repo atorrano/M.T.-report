@@ -2651,8 +2651,7 @@ The chapter of experimental results follows part of the trajectory of the experi
 performance of the AI agents versus the classical rule agents. The first results are related to the first
 experiments of rule based agents in the model for the Gujarat\cite{JARM2014}. Taking the same setting, 
 mdp agents were put to test showing us that they could not improve the rule based agent resilience capability.  
-The multiplicity reduction of the planning search states(p.\pageref{sec:ReduccStates}), compacting the range of values and 
-limiting stochasticity, proved to be a good solution to solve it. Results are shown where it is obvious that 
+Multiplicity reduction of the planning search states(p.\pageref{sec:ReduccStates}), compacting the range of values and limiting stochasticity proved to be a good solution to solve it. Results are shown where it is obvious that 
 starvation is lower for mdp agents. Afterwards, some odd trends in the behaviour of parameters of the decision 
 making process motivated another analysis of the model for the knowledge layer of the agent 
 (p.\pageref{sec:Divergence}). 
@@ -2692,7 +2691,7 @@ related to climatic changing conditions and its effect on resource availability.
 Simulations were run taking the climatic conditions of three spatial bounds, the zone of Kutch-Saurashtra 
 (north Gujarat), the region of Gujarat and the average rainfall of the whole continent. The combination of
 the regions, the extrapolation of climatic parameters to four selected time lapses in Holocene plus the 
-intervals of exploration of the rainfall ( average and yearly variation ) unfold the simulation scenarios.
+intervals of exploration of the rainfall unfold the simulation scenarios.
 The analysis shows that historical decrease of average rainfall along millennia is not enough explanation 
 to answer the question about extinction of HG. On the other hand, variation associated to yearly precipitation
 played a strong role on population dynamics as the major cause for group collapse if a threshold is 
@@ -2726,7 +2725,7 @@ The problem lied in the internal representation of the world for the search node
 representation scattered the states due to the wide domain of the features. It produced non matching states
 and led to search traces with low statistical significance needed to distinguish preferable traces
 from the harmful ones for the agent. The representation of the world states was reduced categorizing numerical
-features and reducing stochasticity the children node states expansion as the corresponding section illustrates
+features and reducing stochasticity at the children node expansion as the corresponding section illustrates
 (p. \pageref{sec:ReduccStates}).
 After state reduction the results took the direction we were expecting. The figure 
 ~\ref{fig:meanBoxplots_Rain1000to4000_rule_rand_mdp} corresponds to an exploration of the rainfall in the 
@@ -2938,7 +2937,7 @@ the agent towards richer areas as a long term effect of the drift of the movemen
 would be imagined free from bad allocated move actions. The artificial ideal planner is imagined as proposing 
 always movement actions in the time step when they would not increase the starvation of the agent. So that is 
 what happens when you do not apply the depletion of resources to the environment after the execution of a 
-forage action. Because the resources stay unaltered as if the patch were new and the agent just would have 
+forage action. Because the resources stay unaltered as if the patches were new and the agent just would have 
 arrived in the last time-step. And then it seems that the sequence of actions does not disturb the flow of 
 resources that the agent retrieves. It seems as if the planner would have been selecting each time the perfect 
 action to be launched; either a normal foraging action or a move action in the time step before the system reaches 
@@ -3228,10 +3227,10 @@ Configurations for mdp agents, when compared, gives us quantitative differences.
 \subsection{Experiment 3: Width Exploration}
 \label{sec:expEcsi3}
 %%quick descrip : 
-The third experiment explores configurations for mdp and its performance in optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision process. 
-Horizon sets the amount of steps you look in the future; and width sets the amount of hypothetical traces explored to get an statistical sample of eventual outcomes and distinguish between good actions from bad to apply in the next time step. 
+The third experiment explores configurations for mdp and its performance for optimal foraging and migratory actions. MDP configuration parameters denote the depth of the reasoning in the decision process. 
+Horizon sets the amount of steps you look in the future; and width sets the amount of hypothetical traces explored to get an statistical sample of eventual outcomes and distinguish between good actions from bad to be applied in the next time step. 
 This exploration is needed  to detect sensitivities and interactions between horizon, width and the starvation rates for the sake of the tests in the evaluation of the mdp approach versus the rule based model. 
-To test horizons with values one and  two is out of discussion because you cannot take all the advantage of the planning engine. And horizons above six we have seen are of great computational time expenditure. Even horizon six demands big amounts of hours making simulations non reasonable when applied to ranges in the scale of decades and hundreds of years.
+To test horizons with values '1' and '2' is out of discussion because you cannot take all the advantage of the planning engine. And horizons above '6' we have seen are of great computational time expenditure. Even horizon '6' demands big amounts of hours making simulations non reasonable when applied to ranges in the scale of decades and hundreds of years.
 
 %%Settings : 
 The configurations are explored under the same conditions as the experiment one. The chosen combinations follow, h10 and w500, h10 and w1000, h10 and w5000, h10 and w10000, h6 and w200, h6 and w500, h6 and w1000, h3 and w50, h3 and w100, h3 and w500.
@@ -3263,14 +3262,13 @@ We represent in the plots (Fig.~\ref{fig:ecsi3_clim500}, Fig.~\ref{fig:ecsi3_cli
 \end{figure}
 
 
-A first approach based on the shallow evidence restates the observations from the past experiments. Horizon 6 and 10 go coupled and horizon 3 produces a lower performance of the survival skills. As rainfall increases the variability in the distribution of starvation rate decreases as decreases uncertainty and low resource states in the simulation.
+A first approach based on the shallow evidence restates the observations from the first experiment. Horizon 6 and 10 go coupled and horizon 3 produces a lower performance of the survival skills. As rainfall increases the variability in the distribution of starvation rate decreases as decreases uncertainty and low resource states in the simulation.
 It seems roughly that there is no difference when the agent uses one width or another for some given horizon. But if we look back to experiment two, they appear; it is caused by the presence of other agents who introduce uncertainty. 
-When the vicinity displays greater variability in resource availability  due to the other's activities it results in having a greater range of possible states to evaluate. To explore a bigger set and filter worthy trajectories from bad ones it requires to increase the width to ensure a greater statistical significance when selecting and discarding trajectories. 
-And the plots from experiment two show that agents with greater width benefit from it.
+When the vicinity displays greater variability in resource availability, that is due to the other's activities, it results in having a greater range of possible states to evaluate. To explore a bigger set and filter worthy trajectories from bad ones it requires to increase the width to ensure a greater statistical significance when selecting and discarding trajectories. And the plots from experiment two show that agents with greater width benefit from it.
+Summarizing, for environments with no indirect competition, the widths we have applied for each horizon do not differ very much for the survival capability.
 
 The second point, from the technical point of view, is that if we achieve same statistical results for the output variables in the system (e.g. starvation rate) with a same width with different horizons, we could extract the same conclusions. Then the model would be statistically equivalent under the simulated scenario and hence we could choose the configurations that imply less computational power to run cheaper and longer simulations.
 %%brief conclussion:
-Summarizing, for environments with no indirect competition, the widths we have applied for each horizon do not differ very much in the survival capabilities.
 
 % \textbf{\textit{tema resource divergence : no està esmentat, però el tenim implementat }}
 % \\
@@ -3278,49 +3276,38 @@ Summarizing, for environments with no indirect competition, the widths we have a
 
 \subsection{Conclusions}
 
-\begin{enumerate}
-
-	\item 
-	summary of key evidences and conclusions from the experiments 1, 2, and 3.
+%summary of key evidences and conclusions from the experiments 1, 2, and 3.
 	
-Experiments comparing the differet agent type confirm our hypothesis. Introducing AI in an agent can produce
-meaningful changes in the results of a simulation. When applied to a resilience test sceneario chosing
-one or another can produce different conclussions. Whe have seen qualitative differences in the results. MDP agents can achieave better levels of resilience. The key factor is adaptability. The greedy schema of the 
+Experiments comparing the different agent types confirm our hypothesis. Introducing AI in an agent can produce
+meaningful changes in the results of a simulation. When applied to a resilience test scenario choosing
+one or another can produce different conclusions. Whe have seen qualitative differences in the results. MDP agents can achieve better levels of resilience. The key factor is adaptability. The greedy schema of the 
 rule based agent makes it blind to the critical points of the year where two opposite strategies must be
-chosen and applied. The beginning of the year demands an low movement rate while the end of the year demands
-a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms the pattern through an extra set of rules introduced in the rule based agent. But 
+chosen and applied. The beginning of the year demands a low movement rate while the end of the year demands
+a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms this pattern through an extra set of rules introduced in the rule based agent. And we could keep on extending the agent with more and more rules. But the objective is not to design an expert system in survival in Gujarat. We wanted to find the differences of classical social agent's static behaviour and adaptability versus dynamic behaviour. We wanted to verify that the way behaviours are modelled can change results in your simulations. Exploring the parameters of the MDP agent 
+
+diff due to width +- same magnitude order, you can reach equivalent conclusions, but the difference with
+rule based agents is too far away. It can lead to oposing conclusions. Hence it is not innocuous the choice
+of agent behaviour
 
 
-	
-	
-	
-	\item Una strategia basada en regles greedy pot fer escapar detalls i fer acabar dissenyant un agent poc adaptat. Un mateix escenari pot tenir fases on el requeriment de comportament sigui el contrari d'una a un altre; e.g. en els primers dies crítics del any no et moguis; al final del any no esperis massa, move the agent often. I aquest és el punt d'adaptabilitat on el rule based s'encalla.
-	
-	\item Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, i com horizon 6 es comporta bastant semblant a horizon 10 podríem dir que s'ha arribat al punt de saturació,més horizon no reportaria un benefici tant gran o que pogués aportar noves observacions i patrons a la comparativa. Esmentant que queda prou reflexat amb aquests paràmetres que hi ha una diferència en l'us de regles versus planning. ( l'experiment d'exploració de widths vs horizons ens donarà la última paraula)
+Also, results from experiment 3 in comparison to experiment 2 make explicit how important it is the effect of indirect competition. Changing UCT parameters horizon and width affects the performance. A future stage, just like we do for biomass prediction, should consider to introduce
+neighbours' effect. An evaluation will be needed in order to find the best technique to integrate this component to the knowledge layer of the agent and the UCT as well as find a lower bound for the new starvation. This way we will be able to asses the gain of introducing it and the computational cost in exchange.
 
-	El resultat de l'experiment 3 respecte als mostrats per l'experiment 2 fa explícita la importància 
-	de l'efecte que te la competencia indirecta. En un stage futur, igual que s'ha fet per a la predicció
-	de la biomassa s'ha d'incloure la predicció de l'efecte dels veins. Caldrá avaluar quina es la 
-	millor técnica per a integrar aquest component a la layer de knowledge del agent i els estats UCT.
-	A més de trobar una fita inferior per a la starvation quan es dona el cas de la competició i així
-	avaluar la qualitat de la predicció i el cost computacional extra que suposa .
-	
-Com es constata al experiment 2 l'agent rule based segueix una trajectoria oposada. S'acosta a un posible 
-colapse futur mentre els agents mdp es mantenen prou be i profiliferen.
+As the concluding reflection, just to mention AI was born to emulate human performance in intelligent tasks. But it does not mean AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
-\item \textit{Una reflexio sobre agafar la AI i colocar-la en un mark diferent.}
-	By the way, AI was born to emulate human performance in intelligent tasks. But it does not mean AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgment. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
-
-Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, 
-i com horizon 6 es comporta bastant semblant a horizon 10 podríem dir que s'ha arribat al punt de saturació,
-més horizon no reportaria un benefici tant gran o que pogués aportar noves observacions i patrons a la 
-comparativa. Esmentant que queda prou reflexat amb aquests paràmetres que hi ha una diferència en l'us de regles versus 
-planning.
+%Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, 
+%i com horizon 6 es comporta bastant semblant a horizon 10 podríem dir que s'ha arribat al punt de saturació,
+%més horizon no reportaria un benefici tant gran o que pogués aportar noves observacions i patrons a la 
+%comparativa. Esmentant que queda prou reflexat amb aquests paràmetres que hi ha una diferència en l'us de %regles versus 
+%planning.
 
 
+\chapter{Conclusions, Future and Recommendations}
 
-
-\chapter{Conclusions and Future}
+%%TODO
+%% com a recomanacio, potser incis metodologic, aconsellar de modelitzar els sistemes
+%% probant i comparant els tipus d'agents : rule, random, ai per a treure insight of the 
+%% system. A mes podras avaluar el millor agent per als teus objectius.
 
 This master thesis reflects part of the experience of my contribution to Gujarat Project in
 its first stages. This part of the project had as objectives to find an stable model to begin
@@ -3357,11 +3344,9 @@ classical agents in their evolution and response to challenges. The second is th
 project force us to use AI tools to represent agents behaviour. There are many details and relationships.
 The environment is very changing due to the mutual interaction of agents. And simple classical models cannot 
 encompass a behaviour that will show successful, reasonable and or realistic decisions under this environment.
-By the way, AI was born to emulate human performance in intelligent tasks. But it does not mean AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express the power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
-\subsection{Future Work}
+%% mou aqui el paragraph del chapter anterior que comenca amb : By the way, AI was born to emulate human
 
-\end{enumerate}
 
 \subsection{Future Work}
 
