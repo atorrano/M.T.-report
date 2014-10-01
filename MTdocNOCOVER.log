@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.2.18)  22 SEP 2014 12:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.2.18)  30 SEP 2014 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1896,7 +1896,7 @@ Chapter 5.
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3349.
+(hyperref)                than one, level fixed on input line 3337.
 
 [102] [103]
 Chapter 6.
@@ -1906,7 +1906,7 @@ Chapter 6.
 Chapter 7.
 
 LaTeX Warning: Reference `fig:Pandora1.jpg' on page 105 undefined on input line
- 3424.
+ 3412.
 
 [105
 
@@ -1914,73 +1914,73 @@ LaTeX Warning: Reference `fig:Pandora1.jpg' on page 105 undefined on input line
 File: figures/Pandora1.jpg Graphic file (type jpg)
 
 <use figures/Pandora1.jpg>
-Package pdftex.def Info: figures/Pandora1.jpg used on input line 3447.
+Package pdftex.def Info: figures/Pandora1.jpg used on input line 3435.
 (pdftex.def)             Requested size: 128.0374pt x 129.72592pt.
 
 <figures/Pandora2.jpg, id=1381, 297.11pt x 253.94875pt>
 File: figures/Pandora2.jpg Graphic file (type jpg)
 
 <use figures/Pandora2.jpg>
-Package pdftex.def Info: figures/Pandora2.jpg used on input line 3457.
+Package pdftex.def Info: figures/Pandora2.jpg used on input line 3445.
 (pdftex.def)             Requested size: 128.0374pt x 109.43994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3469--3477
+Underfull \hbox (badness 10000) in paragraph at lines 3457--3465
 
  []
 
 [106 <./figures/Pandora1.jpg> <./figures/Pandora2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 3478--3489
+Underfull \hbox (badness 10000) in paragraph at lines 3466--3477
 
  []
 
 [107] [108
 
 ]
-Overfull \hbox (11.93425pt too wide) in paragraph at lines 3605--3607
+Overfull \hbox (11.93425pt too wide) in paragraph at lines 3593--3595
 []\OT1/ptm/m/n/10.95 Sugarscape. \OT1/ptm/m/it/10.95 http://ccl.northwestern.ed
 u/netlogo/models/community/Sugarscape 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3645--3648
+Underfull \hbox (badness 10000) in paragraph at lines 3633--3636
 []\OT1/ptm/m/it/10.95 The Unity of Sci-ence\OT1/ptm/m/n/10.95 , Stan-ford En-cy
 -clo-pe-dia of Phi-los-o-phy
  []
 
 [109] [110]
-Underfull \hbox (badness 7012) in paragraph at lines 3780--3785
+Underfull \hbox (badness 7012) in paragraph at lines 3768--3773
 []\OT1/ptm/m/n/10.95 Tim Lewens \OT1/ptm/m/it/10.95 "Cul-tural Evo-lu-tion", Th
 e Stan-ford En-cy-clo-pe-dia of
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 3780--3785
+Underfull \hbox (badness 2903) in paragraph at lines 3768--3773
 \OT1/ptm/m/it/10.95 Phi-los-o-phy\OT1/ptm/m/n/10.95 . (Spring 2013 Edi-tion), E
 d-ward N. Zalta (ed.), URL =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3780--3785
+Underfull \hbox (badness 10000) in paragraph at lines 3768--3773
 \OT1/ptm/m/n/10.95 <http://plato.stanford.edu/archives/spr2013/entries/evolutio
 n-cultural/>.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3804--3806
+Underfull \hbox (badness 10000) in paragraph at lines 3792--3794
 []\OT1/ptm/m/it/10.95 Repast for High Per-for-mance Com-put-ing \OT1/ptm/m/n/10
 .95 :
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3825.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3813.
 [111]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3825.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3813.
  (./MTdocNOCOVER.aux
 * soulpos - computing points - it may take a few seconds *
 \openout3 = `MTdocNOCOVER.upb'.
 
  (./MTdocNOCOVER.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3825.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3825.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3813.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3813.
 
 Package rerunfilecheck Info: File `MTdocNOCOVER.out' has not changed.
 (rerunfilecheck)             Checksum: 3FDA93705C089C66747FC65251DC2347;6686.
@@ -2009,7 +2009,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on MTdocNOCOVER.pdf (115 pages, 16228891 bytes).
+Output written on MTdocNOCOVER.pdf (115 pages, 16228616 bytes).
 PDF statistics:
  1570 PDF objects out of 1728 (max. 8388607)
  1349 compressed objects within 14 object streams

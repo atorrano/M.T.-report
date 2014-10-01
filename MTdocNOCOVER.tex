@@ -3301,23 +3301,85 @@ neighbours' effect. An evaluation will be needed in order to find the best techn
 AI -> resilience
 AI vs RULE -> experiments from chapter{Experiments} show diferences.
 
-*Procés en l'adaptació de la tècnica, del model MDP en una social simulation
 
-  i.-Resoldres els problemes de rendiment
+
+L
+
+*Experiència i Procés en l'adaptació de la tècnica, del model MDP, en una social simulation
+
+  .-Resoldre els problemes de rendiment
+      Els algoritmes de la AI normalment estan orientats a resoldre un requeriment, una tasca.
       HR -> LR
       TrendVicinity : keep quality of walk(reward) but getting greater throughput
   
-  ii.-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
-les visicituts que presenta el planning en un framework més que gran que un
-problem-solving directe.
-    ReduceStates
-    Divergence due to discrepances between internal model of the planning layer versus 
+  .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
+  les visicituts que presenta el planning en un framework més que gran que un
+  problem-solving directe.    
+    -ReduceStates
+    -Divergence due to discrepances between internal model of the planning layer versus 
     real world layer
+	Com es tracta aquest problema en els MAS? fins a quin punt se li dona importància?
+	la section 2.3 de NorvigEd3 parla de les properties del environment.Aixo condiciona
+	l'efecte que pots aconseguir amb el planner. No es el mateix planificar en entorns
+	observable,deterministic,KNOWN que amb altres més durs.
 	Biomass Prediction
 	Multiagency
 	Forage Action HR vs LR
-    La descoberta de features de la logica interna del sistema degut a la comparacio
-    entre els tipus d'agents -> MarkovMove's rules
+
+*La descoberta de features de la logica interna del sistema degut a la comparacio
+entre els tipus d'agents -> MarkovMove's rules
+
+Tesauro potser parla de l'imperfect heuristic com una discrepancia entre el model extern i l'intern,
+en la mind de l'agent:
+``An alternative is to do Monte Carlo simulation to evaluate a position. Start with
+an alpha–beta (or other) search algorithm. From a start position, have the algorithm play
+thousands of games against itself, using random dice rolls. In the case of backgammon, the
+resulting win percentage has been shown to be a good approximation of the value of the
+position, even if the algorithm has an imperfect heuristic and is searching only a few plies
+(Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
+. Gerry Tesauro’s (1995) TD-G AMMON 
+
+AI -> solve real world problems
+AI -> solve simulated world problems
+
+
+do not forget : ENVIRONMENT PROPERTIES
+
+busca algun cas real de MAS on lliguin aquestes caracteristiques amb la
+divergencia entre world i model of the world inside the agent, com a causant
+de perdua de performance, com causant d'uncertainty
+
+
+
+These will affect to discrepancy World vs Agent's Internal World representation
+
+1.-Fully observable vs. partially observable:
+	del mapa HR extreus el map LR, la deliberació funciona sobre l'LR raster : partial unknown
+2.-Single agent vs. multiagent:
+
+3.-Deterministic vs. stochastic.
+	state_t+1 = f(state_t,action_t). Is f deterministic? stochastic?
+	partially observable worlds can make it seem that f is stochastic
+4.-Episodic vs. sequential
+	el move d'ara et condiciona cap a on vas i els recursos que hi ha a la zona... el problema és
+	sequencial?
+5.-Static vs. dynamic
+	Gujarat, static, nothing changes while deliberating
+6.-Discrete vs. continuous:
+	Discrete, we are not simulating particles nor planets
+	But input... with so many resources
+7.-Known vs. unknown
+	The LR part is not applying the same physics as HR layer
+	The agent delibers with partial unknown dynamics
+	Norvig:"In a known environment, the outcomes (or outcome probabilities if the
+		environment is stochastic) for all actions are given." 
+	Norvig:"Obviously, if the environment is unknown, the agent will have to learn 
+		how it works in order to make good decisions."
+
+Abstraction.
+NorvigEd3.pg(69=88)
+
+
 
 
 
@@ -3331,6 +3393,7 @@ its first stages. This part of the project had as objectives to find an stable m
 studying resilience of HG and AP in semi-arid environments, and the possibilities offered by the
 introduction of sophisticated decision making engine in the agents populating the simulation.
 
+%% project, big picture
 The main hypothesis of HG resilience, in comparison to other cases where they disappeared at a 
 greater pace, is about climate variability and hard environmental conditions.
 The model has grown from a toy model based on Sugarscape\cite{EpsteinAxtell}. The initial prerequisite
@@ -3338,12 +3401,19 @@ was to tune the model towards a stable set of conditions. Experts selected the s
 for weather parameters and associated biomass from anthropological and climatic registers that would 
 allow a basic degree of stability. This stability floor must be altered applying variations in rain and
 other future factors to be introduced. The variability and extreme values induce stress in the 
-environment and will make more explicit the factors where we can asses the resilience of HG in comparison to AP. Actually, we can say we have achieved the stability basic configuration of the environment. Agents survive, reach a carrying capacity and keep it along the generations. The system has plausible environmental conditions and behaviour.
+environment and will make more explicit the factors where we can asses the resilience of HG in comparison
+to AP. Actually, we can say we have achieved the stability basic configuration of the environment. 
+Agents survive, reach a carrying capacity and keep it along the generations. The system has plausible 
+environmental conditions and behaviour.
 
+%% AI vs rule based results
 The conclusions about introducing AI and more sophisticated techniques in social science simulation receive
-the confirmation for its use from two points. The empirical evidence show that sophisticated agents outperform classical agents in their evolution and response to challenges. 
-The second is that modelling requirements of this project force us to use AI tools to represent agents behaviour. There are many details and relationships.
-The environment is very changing due to the mutual interaction of agents. And simple classical models cannot encompass a behaviour that will show successful, reasonable and or realistic decisions under this environment.
+the confirmation for its use from two points. The empirical evidence show that sophisticated agents 
+outperform classical agents in their evolution and response to challenges. 
+The second is that modelling requirements of this project force us to use AI tools to represent agents 
+behaviour. There are many details and relationships. The environment is very changing due to the mutual 
+interaction of agents. And simple classical models cannot encompass a behaviour that will show successful, 
+reasonable and or realistic decisions under this environment.
 
 
 %%TODO eficiencia... hem de discutir si el horizon_width que interessen són computacionalment factibles
