@@ -3301,7 +3301,9 @@ neighbours' effect. An evaluation will be needed in order to find the best techn
 AI -> resilience
 AI vs RULE -> experiments from chapter{Experiments} show diferences.
 
-
+%%TODO busca bibliografia sobre els efectes d'un environment unknown, quan 
+%% l'agent te un internal world model amb una fisica diferent a la del world model.
+%% S'ha de veure que apareix el problema de divergencia despres de n passes.
 
 L
 
@@ -3313,9 +3315,9 @@ L
       TrendVicinity : keep quality of walk(reward) but getting greater throughput
   
   .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
-  les visicituts que presenta el planning en un framework més que gran que un
+  les visicituts que presenta el planning en un framework més gran que un
   problem-solving directe.    
-    -ReduceStates
+    -ReduceStates <- statistical relevance
     -Divergence due to discrepances between internal model of the planning layer versus 
     real world layer
 	Com es tracta aquest problema en els MAS? fins a quin punt se li dona importància?
@@ -3338,6 +3340,46 @@ resulting win percentage has been shown to be a good approximation of the value 
 position, even if the algorithm has an imperfect heuristic and is searching only a few plies
 (Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
 . Gerry Tesauro’s (1995) TD-G AMMON 
+
+AI -> solve real world problems
+AI -> solve simulated world problems
+
+
+do not forget : ENVIRONMENT PROPERTIES
+
+busca algun cas real de MAS on lliguin aquestes caracteristiques amb la
+divergencia entre world i model of the world inside the agent, com a causant
+de perdua de performance, com causant d'uncertainty
+
+
+
+These will affect to discrepancy World vs Agent's Internal World representation
+
+1.-Fully observable vs. partially observable:
+	del mapa HR extreus el map LR, la deliberació funciona sobre l'LR raster : partial unknown
+2.-Single agent vs. multiagent:
+
+3.-Deterministic vs. stochastic.
+	state_t+1 = f(state_t,action_t). Is f deterministic? stochastic?
+	partially observable worlds can make it seem that f is stochastic
+4.-Episodic vs. sequential
+	el move d'ara et condiciona cap a on vas i els recursos que hi ha a la zona... el problema és
+	sequencial?
+5.-Static vs. dynamic
+	Gujarat, static, nothing changes while deliberating
+6.-Discrete vs. continuous:
+	Discrete, we are not simulating particles nor planets
+	But input... with so many resources
+7.-Known vs. unknown
+	The LR part is not applying the same physics as HR layer
+	The agent delibers with partial unknown dynamics
+	Norvig:"In a known environment, the outcomes (or outcome probabilities if the
+		environment is stochastic) for all actions are given." 
+	Norvig:"Obviously, if the environment is unknown, the agent will have to learn 
+		how it works in order to make good decisions."
+
+Abstraction.
+NorvigEd3.pg(69=88)
 
 
 
