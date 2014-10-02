@@ -3305,9 +3305,9 @@ AI vs RULE -> experiments from chapter{Experiments} show diferences.
 %% l'agent te un internal world model amb una fisica diferent a la del world model.
 %% S'ha de veure que apareix el problema de divergencia despres de n passes.
 
-L
 
-
+RealWorld <- MAS
+Simulated World <- MAS
 
 
 
@@ -3317,7 +3317,7 @@ L
 
   .-Resoldre els problemes de rendiment
       Els algoritmes de la AI normalment estan orientats a resoldre un requeriment, una tasca.
-      HR -> LR
+      HR -> LR (això provocarà un dels problemes de divergencia )
       TrendVicinity : keep quality of walk(reward) but getting greater throughput
   
   .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
@@ -3326,13 +3326,16 @@ L
     -ReduceStates <- statistical relevance
     -Divergence due to discrepances between internal model of the planning layer versus 
     real world layer
+	foto perfecta del world? --> CPU consumption. Abstracccio,simplificacio --> divergencia
 	Com es tracta aquest problema en els MAS? fins a quin punt se li dona importància?
 	la section 2.3 de NorvigEd3 parla de les properties del environment.Aixo condiciona
 	l'efecte que pots aconseguir amb el planner. No es el mateix planificar en entorns
 	observable,deterministic,KNOWN que amb altres més durs.
-	Biomass Prediction
-	Multiagency
-	Forage Action HR vs LR
+	i.-Biomass Prediction
+	ii.-Multiagency
+	iii.-Forage Action HR vs LR (encara calen experiments per assegurar que això és un problema)
+	  Mes Width no millora, a cert punt empitjora ( 1 single agent + biomass prediction ) : 
+	  width++ -> overfitting?!?
 
 *La descoberta de features de la logica interna del sistema degut a la comparacio
 entre els tipus d'agents -> MarkovMove's rules
@@ -3345,7 +3348,7 @@ thousands of games against itself, using random dice rolls. In the case of backg
 resulting win percentage has been shown to be a good approximation of the value of the
 position, even if the algorithm has an imperfect heuristic and is searching only a few plies
 (Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
-. Gerry Tesauro’s (1995) TD-G AMMON 
+. Gerry Tesauro’s (1995) TD-G AMMON  <---- això és degut a l'error relatiu i l'error absolut, (and how to flee from a bear?)
 
 AI -> solve real world problems
 AI -> solve simulated world problems
