@@ -2646,7 +2646,7 @@ of objects implied almost and order of magnitude of improvement.
 	
 	
 \chapter{Experiments}
-
+\label{sec:Experiments}
 The chapter of experimental results follows part of the trajectory of the experience of comparing the 
 performance of the AI agents versus the classical rule agents. The first results are related to the first
 experiments of rule based agents in the model for the Gujarat\cite{JARM2014}. Taking the same setting, 
@@ -3283,7 +3283,7 @@ meaningful changes in the results of a simulation. When applied to a resilience 
 one or another it can produce different conclusions. We have seen qualitative differences in the results. MDP agents can achieve better levels of resilience. The key factor is adaptability. The greedy schema of the 
 rule based agent makes it blind to the critical points of the year where two opposite strategies must be
 chosen and applied. The beginning of the year demands a low movement rate while the end of the year demands
-a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms this pattern through an extra set of rules introduced in the rule based agent. And we could keep on extending the agent with more and more rules. But the objective is not to design an expert system in survival in Gujarat. We wanted to find the differences of classical social agent's static behaviour and adaptability versus dynamic behaviour. We wanted to verify that the way behaviours are modelled can change results in your simulations. Exploring the parameters of the MDP agent we observed differences, but the measures kept in the same order of magnitude and would involve equivalent conclusions. On the other hand, differences with rule based agents were quite far away. The trend was qualitatively different. Hence it is not innocuous the choice of how is modelled behaviour for agents.
+a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms this pattern through an extra set of rules introduced in the rule based agent. And we could keep on extending the agent with more and more rules. But the objective is not to design an expert system in survival in Gujarat. We wanted to find the differences of classical social agent's static behaviour and adaptability versus dynamic behaviour. We wanted to verify that the way behaviours are modelled can change results in your simulations. Exploring the parameters of the MDP agent we observed differences, but the measures of resilience kept in the same order of magnitude and would involve equivalent conclusions. On the other hand, differences with rule based agents were quite far away. The trend was qualitatively different. Hence it is not innocuous the choice of how is modelled behaviour for agents.
 
 Besides, results from experiment 3 in comparison to experiment 2 make explicit how important it is the effect of indirect competition. Changing UCT parameters horizon and width affects the performance. A future stage, just like we do for biomass prediction, should consider to introduce
 neighbours' effect. An evaluation will be needed in order to find the best technique to integrate this component to the knowledge layer of the agent and the UCT as well as find a lower bound for the new starvation. This way we will be able to asses the gain of introducing it and the computational cost in exchange.
@@ -3309,7 +3309,7 @@ AI vs RULE -> experiments from chapter{Experiments} show diferences.
 
 RealWorld <- MAS
 Simulated World <- MAS
-
+Social Sciences <- MAS
 
 
 
@@ -3324,7 +3324,7 @@ Simulated World <- MAS
   .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
   les visicituts que presenta el planning en un framework més gran que un
   problem-solving directe.    
-    -ReduceStates <- statistical relevance
+    -ReduceStates <- statistical relevance. too much detail demands higher sampling
     -Divergence due to discrepances between internal model of the planning layer versus 
     real world layer
 	foto perfecta del world? --> CPU consumption. Abstracccio,simplificacio --> divergencia
@@ -3349,7 +3349,8 @@ thousands of games against itself, using random dice rolls. In the case of backg
 resulting win percentage has been shown to be a good approximation of the value of the
 position, even if the algorithm has an imperfect heuristic and is searching only a few plies
 (Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
-. Gerry Tesauro’s (1995) TD-G AMMON  <---- això és degut a l'error relatiu i l'error absolut, (and how to flee from a bear?)
+. Gerry Tesauro’s (1995) TD-G AMMON  <---- això és degut a l'error relatiu i l'error absolut, (and how to flee from a bear?) --> put justificar la idea que LR encara q per precission el que interessa és 
+la qualitat relativa respecte els altres sectors.
 
 AI -> solve real world problems
 AI -> solve simulated world problems
@@ -3409,7 +3410,7 @@ aplicat criteris en la decisio dels experiments i diversos aspectes de l'agent (
 
 
 %% project, big picture
-The main hypothesis of HG resilience, in comparison to other cases where they disappeared at a 
+The main hypothesis of HG resilience, in comparison to other places where they disappeared at a 
 greater pace, is about climate variability and hard environmental conditions.
 The model has grown from a toy model based on Sugarscape\cite{EpsteinAxtell}. The initial prerequisite
 was to tune the model towards a stable set of conditions. Experts selected the set of conditions 
@@ -3423,18 +3424,33 @@ environmental conditions and behaviour.
 
 %% AI vs rule based results
 The conclusions about introducing AI and more sophisticated techniques in social science simulation receive
-the confirmation for its use from two points. The empirical evidence show that sophisticated agents 
-outperform classical agents in their evolution and response to challenges. 
+a positive feedback for its use from two points. The empirical evidence show that sophisticated agents 
+outperform classical agents in their evolution and response to challenges(\ref{sec:Experiments}). 
+
+<la seguent frase.. ''force'' ??? >
 The second is that modelling requirements of this project force us to use AI tools to represent agents 
 behaviour. There are many details and relationships. The environment is very changing due to the mutual 
 interaction of agents. And simple classical models cannot encompass a behaviour that will show successful, 
 reasonable and or realistic decisions under this environment.
+<el que volies era adaptabilitat>
 
-Però la introducció de la AI no ha sigut un procediment directe on simplement s'hagi incrustat la planificació sobre
-els inputs que rebia l'agent original substituint el modul basat en regles. Introduïr l'agent amb AI ha comportat tractar 
-problemes de consum de CPU i problemes sobre el model del mon en la capa de decision making de l'agent. Hi ha un 
-treball d'ajust dels models interns de l'agent sobre l'entorn on es mou. La diferència entre el model del mon i 
-el model del mon dins l'agent és una porta oberta a perdua de precisió en i encert de les actions proposades per la capa de planning.
+But the introduction of AI was not simply a direct procedure which has embedded planning over the receiving inputs of the agent replacing the original rule-based module.
+One must take into account the world representation for the decision-making layer. Resolution and detail
+will have an impact in cpu consumption due to the high number of cycles in the deliberation algorithms.
+It happens for each agent, each timestep of the simulation. AI algorithms are not applied in a isolated
+single problem-solving demand. They will be embedded in a simulation framework. The model demanded an extra balance decisions for granularity, relevance and cpu consumption.
+Other issues to take into account from world model are statistical relevance and divergence(\ref{sec:Divergence}). In our case, applying computer-rollout for planning in features with large domains would produce lack of statistical relevance to separate beneficial options from the others. Wide spectra require larger samples which require more cpu time. This condition forced to exert modifications and handle more abstract representations of the world in the agent side 
+(\ref{sec:ReduccStates}).
+Adjusting the abstraction of world model for the agent must consider other issues that could induce divergence problems. For instance, our model asked for some components to be introduced in the reasoning process like biomass grow prediction and multi-agency ( this later point should be dealt in the future). 
+
+
+
+
+
+
+Un altre problema era produit... ...sobre el model del mon en la capa de decision making de l'agent. Hi ha un treball d'ajust dels models interns de l'agent sobre l'entorn on es mou. La diferència entre el model del mon i el model del mon dins l'agent és una porta oberta a perdua de precisió en l'encert de les actions proposades per la capa de planning.
+
+
 
 AI was born to emulate human performance in intelligent tasks. But it does not mean applying directly AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. Executar aquestes tècniques en un framework de simulació comporta que s'hagin
 de fer moltes peticions de solvings per segon a la capa de decision making per a realitzar el mostreig estadístic de l'experiment que consta de centenars de simulacions. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. Això comporta que si l'agent manega dins de la seva ment una representació amb el nivell de detall del model del mon el consum de cpu es dispararà. Per a minimitzar l'impacte ens veiem forçats a introduir abstraccions i simplificacions respecte al model del mon. <--- porta d'entrada de divergencia...  
@@ -3449,7 +3465,7 @@ model, que conduirá a trace divergence -> deviation in guessing
 3.-divergence
 
 
-
+*********************************************************
 
 %%TODO eficiencia... hem de discutir si el horizon_width que interessen són computacionalment factibles
 %% hi ha millora del throughput al introduir LR a la MDP layer. Després altres tricks han ajudat. Pero
