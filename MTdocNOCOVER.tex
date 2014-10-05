@@ -3299,101 +3299,98 @@ neighbours' effect. An evaluation will be needed in order to find the best techn
 
 \chapter{Conclusions, Future and Recommendations}
 
-AI -> resilience
-AI vs RULE -> experiments from chapter{Experiments} show diferences.
+%AI -> resilience
+%AI vs RULE -> experiments from chapter{Experiments} show diferences.
 
 %%TODO busca bibliografia sobre els efectes d'un environment unknown, quan 
 %% l'agent te un internal world model amb una fisica diferent a la del world model.
 %% S'ha de veure que apareix el problema de divergencia despres de n passes.
 
 
-RealWorld <- MAS
-Simulated World <- MAS
-Social Sciences <- MAS
+%RealWorld <- MAS
+%Simulated World <- MAS
+%Social Sciences <- MAS
 
 
 
 
-*Experiència i Procés en l'adaptació de la tècnica, del model MDP, en una social simulation
-
-  .-Resoldre els problemes de rendiment
-      Els algoritmes de la AI normalment estan orientats a resoldre un requeriment, una tasca.
-      HR -> LR (això provocarà un dels problemes de divergencia )
-      TrendVicinity : keep quality of walk(reward) but getting greater throughput
+%*Experiència i Procés en l'adaptació de la tècnica, del model MDP, en una social simulation
+%
+%  .-Resoldre els problemes de rendiment
+%      Els algoritmes de la AI normalment estan orientats a resoldre un requeriment, una tasca.
+%      HR -> LR (això provocarà un dels problemes de divergencia )
+%      TrendVicinity : keep quality of walk(reward) but getting greater throughput
   
-  .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
-  les visicituts que presenta el planning en un framework més gran que un
-  problem-solving directe.    
-    -ReduceStates <- statistical relevance. too much detail demands higher sampling
-    -Divergence due to discrepances between internal model of the planning layer versus 
-    real world layer
-	foto perfecta del world? --> CPU consumption. Abstracccio,simplificacio --> divergencia
-	Com es tracta aquest problema en els MAS? fins a quin punt se li dona importància?
-	la section 2.3 de NorvigEd3 parla de les properties del environment.Aixo condiciona
-	l'efecte que pots aconseguir amb el planner. No es el mateix planificar en entorns
-	observable,deterministic,KNOWN que amb altres més durs.
-	i.-Biomass Prediction
-	ii.-Multiagency
-	iii.-Forage Action HR vs LR (encara calen experiments per assegurar que això és un problema)
-	  Mes Width no millora, a cert punt empitjora ( 1 single agent + biomass prediction ) : 
-	  width++ -> overfitting?!?
+%  .-Introduir AI no es una cosa directa, cal un procés d'adaptació, de detectar
+%  les visicituts que presenta el planning en un framework més gran que un
+%  problem-solving directe.    
+%    -ReduceStates <- statistical relevance. too much detail demands higher sampling
+%    -Divergence due to discrepances between internal model of the planning layer versus 
+%    real world layer
+%	foto perfecta del world? --> CPU consumption. Abstracccio,simplificacio --> divergencia
+%	Com es tracta aquest problema en els MAS? fins a quin punt se li dona importància?
+%	la section 2.3 de NorvigEd3 parla de les properties del environment.Aixo condiciona
+%	l'efecte que pots aconseguir amb el planner. No es el mateix planificar en entorns
+%	observable,deterministic,KNOWN que amb altres més durs.
+%	i.-Biomass Prediction
+%	ii.-Multiagency
+%	iii.-Forage Action HR vs LR (encara calen experiments per assegurar que això és un problema)
+%	  Mes Width no millora, a cert punt empitjora ( 1 single agent + biomass prediction ) : 
+%	  width++ -> overfitting?!?
 
-*La descoberta de features de la logica interna del sistema degut a la comparacio
-entre els tipus d'agents -> MarkovMove's rules
+%*La descoberta de features de la logica interna del sistema degut a la comparacio
+%entre els tipus d'agents -> MarkovMove's rules
 
-Tesauro potser parla de l'imperfect heuristic com una discrepancia entre el model extern i l'intern,
-en la mind de l'agent:
-``An alternative is to do Monte Carlo simulation to evaluate a position. Start with
-an alpha–beta (or other) search algorithm. From a start position, have the algorithm play
-thousands of games against itself, using random dice rolls. In the case of backgammon, the
-resulting win percentage has been shown to be a good approximation of the value of the
-position, even if the algorithm has an imperfect heuristic and is searching only a few plies
-(Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
-. Gerry Tesauro’s (1995) TD-G AMMON  <---- això és degut a l'error relatiu i l'error absolut, (and how to flee from a bear?) --> put justificar la idea que LR encara q per precission el que interessa és 
-la qualitat relativa respecte els altres sectors.
+%Tesauro potser parla de l'imperfect heuristic com una discrepancia entre el model extern i l'intern,
+%en la mind de l'agent:
+%``An alternative is to do Monte Carlo simulation to evaluate a position. Start with
+%an alpha–beta (or other) search algorithm. From a start position, have the algorithm play
+%thousands of games against itself, using random dice rolls. In the case of backgammon, the
+%resulting win percentage has been shown to be a good approximation of the value of the
+%position, even if the algorithm has an imperfect heuristic and is searching only a few plies
+%(Tesauro, 1995). For games with dice, this type of simulation is called a rollout.''
+%. Gerry Tesauro’s (1995) TD-G AMMON  <---- això és degut a l'error relatiu i l'error absolut, (and how to flee from a bear?) --> put justificar la idea que LR encara q per precission el que interessa és 
+%la qualitat relativa respecte els altres sectors.
 
-AI -> solve real world problems
-AI -> solve simulated world problems
-
-
-do not forget : ENVIRONMENT PROPERTIES
-
-busca algun cas real de MAS on lliguin aquestes caracteristiques amb la
-divergencia entre world i model of the world inside the agent, com a causant
-de perdua de performance, com causant d'uncertainty
+%AI -> solve real world problems
+%AI -> solve simulated world problems
 
 
+%do not forget : ENVIRONMENT PROPERTIES de llibre de Norvig.
 
-These will affect to discrepancy World vs Agent's Internal World representation
-
-1.-Fully observable vs. partially observable:
-	del mapa HR extreus el map LR, la deliberació funciona sobre l'LR raster : partial unknown
-2.-Single agent vs. multiagent:
-
-3.-Deterministic vs. stochastic.
-	state_t+1 = f(state_t,action_t). Is f deterministic? stochastic?
-	partially observable worlds can make it seem that f is stochastic
-4.-Episodic vs. sequential
-	el move d'ara et condiciona cap a on vas i els recursos que hi ha a la zona... el problema és
-	sequencial?
-5.-Static vs. dynamic
-	Gujarat, static, nothing changes while deliberating
-6.-Discrete vs. continuous:
-	Discrete, we are not simulating particles nor planets
-	But input... with so many resources
-7.-Known vs. unknown
-	The LR part is not applying the same physics as HR layer
-	The agent delibers with partial unknown dynamics
-	Norvig:"In a known environment, the outcomes (or outcome probabilities if the
-		environment is stochastic) for all actions are given." 
-	Norvig:"Obviously, if the environment is unknown, the agent will have to learn 
-		how it works in order to make good decisions."
-
-Abstraction.
-NorvigEd3.pg(69=88)
+%busca algun cas real de MAS on lliguin aquestes caracteristiques amb la
+%divergencia entre world i model of the world inside the agent, com a causant
+%de perdua de performance, com causant d'uncertainty
 
 
 
+%These will affect to discrepancy World vs Agent's Internal World representation
+
+%1.-Fully observable vs. partially observable:
+%	del mapa HR extreus el map LR, la deliberació funciona sobre l'LR raster : partial unknown
+%2.-Single agent vs. multiagent:
+%
+%3.-Deterministic vs. stochastic.
+%	state_t+1 = f(state_t,action_t). Is f deterministic? stochastic?
+%	partially observable worlds can make it seem that f is stochastic
+%4.-Episodic vs. sequential
+%	el move d'ara et condiciona cap a on vas i els recursos que hi ha a la zona... el problema és
+%	sequencial?
+%5.-Static vs. dynamic
+%	Gujarat, static, nothing changes while deliberating
+%6.-Discrete vs. continuous:
+%	Discrete, we are not simulating particles nor planets
+%	But input... with so many resources
+%7.-Known vs. unknown
+%	The LR part is not applying the same physics as HR layer
+%	The agent delibers with partial unknown dynamics
+%	Norvig:"In a known environment, the outcomes (or outcome probabilities if the
+%		environment is stochastic) for all actions are given." 
+%	Norvig:"Obviously, if the environment is unknown, the agent will have to learn 
+%		how it works in order to make good decisions."
+
+%Abstraction.
+%NorvigEd3.pg(69=88)
 
 
 %%TODO
@@ -3405,8 +3402,8 @@ This master thesis reflects part of the experience of my contribution to Gujarat
 its first stages. This part of the project had as objectives to find an stable model to begin
 studying resilience of HG and AP in semi-arid environments, and the possibilities offered by the
 introduction of sophisticated decision making engine in the agents populating the simulation.
-I que aquesta feina s'ha fet treballant en paralel amb altres companys(UPF,etc..) on s'hi han 
-aplicat criteris en la decisio dels experiments i diversos aspectes de l'agent (Albore&Trendvicinity)
+I que aquesta feina s'ha fet treballant en paralel amb altres companys(UPF,etc) on s'hi han 
+aplicat criteris en la decisio dels experiments i diversos aspectes de l'agent (Albore\&Trendvicinity)
 
 
 %% project, big picture
@@ -3423,29 +3420,17 @@ Agents survive, reach a carrying capacity and keep it along the generations. The
 environmental conditions and behaviour.
 
 %% AI vs rule based results
-The conclusions about introducing AI and more sophisticated techniques in social science simulation receive
-a positive feedback for its use from two points. The empirical evidence show that sophisticated agents 
-outperform classical agents in their evolution and response to challenges(\ref{sec:Experiments}). 
-
-<la seguent frase.. ''force'' ??? >
-The second is that modelling requirements of this project force us to use AI tools to represent agents 
-behaviour. There are many details and relationships. The environment is very changing due to the mutual 
-interaction of agents. And simple classical models cannot encompass a behaviour that will show successful, 
-reasonable and or realistic decisions under this environment.
-<el que volies era adaptabilitat>
-
+The hypothesis about introducing AI and more sophisticated techniques in social science simulation receive
+positive feedback from the empirical evidence. It shows that sophisticated agents outperform classical agents in their evolution and response to challenges(pag.\pageref{sec:Experiments}). 
 But the introduction of AI was not simply a direct procedure which has embedded planning over the receiving inputs of the agent replacing the original rule-based module.
-One must take into account the world representation of the decision-making layer. Model resolution and detail will have an impact in cpu consumption due to the high number of cycles in the deliberation algorithms. It happens for each agent, each timestep of the simulation. AI algorithms are not applied in a isolated single problem-solving demand. They are embedded in a simulation framework. The model demanded an extra balance decisions for granularity, relevance and cpu consumption.
-Other issues we had to take into account from world model are statistical relevance and divergence(\ref{sec:Divergence}). In our case, applying computer-rollout for planning with features with large domains would produce lack of statistical relevance to separate beneficial options from the others. Wide spectra require larger samples which require more cpu time. This condition forced to exert modifications and handle more abstract representations of the world in the agent side 
-(\ref{sec:ReduccStates}).
+
+AI was born to emulate human performance in intelligent tasks. But it does not mean applying directly AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'', achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives or produce an optimal policy for an autonomous robot, for instance. 
+
+As crucial point, one must take into account the world representation of the decision-making layer. Model granularity, space resolution and detail will have an impact in cpu consumption due to the high number of cycles in the deliberation algorithms. It happens for each agent, each timestep of the simulation. AI algorithms are not applied in a isolated single problem-solving demand. They are embedded in a simulation framework. The model demanded an extra balance decisions for granularity, relevance and cpu consumption.
+Some issues we had to take into account from world model are statistical relevance and divergence(pag.\pageref{sec:Divergence}). In our case, applying computer-rollout for planning with features with large domains would produce lack of statistical relevance to separate beneficial options from the others. Wide spectra require larger samples which require more cpu time. This condition forced to exert modifications and handle more abstract representations of the world in the agent side 
+(pag.\pageref{sec:ReduccStates}).\\
 Adjusting the abstraction of world model for the agent must consider other issues that could induce divergence problems. For instance, our model asked for some components to be introduced in the reasoning process like biomass grow prediction and multi-agency ( this later point should be dealt in the future).
-\pdfcomment{ cal mirar què diuen els experiments sobre la diferència entre forage del MDP i forage real; si això provoca divergence}. Difference between the environment and model in the mind is a factor 
-that introduces deviation in the approximations of the decision-making module.
-
-
-AI was born to emulate human performance in intelligent tasks. But it does not mean applying directly AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. Executar aquestes tècniques en un framework de simulació comporta que s'hagin
-de fer moltes peticions de solvings per segon a la capa de decision making per a realitzar el mostreig estadístic de l'experiment que consta de centenars de simulacions. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. Això comporta que si l'agent manega dins de la seva ment una representació amb el nivell de detall del model del mon el consum de cpu es dispararà. Per a minimitzar l'impacte ens veiem forçats a introduir abstraccions i simplificacions respecte al model del mon. <--- porta d'entrada de divergencia...  
-
+\pdfcomment{ cal mirar què diuen els experiments sobre la diferència entre forage del MDP i forage real; si això provoca divergence i afegir-ho al text}. Difference between the environment and model in the mind is a factor that will introduce deviation in the approximations of the decision-making module.
 
 
 *********************************************************
@@ -3459,8 +3444,7 @@ de fer moltes peticions de solvings per segon a la capa de decision making per a
 If the simulation is not long enough you do not give time to the system to develop many effects that in real world span centuries and millennia.}
 
 
-%% mou aqui el paragraph del chapter anterior que comenca amb : By the way, AI was born to emulate human
-As the concluding reflection, just to mention AI was born to emulate human performance in intelligent tasks. But it does not mean applying directly AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'' : achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives, produce an optimal policy for an autonomous robot, for instance. AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
+AI in social science simulation must be handled with good judgement. AI algorithms cannot be used at their fully without taking into account the cost that will represent after thousands of simulation steps. But it is more important the modelization task. AI algorithms are subjugated to the bounds(sometimes clear, sometimes fuzzy) or the features of the behaviour chosen for the agents. 
 
 
 \subsection{Future Work}
