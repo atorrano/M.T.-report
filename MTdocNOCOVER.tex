@@ -3274,20 +3274,10 @@ The second point, from the technical point of view, is that if we achieve same s
 % \\
 % \textbf{\textit{tema divergence due to other agents in the vicinity : compto que s'ha d'esmentar al future steps}}
 
-\subsection{Conclusions}
+%%\subsection{Conclusions} <-- moved to next chapter
 
 %summary of key evidences and conclusions from the experiments 1, 2, and 3.
 	
-Experiments comparing the different agent types confirm our hypothesis. Introducing AI in an agent can produce
-meaningful changes in the results of a simulation. When applied to a resilience test scenario choosing
-one or another it can produce different conclusions. We have seen qualitative differences in the results. MDP agents can achieve better levels of resilience. The key factor is adaptability. The greedy schema of the 
-rule based agent makes it blind to the critical points of the year where two opposite strategies must be
-chosen and applied. The beginning of the year demands a low movement rate while the end of the year demands
-a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms this pattern through an extra set of rules introduced in the rule based agent. And we could keep on extending the agent with more and more rules. But the objective is not to design an expert system in survival in Gujarat. We wanted to find the differences of classical social agent's static behaviour and adaptability versus dynamic behaviour. We wanted to verify that the way behaviours are modelled can change results in your simulations. Exploring the parameters of the MDP agent we observed differences, but the measures of resilience kept in the same order of magnitude and would involve equivalent conclusions. On the other hand, differences with rule based agents were quite far away. The trend was qualitatively different. Hence it is not innocuous the choice of how is modelled behaviour for agents.
-
-Besides, results from experiment 3 in comparison to experiment 2 make explicit how important it is the effect of indirect competition. Changing UCT parameters horizon and width affects the performance. A future stage, just like we do for biomass prediction, should consider to introduce
-neighbours' effect. An evaluation will be needed in order to find the best technique to integrate this component to the knowledge layer of the agent and the UCT as well as find a lower bound for the new starvation. This way we will be able to asses the gain of introducing it and the computational cost in exchange.
-
 
 
 %Els paràmetres usats per al mdp en la comparativa semblen els adients per l'objectiu. No hi ha inestabilitat, 
@@ -3402,8 +3392,8 @@ This master thesis reflects part of the experience of my contribution to Gujarat
 its first stages. This part of the project had as objectives to find an stable model to begin
 studying resilience of HG and AP in semi-arid environments, and the possibilities offered by the
 introduction of sophisticated decision making engine in the agents populating the simulation.
-I que aquesta feina s'ha fet treballant en paralel amb altres companys(UPF,etc) on s'hi han 
-aplicat criteris en la decisio dels experiments i diversos aspectes de l'agent (Albore\&Trendvicinity)
+%I que aquesta feina s'ha fet treballant en paralel amb altres companys(UPF,etc) on s'hi han 
+%aplicat criteris en la decisio dels experiments i diversos aspectes de l'agent (Albore\&Trendvicinity)
 
 
 %% project, big picture
@@ -3422,11 +3412,23 @@ environmental conditions and behaviour.
 %% AI vs rule based results
 The hypothesis about introducing AI and more sophisticated techniques in social science simulation receive
 positive feedback from the empirical evidence. It shows that sophisticated agents outperform classical agents in their evolution and response to challenges(pag.\pageref{sec:Experiments}). 
+
+Experiments comparing the different agent types confirm our hypothesis. Introducing AI in an agent can produce
+meaningful changes in the results of a simulation. When applied to a resilience test scenario choosing
+one or another it can produce different conclusions. We have seen qualitative differences in the results. MDP agents can achieve better levels of resilience. The key factor is adaptability. The greedy schema of the 
+rule based agent makes it blind to the critical points of the year where two opposite strategies must be
+chosen and applied. The beginning of the year demands a low movement rate while the end of the year demands
+a higher movement rate with optimal decision for the time step when to move. One of the experiments confirms this pattern through an extra set of rules introduced in the rule based agent. And we could keep on extending the agent with more and more rules. But the objective is not to design an expert system in survival in Gujarat. We wanted to find the differences of classical social agent's static behaviour and adaptability versus dynamic behaviour. We wanted to verify that the way behaviours are modelled can change results in your simulations. Exploring the parameters of the MDP agent we observed differences, but the measures of resilience kept in the same order of magnitude and would involve equivalent conclusions. On the other hand, differences with rule based agents were quite far away. The trend was qualitatively different. Hence it is not innocuous the choice of how is modelled behaviour for agents.
+
+Besides, results from experiment 3 in comparison to experiment 2 make explicit how important it is the effect of indirect competition. Changing UCT parameters horizon and width affects the performance. A future stage, just like we do for biomass prediction, should consider to introduce
+neighbours' effect. An evaluation will be needed in order to find the best technique to integrate this component to the knowledge layer of the agent and the UCT as well as find a lower bound for the new starvation. This way we will be able to asses the gain of introducing it and the computational cost in exchange.
+
+
 But the introduction of AI was not simply a direct procedure which has embedded planning over the receiving inputs of the agent replacing the original rule-based module.
 
 AI was born to emulate human performance in intelligent tasks. But it does not mean applying directly AI will give all your work done. Internal procedures in simulation are not like pure problem solving nor pure support to decision making. Many activities where AI is involved allow to AI techniques to express their power without restrictions, ``perform as best as you can'', achieve the best accuracy on Part-Of-Speech tagging, cluster data with minimum number of false positives or produce an optimal policy for an autonomous robot, for instance. 
 
-As crucial point, one must take into account the world representation of the decision-making layer. Model granularity, space resolution and detail will have an impact in cpu consumption due to the high number of cycles in the deliberation algorithms. It happens for each agent, each timestep of the simulation. AI algorithms are not applied in a isolated single problem-solving demand. They are embedded in a simulation framework. The model demanded an extra balance decisions for granularity, relevance and cpu consumption.
+As crucial point, one must take into account the world representation of the decision-making layer. Model granularity, space resolution and detail will have an impact in cpu consumption due to the high number of cycles in the deliberation algorithms. It happens for each agent, each time step of the simulation. AI algorithms are not applied in a isolated single problem-solving demand. They are embedded in a simulation framework. The model demanded an extra balance decisions for granularity, relevance and cpu consumption.
 Some issues we had to take into account from world model are statistical relevance and divergence(pag.\pageref{sec:Divergence}). In our case, applying computer-rollout for planning with features with large domains would produce lack of statistical relevance to separate beneficial options from the others. Wide spectra require larger samples which require more cpu time. This condition forced to exert modifications and handle more abstract representations of the world in the agent side 
 (pag.\pageref{sec:ReduccStates}).\\
 Adjusting the abstraction of world model for the agent must consider other issues that could induce divergence problems. For instance, our model asked for some components to be introduced in the reasoning process like biomass grow prediction and multi-agency ( this later point should be dealt in the future).
