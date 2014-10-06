@@ -90,9 +90,9 @@
 \contentsline {subsection}{\numberline {4.3.1}Experiment 1: Mean Starvation Day Comparison}{81}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Experiment 2: Ten year simulation of Rule Based Agent vs MDP Agent}{90}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Experiment 3: Width Exploration}{92}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Conclusions, Future and Recommendations}{100}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.4}Future Work}{102}{subsection.5.0.4}
-\contentsline {chapter}{\numberline {6}Acknowledgement}{104}{chapter.6}
-\contentsline {chapter}{\numberline {7}Annex 1 : Platforms}{105}{chapter.7}
-\contentsline {section}{\numberline {7.1}Pandora}{105}{section.7.1}
-\contentsline {section}{\numberline {7.2}Other platforms}{106}{section.7.2}
+\contentsline {chapter}{\numberline {5}Conclusions}{100}{chapter.5}
+\contentsline {chapter}{\numberline {6}Future and Recommendations}{103}{chapter.6}
+\contentsline {chapter}{\numberline {7}Acknowledgement}{104}{chapter.7}
+\contentsline {chapter}{\numberline {8}Annex 1 : Platforms}{105}{chapter.8}
+\contentsline {section}{\numberline {8.1}Pandora}{105}{section.8.1}
+\contentsline {section}{\numberline {8.2}Other platforms}{106}{section.8.2}

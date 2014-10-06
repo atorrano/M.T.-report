@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.24)  6 OCT 2014 09:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.2.18)  6 OCT 2014 12:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **MTdocNOCOVER.tex
 (./MTdocNOCOVER.tex
 LaTeX2e <2011/06/27>
-Babel <3.9f> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -547,13 +547,13 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read1
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/05/16 v3.9f The Babel package
+Package: babel 2013/12/03 3.9h The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/05/16 v3.9f Babel common definitions
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count99
 \U@D=\dimen114
 )
@@ -851,7 +851,7 @@ put line 292.
 LaTeX Info: Redefining \today on input line 724.
 
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/dt-british.def
-File: dt-british.def 2007/06/15
+File: dt-british.def 2013/09/10
 )
 \dt@a=\toks35
 \dt@b=\toks36
@@ -930,7 +930,7 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen134
@@ -1895,108 +1895,107 @@ Chapter 5.
 
 ]
 Package hyperref Info: bookmark level for unknown lpcsec defaults to 0 on input
- line 3435.
- [101]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3452.
-
-[102] [103]
+ line 3432.
+ [101] [102]
 Chapter 6.
-[104
+[103
 
 ]
 Chapter 7.
+[104
+
+]
+Chapter 8.
 
 LaTeX Warning: Reference `fig:Pandora1.jpg' on page 105 undefined on input line
- 3527.
+ 3494.
 
 [105
 
-] <figures/Pandora1.jpg, id=1380, 456.20438pt x 462.22687pt>
+] <figures/Pandora1.jpg, id=1373, 456.20438pt x 462.22687pt>
 File: figures/Pandora1.jpg Graphic file (type jpg)
 
 <use figures/Pandora1.jpg>
-Package pdftex.def Info: figures/Pandora1.jpg used on input line 3550.
+Package pdftex.def Info: figures/Pandora1.jpg used on input line 3517.
 (pdftex.def)             Requested size: 128.0374pt x 129.72592pt.
 
-<figures/Pandora2.jpg, id=1381, 297.11pt x 253.94875pt>
+<figures/Pandora2.jpg, id=1374, 297.11pt x 253.94875pt>
 File: figures/Pandora2.jpg Graphic file (type jpg)
 
 <use figures/Pandora2.jpg>
-Package pdftex.def Info: figures/Pandora2.jpg used on input line 3560.
+Package pdftex.def Info: figures/Pandora2.jpg used on input line 3527.
 (pdftex.def)             Requested size: 128.0374pt x 109.43994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3572--3580
+Underfull \hbox (badness 10000) in paragraph at lines 3539--3547
 
  []
 
 [106 <./figures/Pandora1.jpg> <./figures/Pandora2.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 3581--3592
+Underfull \hbox (badness 10000) in paragraph at lines 3548--3559
 
  []
 
 [107] [108
 
 ]
-Overfull \hbox (11.93425pt too wide) in paragraph at lines 3708--3710
+Overfull \hbox (11.93425pt too wide) in paragraph at lines 3675--3677
 []\OT1/ptm/m/n/10.95 Sugarscape. \OT1/ptm/m/it/10.95 http://ccl.northwestern.ed
 u/netlogo/models/community/Sugarscape 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3748--3751
+Underfull \hbox (badness 10000) in paragraph at lines 3715--3718
 []\OT1/ptm/m/it/10.95 The Unity of Sci-ence\OT1/ptm/m/n/10.95 , Stan-ford En-cy
 -clo-pe-dia of Phi-los-o-phy
  []
 
 [109] [110]
-Underfull \hbox (badness 7012) in paragraph at lines 3883--3888
+Underfull \hbox (badness 7012) in paragraph at lines 3850--3855
 []\OT1/ptm/m/n/10.95 Tim Lewens \OT1/ptm/m/it/10.95 "Cul-tural Evo-lu-tion", Th
 e Stan-ford En-cy-clo-pe-dia of
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 3883--3888
+Underfull \hbox (badness 2903) in paragraph at lines 3850--3855
 \OT1/ptm/m/it/10.95 Phi-los-o-phy\OT1/ptm/m/n/10.95 . (Spring 2013 Edi-tion), E
 d-ward N. Zalta (ed.), URL =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3883--3888
+Underfull \hbox (badness 10000) in paragraph at lines 3850--3855
 \OT1/ptm/m/n/10.95 <http://plato.stanford.edu/archives/spr2013/entries/evolutio
 n-cultural/>.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3907--3909
+Underfull \hbox (badness 10000) in paragraph at lines 3874--3876
 []\OT1/ptm/m/it/10.95 Repast for High Per-for-mance Com-put-ing \OT1/ptm/m/n/10
 .95 :
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3928.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3895.
 [111]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3928.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3895.
  (./MTdocNOCOVER.aux
 * soulpos - computing points - it may take a few seconds *
 \openout3 = `MTdocNOCOVER.upb'.
 
  (./MTdocNOCOVER.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3928.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3928.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3895.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3895.
 
 Package rerunfilecheck Info: File `MTdocNOCOVER.out' has not changed.
-(rerunfilecheck)             Checksum: 993BCEE2BF7E562AFBB3E379BE4264BD;6621.
+(rerunfilecheck)             Checksum: 850C81BA3722340E87515711D0D0541F;6592.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12898 strings out of 495031
- 198469 string characters out of 6181531
- 322587 words of memory out of 5000000
- 15359 multiletter control sequences out of 15000+600000
+ 12902 strings out of 495028
+ 198601 string characters out of 6181497
+ 323059 words of memory out of 5000000
+ 15373 multiletter control sequences out of 15000+600000
  47193 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,13n,36p,2408b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2012,10 +2011,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on MTdocNOCOVER.pdf (115 pages, 16230086 bytes).
+Output written on MTdocNOCOVER.pdf (115 pages, 16229071 bytes).
 PDF statistics:
- 1570 PDF objects out of 1728 (max. 8388607)
- 1349 compressed objects within 14 object streams
- 434 named destinations out of 1000 (max. 500000)
+ 1560 PDF objects out of 1728 (max. 8388607)
+ 1339 compressed objects within 14 object streams
+ 427 named destinations out of 1000 (max. 500000)
  1037 words of extra memory for PDF output out of 10000 (max. 10000000)
 
