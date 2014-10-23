@@ -3386,8 +3386,8 @@ The second point, from the technical point of view, is that if we achieve same s
 %% probant i comparant els tipus d'agents : rule, random, ai per a treure insight of the 
 %% system. A mes podras avaluar el millor agent per als teus objectius.
 
-This master thesis reflects part of the experience of my contribution to Gujarat Project in
-its first stages. This part of the project had as objectives to find an stable model to begin
+This master thesis reflects part of the experience of my contribution to Gujarat Project. 
+This part of the project had as objectives to find an stable model to begin
 studying resilience of HG and AP in semi-arid environments, and the possibilities offered by the
 introduction of sophisticated decision making engine in the agents populating the simulation.
 %I que aquesta feina s'ha fet treballant en paralel amb altres companys(UPF,etc) on s'hi han 
@@ -3429,12 +3429,37 @@ As crucial point, one must take into account the world representation of the dec
 Some more issues we had to take into account from world model are statistical relevance and divergence(pag.\pageref{sec:Divergence}). In our case, applying computer-rollout for planning with features with large domains would produce lack of statistical relevance to separate beneficial options from the others. Wide spectra require larger samples which require more cpu time. This condition forced to exert modifications and handle more abstract representations of the world in the agent side 
 (pag.\pageref{sec:ReduccStates}).\\
 Adjusting the abstraction of world model for the agent must consider other issues that could induce divergence problems. For instance, our model asked for some components to be introduced in the reasoning process like biomass grow prediction and multi-agency ( this later point should be dealt in the future).
-\pdfcomment{ cal mirar què diuen els experiments sobre la diferència entre forage del MDP i forage real; si això provoca divergence i afegir-ho al text}. Difference between the environment and model in the mind is a factor that will introduce deviation in the approximations of the decision-making module.
+\pdfcomment{ cal mirar què diuen els experiments sobre la diferència entre forage del MDP i forage real; si això provoca divergence i afegir-ho al text}. Differences between the environment and model in the mind is a factor that will introduce deviation in the approximations of the decision-making module.
 
 To summarize, although introducing MBA will allow to develop agents with a greater adaptability and richer behaviour patterns, there is a non-negligible effort associated with designing, implementing, and managing the environment model layer of the agents.
-There is a mandatory work fo abstraction in the representation of the environment and it involves adjusting the physical laws and procedures applied to it.
+There is a mandatory work fo abstraction in the representation of the environment and it involves adjusting the physical laws and procedures applied to it. Differences between environment and the model owned by the agent are prone to divergence problems that must not be forgotten.
 
-*********************************************************
+% JASSS
+% coses que hem vist en el model
+% explorant horizons : de h3 a h10 starvation is around 23. Width does not affects.
+% 
+% predicted collected resources : weird plot of distribution prediction vs timestep
+% LR forage always under HR forage? will this introduce too much MoveHome with the aim of
+% scaping scarcity when really it is no the case???
+% ==> remodel model 0 : reduce resource raster resolution
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+
+
+%%*********************************************************
+
+
+
 
 %%TODO eficiencia... hem de discutir si el horizon_width que interessen són computacionalment factibles
 %% hi ha millora del throughput al introduir LR a la MDP layer. Després altres tricks han ajudat. Pero
